@@ -14,28 +14,23 @@ public class PrimeFactor {
 		
 		while (true) {
 			
-			int n = sc.nextInt();
-			
-			if (n == -1) {
+			if (sc.nextInt() == -1) {
 				break;
 			}
-			while (n % 2 == 0) {
-				System.out.printf("%d ", 2);
-				n = n / 2;
-			}
 			
-			for (int i = 3; i < Math.sqrt(n); i += 2) {
-				while (n % i == 0) {
-					System.out.printf("%d ", i);
-					n = n / i;
+			int n = sc.nextInt();
+			//Sieve of Eratosthenes approach
+			boolean[] A = new boolean[n];
+			Arrays.fill(A, Boolean.TRUE);
+			
+			for (int i = 2; i < Math.sqrt(n); i++) {
+				if (A[i] == true) {
+					int count = 1;
+					for (int j = i * i; j < n; j = (i * i) + (count++ * i)) {
+						
+					}
 				}
 			}
-			
-			if (n > 2) {
-				System.out.printf("%d ", n);
-			}
-			
-			System.out.println();
 			
 		}
 		

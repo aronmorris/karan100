@@ -35,8 +35,6 @@ public class PrimeFactor {
 				System.out.printf("%d ", n);
 			}
 			
-			System.out.println();
-			
 		}
 		
 		sc.close();

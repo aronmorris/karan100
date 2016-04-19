@@ -14,11 +14,12 @@ public class PrimeFactor {
 		
 		while (true) {
 			
-			int n = sc.nextInt();
-			
-			if (n == -1) {
+			if (sc.nextInt() == -1) {
 				break;
 			}
+			
+			int n = sc.nextInt();
+			
 			while (n % 2 == 0) {
 				System.out.printf("%d ", 2);
 				n = n / 2;
@@ -34,8 +35,6 @@ public class PrimeFactor {
 			if (n > 2) {
 				System.out.printf("%d ", n);
 			}
-			
-			System.out.println();
 			
 		}
 		
