@@ -1,0 +1,72 @@
+import java.util.LinkedList;
+import java.util.Scanner;
+
+//Lists each prime until asked to stop
+public class NextPrime {
+
+	static LinkedList<Integer> capturedPrimes = new LinkedList<Integer>();
+	
+	public static void main(String[] args) {
+		
+		System.out.println("This program will list primes until receiving the input -1."
+				+ "\n" + "Give it any other integer value for it to go to the next prime.");
+		
+		Scanner sc = new Scanner(System.in);
+		
+		capturedPrimes.add(1);
+		capturedPrimes.add(2);
+		
+		int current = 3;
+		
+		while(true) {
+			
+			int n = sc.nextInt();
+			
+			if (n == -1) {
+				break;
+			}
+			
+			returnPrime(current);
+			
+			current++;
+			
+			System.out.println(capturedPrimes.getLast());
+			
+		}
+		
+		sc.close();
+		
+	}
+	
+	static void returnPrime(int n) {
+		//Reuse code from PrimeFactor
+		
+		//Divide until value is no longer even
+		while (n % 2 == 0) {
+			capturePrimes(n);
+			n = n / 2;
+		}
+		
+		n = (int) Math.sqrt(n);
+		
+		//Divide by every value until it can't divide by it further if the value is a divisor
+		//While also not using any even values since they've been eliminated
+		for (int i = 3; i < n; i += 2) {
+			while (n % i == 0) {
+				capturePrimes(n);
+				n = n / i;
+			}
+		}
+		//In case the remaining value is > 2 it's printed
+		if (n > 2) {
+			capturePrimes(n);
+		}
+	}
+	
+	static void capturePrimes(int n ) {
+		if (!capturedPrimes.contains(n)) {
+			capturedPrimes.add(n);
+		}
+	}
+	
+}
