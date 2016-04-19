@@ -1,0 +1,50 @@
+
+public class Node {
+
+	private Node next;
+	
+	private Node prev;
+	
+	private Object data;
+	
+	public Node(Node previous, Node next, Object storeData) {
+		
+		this.prev = previous;
+		
+		this.next = next;
+		
+		this.data = storeData;
+		
+	}
+	
+	public void setData(Object newData) {
+		
+        this.data = newData;
+        
+    }
+
+    public void setNextNode(Node nextNode) {
+    	
+        this.next = nextNode;
+        
+    }
+
+    public void setPreviousNode(Node previous) {
+    	
+        this.prev = previous;
+        
+    }
+
+    public Node getNextNode() {
+    	
+        return next;
+        
+    }
+
+    public Node getPreviousNode() {
+    	
+        return prev;
+        
+    }
+	
+}

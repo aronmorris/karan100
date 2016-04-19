@@ -1,0 +1,17 @@
+package com.starlesscitadel.aronmorris.starlessplayer;
+
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class StarlessPlayer extends JavaPlugin {
+	
+	@Override
+	public void onEnable() {
+		//TODO insert listeners etc
+	}
+	
+	@Override
+	public void onDisable() {
+		//TODO cleanup & graceful exit logic
+	}
+	
+}

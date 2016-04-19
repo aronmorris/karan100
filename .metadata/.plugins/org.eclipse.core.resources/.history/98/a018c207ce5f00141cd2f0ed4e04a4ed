@@ -1,0 +1,22 @@
+
+public class NodeList extends Node {
+
+	private Node[] node;
+	
+	
+	
+	public NodeList(int listSize, Object ...objects) {
+		
+		node = new Node[listSize];
+		
+	}
+	
+	public Object first() {
+		
+		return node[0].element();
+		
+	}
+	
+	
+	
+}

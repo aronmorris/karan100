@@ -1,0 +1,16 @@
+
+public class Position extends Node {
+
+	public Position(Node previous, Node next, Object storeData) {
+		
+		super(previous, next, storeData);
+		
+	}
+
+	public Object element() {
+		
+		return this.getData();
+		
+	}
+	
+}
