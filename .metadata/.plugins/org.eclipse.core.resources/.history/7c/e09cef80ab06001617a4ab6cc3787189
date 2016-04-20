@@ -1,0 +1,44 @@
+
+public class TileCostCalculator {
+	/**
+	 * Calculates the cost of tiling an area of floor, given a shape S,
+	 * dimensions L, W, r (when applicable)
+	 */
+	
+	//Project desc. only calls for a square to be calculated - that's boring
+	//Here's some fun shapes
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	//All area calculations below for their shape
+	
+	public static double square(double l, double w) {
+		return l * w;
+	}
+	
+	public static double triangle(double l, double w) {
+		return (l * w) / 2;
+	}
+	
+	public static double circle(double r) {
+		return 2 * Math.PI * r;
+	}
+	
+	public static double oval(double semimajor, double semiminor) {
+		return Math.PI * semimajor * semiminor;
+	}
+	
+	public static double parallelogram(double h, double b) {
+		return h * b;
+	}
+	
+	public static double trapezoid(double upper_w, double lower_w, double h) {
+		return (0.5 * (upper_w + lower_w) * h);
+	}
+	
+	public static double sector(double r, double angle) {
+		return (0.5 * Math.pow(r, 2) * angle);
+	}
+}
