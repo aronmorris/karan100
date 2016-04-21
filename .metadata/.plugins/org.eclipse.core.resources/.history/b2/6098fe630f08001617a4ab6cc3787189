@@ -12,16 +12,12 @@ public class Mortgage {
 	public Mortgage(){}
 	
 	public double calculateMonthlyPayment() {
-		//From https://en.wikipedia.org/wiki/Mortgage_calculator#Monthly_payment_formula
-		
 		double monthlyPayment;
-		//Monthly interest as decimal
-		double decInt = (this.interestRate / 12) / 100;
-		int durationInMonths = this.durationInYears * 12;
+		double decInt = this.interestRate / 100;
 		
 		monthlyPayment = 
-				(decInt * mortgageValue * Math.pow((1 + decInt), durationInMonths))
-				/ (Math.pow((1 + decInt), durationInMonths) - 1);
+				(decInt * mortgageValue * Math.pow((1 + decInt), this.durationInYears * 12))
+				/ (Math.pow((1 + decInt), this.durationInYears * 12) - 1);
 		
 		return monthlyPayment;
 		

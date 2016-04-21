@@ -15,8 +15,7 @@ public class Mortgage {
 		//From https://en.wikipedia.org/wiki/Mortgage_calculator#Monthly_payment_formula
 		
 		double monthlyPayment;
-		//Monthly interest as decimal
-		double decInt = (this.interestRate / 12) / 100;
+		double decInt = this.interestRate / 100;
 		int durationInMonths = this.durationInYears * 12;
 		
 		monthlyPayment = 
