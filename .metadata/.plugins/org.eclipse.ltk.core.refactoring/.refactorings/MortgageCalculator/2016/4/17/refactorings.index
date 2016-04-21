@@ -1,0 +1,9 @@
+1461200270727	Encapsulate field 'interestPaid'
+1461200276589	Encapsulate field 'interest'
+1461200281860	Encapsulate field 'monthlyPayment'
+1461200286730	Encapsulate field 'mortgageValue'
+1461200290010	Encapsulate field 'downPayment'
+1461201132933	Encapsulate field 'durationInYears'
+1461202394755	Encapsulate field 'interestRate'
+1461202802790	Encapsulate field 'type'
+1461203042040	Delete element

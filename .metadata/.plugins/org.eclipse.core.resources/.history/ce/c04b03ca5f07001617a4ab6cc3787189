@@ -1,0 +1,62 @@
+
+public class Mortgage {
+
+	private double downPayment;
+	private double mortgageValue;
+	private double monthlyPayment;
+	private double interestDue;
+	private double interestPaid;
+	private int durationInYears;
+	
+	public Mortgage(double mortgageVal, double down, double monthlyPay, double intDue, double intPaid, int duration) {
+		this.mortgageValue = mortgageVal;
+		this.downPayment = down;
+		this.monthlyPayment = monthlyPay;
+		this.interestDue = intDue;
+		this.interestPaid = intPaid;
+		this.setDurationInYears(duration);
+	}
+	
+	public double setDownPayment(double price, double percentDown) {
+		return price * (percentDown / 100);
+	}
+	
+	//Getters & Setters, nothing interesting
+	public double getinterestPaid() {
+		return interestPaid;
+	}
+	public void setinterestPaid(double interestPaid) {
+		this.interestPaid = interestPaid;
+	}
+	public double getinterestDue() {
+		return interestDue;
+	}
+	public void setinterestDue(double interest) {
+		this.interestDue = interest;
+	}
+	public double getMonthlyPayment() {
+		return monthlyPayment;
+	}
+	public void setMonthlyPayment(double monthlyPayment) {
+		this.monthlyPayment = monthlyPayment;
+	}
+	public double getMortgageValue() {
+		return mortgageValue;
+	}
+	public void setMortgageValue(double mortgageValue) {
+		this.mortgageValue = mortgageValue;
+	}
+	public double getDownPayment() {
+		return downPayment;
+	}
+	public void setDownPayment(double downPayment) {
+		this.downPayment = downPayment;
+	}
+	public int getDurationInYears() {
+		return durationInYears;
+	}
+	public void setDurationInYears(int durationInYears) {
+		this.durationInYears = durationInYears;
+	}
+	
+}
