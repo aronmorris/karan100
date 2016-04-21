@@ -45,7 +45,7 @@ public class NextPrime {
 			**/
 		}
 		
-		sc.close();
+		//sc.close();
 		
 	}
 	

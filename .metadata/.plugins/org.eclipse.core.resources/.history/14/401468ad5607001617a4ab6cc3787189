@@ -22,7 +22,7 @@ public class TileCostCalculator {
 			descOptions();
 			int n = sc.nextInt();
 			
-			System.out.println("Enter cost of your tile as a number, please.");
+			System.out.println("Enter cost of your tile, please.");
 			double price = sc.nextDouble();
 			
 			//Init 1 variable instead of multiple for each case
@@ -112,7 +112,7 @@ public class TileCostCalculator {
 	}
 	
 	public static double circle(double r) {
-		return Math.PI * r * r;
+		return 2 * Math.PI * r;
 	}
 	
 	public static double oval(double semimajor, double semiminor) {

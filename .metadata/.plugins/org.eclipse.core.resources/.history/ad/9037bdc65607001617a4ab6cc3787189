@@ -112,7 +112,7 @@ public class TileCostCalculator {
 	}
 	
 	public static double circle(double r) {
-		return Math.PI * r * r;
+		return 2 * Math.PI * r * r;
 	}
 	
 	public static double oval(double semimajor, double semiminor) {

@@ -22,53 +22,24 @@ public class TileCostCalculator {
 			descOptions();
 			int n = sc.nextInt();
 			
-			System.out.println("Enter cost of your tile as a number, please.");
+			System.out.println("Enter cost of your tile, please.");
 			double price = sc.nextDouble();
 			
-			//Init 1 variable instead of multiple for each case
 			double[] params = new double[3];
 			switch(n) {
-			case 1: System.out.printf("Enter %s separated by enter.%n", "width and height");
+			case 1: System.out.printf("Enter %s separated by enter.%n", "length and height");
 					params[0] = sc.nextDouble(); params[1] = sc.nextDouble();
 					output(square(params[0], params[1]) * price);
 					break;
-					
-			case 2: System.out.printf("Enter %s separated by enter.%n", "width and height");
+			case 2: System.out.printf("Enter %s separated by enter.%n", "height and width");
 					params[0] = sc.nextDouble(); params[1] = sc.nextDouble();
-					output(triangle(params[0], params[1]) * price);
-					break;
-					
-			case 3: System.out.printf("Enter %s separated by enter.%n", "radius");
-					params[0] = sc.nextDouble();
-					output(circle(params[0]) * price);
-					break;
-					
-			case 4: System.out.printf("Enter %s separated by enter.%n", 
-					"semimajor axis and semiminor axis");
-					params[0] = sc.nextDouble(); params[1] = sc.nextDouble();
-					output(oval(params[0], params[1]) * price);
-					break;
-					
-			case 5: System.out.printf("Enter %s separated by enter.%n", "width and height");
-					params[0] = sc.nextDouble(); params[1] = sc.nextDouble();
-					output(parallelogram(params[0], params[1]) * price);
-					break;
-					
-			case 6: System.out.printf("Enter %s separated by enter.%n", 
-					"upper width, lower width, and height");
-					params[0] = sc.nextDouble(); params[1] = sc.nextDouble(); params[2] = sc.nextDouble();
-					output(trapezoid(params[0], params[1], params[2]) * price);
-					break;
-					
-			case 7: System.out.printf("Enter %s separated by enter.%n", "radius and angle in degrees");
-					params[0] = sc.nextDouble(); params[1] = sc.nextDouble();
-					output(sector(params[0], params[1]) * price);
+					output(square(params[0], params[1]) * price);
 					break;
 			default: cont = false;
 					break;
 			}
 			
-			System.out.printf("Calculate another shape? Y/N%n");
+			System.out.printf("Calculate another shape? Y/N");
 			String next = sc.next();
 			
 			if (next.toLowerCase().equals("y") || next.toLowerCase().equals("yes")) {
@@ -84,19 +55,16 @@ public class TileCostCalculator {
 	}
 	
 	public static void descOptions() {
-		System.out.printf("Your options:%n"
-						+ "1: Square%n"
+		System.out.printf("1: Square%n"
 						+ "2: Triangle%n"
 						+ "3: Circle%n"
 						+ "4: Oval%n"
 						+ "5: Parallelogram%n"
 						+ "6: Trapezoid%n"
 						+ "7: Arc sector%n"
-						+ "Any other value to exit this menu.%n");
+						+ "Any other value to exit.%n");
 	}
 	
-	//Consumes a double in the form of the output of a returned area
-	//Prints the cost
 	public static void output(double func) {
 		System.out.printf("Your cost: $%.2f%n%n", func);
 	}
@@ -112,7 +80,7 @@ public class TileCostCalculator {
 	}
 	
 	public static double circle(double r) {
-		return Math.PI * r * r;
+		return 2 * Math.PI * r;
 	}
 	
 	public static double oval(double semimajor, double semiminor) {
@@ -128,6 +96,6 @@ public class TileCostCalculator {
 	}
 	
 	public static double sector(double r, double angle) {
-		return ((angle / 360) * Math.PI * (r * r));
+		return (0.5 * Math.pow(r, 2) * angle);
 	}
 }

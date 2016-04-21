@@ -22,7 +22,7 @@ public class TileCostCalculator {
 			descOptions();
 			int n = sc.nextInt();
 			
-			System.out.println("Enter cost of your tile as a number, please.");
+			System.out.println("Enter cost of your tile, please.");
 			double price = sc.nextDouble();
 			
 			//Init 1 variable instead of multiple for each case
@@ -92,7 +92,7 @@ public class TileCostCalculator {
 						+ "5: Parallelogram%n"
 						+ "6: Trapezoid%n"
 						+ "7: Arc sector%n"
-						+ "Any other value to exit this menu.%n");
+						+ "Any other value to exit.%n");
 	}
 	
 	//Consumes a double in the form of the output of a returned area
@@ -112,7 +112,7 @@ public class TileCostCalculator {
 	}
 	
 	public static double circle(double r) {
-		return Math.PI * r * r;
+		return 2 * Math.PI * r;
 	}
 	
 	public static double oval(double semimajor, double semiminor) {
