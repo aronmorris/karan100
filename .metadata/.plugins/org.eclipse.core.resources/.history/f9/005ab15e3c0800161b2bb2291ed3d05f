@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+/**
+ * Returns the change for a transaction in quarters, dimes, nickels, and pennies,
+ * given a cost and amount paid.
+ * @author Aron
+ *
+ */
+public class ChangeReturn {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.printf("What is the price of the item?%n");
+		
+		double price = -1;
+		
+		try {
+			price = sc.nextDouble();
+		}
+		
+	}
+	
+}
