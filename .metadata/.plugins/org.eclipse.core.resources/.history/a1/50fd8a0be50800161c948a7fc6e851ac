@@ -1,0 +1,38 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+/**
+ * Returns the change for a transaction in quarters, dimes, nickels, and pennies,
+ * given a cost and amount paid.
+ * @author Aron
+ *
+ */
+public class ChangeReturn {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.printf("What is the price of the item?%n");
+		
+		double price = doubleInputValidator(sc);
+		
+	}
+	
+	//Ensures only valid input is accepted
+	public static double doubleInputValidator(Scanner sc) {
+		double output = -1;
+		boolean valid = false;
+		while(!valid) {
+			try {
+				output = sc.nextDouble();
+				valid = true;
+			} catch (InputMismatchException e) {
+				System.out.printf("Invalid input! Must be a price.%n");
+				sc.next(); //consume invalid input
+			}
+		}
+		return output;
+	}
+	
+}
