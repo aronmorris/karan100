@@ -1,0 +1,14 @@
+
+public class DecimalConverter {
+
+	public static void main(String[] args) {
+		
+		
+		
+	}
+	
+	public static String toBinary(int i) {
+		return Integer.toBinaryString(i);
+	}
+	
+}
