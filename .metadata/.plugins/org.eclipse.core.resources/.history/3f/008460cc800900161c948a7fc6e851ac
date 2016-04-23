@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+
+
+/**
+ *  Calculator class, solves equations entered into it
+ *  TODO: UI?
+ * @author Aron
+ *
+ */
+public class Calculator {
+
+	public static void main(String[] args) {
+		
+		try(Scanner sc = new Scanner(System.in)) {
+		
+			int firstVal, secondVal;
+			
+			System.out.printf("Enter the first number.%n");
+			firstVal =  validateInput(sc);
+			System.out.printf("Now enter the second one.%n");
+			secondVal = validateInput(sc);
+			
+		}
+		
+	}
+	
+	public static int validateInput(Scanner sc) {
+		int returnVal;
+		
+		do {
+			try {
+				returnVal = Integer.parseInt(sc.next());
+				break;
+			} catch(Exception e) {
+				System.out.printf("Invalid input.%n");
+			}
+		} while(true);
+		
+		return returnVal;
+		
+	}
+	
+}
