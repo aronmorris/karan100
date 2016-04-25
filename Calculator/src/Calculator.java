@@ -14,7 +14,7 @@ public class Calculator {
 		
 		try(Scanner sc = new Scanner(System.in)) {
 		
-			int firstVal, secondVal;
+			double firstVal, secondVal;
 			String operator;
 			
 			System.out.printf("Enter the first number.%n");
@@ -28,25 +28,40 @@ public class Calculator {
 					System.out.printf("Not a valid operator. Valid operators are *, /, -, +%n");
 				}
 				else {
+					switch(operator) {
+					case "+": easyPrint(firstVal + secondVal);
+						break;
+					case "-": easyPrint(firstVal - secondVal);
+						break;
+					case "*": easyPrint(firstVal * secondVal);
+						break;
+					case "/": if (secondVal == 0) { 
+							System.out.println("Illegal!");
+							break; }
+							easyPrint(firstVal / secondVal);
+						break;
+					}
 					break;
 				}
 			} while (true);
 			
-			//TODO implement shunting yard algorithm so any equation can be solved
-			
-			
+			//TODO implement shunting yard algorithm?
 			
 		}
 		
 	}
 	
+	public static void easyPrint(double expression) {
+		System.out.printf("%.3f%n",expression);
+	}
+	
 	//Returns only valid integers from user input
-	public static int validateInput(Scanner sc) {
-		int returnVal;
+	public static double validateInput(Scanner sc) {
+		double returnVal;
 		
 		do {
 			try {
-				returnVal = Integer.parseInt(sc.next());
+				returnVal = Double.parseDouble(sc.next());
 				break;
 			} catch(Exception e) {
 				System.out.printf("Invalid input.%n");
