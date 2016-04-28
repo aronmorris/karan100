@@ -5,12 +5,10 @@ public class ConverterFactory {
 		if (converterType == null) {
 			return null;
 		}
-		switch(converterType) {
+		switch(converterType.toLowerCase()) {
 		case "currency": return new CurrencyConverter();
 			
 		case "temperature": return new TemperatureConverter();
-			
-		case "volume": return new VolumeConverter();
 		
 		case "mass": return new MassConverter();
 			

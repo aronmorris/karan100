@@ -1,5 +1,6 @@
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.ArrayList;
 
 public class CurrencyConverter implements Converter {
 	
@@ -39,7 +40,8 @@ public class CurrencyConverter implements Converter {
 	 * @param fStr first currency name
 	 * @param sStr second currency name
 	 */
-	public void assignValues(Currencies fCurr, Currencies sCurr, double amt, String fStr, String sStr) {
+
+	public void setVariables(Currencies fCurr, Currencies sCurr, double amt, String fStr, String sStr) {
 		this.converterOutput = convert(fCurr, sCurr, amt);
 		this.firstCurrency = fStr;
 		this.secondCurrency = sStr;
@@ -55,7 +57,7 @@ public class CurrencyConverter implements Converter {
 	}
 	
 	public static BigDecimal convert(Currencies first, Currencies second, double amount) {
-		return second.getValue().divide(first.getValue(), 4, RoundingMode.CEILING);
+		return second.getValue().divide(first.getValue(), 4, RoundingMode.CEILING).multiply(new BigDecimal(amount));
 	}
 	
 	@Override
@@ -63,6 +65,14 @@ public class CurrencyConverter implements Converter {
 		System.out.printf("Converting %s to %s:%n" +
 						"Result: %s %s%n", this.firstCurrency, this.secondCurrency,
 						this.converterOutput.toString(), this.secondCurrency);
+	}
+
+	@Override
+	public void listUnits() {
+		for (Currencies c : Currencies.values()) {
+			System.out.printf("%s%n", c.name());
+		}
+		
 	}
 	
 }
