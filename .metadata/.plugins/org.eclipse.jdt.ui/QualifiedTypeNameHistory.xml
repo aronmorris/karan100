@@ -3,4 +3,15 @@
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="org.bukkit.plugin.java.JavaPlugin"/>
 <fullyQualifiedTypeName name="org.bukkit.entity.Player"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="javax.sound.sampled.AudioInputStream"/>
+<fullyQualifiedTypeName name="javax.sound.sampled.AudioSystem"/>
+<fullyQualifiedTypeName name="javax.sound.sampled.AudioFormat"/>
+<fullyQualifiedTypeName name="javax.sound.sampled.DataLine.Info"/>
+<fullyQualifiedTypeName name="javax.sound.sampled.DataLine"/>
+<fullyQualifiedTypeName name="javax.sound.sampled.Clip"/>
+<fullyQualifiedTypeName name="javax.sound.sampled.LineListener"/>
+<fullyQualifiedTypeName name="javax.sound.sampled.UnsupportedAudioFileException"/>
+<fullyQualifiedTypeName name="javax.sound.sampled.LineUnavailableException"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
 </qualifiedTypeNameHistroy>

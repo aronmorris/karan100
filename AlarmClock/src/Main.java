@@ -8,7 +8,9 @@ public class Main {
 		//set time in millis for ringing
 		//subj1.setTime(10000, "Hello");
 		
-		subj1.setTime(3000, 
+		
+		
+		subj1.setTime("Saturday", "4:14 PM", true,
 				"/Users/Aron/comp345project/COMP345Project/COMP345Project/SFML-2.1/examples/sound/resources/canary.wav");
 	
 	}
