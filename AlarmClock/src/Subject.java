@@ -3,24 +3,24 @@ import java.util.List;
 
 public class Subject {
 	private List<Observer> observers = new ArrayList<Observer>();
-	private int time;
+	private int state;
 	
-	public int getTime() {
-		return time;
+	public int getState() {
+		return state;
 	}
 	
-	public void setTime(int Time, String msg) {
-		this.time = Time;
-		notifyAllObservers(this.time, msg);
+	public void setState(int state) {
+		this.state = state;
+		notifyAllObservers();
 	}
 	
 	public void attach(Observer observer) {
 		observers.add(observer);
 	}
 	
-	public void notifyAllObservers(int time, String msg) {
+	public void notifyAllObservers() {
 		for (Observer obs : observers) {
-			obs.update(time, msg);
+			obs.update();
 		}
 	}
 }
