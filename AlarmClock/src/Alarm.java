@@ -21,13 +21,16 @@ public class Alarm extends Observer{
 		
 		Date cDate = new Date();
 		
-		SimpleDateFormat sdf = new SimpleDateFormat("k");
+		SimpleDateFormat sdf = new SimpleDateFormat("EEE k:mm");
 		
 		try {
-			cDate = sdf.parse(hour);
+			cDate = sdf.parse(day + " " + hour);
 			
 			cal.setTime(cDate);
-			System.out.println(cal.HOUR_OF_DAY);
+			System.out.println(sdf.format(cal.getTime()));
+			System.out.println(cal.get(cal.HOUR_OF_DAY));
+			System.out.println(cal.get(cal.MINUTE));
+			System.out.println(cal.get(cal.DAY_OF_WEEK));
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -35,13 +38,18 @@ public class Alarm extends Observer{
 		}
 		
 		if (repeats) {
-			timer.scheduleAtFixedRate(new AlarmTask(msg), cDate, TimeUnit.MILLISECONDS.convert(1, TimeUnit.DAYS));
+			
+			long interval = 
+				Math.abs(cal.DAY_OF_WEEK * (1000 * 60 * 60 * 24 * 7) + cal.HOUR_OF_DAY * (1000 * 60 * 60) + cal.MINUTE * (1000 * 60));
+			
+			timer.scheduleAtFixedRate(new AlarmTask(msg), cDate, interval);
 		}
 		else {
-			
+			timer.schedule(new AlarmTask(msg), cDate);
 		}
 		
-		timer.schedule(new AlarmTask(msg), cal.getTime(), TimeUnit.MILLISECONDS.convert(1, TimeUnit.DAYS));
+		return;
+		
 	}
 
 

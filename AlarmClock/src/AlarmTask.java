@@ -16,7 +16,7 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 public class AlarmTask extends TimerTask implements LineListener {
 
 	private String msg;
-	boolean completed;
+	static boolean completed = false;
 		
 	public AlarmTask(String msg) {
 		this.msg = msg;
@@ -50,12 +50,15 @@ public class AlarmTask extends TimerTask implements LineListener {
 			while (!completed){
 				try {
 					Thread.sleep(500);
+					System.out.println("Another go!");
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
 			}
 			
 			audioClip.close();
+			
+			audioStream.close();
 			
 		} catch(UnsupportedAudioFileException e) {
 			System.out.println("File not supported.");

@@ -10,7 +10,7 @@ public class Main {
 		
 		
 		
-		subj1.setTime("Saturday", "4:14 PM", true,
+		subj1.setTime("Saturday", "5:14 PM", true,
 				"/Users/Aron/comp345project/COMP345Project/COMP345Project/SFML-2.1/examples/sound/resources/canary.wav");
 	
 	}
