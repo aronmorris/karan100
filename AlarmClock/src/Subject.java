@@ -22,6 +22,7 @@ public class Subject {
 	public void notifyAllObservers(String day, String hour, boolean repeats, String msg) {
 		for (Observer obs : observers) {
 			obs.update(day, hour, repeats, msg);
+			//System.out.println("notifyAllObservers");
 		}
 	}
 }

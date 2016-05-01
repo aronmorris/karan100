@@ -22,7 +22,9 @@ public class AlarmTask extends TimerTask implements LineListener {
 		this.msg = msg;
 	}
 	public void run() {
-		System.out.println(msg);
+		
+		//System.out.println("run() method in AlarmTask called.");
+		//System.out.println(msg);
 		playAlarm(msg);
 	}
 	
@@ -32,7 +34,10 @@ public class AlarmTask extends TimerTask implements LineListener {
 	
 		File audioFile = new File(alarmPath);
 		
+		//System.out.println("playAlarm in AlarmTask");
+		
 		try {
+			//System.out.println("Entered Try for playAlarm.");
 			AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
 			
 			AudioFormat format = audioStream.getFormat();
@@ -50,15 +55,13 @@ public class AlarmTask extends TimerTask implements LineListener {
 			while (!completed){
 				try {
 					Thread.sleep(500);
-					System.out.println("Another go!");
+					//System.out.println("Another go!");
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
 			}
 			
 			audioClip.close();
-			
-			audioStream.close();
 			
 		} catch(UnsupportedAudioFileException e) {
 			System.out.println("File not supported.");
