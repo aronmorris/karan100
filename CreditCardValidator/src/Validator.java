@@ -30,6 +30,8 @@ public class Validator {
 		
 		System.out.println(luhnChecksum(luhnChecksumArr(digitsToArray(input))));
 		
+		sc.close();
+		
 	}
 	
 	public static int[] digitsToArray(String number) {
