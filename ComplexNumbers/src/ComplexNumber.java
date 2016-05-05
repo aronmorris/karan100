@@ -1,6 +1,6 @@
 
 public class ComplexNumber {
-	private int a, b;
+	private double a, b;
 	
 	private final String i = "i";
 	
@@ -9,35 +9,59 @@ public class ComplexNumber {
 		this.b = 0;
 	}
 	
-	public ComplexNumber(int a, int b) {
+	public ComplexNumber(double a, double b) {
 		this.a = a;
 		this.b = b;
 	}
 	
+	//adds two complexes
 	public ComplexNumber add(ComplexNumber c) {
 		return new ComplexNumber(this.a + c.a, this.b + c.b);
 	}
-	
-	public ComplexNumber multiply(ComplexNumber c) {
-		int outA = this.a * c.a + this.a * c.b;
-		int outB = this.b * c.a + this.b * c.b;
-		return new ComplexNumber(outA, outB);
+	//distributes negative and adds as normal
+	public ComplexNumber subtract(ComplexNumber c) {
+		double nCA = -c.a;
+		double nCB = -c.b;
+		return this.add(new ComplexNumber(nCA, nCB));
 	}
-
+	
+	//multiplies through FOIL
+	public ComplexNumber multiply(ComplexNumber c) {
+		return new ComplexNumber(this.a * c.a - this.b * c.b,
+								 this.a * c.b + this.b * c.a);
+	}
+	
+	//Performs division
+	public ComplexNumber divide(ComplexNumber c) {
+		double den = Math.pow(c.mod(), 2);
+        return new ComplexNumber((this.a * c.a + this.b * c.b) / den,
+        						 (this.b * c.a - this.a * c.b) / den);
+		
+	}
+	
+	private double mod() {
+        if (this.a != 0 || this.b != 0) {
+            return Math.sqrt(this.a * this.a + this.b *this.b);
+        } else {
+            return 0;
+        }
+	}
+	
 	@Override
 	public String toString() {
 		String operator = "";
 		
-		if (b > 0) {
+		if (this.b > 0) {
 			operator = "+";
 		}
 		
-		else if (b == 0) {
-			return Integer.toString(this.a);
+		else if ((this.b) < 0.01 && (this.b) >-0.01) { //thresholding
+			return Double.toString((this.a));
 		}
 		
-		return this.a + operator + this.b + i;
+		return (this.a) + operator + (this.b) + i;
 		
 	}
+	
 	
 }
