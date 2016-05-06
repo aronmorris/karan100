@@ -2,13 +2,21 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
+<<<<<<< Updated upstream
 		<item value="Time" key="selection"/>
+=======
+		<item value="update" key="selection"/>
+>>>>>>> Stashed changes
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+<<<<<<< Updated upstream
 			<item value="state"/>
+=======
+			<item value="update"/>
+>>>>>>> Stashed changes
 			<item value="doubleerest"/>
 			<item value="int"/>
 			<item value="interest"/>
@@ -23,10 +31,10 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="257" key="DIALOG_WIDTH"/>
-		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
-		<item value="381" key="DIALOG_HEIGHT"/>
+		<item value="263" key="DIALOG_WIDTH"/>
+		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
+		<item value="399" key="DIALOG_HEIGHT"/>
 		<item value="48" key="DIALOG_X_ORIGIN"/>
-		<item value="492" key="DIALOG_Y_ORIGIN"/>
+		<item value="422" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
