@@ -1,55 +1,62 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
-
+import java.util.HashSet;
 
 public class HappyNumbers {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) {
 	
-		ArrayList<Integer> a = makeDigits(13);
+		int happyNums = 0, it = 1;
 		
-		final List<Integer> eLoop = 
-				new ArrayList<>(Arrays.asList(4, 16, 37, 58, 89, 145, 42, 20));
-	
-		System.out.println(a);
+		while (happyNums < 8) {
+			
+			if (isHappy(it)) {
+				happyNums++;
+				System.out.println(it);
+			}
+			
+			it++;
+			
+		}
 		
-		int i = 0;
-		
-		do {
-			i = happify(a);
-			a = makeDigits(i);
-			//if (a.toString().equals("[1, 4, 5]")) break;
-			System.out.println(a.toString());
-			Thread.sleep(1);
-		} while (i != 1);
-		System.out.println("Unending!");
 	}
 	
-	public static ArrayList<Integer> makeDigits(int i) {
-		ArrayList<Integer> arr = new ArrayList<Integer>();
-		int temp = i;
-		do {
-			arr.add(temp % 10);
-			temp /= 10;
-		} while(temp > 0);
-		Collections.reverse(arr); //arraylist is filled in backwards order
-		return arr;
+	public static int[] makeDigits(int i) {
+		String temp = String.valueOf(i);
+		int[] res = new int[temp.length()];
+		int j = 0;
+		
+		while(i > 0) {
+			int k = i % 10;
+			res[j++] = k;
+			i /= 10;
+		}
+		
+		return res;
 	}
 	
-	public static int happify(ArrayList<Integer> a) {
+	public static int happify(int[] arr) {
 		int ret = 0;
-		for (int i = 0; i < a.size(); i++) {
-			ret += Math.pow(a.get(i), 2);
+		
+		for (int i : arr) {
+			ret +=  i * i;
 		}
 		
 		return ret;
 	}
 	
-	public static void catchLoop(String s) {
+	public static boolean isHappy(int n) {
+		HashSet<Integer> s = new HashSet<Integer>();
 		
+		while (!s.contains(n)) {
+			s.add(n);
+			n = happify(makeDigits(n));
+			if (n == 1) {
+				return true;
+			}	
+		}
+		
+		return false;
 	}
 	
-	
-}
+}	
