@@ -7,13 +7,15 @@ import java.util.Map;
 public class ClosestPoints {
 
 	public static void main(String[] args) {
-		Tuple[] listOfPoints = {new Tuple(1,3),new Tuple(3,4),new Tuple(2,2), new Tuple(3, 5),new Tuple(5,3)};
+		Tuple[] listOfPoints = {new Tuple(1,3),new Tuple(31,2), new Tuple(8, 5), new Tuple(8, 7),new Tuple(31,2), new Tuple(100, 2),new Tuple(6,3), new Tuple(2, 2)};
 		HashMap<Double, ArrayList<Tuple>> ans = closestPair(sortX(listOfPoints), sortY(listOfPoints));
 		System.out.printf(ans.toString());
 	}
 	
 	/**
 	 * Identifies closest points in O(nlogn) time, implements https://www.rosettacode.org/wiki/Closest-pair_problem algorithm
+	 * 
+	 * Implementation currently only sorts by Y, to fix in future
 	 * @param xPoints sorted X ascending order
 	 * @param yPoints sorted Y ascending order
 	 * @return
@@ -74,16 +76,16 @@ public class ClosestPoints {
 			
 			ArrayList<Tuple> ySmall = new ArrayList<Tuple>();
 			for (int i = 0; i < yPoints.length; i++) {
-				if (Math.abs(xMid.X() - yPoints[1].X()) < dMin) {
+				if (Math.abs(xMid.X() - yPoints[0].X()) < dMin) {
 					ySmall.add(yPoints[i]);
 				}
 			}
 			
 			HashMap<Double, ArrayList<Tuple>> closest = dpMin;
 			//actual comparison sorting of the smallest elements
-			for (int i = 1; i <= ySmall.size() - 1; i++) {
+			for (int i = 1; i < ySmall.size() - 1; i++) {
 				int k = i + 1;
-				while (k <= ySmall.size() && (ySmall.get(k).Y() - ySmall.get(i).Y()) < dMin) {
+				while (k < ySmall.size() && (ySmall.get(k).Y() - ySmall.get(i).Y()) < dMin) {
 					if (Math.abs(ySmall.get(k).Y() - ySmall.get(i).Y()) < (double) dpMin.keySet().toArray()[0]) {
 						ArrayList<Tuple> val = new ArrayList<Tuple>();
 						val.add(ySmall.get(k));
