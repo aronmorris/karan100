@@ -1,6 +1,8 @@
 package com.aronmorris.graph;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
+import java.util.LinkedList;
 import java.util.Set;
 
 
@@ -16,24 +18,28 @@ public class Graph {
 	{
 		this.nodes.addAll(nodes);
 		
+		LinkedList<Link> existsInSet = new LinkedList<Link>();
+		HashSet<Link> matches = new HashSet<Link>();
+
 		for (Node n : nodes) {
 			for (Node m : nodes) {
 				//add new link to the list if the nodes aren't the same node and share X or Y, and if the graph doesn't contain the node's reverse already
 				//(1, 2):(2, 1) and (2, 1):(1, 2) doesn't mean anything in an undirected graph like this
-				if (!(n.equals(m)) && ((n.X() == m.X() || n.Y() == m.Y()))) {
-					boolean doesContain = false;
-					for (Link l : this.links) {
-						if (l.equals(new Link(m, n))) {
-							doesContain = true;
-						}
-					}
-					if (!doesContain) {
-						links.add(new Link(n, m));
+				if (!(n.equals(m)) && (!(existsInSet.contains(new Link(n, m))) && !(existsInSet.contains(new Link(m, n))))) {
+					if (n.X() == m.X() || n.Y() == m.Y()) {
+						this.links.add(new Link(n, m));
+						existsInSet.add(new Link(n, m));	
 					}
 				}
-			}
+				else if (n.equals(m) && (!(existsInSet.contains(new Link(n, m))) && !(existsInSet.contains(new Link(m, n))))) {
+					if (n.X() == m.Y() && n.Y() == m.X()) {
+						System.out.println(new Link(n, m).toString());
+					}
+				}
+			}	
 		}
 	}
+	
 	
 	public int getDegreeOfNode(Node node) {
 		int linksToOtherNodes = 0;
