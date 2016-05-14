@@ -21,7 +21,7 @@ public class GraphFromLinks {
 		nodes.add(new Node(1, 3));
 		nodes.add(new Node(1, 4));
 		nodes.add(new Node(2, 1));
-		//nodes.add(new Node(1, 1));
+		nodes.add(new Node(1, 1));
 		
 		Graph graph = new Graph(nodes);
 		

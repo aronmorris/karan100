@@ -1,4 +1,5 @@
 package com.aronmorris.graph;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -38,11 +39,19 @@ public class Graph {
 		int linksToOtherNodes = 0;
 	
 		LinkedHashSet<Link> temp = this.links;
-			
+		boolean matchedNodeCounted = false;	
+		
+		
+		/*The problem to be addressed here isn't that the node ever loops back on itself (since those are removed
+		 * by the constructor (should be reviewed), it's that self-directs are prevented from occurring in there.
+		 * This should not happen and I'll have to make it so that self-loops happen once, but aren't counted as
+		 * links with every other node twice
+		 */
 		for (Link l : temp) {
 			if (l.A.equals(node) && l.B.equals(node)) {
 				linksToOtherNodes += 2; //+2 if the node has a link to itself regardless of how often
-				removeAllLinksWithNode(node, temp);
+				matchedNodeCounted = true;
+				System.out.println("Match!");
 			}
 			else if (l.A.equals(node) || l.B.equals(node)) {
 				linksToOtherNodes += 1;
@@ -59,16 +68,6 @@ public class Graph {
 	
 	public Set<Link> getLinks() {
 		return this.links;
-	}
-	
-	private void removeAllLinksWithNode(Node node, Set<Link> links) {
-		
-		for (Link l : links) {
-			if (l.A.equals(node) && l.B.equals(node)) {
-				links.remove(l);
-			}
-		}
-		
 	}
 	
 	@Override
