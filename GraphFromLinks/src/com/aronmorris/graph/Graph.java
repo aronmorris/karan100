@@ -19,7 +19,7 @@ public class Graph {
 		this.nodes.addAll(nodes);
 		
 		LinkedList<Link> existsInSet = new LinkedList<Link>();
-		HashSet<Link> matches = new HashSet<Link>();
+		LinkedList<Link> matches = new LinkedList<Link>();
 
 		for (Node n : nodes) {
 			for (Node m : nodes) {
@@ -31,9 +31,12 @@ public class Graph {
 						existsInSet.add(new Link(n, m));	
 					}
 				}
+				//reflective case
 				else if (n.equals(m) && (!(existsInSet.contains(new Link(n, m))) && !(existsInSet.contains(new Link(m, n))))) {
-					if (n.X() == m.Y() && n.Y() == m.X()) {
+					if (n.X() == m.Y() && n.Y() == m.X() && !(matches.contains(new Link(n, m)))) {
 						System.out.println(new Link(n, m).toString());
+						matches.add(new Link(n, m));
+						this.links.add(new Link(n, m));
 					}
 				}
 			}	
@@ -45,18 +48,10 @@ public class Graph {
 		int linksToOtherNodes = 0;
 	
 		LinkedHashSet<Link> temp = this.links;
-		boolean matchedNodeCounted = false;	
 		
-		
-		/*The problem to be addressed here isn't that the node ever loops back on itself (since those are removed
-		 * by the constructor (should be reviewed), it's that self-directs are prevented from occurring in there.
-		 * This should not happen and I'll have to make it so that self-loops happen once, but aren't counted as
-		 * links with every other node twice
-		 */
 		for (Link l : temp) {
 			if (l.A.equals(node) && l.B.equals(node)) {
-				linksToOtherNodes += 2; //+2 if the node has a link to itself regardless of how often
-				matchedNodeCounted = true;
+				linksToOtherNodes += 2; //+2 if the node is reflective
 				System.out.println("Match!");
 			}
 			else if (l.A.equals(node) || l.B.equals(node)) {

@@ -27,7 +27,7 @@ public class GraphFromLinks {
 		
 		System.out.println(graph.toString());
 		Node[] arr = new Node[nodes.size()];
-		System.out.println(graph.getDegreeOfNode(nodes.toArray(arr)[arr.length - 2]));
+		System.out.println(graph.getDegreeOfNode(nodes.toArray(arr)[0]));
 	
 	}
 	
