@@ -9,6 +9,8 @@ public final class Node {
 
 	private int X, Y;
 	
+	private int id; //optional field to keep track of which node is which
+	
 	public Node() {
 		this.X = 0;
 		this.Y = 0;
@@ -27,12 +29,23 @@ public final class Node {
 		return this.Y;
 	}
 	
+	public void setID(int i) {
+		this.id = i;
+	}
+	
+	public int getID() {
+		return this.id;
+	}
+	
 	@Override
 	public String toString() {
 		return "(" + this.X + ", " + this.Y + ")";
 	}
 	
 	@Override
+	/* Node ID isn't factored in here because IDs are unique per node
+	 * This method only compares the node values as set by the user
+	 */
 	public boolean equals(Object o) {
 		if (o == null) {
 			return false;

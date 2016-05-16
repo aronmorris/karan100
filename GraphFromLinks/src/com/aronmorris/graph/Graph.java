@@ -16,13 +16,20 @@ public class Graph {
 	
 	public Graph(Set<Node> nodes) 
 	{
-		this.nodes.addAll(nodes);
+		int id = 0;
+		for (Node n : nodes) {
+			n.setID(id);
+			id += 1;
+		}
+		
+		this.nodes = (LinkedHashSet<Node>) nodes;
 		
 		LinkedList<Link> existsInSet = new LinkedList<Link>();
 		LinkedList<Link> matches = new LinkedList<Link>();
-
-		for (Node n : nodes) {
-			for (Node m : nodes) {
+		
+		for (Node n : this.nodes) {
+			
+			for (Node m : this.nodes) {
 				//add new link to the list if the nodes aren't the same node and share X or Y, and if the graph doesn't contain the node's reverse already
 				//(1, 2):(2, 1) and (2, 1):(1, 2) doesn't mean anything in an undirected graph like this
 				if (!(n.equals(m)) && (!(existsInSet.contains(new Link(n, m))) && !(existsInSet.contains(new Link(m, n))))) {
@@ -33,14 +40,33 @@ public class Graph {
 				}
 				//reflective case - add the reflective link only once
 				else if (n.equals(m) && (!(existsInSet.contains(new Link(n, m))) && !(existsInSet.contains(new Link(m, n))))) {
-					if (n.X() == m.Y() && n.Y() == m.X() && !(matches.contains(new Link(n, m)))) {
+					if (n.X() == m.Y() && n.Y() == m.X() && !(matches.contains(new Link(n, m))) && n.getID() != m.getID()) {
 						//System.out.println(new Link(n, m).toString()); //debugging
 						matches.add(new Link(n, m));
 						this.links.add(new Link(n, m));
+						//this.nodes.remove(m);
 					}
 				}
 			}	
 		}
+	}
+	
+	public boolean hasLinks() {
+		if (this.links.size() == 0) {
+			return false;
+		}
+		else  {
+			return true;
+		}
+	}
+	
+	public Node getNodeByID(int id) {
+		for (Node n : this.nodes) {
+			if (n.getID() == id) {
+				return n;
+			}
+		}
+		return null;
 	}
 	
 	

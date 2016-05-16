@@ -23,6 +23,7 @@ public class GraphFromLinks {
 		nodes.add(new Node(3, 3));
 		nodes.add(new Node(1, 1));
 		nodes.add(new Node(1, 1));
+		nodes.add(new Node(2, 2));
 		
 		Graph graph = new Graph(nodes);
 		
