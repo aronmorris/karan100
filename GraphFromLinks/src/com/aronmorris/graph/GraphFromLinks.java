@@ -22,12 +22,13 @@ public class GraphFromLinks {
 		nodes.add(new Node(1, 4));
 		nodes.add(new Node(3, 3));
 		nodes.add(new Node(1, 1));
+		nodes.add(new Node(1, 1));
 		
 		Graph graph = new Graph(nodes);
 		
 		System.out.println(graph.toString());
 		Node[] arr = new Node[nodes.size()];
-		System.out.println(graph.getDegreeOfNode(nodes.toArray(arr)[0]));
+		System.out.println("Degree of node: " + nodes.toArray(arr)[0].toString() + ": " + graph.getDegreeOfNode(nodes.toArray(arr)[0]));
 	
 	}
 	

@@ -31,10 +31,10 @@ public class Graph {
 						existsInSet.add(new Link(n, m));	
 					}
 				}
-				//reflective case
+				//reflective case - add the reflective link only once
 				else if (n.equals(m) && (!(existsInSet.contains(new Link(n, m))) && !(existsInSet.contains(new Link(m, n))))) {
 					if (n.X() == m.Y() && n.Y() == m.X() && !(matches.contains(new Link(n, m)))) {
-						System.out.println(new Link(n, m).toString());
+						//System.out.println(new Link(n, m).toString()); //debugging
 						matches.add(new Link(n, m));
 						this.links.add(new Link(n, m));
 					}
@@ -52,7 +52,7 @@ public class Graph {
 		for (Link l : temp) {
 			if (l.A.equals(node) && l.B.equals(node)) {
 				linksToOtherNodes += 2; //+2 if the node is reflective
-				System.out.println("Match!");
+				//System.out.println("Match!"); //debugging
 			}
 			else if (l.A.equals(node) || l.B.equals(node)) {
 				linksToOtherNodes += 1;
@@ -63,11 +63,23 @@ public class Graph {
 		return linksToOtherNodes;
 	}
 	
-	public Set<Node> getNodes() {
+	public LinkedHashSet<Link> getLinksOfNode(Node node) {
+		LinkedHashSet<Link> returnSet = new LinkedHashSet<Link>();
+		
+		for (Link l : this.links) {
+			if (l.A.equals(node) || l.B.equals(node)) {
+				returnSet.add(l);
+			}
+		}
+		
+		return returnSet;
+	}
+	
+	public LinkedHashSet<Node> getNodes() {
 		return this.nodes;
 	}
 	
-	public Set<Link> getLinks() {
+	public LinkedHashSet<Link> getLinks() {
 		return this.links;
 	}
 	
@@ -75,22 +87,44 @@ public class Graph {
 	public String toString() {
 		String retStr = "";
 		
+		Node[] nArr = new Node[this.nodes.size()];
+		this.nodes.toArray(nArr);
+		
+		Link[] lArr = new Link[this.links.size()];
+		this.links.toArray(lArr);
+		
 		retStr += "Nodes: ";
-		for (Node n : nodes) {
-			retStr += n.toString() + ", ";
+		for (int i = 0; i < nArr.length; i++) {
+			if (i % 3 == 0) { //neaten the output so it doesn't have an endless one-line string
+				retStr += "\n";
+			}
+			if (i == nArr.length - 1) { //last item in set
+				retStr += nArr[i].toString();
+			}
+			else {
+				retStr += nArr[i].toString() + ", ";
+			}
 		}
-		retStr += "\nLinks: \n";
-		for (Link l : links) {
-			retStr += l.toString() + ", \n";
+		retStr += "\nLinks:\n";
+		for (int i = 0; i < lArr.length; i++) {
+			/*
+			if (i % 3 == 0) {
+				retStr += "\n";
+			}
+			*/
+			if (i == lArr.length -1) {
+				retStr += lArr[i].toString();
+			}
+			else {
+				retStr += lArr[i].toString()+ ", \n";
+			}
 		}
 		
 		return retStr;
 	}
 	
-	//A 2-element pair, representing a link between Nodes A and B
-	//This is private because while nodes are necessarily generated externally,
-	//links are only a subset of the nodes and only exist in the context of a graph
-	private final class Link {
+	
+	public class Link {
 		
 		private Node A, B;
 		
