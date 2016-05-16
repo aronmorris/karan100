@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.Set;
@@ -42,18 +43,16 @@ public class EulerianPath {
 	public static boolean isEulerian(Graph graph) {
 		
 	
-		Link[] links = new Link[graph.getLinks().size()];
+		LinkedHashSet<Link> links = graph.getLinks();
 		Node[] nodes = new Node[graph.getNodes().size()];
-		graph.getNodes().toArray(nodes);
-		graph.getNodes().toArray(links);
-	
+		graph.getNodes().toArray(nodes);	
 		Stack<Node> nodeStack = new Stack<Node>();
 		LinkedList<Node> circuit = new LinkedList<Node>();
 		
 		
 		int[] degreeArr = new int[nodes.length];
 		int oddCtr = 0;
-		int startIndex;
+		int startIndex = 0;
 	
 		
 		for (int i = 0; i < degreeArr.length; i++) {
@@ -74,9 +73,50 @@ public class EulerianPath {
 			if (oddCtr == 0 && i == degreeArr.length - 1) { //last iteration and no odd degree nodes at all
 				startIndex = 0; //path can begin anywhere
 			}
+			else {
+				return false; //if neither of the conditions is met then the graph cannot be Euler-compliant
+			}
 		}
 		
 		
+		//TODO continue algorithm
+		while (true) {
+			
+			boolean hasNeighbors = false;
+			for (Iterator<Link> it = links.iterator(); it.hasNext();) {
+				
+				Link l = it.next();
+				
+				if (l.A().equals(nodes[startIndex]) && l.B().equals(nodes[startIndex])) { //reflective case
+					it.remove();
+				}
+				
+				
+				if (l.A().equals(nodes[startIndex])) { //get the first neighbor of this node
+					hasNeighbors = true; //link node A is the node earlier chosen as the starting node
+					nodeStack.add(nodes[startIndex]); //add the current node to the index
+					it.remove(); //sever the link between (x, y)(y, z) [though (y, z)(z, w) may still exist]
+					break;
+				}
+				/* Node B is the node that is related to the one being searched - possibly not prudent to include it
+				else if (l.B().equals(nodes[startIndex])) { //get the first neighbor of this node
+					hasNeighbors = true;
+					
+					break;
+				}
+				*/
+				
+			}
+			if (!hasNeighbors) {
+				
+			}
+			else if (hasNeighbors) {
+				
+			}
+			
+			
+			break;
+		}
 		
 		
 		return false; //TODO change to actual return condition

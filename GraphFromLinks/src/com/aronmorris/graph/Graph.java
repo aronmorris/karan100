@@ -133,6 +133,14 @@ public class Graph {
 			this.B = b;
 		}
 		
+		public Node A() {
+			return this.A;
+		}
+		
+		public Node B() {
+			return this.B;
+		}
+		
 		@Override
 		public String toString() {
 			return "[" + this.A.toString() + ", " + this.B.toString() + "]";
