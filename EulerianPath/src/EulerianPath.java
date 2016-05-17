@@ -18,6 +18,14 @@ public class EulerianPath {
 		boolean addXY = true;
 		
 		nodes.add(new Node(1, 1));
+		nodes.add(new Node(1, 1));
+		
+		nodes.add(new Node(1, 1));
+		
+		nodes.add(new Node(1, 1));
+		nodes.add(new Node(1, 1));
+		
+		nodes.add(new Node(1, 1));
 		
 		int x = 0, y = 1;
 		for (int i = 1; i <= 10; i++) {
@@ -30,7 +38,7 @@ public class EulerianPath {
 			}
 			nodes.add(new Node(x, y));
 			addXY = !addXY;
-			System.out.println(new Node(x, y));
+			//System.out.println(new Node(x, y));
 		}
 		
 		Graph graph = new Graph(nodes);

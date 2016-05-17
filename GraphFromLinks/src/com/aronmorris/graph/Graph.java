@@ -1,6 +1,4 @@
 package com.aronmorris.graph;
-import java.util.HashSet;
-import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.Set;
@@ -22,11 +20,35 @@ public class Graph {
 			id += 1;
 		}
 		
-		this.nodes = (LinkedHashSet<Node>) nodes;
+		LinkedList<Node> nLL = new LinkedList<Node>();
+		
+		nLL.addAll(nodes);
+		
+		int copiesOfN = 0;
+		for (Node n : nodes) {
+			for (Node m : nodes) {
+				if (n.X() == m.Y() && n.Y() == m.X() && n.getID() != m.getID()) {
+					//System.out.println("copy");
+					int reflects = 0;
+					for (int i = 0; i < nLL.size(); i++) {
+						if (nLL.get(i).equals(m)) {
+							reflects += 1;
+						}
+					}
+					if (reflects > 2) {
+						nLL.remove(m);
+						//System.out.println("Removed " + m.toString());
+					}
+				}	
+			}
+			copiesOfN = 0;
+		}
+		
+		this.nodes.addAll(nLL);
 		
 		LinkedList<Link> existsInSet = new LinkedList<Link>();
 		LinkedList<Link> matches = new LinkedList<Link>();
-		
+	
 		for (Node n : this.nodes) {
 			
 			for (Node m : this.nodes) {
@@ -44,12 +66,17 @@ public class Graph {
 						//System.out.println(new Link(n, m).toString()); //debugging
 						matches.add(new Link(n, m));
 						this.links.add(new Link(n, m));
-						//this.nodes.remove(m);
+						nLL.remove(m);
+						//this.nodes.remove(m); //doesnt work unless iterators are used and iterator use is buggy with the Node object
 					}
 				}
 			}	
 		}
+		this.nodes.clear();
+		this.nodes.addAll(nLL);
 	}
+	
+	
 	
 	public boolean hasLinks() {
 		if (this.links.size() == 0) {

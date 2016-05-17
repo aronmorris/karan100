@@ -7,7 +7,7 @@ package com.aronmorris.graph;
  */
 public final class Node {
 
-	private int X, Y;
+	private final int X, Y;
 	
 	private int id; //optional field to keep track of which node is which
 	
@@ -29,7 +29,7 @@ public final class Node {
 		return this.Y;
 	}
 	
-	public void setID(int i) {
+	public final void setID(int i) {
 		this.id = i;
 	}
 	
