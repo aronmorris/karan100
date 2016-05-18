@@ -2,9 +2,14 @@ package com.aronmorris.graph;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
-import java.util.Set;
 
-
+/**
+ * Nodes and Links are immutable and can't be modified after being set. 
+ * However, the graph can add and remove them from its lists without modifying
+ * any individual node or link
+ * @author Aron
+ *
+ */
 public class Graph {
 	
 	
@@ -15,6 +20,7 @@ public class Graph {
 	public Graph() {
 		this.nodes = new LinkedList<Node>();
 		this.links = new LinkedList<Link>();
+	
 	}
 	
 	public void addNode(int x, int y) {
