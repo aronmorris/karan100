@@ -1,4 +1,5 @@
 package com.aronmorris.graph;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.Set;
@@ -9,11 +10,61 @@ public class Graph {
 	
 	private LinkedList<Node> nodes;
 
-	private LinkedHashSet<Link> links;
+	private LinkedList<Link> links;
 	
 	public Graph() {
 		this.nodes = new LinkedList<Node>();
-		this.links = new LinkedHashSet<Link>();
+		this.links = new LinkedList<Link>();
+	}
+	
+	public void addNode(int x, int y) {
+		Node n = new Node(x, y);
+		
+		for (Node m : this.nodes) {
+			if (n.equals(m)) {
+				m.setReflective(true);
+				n.setReflective(true);
+				if (!this.links.contains(new Link(n, m))) {
+					this.links.add(new Link(n, m));
+				}
+			}
+		}
+		if (!n.isReflective()) {
+			this.nodes.add(n);
+			addLink();
+			
+		}
+		
+	}
+	
+	private void addLink() {
+		for (Node n : this.nodes) {
+			for (Node m : this.nodes) {
+				
+				if (m.isReflective() && !this.links.contains(new Link(m, m))) {
+					this.links.add(new Link(m, m));
+				}
+				
+				if (!n.equals(m) && (n.X == m.X || n.Y == m.Y) && !(this.links.contains(new Link(n, m)) || this.links.contains(new Link(m, n)))) {
+					this.links.add(new Link(n, m));
+				}
+			}
+		}
+		
+	}
+	
+	public void removeNode(int x, int y) {
+		for (Iterator<Node> it = this.nodes.iterator(); it.hasNext();) {
+			Node n = it.next();
+			if (n.X == x && n.Y == y) {
+				it.remove();
+				for (int i = 0; i < this.links.size(); i++) {
+					if (links.get(i).A.equals(n) || links.get(i).B.equals(n)) {
+						links.remove(i);
+					}
+				}
+			}
+		}
 	}
 	
 	public boolean hasLinks() {
@@ -28,7 +79,7 @@ public class Graph {
 	public int getDegreeOfNode(Node node) {
 		int linksToOtherNodes = 0;
 	
-		
+		//TODO reimplement
 		return linksToOtherNodes;
 	}
 	
@@ -49,8 +100,20 @@ public class Graph {
 	public String toString() {
 		String retStr = "";
 		
-		//TODO finish reimplementation
-		
+		retStr += "Nodes: \n";
+		int ctr = 0;
+		for (Iterator<Node> it = this.nodes.iterator(); it.hasNext();) {
+			ctr += 1;
+			retStr += it.next() + (it.hasNext() ? ", " : "");
+			if (ctr % 4 == 0) {
+				retStr += "\n";
+			}
+		}
+	
+		retStr += "\nLinks: \n";
+		for (Iterator<Link> it = this.links.iterator(); it.hasNext();) {
+			retStr += it.next() + (it.hasNext() ? ", \n" : "\n");	
+		}
 		return retStr;
 	}
 	
@@ -59,7 +122,7 @@ public class Graph {
 		
 		private boolean reflective;
 		
-		protected Node(int a, int b, boolean reflective) {
+		protected Node(int a, int b) {
 			this.X = a;
 			this.Y = b;
 			
@@ -97,6 +160,10 @@ public class Graph {
 			return this.Y;
 		}
 		
+		protected void setReflective(boolean b) {
+			this.reflective = b;
+		}
+		
 		protected boolean isReflective() {
 			return this.reflective;
 		}
@@ -111,7 +178,7 @@ public class Graph {
 			this.A = a;
 			this.B = b;
 		}
-		
+				
 		public Node A() {
 			return this.A;
 		}
