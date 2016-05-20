@@ -14,6 +14,9 @@ public class EulerianPath {
 		
 		Graph graph = new Graph();
 		
+		graph.addNode(1, 1);
+		graph.addNode(1, 1);
+		graph.addNode(2, 3);
 		int x = 0, y = 1;
 		for (int i = 1; i <= 10; i++) {
 			//(1, 1) (2, 1), (2, 2), (3, 2), (3, 3), (4, 3)
@@ -29,6 +32,20 @@ public class EulerianPath {
 		}
 		
 		//System.out.println(graph.toString());
+		
+		for (int i = 0; i < graph.getAllNodes().size(); i++) {
+			System.out.println("Degree of Node: " + graph.get(i) + ": " + graph.getDegreeOfNode(graph.get(i)));
+		}
+		
+		System.out.println((graph.toString()));
+		
+		
+		graph.removeNode(2,  3);
+		System.out.println("Removed node");
+
+		for (int i = 0; i < graph.getAllNodes().size(); i++) {
+			System.out.println("Degree of Node: " + graph.get(i) + ": " + graph.getDegreeOfNode(graph.get(i)));
+		}
 		
 		System.out.println((graph.toString()));
 		

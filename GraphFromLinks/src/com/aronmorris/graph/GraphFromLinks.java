@@ -19,6 +19,10 @@ public class GraphFromLinks {
 		
 		Graph graph = new Graph();
 		
+		for (int i = 0; i < 10; i++) {
+			graph.addNode(i, i+1);
+		}
+		
 		System.out.println(graph.toString());
 		
 	}

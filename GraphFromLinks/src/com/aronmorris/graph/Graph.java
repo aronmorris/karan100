@@ -13,12 +13,12 @@ import java.util.LinkedList;
 public class Graph {
 	
 	
-	private LinkedList<Node> nodes;
+	private LinkedHashSet<Node> nodes;
 
 	private LinkedList<Link> links;
 	
 	public Graph() {
-		this.nodes = new LinkedList<Node>();
+		this.nodes = new LinkedHashSet<Node>();
 		this.links = new LinkedList<Link>();
 	
 	}
@@ -30,17 +30,31 @@ public class Graph {
 			if (n.equals(m)) {
 				m.setReflective(true);
 				n.setReflective(true);
-				if (!this.links.contains(new Link(n, m))) {
+				//System.out.println("!!!");
+
+				if (!this.links.contains(new Link(n, m)) || !this.links.contains(new Link(m, n))) {
 					this.links.add(new Link(n, m));
+					System.out.println("!!!");
+					
 				}
+				
 			}
-		}
-		if (!n.isReflective()) {
-			this.nodes.add(n);
-			addLink();
-			
+			//System.out.println("!!!");
 		}
 		
+		if (!n.isReflective() && !this.nodes.contains(n)) {
+			this.nodes.add(n);
+			addLink();
+		}
+		
+	}
+	
+	public LinkedHashSet<Node> getAllNodes() {
+		return this.nodes;
+	}
+	
+	public Node get(int i) {
+		return (Node) this.nodes.toArray()[i];
 	}
 	
 	private void addLink() {
@@ -64,14 +78,16 @@ public class Graph {
 			Node n = it.next();
 			if (n.X == x && n.Y == y) {
 				it.remove();
-				for (int i = 0; i < this.links.size(); i++) {
-					if (links.get(i).A.equals(n) || links.get(i).B.equals(n)) {
-						links.remove(i);
+				for (Iterator<Link> lit = this.links.iterator(); lit.hasNext();) {
+					Link ln = lit.next();
+					if (ln.A.equals(n) || ln.B.equals(n)) {
+						lit.remove();
 					}
 				}
 			}
 		}
 	}
+	
 	
 	public boolean hasLinks() {
 		if (this.links.size() == 0) {
@@ -85,7 +101,20 @@ public class Graph {
 	public int getDegreeOfNode(Node node) {
 		int linksToOtherNodes = 0;
 	
-		//TODO reimplement
+		for (Iterator<Link> it = this.links.iterator(); it.hasNext();) {
+			Link l = it.next();
+			if (l.A.equals(node) && l.B.equals(node)) {
+				linksToOtherNodes += 2;
+			}
+			
+			else if (l.A.equals(node) || l.B.equals(node)) {
+					linksToOtherNodes += 1;
+			}
+				
+		
+			
+		}
+		
 		return linksToOtherNodes;
 	}
 	
@@ -126,7 +155,7 @@ public class Graph {
 	private final class Node {
 		private final int X, Y;
 		
-		private boolean reflective;
+		private boolean reflective = false;
 		
 		protected Node(int a, int b) {
 			this.X = a;
@@ -146,7 +175,7 @@ public class Graph {
 			if (n == this) {
 				return true;
 			}
-			if (!(n instanceof Link)) {
+			if (!(n instanceof Node)) {
 				return false;
 			}
 			
