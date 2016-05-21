@@ -16,11 +16,6 @@ public class EulerianPath {
 		
 		Graph graph = new Graph();
 		
-		graph.addNode(1, 1);
-		graph.addNode(2, 2);
-		/*
-		graph.addNode(1, 1);
-		graph.addNode(2, 3);
 		int x = 0, y = 1;
 		for (int i = 1; i <= 10; i++) {
 			//(1, 1) (2, 1), (2, 2), (3, 2), (3, 3), (4, 3)
@@ -32,20 +27,24 @@ public class EulerianPath {
 			}
 			graph.addNode(x, y);
 			addXY = !addXY;
-			//System.out.println(new Node(x, y));
+			System.out.printf("(%d, %d)%n", x, y);
 		}
-		*/
 		
-		//System.out.println(graph.toString());
 		
-		System.out.println(graph.getDegreeOfNode(graph.get(0)));
-		System.out.println((isEulerian(graph)));
+		System.out.println(graph.toString());
+		
+		try {
+			System.out.println(graph.getDegreeOfNode(graph.get(0)));
+			System.out.println((isEulerian(graph)));
+		} catch(ArrayIndexOutOfBoundsException e) {
+			System.out.println("No nodes.");
+		}
 		
 	}
 	
 	public static boolean isEulerian(Graph graph) {
 		
-		LinkedList<Link> links = graph.getLinks();
+		///LinkedList<Link> links = graph.getLinks();
 		
 		//LinkedHashSet<Node> nodes = graph.getAllNodes();
 		
@@ -61,6 +60,7 @@ public class EulerianPath {
 		for (int i = 0; i < degrees.length; i++) {
 			degrees[i] = graph.getDegreeOfNode(graph.get(i));
 			parity += degrees[i] % 2; //0 if even 1 if odd
+			System.out.printf("Parity at %d for node %s%n", parity, graph.get(i));
 		}
 		
 		if (parity == 2) { //two nodes have odd degree, these must be the start and end nodes
@@ -77,6 +77,7 @@ public class EulerianPath {
 		}
 		
 		else { //Parity isnt 0 or 2, so no path exists
+			System.out.printf("No path exists according to parity value !0 || 2: %d%n", parity);
 			return false;
 		}
 		
@@ -116,10 +117,11 @@ public class EulerianPath {
 		Collections.reverse(circuit); //circuit is created in reverse order of how it actually appears
 		
 		if (circuit.isEmpty()) {
+			System.out.printf("No path appears to exist.%n");
 			return false;
 		}
 		
-		for (Node n : circuit) {
+		for (Node n : circuit) { 
 			for (Node m : circuit) {
 				if (n.equals(m) && circuit.indexOf(n) != circuit.indexOf(m)) { //same item appears twice and isn't in the same spot twice
 					System.out.println("Cycle exists");
@@ -128,11 +130,12 @@ public class EulerianPath {
 			}
 		}
 		
-		if (circuit.size() > 0) {
+		if (circuit.size() > 1) { //
 			System.out.printf("Path exists.%n%s%n", circuit.toString());
 			return true;
 		}
 		
+		System.out.printf("Path/cycle conditions not satisfied.%n");
 		return false; //TODO change to actual return condition
 	}
 	

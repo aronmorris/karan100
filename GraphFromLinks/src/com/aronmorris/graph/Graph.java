@@ -34,7 +34,7 @@ public class Graph {
 
 				if (!this.links.contains(new Link(n, m)) || !this.links.contains(new Link(m, n))) {
 					this.links.add(new Link(n, m));
-					System.out.println("!!!");
+					//System.out.println("!!!");
 					
 				}
 				
