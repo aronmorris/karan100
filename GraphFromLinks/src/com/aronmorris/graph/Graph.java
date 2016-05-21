@@ -1,6 +1,5 @@
 package com.aronmorris.graph;
 import java.util.Iterator;
-import java.util.LinkedHashSet;
 import java.util.LinkedList;
 
 /**
@@ -13,12 +12,12 @@ import java.util.LinkedList;
 public class Graph {
 	
 	
-	private LinkedHashSet<Node> nodes;
+	private LinkedList<Node> nodes;
 
 	private LinkedList<Link> links;
 	
 	public Graph() {
-		this.nodes = new LinkedHashSet<Node>();
+		this.nodes = new LinkedList<Node>();
 		this.links = new LinkedList<Link>();
 	
 	}
@@ -49,7 +48,7 @@ public class Graph {
 		
 	}
 	
-	public LinkedHashSet<Node> getAllNodes() {
+	public LinkedList<Node> getAllNodes() {
 		return this.nodes;
 	}
 	
