@@ -57,46 +57,7 @@ public class Graph {
 		return (Node) this.nodes.toArray()[i];
 	}
 	
-	private void addLink() {
-		for (Node n : this.nodes) {
-			for (Node m : this.nodes) {
-				
-				if (m.isReflective() && !this.links.contains(new Link(m, m))) {
-					this.links.add(new Link(m, m));
-				}
-				
-				if (!n.equals(m) && (n.X == m.X || n.Y == m.Y) && !(this.links.contains(new Link(n, m)) || this.links.contains(new Link(m, n)))) {
-					this.links.add(new Link(n, m));
-				}
-			}
-		}
-		
-	}
 	
-	public void removeNode(int x, int y) {
-		for (Iterator<Node> it = this.nodes.iterator(); it.hasNext();) {
-			Node n = it.next();
-			if (n.X == x && n.Y == y) {
-				it.remove();
-				for (Iterator<Link> lit = this.links.iterator(); lit.hasNext();) {
-					Link ln = lit.next();
-					if (ln.A.equals(n) || ln.B.equals(n)) {
-						lit.remove();
-					}
-				}
-			}
-		}
-	}
-	
-	
-	public boolean hasLinks() {
-		if (this.links.size() == 0) {
-			return false;
-		}
-		else  {
-			return true;
-		}
-	}
 	
 	public int getDegreeOfNode(Node node) {
 		int linksToOtherNodes = 0;
@@ -118,8 +79,8 @@ public class Graph {
 		return linksToOtherNodes;
 	}
 	
-	public LinkedHashSet<Link> getLinksOfNode(Node node) {
-		LinkedHashSet<Link> returnSet = new LinkedHashSet<Link>();
+	public LinkedList<Link> getLinksOfNode(Node node) {
+		LinkedList<Link> returnSet = new LinkedList<Link>();
 		
 		for (Link l : this.links) {
 			if (l.A.equals(node) || l.B.equals(node)) {
@@ -130,6 +91,54 @@ public class Graph {
 		return returnSet;
 	}
 	
+	/**
+	 * Removes the specified node from the node list and removes
+	 * ALL links that it's a member of.
+	 * @param x
+	 * @param y
+	 */
+	public void removeNode(int x, int y) {
+		for (Iterator<Node> it = this.nodes.iterator(); it.hasNext();) {
+			Node n = it.next();
+			if (n.X == x && n.Y == y) {
+				it.remove();
+				for (Iterator<Link> lit = this.links.iterator(); lit.hasNext();) {
+					Link ln = lit.next();
+					if (ln.A.equals(n) || ln.B.equals(n)) {
+						lit.remove();
+					}
+				}
+			}
+		}
+	}
+	
+	public void addLink() {
+		for (Node n : this.nodes) {
+			for (Node m : this.nodes) {
+				
+				if (m.isReflective() && !this.links.contains(new Link(m, m))) {
+					this.links.add(new Link(m, m));
+				}
+				
+				if (!n.equals(m) && (n.X == m.X || n.Y == m.Y) && !(this.links.contains(new Link(n, m)) || this.links.contains(new Link(m, n)))) {
+					this.links.add(new Link(n, m));
+				}
+			}
+		}
+	}
+		
+	public void removeLink(Link link) {
+		this.links.remove(link);
+	}
+	
+	public boolean hasLinks() {
+		if (this.links.size() == 0) {
+			return false;
+		}
+		else  {
+			return true;
+		}
+	}
 	
 	@Override
 	public String toString() {
@@ -152,7 +161,11 @@ public class Graph {
 		return retStr;
 	}
 	
-	private final class Node {
+	public LinkedList<Link> getLinks() {
+		return this.links;
+	}
+	
+	public final class Node {
 		private final int X, Y;
 		
 		private boolean reflective = false;
@@ -187,11 +200,11 @@ public class Graph {
 			return false;
 		}
 		
-		protected int X() {
+		public int X() {
 			return this.X;
 		}
 		
-		protected int Y() {
+		public int Y() {
 			return this.Y;
 		}
 		
@@ -205,7 +218,7 @@ public class Graph {
 		
 	}
 	
-	private class Link {
+	public class Link {
 		
 		private Node A, B;
 		
@@ -229,6 +242,14 @@ public class Graph {
 		
 		@Override
 		public boolean equals(Object l) {
+			
+			try {
+				if (l == null) {
+					return false;
+				}
+			} catch(NullPointerException e) {
+				return false;
+			}
 			if (l == null) {
 				return false;
 			}
