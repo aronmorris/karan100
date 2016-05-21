@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.Map;
@@ -13,6 +14,9 @@ public class ConnectedGraph {
 	public static void main(String[] args) {
 	
 		Graph graph = new Graph();
+		
+		graph.addNode(10, 10);
+		
 		boolean addXY = false;
 		int x = 0, y = 1;
 		for (int i = 1; i <= 10; i++) {
@@ -27,6 +31,8 @@ public class ConnectedGraph {
 			addXY = !addXY;
 			System.out.printf("(%d, %d)%n", x, y);
 		}
+		
+		System.out.println(graph);
 		
 		System.out.println(isConnected(graph));
 		
@@ -51,23 +57,23 @@ public class ConnectedGraph {
 		
 		nStack.push(cNode);
 		
+		int ctr = 0;
+		
 		do {
 			
-			do {
-				
-				relatedLinks = graph.getLinksOfNode(cNode);
-				
-				for (Link l : relatedLinks) {
-					if (visited.get(l.A()) && visited.get(l.B())) {
-						if (nStack.isEmpty()) {
-							return visited.containsKey(false);
-						}
+			relatedLinks = graph.getLinksOfNode(cNode);
+			
+			for (Iterator<Link> it = relatedLinks.iterator(); it.hasNext();) {
+				Link l = it.next();
+				if (visited.get(l.A()) && visited.get(l.B())) {
+					if (nStack.isEmpty()) {
+						return visited.containsKey(false);
 					}
 				}
-					
-				
-				
-			} while(relatedLinks.isEmpty());
+				if (!it.hasNext()) {
+					cNode = nStack.pop();
+				}
+			}
 			
 			for (Link l : relatedLinks) {
 				if (l.A().equals(cNode) && !visited.get(l.B())) {
@@ -83,11 +89,19 @@ public class ConnectedGraph {
 				}
 			}
 			
-			System.out.printf("Stack at value: %s%n", cNode);
+			System.out.printf("Stack at value: %s%n", nStack.peek());
+			
+	
+			if (nStack.peek().equals(cNode) && ctr > 5) {
+				return false;
+			}
+			
+			ctr++;
+				
 			
 		} while (!nStack.isEmpty());
 		
-		return visited.containsKey(false);
+		return !visited.containsKey(false);
 	}
 	
 }
