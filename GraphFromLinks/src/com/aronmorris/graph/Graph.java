@@ -52,6 +52,24 @@ public class Graph {
 		return this.nodes;
 	}
 	
+	public LinkedList<Node> getRelatedNodes(Node n) {
+		LinkedList<Node> rel = new LinkedList<Node>();
+		
+		for (Iterator<Link> it = this.links.iterator(); it.hasNext();) {
+			Link l = it.next();
+			if (!(l.A.equals(n) && l.B.equals(n))) {
+				if (l.A.equals(n)) {
+					rel.add(l.B);
+				}
+				else if (l.B.equals(n)) {
+					rel.add(l.B);
+				}
+			}
+		}
+		
+		return rel;
+	}
+	
 	public Node get(int i) {
 		return (Node) this.nodes.toArray()[i];
 	}
