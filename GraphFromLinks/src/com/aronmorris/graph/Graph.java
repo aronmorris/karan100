@@ -240,7 +240,7 @@ public class Graph {
 		
 	}
 	
-	public class Link {
+	public static class Link {
 		
 		private Node A, B;
 		
@@ -248,7 +248,7 @@ public class Graph {
 			this.A = a;
 			this.B = b;
 		}
-				
+	
 		public Node A() {
 			return this.A;
 		}
@@ -270,9 +270,6 @@ public class Graph {
 					return false;
 				}
 			} catch(NullPointerException e) {
-				return false;
-			}
-			if (l == null) {
 				return false;
 			}
 			if (l == this) {
