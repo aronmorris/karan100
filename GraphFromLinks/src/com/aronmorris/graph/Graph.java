@@ -182,10 +182,15 @@ public class Graph {
 		return this.links;
 	}
 	
-	public final class Node {
+	public static class Node {
 		private final int X, Y;
 		
 		private boolean reflective = false;
+		
+		protected Node() {
+			this.X = 0;
+			this.Y = 0;
+		}
 		
 		protected Node(int a, int b) {
 			this.X = a;
