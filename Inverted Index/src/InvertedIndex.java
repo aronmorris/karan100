@@ -67,7 +67,7 @@ public class InvertedIndex {
 	private static void index(String[] strArr, File srcDoc) {
 		for (String s : strArr) {
 			s = s.toLowerCase();
-			IndexMap.addToken(s);
+			IndexMap.addToken(s, srcDoc);
 		}
 	}
 	

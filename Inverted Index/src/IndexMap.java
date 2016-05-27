@@ -11,13 +11,13 @@ import java.util.HashMap;
 
 public class IndexMap {
 
-	private static HashMap<String, ArrayList<String>> index; 
-	private static HashMap<String, Integer> occurrences;
+	//private static HashMap<String, HashMap<File, ArrayList<String>>> index; 
+	private static HashMap<File, HashMap<String, Integer>> index;
 	
 	public IndexMap() {
 		
-		index = new HashMap<String, ArrayList<String>>();
-		occurrences = new HashMap<String, Integer>();
+		//index = new HashMap<String, HashMap<File, ArrayList<String>>>();
+		index = new HashMap<File, HashMap<String, Integer>>();
 		
 		//defeats instantiation
 		/*try
@@ -69,18 +69,39 @@ public class IndexMap {
 		return instance;
 	}
 	*/
-	public static Integer get(String token) {
-		return occurrences.get(token);
+	public static String get(String token) {
+		StringBuilder sb = new StringBuilder();
+		for (File key : index.keySet()) {
+			int count = index.get(key).get(token);
+			sb.append("Term \'" + token + "\' appears in ");
+			sb.append(key.getName());
+			sb.append(" " + count + (count > 1 ? " times." : " time."));
+		}
+		
+		return sb.toString();
+		
 	}
 	
 	//TODO fix these here
-	public static boolean addToken(String token) {
+	public static boolean addToken(String token, File file) {
 		
-		if (occurrences.containsKey(token)) {
-			int count = occurrences.get(token);
-			occurrences.put(token, count);
-		} else {
-			occurrences.put(token, 1); //add to occurrence index	
+		if (index.containsKey(file)) {
+	
+			if (index.get(file).containsKey(token)) {
+				int tmp = index.get(file).get(token);
+				index.get(file).put(token, tmp + 1);
+			}
+			else {
+				index.get(file).put(token, 1);
+				
+			}
+			
+		}
+		
+		else {
+			HashMap<String, Integer> tmp = new HashMap<String, Integer>();
+			tmp.put(token, 1);
+			index.put(file, tmp);
 		}
 		
 		return true;
