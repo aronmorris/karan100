@@ -19,7 +19,7 @@ public class InvertedIndex {
 		
 		index(file);
 		
-		System.out.println(IndexMap.get("hello"));
+		System.out.println(IndexMap.getOccurrences("hello"));
 		
 		//end();
 		

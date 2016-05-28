@@ -69,20 +69,53 @@ public class IndexMap {
 		return instance;
 	}
 	*/
-	public static String get(String token) {
-		StringBuilder sb = new StringBuilder();
+	
+	/**
+	 * Fetches the occurrences of a token for each file it appears in
+	 * @param token The string token to be found
+	 * @return Returns a hashmap<File, Integer> with each key's value = its occurrences for that file
+	 */
+	public static HashMap<File, Integer> getOccurrences(String token) {
+		
+		HashMap<File, Integer> retMap = new HashMap<File, Integer>();
+		
 		for (File key : index.keySet()) {
-			int count = index.get(key).get(token);
-			sb.append("Term \'" + token + "\' appears in ");
-			sb.append(key.getName());
-			sb.append(" " + count + (count > 1 ? " times." : " time."));
+			if (index.get(key).containsKey(token)) {
+				retMap.put(key, index.get(key).get(token));
+			}
 		}
 		
-		return sb.toString();
+		return retMap;
 		
 	}
 	
-	//TODO fix these here
+
+	//TODO add method that returns a sorted list of which file has the closest match to the searched terms
+	//TODO add method that searches for multiple terms at once and returns the weighed result from the TODO above
+	
+	/**
+	 * Handles many tokens at once rather than one at a time
+	 * For logic see addToken(String token, File File)
+	 * @param tokens
+	 * @param file
+	 * @return
+	 */
+	public static boolean addToken(String[] tokens, File file) {
+		
+		for (String token : tokens) {
+			addToken(token, file);
+		}
+		
+		return true;
+		
+	}
+	
+	/**
+	 * Returns true if the index contains the file, false otherwise, adds the individual token
+	 * @param token the token to be added
+	 * @param file the file containing the token
+	 * @return True if the index contains the file already, false otherwise
+	 */
 	public static boolean addToken(String token, File file) {
 		
 		if (index.containsKey(file)) {
@@ -96,20 +129,38 @@ public class IndexMap {
 				
 			}
 			
+			return true;
+			
 		}
 		
 		else {
 			HashMap<String, Integer> tmp = new HashMap<String, Integer>();
 			tmp.put(token, 1);
 			index.put(file, tmp);
+			
+			return false;
+			
 		}
 		
-		return true;
 		
 	}
-	
-	public static boolean removeToken(String token) {
+	/**
+	 * Eliminates all references of a given token in the specified file
+	 * @param token Token to be removed
+	 * @param file File containing the token
+	 * @return Returns true if the token exists and was deleted, false otherwise
+	 */
+	public static boolean removeToken(String token, File file) {
+		
+		if (index.containsKey(file)) {
+			if (index.get(file).containsKey(token)) {
+				index.get(file).remove(token);
+				return true;
+			}
+		}
+		
 		return false;
+		
 	}
 	
 	
