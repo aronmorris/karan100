@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class InvertedIndex {
-
+	/*
 	private static IndexMap indexMap;
 	
 	public static void main(String[] args) {
@@ -29,6 +29,7 @@ public class InvertedIndex {
 		indexMap = IndexMap.getIndexMap();
 	}
 	*/
+	
 	public static void index(File file) {
 		try (BufferedReader br = new BufferedReader(new FileReader(file))){
 			StringBuilder sb = new StringBuilder();

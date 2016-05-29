@@ -8767,3 +8767,208 @@ org.eclipse.recommenders.utils.Logs$LogTraceException
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2016-05-27 21:31:21.666
 !MESSAGE Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocInlineTagCompletionProposal' ('{@linkplain}'). Returning original proposal instead.
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2016-05-28 21:03:19.757
+!MESSAGE Connection to http://download.eclipse.org/windowbuilder/WB/release/R201506241200-1/4.4/content.jar failed on Connection reset. Retry attempt 0 started
+!STACK 0
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:189)
+	at java.net.SocketInputStream.read(SocketInputStream.java:121)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:160)
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:84)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:273)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:283)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:251)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:223)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2016-05-28 21:04:17.180
+!MESSAGE Connection to http://download.eclipse.org/windowbuilder/WB/release/R201506241200-1/4.4/p2.index failed on Connection reset. Retry attempt 0 started
+!STACK 0
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:189)
+	at java.net.SocketInputStream.read(SocketInputStream.java:121)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:160)
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:84)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:273)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:283)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:251)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:223)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2016-05-28 21:04:18.903
+!MESSAGE Connection to http://download.eclipse.org/windowbuilder/WB/release/R201506241200-1/4.4/p2.index failed on Connection reset. Retry attempt 0 started
+!STACK 0
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:189)
+	at java.net.SocketInputStream.read(SocketInputStream.java:121)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:160)
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:84)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:273)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:283)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:251)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:223)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2016-05-28 21:04:40.918
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2016-05-28 21:04:40.918
+!MESSAGE session context was:(profile=epp.package.java, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.core,1.8.0.r44x201506110820
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.core.databinding,1.8.0.r44x201506110821
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.core.java,1.8.0.r44x201506110821
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.core.lib,1.8.0.r44x201506110820
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.core.ui,1.8.0.r44x201506110822
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.layout.group,1.8.0.r44x201506110824
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.os,1.8.0.r44x201506110820
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.os.macosx,1.8.0.r44x201506110820
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.runtime,1.8.0.r44x201506110820
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.runtime.lib,1.8.0.r44x201506110820
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.swing,1.8.0.r44x201506110826
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.swing.FormLayout,1.8.0.r44x201506110826
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.swing.FormLayout.lib,1.8.0.r44x201506110826
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.swing.MigLayout,1.8.0.r44x201506110826
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.swing.MigLayout.lib,1.8.0.r44x201506110826
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.swing.databinding,1.8.0.r44x201506110826
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.swing.java6,1.8.0.r44x201506110826
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.swing.jsr296,1.8.0.r44x201506110826
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.core.databinding.xml,1.8.0.r44x201506110823
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wb.core.feature,1.8.0.r44x201506110820
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wb.core.java.feature,1.8.0.r44x201506110821
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wb.core.ui.feature,1.8.0.r44x201506110822
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.core.xml,1.8.0.r44x201506110823
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wb.core.xml.feature,1.8.0.r44x201506110823
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.doc.user,1.8.0.r44x201506110838
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wb.doc.user.feature,1.8.0.r44x201506110838
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wb.layout.group.feature,1.8.0.r44x201506110824
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.rcp,1.8.0.r44x201506110827
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.rcp.SWT_AWT,1.8.0.r44x201506110828
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wb.rcp.SWT_AWT_support,1.8.0.r44x201506110828
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.rcp.databinding,1.8.0.r44x201506110827
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.rcp.databinding.emf,1.8.0.r44x201506110827
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.rcp.databinding.xwt,1.8.0.r44x201506110829
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.rcp.doc.user,1.8.0.r44x201506110839
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wb.rcp.doc.user.feature,1.8.0.r44x201506110839
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wb.rcp.feature,1.8.0.r44x201506110827
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.rcp.nebula,1.8.0.r44x201506110827
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.rcp.swing2swt,1.8.0.r44x201506110827
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.swing.doc.user,1.8.0.r44x201506110839
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wb.swing.doc.user.feature,1.8.0.r44x201506110839
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wb.swing.feature,1.8.0.r44x201506110826
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.swt,1.8.0.r44x201506110825
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wb.swt.feature,1.8.0.r44x201506110825
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.swt.widgets.baseline,1.8.0.r44x201506110827
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.xwt,1.8.0.r44x201506110829
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-28 21:04:40.918
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wb.xwt.feature,1.8.0.r44x201506110829
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2016-05-28 21:07:00.734
+!MESSAGE Connection to http://download.eclipse.org/windowbuilder/WB/release/R201506241200-1/4.4/p2.index failed on Connection reset. Retry attempt 0 started
+!STACK 0
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:189)
+	at java.net.SocketInputStream.read(SocketInputStream.java:121)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:160)
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:84)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:273)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:283)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:251)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:223)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
