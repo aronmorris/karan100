@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy/>
+<typeInfoHistroy>
+<typeInfo handle="=GraphFromLinks/src&lt;com.aronmorris.graph{Graph.java[Graph" modifiers="1" timestamp="1464040229000"/>
+<typeInfo handle="=GraphFromLinks/src&lt;com.aronmorris.graph{Graph.java[Graph[Link" modifiers="9" timestamp="1464040229000"/>
+<typeInfo handle="=Inverted Index/\/Library\/Java\/JavaVirtualMachines\/jdk1.8.0_05.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;java.awt(Button.class[Button" modifiers="33" timestamp="1395128855000"/>
+<typeInfo handle="=Inverted Index/\/Library\/Java\/JavaVirtualMachines\/jdk1.8.0_05.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;java.awt(List.class[List" modifiers="33" timestamp="1395128855000"/>
+</typeInfoHistroy>
