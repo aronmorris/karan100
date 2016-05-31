@@ -1,14 +1,8 @@
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class IndexMap {
@@ -91,6 +85,10 @@ public class IndexMap {
 		
 	}
 	
+	public static HashMap<File, HashMap<String, Integer>> getIndex() {
+		return index;
+	}
+	
 
 	//TODO add method that returns a sorted list of which file has the closest match to the searched terms
 	//TODO add method that searches for multiple terms at once and returns the weighed result from the TODO above
@@ -166,6 +164,11 @@ public class IndexMap {
 	}
 	
 	public void index(File file) {
+		
+		if (index.containsKey(file)) {
+			return;
+		}
+		
 		try (BufferedReader br = new BufferedReader(new FileReader(file))){
 			StringBuilder sb = new StringBuilder();
 			String line = br.readLine();
@@ -192,7 +195,7 @@ public class IndexMap {
 	
 	public static String[] tokenize(String input) {
 		input = input.replaceAll("[^a-zA-Z0-9'\\s]+"," ");
-		String[] retStr = input.split("\\s+"); //splits by any and all whitespace
+		String[] retStr = input.toLowerCase().split("\\s+"); //splits by any and all whitespace
 		return retStr;
 	}
 	
