@@ -1,8 +1,6 @@
 
 public class PigLatin {
 
-	private final String vowels = "aeiouy";
-	
 	public static void main(String[] args) {
 		System.out.println(atinizeLay("Hello world foo bar test enemy as vowel"));
 	}
