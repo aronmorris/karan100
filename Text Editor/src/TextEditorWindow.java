@@ -1,19 +1,33 @@
+import java.awt.Component;
 import java.awt.EventQueue;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.HashMap;
 
 import javax.swing.JFrame;
+
 import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.ColumnSpec;
 import com.jgoodies.forms.layout.RowSpec;
 import com.jgoodies.forms.factories.FormFactory;
+
+import javax.swing.JFileChooser;
 import javax.swing.JScrollPane;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JEditorPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 
 public class TextEditorWindow {
 
-	private static JFrame frame;
+	private JFrame frame;
+	
+	private HashMap<String, Component> componentMap;
+
 
 	/**
 	 * Launch the application.
@@ -30,10 +44,6 @@ public class TextEditorWindow {
 				}
 			}
 		});
-	}
-	
-	public static JFrame getFrame() {
-		return frame;
 	}
 	
 	/**
@@ -75,6 +85,67 @@ public class TextEditorWindow {
 		
 		JMenuItem saveFile = new JMenuItem("Save As...");
 		menuBar.add(saveFile);
+		
+	    createComponentMap();
+
+	}
+	
+	public void createComponentMap() {
+		 componentMap = new HashMap<String,Component>();
+	        Component[] components = frame.getComponents();
+	        for (int i = 0; i < components.length; i++) {
+	                componentMap.put(components[i].getName(), components[i]);
+	        }
+	}
+
+	public Component getComponentByName(String name) {
+	        if (componentMap.containsKey(name)) {
+	                return (Component) componentMap.get(name);
+	        }
+	        else return null;
+	}
+	
+
+	
+	public void populateEditorPanel(File file) {
+		
+		try (BufferedReader br = new BufferedReader(new FileReader(file))){
+			
+			String line = br.readLine();
+			
+			while (line != null) {
+				
+				
+				
+				line = br.readLine();
+			}
+			
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+	}
+	
+	
+	public void openFile() {
+		JFileChooser chooser = new JFileChooser();
+		FileNameExtensionFilter fnef = new FileNameExtensionFilter("Text files", "txt");
+		chooser.setFileFilter(fnef);
+		chooser.setFileHidingEnabled(true);
+		chooser.setCurrentDirectory(null);
+		
+		if (chooser.showOpenDialog(frame) == JFileChooser.APPROVE_OPTION) {
+			File f = chooser.getSelectedFile();
+			
+			populateEditorPanel(f);
+			
+		} else {
+			//user decided to not add a file
+		}
 	}
 
 }
