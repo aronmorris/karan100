@@ -1,5 +1,7 @@
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.EventQueue;
+import java.awt.Font;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -20,6 +22,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JEditorPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.text.html.HTMLDocument;
 
 
 public class TextEditorWindow {
@@ -72,10 +75,15 @@ public class TextEditorWindow {
 		frame.getContentPane().add(scrollPane, "1, 1, 2, 2, fill, fill");
 		
 		JEditorPane editorPane = new JEditorPane();
+		editorPane.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 12));
+		editorPane.setContentType("text/html");
+		
+		
 		scrollPane.setViewportView(editorPane);
 		
 		JMenuBar menuBar = new JMenuBar();
 		frame.setJMenuBar(menuBar);
+		menuBar.setBackground(Color.LIGHT_GRAY);
 		
 		JMenuItem newFile = new JMenuItem("New");
 		menuBar.add(newFile);
@@ -86,8 +94,15 @@ public class TextEditorWindow {
 		JMenuItem saveFile = new JMenuItem("Save As...");
 		menuBar.add(saveFile);
 		
+		//TODO REMOVE THIS BITS
+		editorPane.setText("...");
+		
+		HTMLDocument d = (HTMLDocument) editorPane.getDocument();
+	
 	    createComponentMap();
 
+	    editorPane.setText(openFile((new File("/Users/Aron/Desktop/bar.txt"))));
+	    
 	}
 	
 	public void createComponentMap() {
@@ -107,19 +122,22 @@ public class TextEditorWindow {
 	
 
 	
-	public void populateEditorPanel(File file) {
+	public String openFile(File file) {
 		
 		try (BufferedReader br = new BufferedReader(new FileReader(file))){
 			
 			String line = br.readLine();
 			
+			StringBuilder sb = new StringBuilder();	
+			
 			while (line != null) {
 				
-				
+				sb.append(line);
 				
 				line = br.readLine();
 			}
 			
+			return sb.toString();
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -128,9 +146,12 @@ public class TextEditorWindow {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
+		
+		return "File not found";
+		
 	}
 	
-	
+	//TODO use this for the "Open" menu button
 	public void openFile() {
 		JFileChooser chooser = new JFileChooser();
 		FileNameExtensionFilter fnef = new FileNameExtensionFilter("Text files", "txt");
@@ -141,7 +162,7 @@ public class TextEditorWindow {
 		if (chooser.showOpenDialog(frame) == JFileChooser.APPROVE_OPTION) {
 			File f = chooser.getSelectedFile();
 			
-			populateEditorPanel(f);
+			//populateEditorPanel(f);
 			
 		} else {
 			//user decided to not add a file
