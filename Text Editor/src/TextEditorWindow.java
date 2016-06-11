@@ -4,9 +4,11 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -23,12 +25,15 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JEditorPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.plaf.FileChooserUI;
 import javax.swing.text.html.HTMLDocument;
 
 
 public class TextEditorWindow {
 
 	private JFrame frame;
+	
+	private JFileChooser fc;
 	
 	private HashMap<String, Component> componentMap;
 
@@ -91,10 +96,11 @@ public class TextEditorWindow {
 		
 		JMenuItem openFile = new JMenuItem("Open");
 		menuBar.add(openFile);
-		openFile.addActionListener(e -> { editorPane.setText(openFile()); });
+		openFile.addActionListener(e -> { editorPane.setText(openFile()); }); //TODO bug fixes if any
 		
 		JMenuItem saveFile = new JMenuItem("Save As...");
 		menuBar.add(saveFile);
+		saveFile.addActionListener(e -> { saveFile(editorPane); });
 		
 		//TODO REMOVE THIS BITS
 		editorPane.setText("...");
@@ -105,7 +111,7 @@ public class TextEditorWindow {
 
 	    editorPane.setText(openFile((new File("/Users/Aron/Desktop/bar.txt"))));
 	    
-	    
+	    fc = new JFileChooser();
 	    
 	}
 	
@@ -122,6 +128,35 @@ public class TextEditorWindow {
 	                return (Component) componentMap.get(name);
 	        }
 	        else return null;
+	}
+	
+	public void saveFile(JEditorPane editor) {
+		 int returnVal = fc.showSaveDialog(frame);
+         if (returnVal == JFileChooser.APPROVE_OPTION) {
+             File file = fc.getSelectedFile();
+             String content = editor.getText();
+         
+             try {
+            	System.out.println("pre-save");
+				FileWriter save = new FileWriter(file.getAbsoluteFile());
+            	System.out.println("post-save");
+
+				BufferedWriter bs = new BufferedWriter(save);
+            	System.out.println("post-buffer");
+
+				
+				bs.write(content);
+            	System.out.println("written to file");
+
+				bs.close();
+				save.close();
+				
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+         }
+		
 	}
 	
 
