@@ -93,24 +93,16 @@ public class TextEditorWindow {
 		
 		JMenuItem newFile = new JMenuItem("New");
 		menuBar.add(newFile);
+		newFile.addActionListener(e -> { newFile(editorPane); });
 		
 		JMenuItem openFile = new JMenuItem("Open");
 		menuBar.add(openFile);
-		openFile.addActionListener(e -> { editorPane.setText(openFile()); }); //TODO bug fixes if any
+		openFile.addActionListener(e -> { editorPane.setText(openFile()); });
 		
 		JMenuItem saveFile = new JMenuItem("Save As...");
 		menuBar.add(saveFile);
 		saveFile.addActionListener(e -> { saveFile(editorPane); });
 		
-		//TODO REMOVE THIS BITS
-		editorPane.setText("...");
-		
-		HTMLDocument d = (HTMLDocument) editorPane.getDocument();
-	
-	    createComponentMap();
-
-	    editorPane.setText(openFile((new File("/Users/Aron/Desktop/bar.txt"))));
-	    
 	    fc = new JFileChooser();
 	    
 	}
@@ -130,6 +122,13 @@ public class TextEditorWindow {
 	        else return null;
 	}
 	
+	public void newFile(JEditorPane editor) {
+		
+		saveFile(editor);
+
+		editor.setText("");
+	}
+	
 	public void saveFile(JEditorPane editor) {
 		 int returnVal = fc.showSaveDialog(frame);
          if (returnVal == JFileChooser.APPROVE_OPTION) {
@@ -137,22 +136,22 @@ public class TextEditorWindow {
              String content = editor.getText();
          
              try {
-            	System.out.println("pre-save");
+            	//System.out.println("pre-save");
 				FileWriter save = new FileWriter(file.getAbsoluteFile());
-            	System.out.println("post-save");
+            	//System.out.println("post-save");
 
 				BufferedWriter bs = new BufferedWriter(save);
-            	System.out.println("post-buffer");
+            	//System.out.println("post-buffer");
 
 				
 				bs.write(content);
-            	System.out.println("written to file");
+            	//System.out.println("written to file");
 
 				bs.close();
 				save.close();
 				
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+				//auto-generated catch block
 				e.printStackTrace();
 			}
          }
@@ -160,7 +159,7 @@ public class TextEditorWindow {
 	}
 	
 
-	//TODO use this for opening files
+	// use this for opening files
 	public String openFile(File file) {
 		
 		try (BufferedReader br = new BufferedReader(new FileReader(file))){
@@ -179,10 +178,10 @@ public class TextEditorWindow {
 			return sb.toString();
 			
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		} 
 		
