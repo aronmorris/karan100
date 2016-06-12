@@ -20,6 +20,9 @@ public class QuoteTracker {
 	private final static String DEFAULT_URL = "http://finance.yahoo.com/webservice/v1/symbols/INSERT/quote?format=json&view=detail";
 	private final static String INSERT = "INSERT";
 	
+	private final static String LIST = "list";
+	private final static String RESOURCES = "resources";
+	
 	public static void main(String[] args) {
 		
 		try {
@@ -45,7 +48,8 @@ public class QuoteTracker {
 			
 			JSONObject json = readJsonFromUrl(generateURL(symbols.toArray(strArr)));
 			
-			System.out.println(json.toString(2));
+			System.out.println(json.getJSONObject(LIST).getJSONArray(RESOURCES).toString(2));
+			//TODO iterate the returned JSONArray's JSONObjects for name, price, day high, and change
 			
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
