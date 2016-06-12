@@ -9,6 +9,8 @@ public class Scheduler {
 		
 		Timer time = new Timer();
 		
+		final int SEC = 1000, MIN = SEC * 60, HOUR = MIN * 60, DAY = HOUR * 24, WEEK = DAY * 7;
+		
 		ScheduledSearch ss = new ScheduledSearch();
 		
 		Date firstTime = new Date();
@@ -16,11 +18,23 @@ public class Scheduler {
 		ArrayList<String> arr = new ArrayList<String>();	
 		
 		for (String arg : args) {
-			try {
-				if (Integer.parseInt(arg) != 0) {
-					period = Integer.parseInt(arg);
+			if (arg.matches("[0-9][mhdw]")) {
+				int interval = Integer.parseInt(arg.substring(0, 1));
+				switch(arg.substring(1)) {
+				case "m": interval *= MIN;
+					break;
+				case "h": interval *= HOUR;
+					break;
+				case "d": interval *= DAY;
+					break;
+				case "w": interval *= WEEK;
+					break;
+				default: 
+					break;
 				}
-			} catch(NumberFormatException e) {
+				period = interval;
+			}
+			else {
 				arr.add(arg);
 			}
 		}
