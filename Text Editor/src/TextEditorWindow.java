@@ -26,7 +26,10 @@ import javax.swing.JMenuItem;
 import javax.swing.JEditorPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.plaf.FileChooserUI;
+import javax.swing.text.DefaultStyledDocument;
+import javax.swing.text.StyledDocument;
 import javax.swing.text.html.HTMLDocument;
+import javax.swing.text.html.HTMLEditorKit;
 
 
 public class TextEditorWindow {
@@ -79,11 +82,22 @@ public class TextEditorWindow {
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setViewportBorder(null);
 		frame.getContentPane().add(scrollPane, "1, 1, 2, 2, fill, fill");
-		
+				
 		JEditorPane editorPane = new JEditorPane();
 		editorPane.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 12));
 		editorPane.setContentType("text/html");
 		editorPane.setName("editorPane");
+		
+		HTMLEditorKit html = new HTMLEditorKit();
+		
+		//TODO
+		/* The editor kit needs to set CSS rules for span classes that change the font and color of specific
+		 * terms and any clear function name (eg "foobar()")
+		 * A listener needs to be added that'll stick the correct span around each term in the document if
+		 * a span isn't already there (prevents nested spans) (probably doable by including the regex characters
+		 * for whitespace, which the spans won't have, being in kerning-contact with their terms
+		 * 
+		 */
 		
 		scrollPane.setViewportView(editorPane);
 		
@@ -105,6 +119,14 @@ public class TextEditorWindow {
 		
 	    fc = new JFileChooser();
 	    
+	}
+	
+	//highlights hardcoded keywords for now
+	public void syntaxHighlight(JEditorPane editor) {
+		String[] terms = editor.getText().split(" ");
+		
+		//htmleditorkit api use here?
+		
 	}
 	
 	public void createComponentMap() {

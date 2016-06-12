@@ -476,3 +476,98 @@
 
 2016-06-08 20:38:47,223 [Thread-11] ERROR org.eclipse.jgit.util.FS - fatal: Could not switch to '/Library/Developer/CommandLineTools/usr/etc/': No such file or directory
 
+2016-06-11 22:04:11,349 [Worker-464] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.rss:RSSReader:0.0.1-SNAPSHOT @ /Users/Aron/Documents/karan100/RSSReader/pom.xml.
+2016-06-11 22:04:11,976 [Worker-459] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.rss:RSSReader:0.0.1-SNAPSHOT @ /Users/Aron/Documents/karan100/RSSReader/pom.xml.
+2016-06-11 22:04:11,981 [Worker-464] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /RSSReader/src/main/java
+2016-06-11 22:04:11,984 [Worker-464] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /RSSReader/src/main/resources
+2016-06-11 22:04:11,985 [Worker-464] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /RSSReader/src/test/java
+2016-06-11 22:04:11,985 [Worker-464] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /RSSReader/src/test/resources
+2016-06-11 22:04:12,692 [Worker-465] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.rss:RSSReader:0.0.1-SNAPSHOT @ /Users/Aron/Documents/karan100/RSSReader/pom.xml.
+2016-06-11 22:04:12,838 [Worker-465] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:04:12,856 [Worker-465] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:04:12,864 [Worker-465] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:04:12,865 [Worker-465] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:04:47,464 [Worker-466] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.rss:RSSReader:0.0.1-SNAPSHOT @ /Users/Aron/Documents/karan100/RSSReader/pom.xml.
+2016-06-11 22:04:47,543 [Worker-466] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:04:47,550 [Worker-466] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:04:47,552 [Worker-466] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:04:47,555 [Worker-466] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:05:09,935 [Worker-465] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.rss:RSSReader:0.0.1-SNAPSHOT @ /Users/Aron/Documents/karan100/RSSReader/pom.xml.
+2016-06-11 22:05:10,018 [Worker-465] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:05:10,020 [Worker-465] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:05:10,022 [Worker-465] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:05:10,024 [Worker-465] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:05:48,452 [Worker-464] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.rss:RSSReader:0.0.1-SNAPSHOT @ /Users/Aron/Documents/karan100/RSSReader/pom.xml.
+2016-06-11 22:05:48,528 [Worker-464] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:05:48,531 [Worker-464] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:05:48,533 [Worker-464] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:05:48,534 [Worker-464] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:08:51,791 [Worker-465] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|http://repo.maven.apache.org/maven2
+2016-06-11 22:09:44,192 [Worker-471] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.rss:RSSReader:0.0.1-SNAPSHOT @ /Users/Aron/Documents/karan100/RSSReader/pom.xml.
+2016-06-11 22:10:40,786 [Worker-470] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.rss:RSSReader:0.0.1-SNAPSHOT @ /Users/Aron/Documents/karan100/RSSReader/pom.xml.
+2016-06-11 22:10:40,831 [Worker-470] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /RSSReader/src/main/java
+2016-06-11 22:10:40,834 [Worker-470] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /RSSReader/src/main/resources
+2016-06-11 22:10:40,835 [Worker-470] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /RSSReader/src/test/java
+2016-06-11 22:10:40,835 [Worker-470] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /RSSReader/src/test/resources
+2016-06-11 22:10:41,311 [Worker-471] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.rss:RSSReader:0.0.1-SNAPSHOT @ /Users/Aron/Documents/karan100/RSSReader/pom.xml.
+2016-06-11 22:10:41,374 [Worker-471] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:10:41,377 [Worker-471] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:10:41,386 [Worker-471] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:10:41,389 [Worker-471] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:10:42,034 [Worker-469] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.rss:RSSReader:0.0.1-SNAPSHOT @ /Users/Aron/Documents/karan100/RSSReader/pom.xml.
+2016-06-11 22:10:42,412 [Worker-463] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:10:42,412 [Worker-463] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:10:42,415 [Worker-463] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:10:42,416 [Worker-463] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:17:48,418 [Worker-473] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.rss:RSSReader:0.0.1-SNAPSHOT @ /Users/Aron/Documents/karan100/RSSReader/pom.xml.
+2016-06-11 22:17:48,796 [Worker-473] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/rometools/rome/1.5.0/rome-1.5.0.pom
+2016-06-11 22:17:48,894 [Worker-473] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/rometools/rome/1.5.0/rome-1.5.0.pom
+2016-06-11 22:17:48,951 [Worker-473] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/rometools/rome-parent/1.5.0/rome-parent-1.5.0.pom
+2016-06-11 22:17:49,034 [Worker-473] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/rometools/rome-parent/1.5.0/rome-parent-1.5.0.pom
+2016-06-11 22:17:49,144 [Worker-473] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/rometools/rome-utils/1.5.0/rome-utils-1.5.0.pom
+2016-06-11 22:17:49,225 [Worker-473] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/rometools/rome-utils/1.5.0/rome-utils-1.5.0.pom
+2016-06-11 22:17:49,280 [Worker-473] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/jdom/jdom/2.0.2/jdom-2.0.2.pom
+2016-06-11 22:17:49,362 [Worker-473] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/jdom/jdom/2.0.2/jdom-2.0.2.pom
+2016-06-11 22:17:49,410 [Worker-473] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.pom
+2016-06-11 22:17:49,486 [Worker-473] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.pom
+2016-06-11 22:17:49,541 [Worker-473] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.7/slf4j-parent-1.7.7.pom
+2016-06-11 22:17:49,627 [Worker-473] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.7/slf4j-parent-1.7.7.pom
+2016-06-11 22:17:49,678 [Worker-473] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/rometools/rome/1.5.0/rome-1.5.0.jar
+2016-06-11 22:17:49,914 [Worker-473] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/rometools/rome/1.5.0/rome-1.5.0.jar
+2016-06-11 22:17:49,952 [Worker-473] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/rometools/rome-utils/1.5.0/rome-utils-1.5.0.jar
+2016-06-11 22:17:50,048 [Worker-473] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/rometools/rome-utils/1.5.0/rome-utils-1.5.0.jar
+2016-06-11 22:17:50,083 [Worker-473] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/jdom/jdom/2.0.2/jdom-2.0.2.jar
+2016-06-11 22:17:50,396 [Worker-473] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/jdom/jdom/2.0.2/jdom-2.0.2.jar
+2016-06-11 22:17:50,429 [Worker-473] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar
+2016-06-11 22:17:50,525 [Worker-473] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar
+2016-06-11 22:17:51,263 [Worker-473] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:17:51,267 [Worker-473] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:17:51,272 [Worker-473] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:17:51,273 [Worker-473] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:18:01,839 [Worker-473] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.rss:RSSReader:0.0.1-SNAPSHOT @ /Users/Aron/Documents/karan100/RSSReader/pom.xml.
+2016-06-11 22:18:01,946 [Worker-473] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:18:01,950 [Worker-473] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:18:01,965 [Worker-473] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:18:01,966 [Worker-473] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:18:26,773 [Worker-468] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:18:26,819 [Worker-468] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:18:26,821 [Worker-468] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:18:26,821 [Worker-468] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:24:39,314 [Worker-465] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|http://repo.maven.apache.org/maven2 in 947521 ms
+2016-06-11 22:26:38,672 [Worker-477] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.rss:RSSReader:0.0.1-SNAPSHOT @ /Users/Aron/Documents/karan100/RSSReader/pom.xml.
+2016-06-11 22:26:38,890 [Worker-477] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:26:38,905 [Worker-477] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:26:38,909 [Worker-477] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:26:38,910 [Worker-477] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:27:38,574 [Worker-465] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:27:38,577 [Worker-465] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:27:38,579 [Worker-465] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:27:38,580 [Worker-465] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:29:05,692 [Worker-477] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:29:05,699 [Worker-477] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:29:05,701 [Worker-477] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:29:05,702 [Worker-477] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:29:52,676 [Worker-472] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:29:52,681 [Worker-472] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-11 22:29:52,683 [Worker-472] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-11 22:29:52,683 [Worker-472] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
