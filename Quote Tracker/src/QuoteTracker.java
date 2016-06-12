@@ -3,14 +3,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
-
 import java.net.URL;
-
 import java.nio.charset.Charset;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -48,8 +46,16 @@ public class QuoteTracker {
 			
 			JSONObject json = readJsonFromUrl(generateURL(symbols.toArray(strArr)));
 			
-			System.out.println(json.getJSONObject(LIST).getJSONArray(RESOURCES).toString(2));
+			//System.out.println(json.getJSONObject(LIST).getJSONArray(RESOURCES).toString(2));
+			
+			JSONArray jsonArr = json.getJSONObject(LIST).getJSONArray(RESOURCES);
+			
+			for (int i = 0; i < jsonArr.length(); i++) {
+				  System.out.println(jsonArr.getJSONObject(i).getJSONObject("resource").getJSONObject("fields").get("name"));
+				}
+
 			//TODO iterate the returned JSONArray's JSONObjects for name, price, day high, and change
+			
 			
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
