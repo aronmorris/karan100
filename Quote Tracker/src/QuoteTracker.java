@@ -46,16 +46,7 @@ public class QuoteTracker {
 			
 			JSONObject json = readJsonFromUrl(generateURL(symbols.toArray(strArr)));
 			
-			//System.out.println(json.getJSONObject(LIST).getJSONArray(RESOURCES).toString(2));
-			
-			JSONArray jsonArr = json.getJSONObject(LIST).getJSONArray(RESOURCES);
-			
-			for (int i = 0; i < jsonArr.length(); i++) {
-				  System.out.println(jsonArr.getJSONObject(i).getJSONObject("resource").getJSONObject("fields").get("name"));
-				}
-
-			//TODO iterate the returned JSONArray's JSONObjects for name, price, day high, and change
-			
+			getData(json);
 			
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
@@ -65,6 +56,21 @@ public class QuoteTracker {
 			e.printStackTrace();
 		}
 		
+	}
+	
+	public static void getData(JSONObject json) {
+	
+		JSONArray jsonArr = json.getJSONObject(LIST).getJSONArray(RESOURCES);
+		
+		for (int i = 0; i < jsonArr.length(); i++) {
+			//TODO iterate the returned JSONArray's JSONObjects for name, price, day high, and change
+			JSONObject obj = jsonArr.getJSONObject(i).getJSONObject("resource").getJSONObject("fields");
+			
+			System.out.println(obj.get("name"));
+			System.out.println("Price: " + obj.get("price"));
+			System.out.println("Change: " + obj.get("change"));
+			
+		}
 	}
 	
 	
