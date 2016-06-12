@@ -46,7 +46,12 @@ public class RSS {
 	}
 	
 	public String read() {
-		return feed.toString();
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(feed.getTitle() + "\n");
+		sb.append(feed.getDescription());
+		
+		return sb.toString();
 	}
 	
 }
