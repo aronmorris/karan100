@@ -5,8 +5,6 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URL;
 import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -20,43 +18,8 @@ public class QuoteTracker {
 	
 	private final static String LIST = "list";
 	private final static String RESOURCES = "resources";
-	
-	public static void main(String[] args) {
-		
-		try {
-
-			Scanner sc = new Scanner(System.in);
-			
-			System.out.println("Type -1 to stop entering stock symbols.");
-			
-			String title = "";
-			ArrayList<String> symbols = new ArrayList<String>();
-			
-			while(true) {
-				title = sc.next();
-				if (title.equals("-1")) {
-					break;
-				}
-				else {
-					symbols.add(title);
-				}
-			}
-			
-			String[] strArr = new String[symbols.size()];
-			
-			JSONObject json = readJsonFromUrl(generateURL(symbols.toArray(strArr)));
-			
-			getData(json);
-			
-		} catch (JSONException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-	}
+	private final static String RESOURCE = "resource";
+	private final static String FIELDS = "fields";
 	
 	public static void getData(JSONObject json) {
 	
@@ -64,7 +27,7 @@ public class QuoteTracker {
 		
 		for (int i = 0; i < jsonArr.length(); i++) {
 			//TODO iterate the returned JSONArray's JSONObjects for name, price, day high, and change
-			JSONObject obj = jsonArr.getJSONObject(i).getJSONObject("resource").getJSONObject("fields");
+			JSONObject obj = jsonArr.getJSONObject(i).getJSONObject(RESOURCE).getJSONObject(FIELDS);
 			
 			System.out.println(obj.get("name"));
 			System.out.println("Price: " + obj.get("price"));

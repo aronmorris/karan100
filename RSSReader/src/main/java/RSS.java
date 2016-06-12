@@ -48,8 +48,7 @@ public class RSS {
 	public String read() {
 		StringBuilder sb = new StringBuilder();
 		
-		sb.append(feed.getTitle() + "\n");
-		sb.append(feed.getDescription());
+		sb.append(feed.toString());
 		
 		return sb.toString();
 	}
