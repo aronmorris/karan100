@@ -4,14 +4,24 @@ import java.util.Date;
 
 public class Post {
 
+	//Timestamps and content are immutable, while comments can be added and removed.
+	//TODO Possibly change arraylist to tree for performance gain?
 	private Date timestamp;
 	private ArrayList<Post> comments;
 	private String content;
 	
-	public Post(String content) {
+	protected Post(String content) {
 		this.content = content;
 		comments = new ArrayList<Post>();
 		timestamp = new Date();
+	}
+	
+	public String getContent() {
+		return content;
+	}
+	
+	public Date getTimestamp() {
+		return timestamp;
 	}
 	
 	public void addComment(String comment) {
@@ -35,6 +45,14 @@ public class Post {
 			}
 		}
 		return null;
+	}
+	
+	/**
+	 * Returns a new instance of the Post's comments which can be modified safely
+	 * @return
+	 */
+	public ArrayList<Post> getComments() {
+		return new ArrayList<Post>(comments);
 	}
 	
 	@Override
