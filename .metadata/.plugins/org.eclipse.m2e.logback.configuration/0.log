@@ -927,3 +927,7 @@
 2016-06-12 13:55:57,819 [Worker-633] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Quote Tracker/src/main/resources
 2016-06-12 13:55:57,821 [Worker-633] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-06-12 13:55:57,821 [Worker-633] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Quote Tracker/src/test/resources
+2016-06-15 19:03:10,471 [Thread-10] ERROR org.eclipse.jgit.util.FS - fatal: Could not switch to '/Library/Developer/CommandLineTools/usr/etc/': No such file or directory
+
+2016-06-15 19:15:31,422 [Thread-10] ERROR org.eclipse.jgit.util.FS - fatal: Could not switch to '/Library/Developer/CommandLineTools/usr/etc/': No such file or directory
+

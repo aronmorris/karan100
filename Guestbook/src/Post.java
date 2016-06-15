@@ -56,6 +56,11 @@ public class Post {
 	}
 	
 	@Override
+	public String toString() {
+		return content;
+	}
+	
+	@Override
 	public boolean equals(Object o) {
 		if (o == null) {
 			return false;

@@ -1,6 +1,8 @@
 import java.awt.EventQueue;
 
+import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
+import javax.swing.ListSelectionModel;
 import javax.swing.SpringLayout;
 import javax.swing.JTextField;
 import javax.swing.JButton;
@@ -8,15 +10,19 @@ import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.JScrollPane;
 import javax.swing.AbstractAction;
+
 import java.awt.event.ActionEvent;
+
 import javax.swing.Action;
 import javax.swing.JList;
+import javax.swing.event.ListSelectionEvent;
 
 
 public class GuestbookUI {
 
 	private JFrame frame;
 	private JTextField textField;
+	private JList<Post> postList;
 
 	/**
 	 * Launch the application.
@@ -75,9 +81,13 @@ public class GuestbookUI {
 		springLayout.putConstraint(SpringLayout.EAST, scrollPane, 238, SpringLayout.WEST, frame.getContentPane());
 		frame.getContentPane().add(scrollPane);
 		
-		JList postList = new JList();
-		scrollPane.setViewportView(postList);
+		DefaultListModel<Post> listModel = new DefaultListModel<>();
 		
+		postList = new JList<Post>(listModel);
+		scrollPane.setViewportView(postList);
+		postList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		postList.setLayoutOrientation(JList.VERTICAL);
+			
 		JButton btnViewComments = new JButton("Comments");
 		springLayout.putConstraint(SpringLayout.NORTH, btnViewComments, 0, SpringLayout.NORTH, scrollPane);
 		springLayout.putConstraint(SpringLayout.WEST, btnViewComments, 0, SpringLayout.WEST, submitPost);
@@ -85,15 +95,23 @@ public class GuestbookUI {
 		
 		JButton btnPreviousContent = new JButton("Previous");
 		springLayout.putConstraint(SpringLayout.NORTH, btnPreviousContent, 6, SpringLayout.SOUTH, btnViewComments);
+		springLayout.putConstraint(SpringLayout.EAST, btnViewComments, 0, SpringLayout.EAST, btnPreviousContent);
 		springLayout.putConstraint(SpringLayout.WEST, btnPreviousContent, 0, SpringLayout.WEST, submitPost);
 		frame.getContentPane().add(btnPreviousContent);
 	}
-	private class SwingAction extends AbstractAction {
-		public SwingAction() {
-			putValue(NAME, "SwingAction");
-			putValue(SHORT_DESCRIPTION, "Some short description");
-		}
-		public void actionPerformed(ActionEvent e) {
-		}
+	
+	public void valueChanged(ListSelectionEvent e) {
+	    if (e.getValueIsAdjusting() == false) { //only care about when the user is done doing things to the list
+
+	        if (postList.getSelectedIndex() == -1) {
+	        //No selection, disable fire button.
+	            fireButton.setEnabled(false);
+
+	        } else {
+	        //Selection, enable the fire button.
+	            fireButton.setEnabled(true);
+	        }
+	    }
 	}
+	
 }

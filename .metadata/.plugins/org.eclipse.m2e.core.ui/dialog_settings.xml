@@ -2,12 +2,15 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.aronmorris.rss"/>
 			<item value="com.starlesscitadel.aronmorris"/>
 			<item value="io.github.aronmorris"/>
 		</list>
 		<list key="name">
+			<item value="RSS Reader"/>
 		</list>
 		<list key="artifactId">
+			<item value="RSSReader"/>
 			<item value="StarlessPlayer"/>
 			<item value="HollowLottery"/>
 		</list>
@@ -34,6 +37,12 @@
 		<list key="issueManagementUrl">
 		</list>
 	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item value="480" key="width"/>
+		<item value="480" key="x"/>
+		<item value="106" key="y"/>
+		<item value="489" key="height"/>
+	</section>
 	<section name="MavenProjectWizardArchetypePage">
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -41,6 +50,19 @@
 			<item value="[artifactId]-[version]"/>
 			<item value="[groupId].[artifactId]"/>
 			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="com.aronmorris.quotetracker"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="QuoteTracker"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
 		</list>
 	</section>
 	<section name="MavenProjectWizardLocationPage">
