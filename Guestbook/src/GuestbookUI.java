@@ -12,10 +12,13 @@ import javax.swing.JScrollPane;
 import javax.swing.AbstractAction;
 
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.Action;
 import javax.swing.JList;
 import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 
 
 public class GuestbookUI {
@@ -23,6 +26,8 @@ public class GuestbookUI {
 	private JFrame frame;
 	private JTextField textField;
 	private JList<Post> postList;
+	DefaultListModel<Post> listModel;
+	private JButton viewComments, previousContent, submitPost;
 
 	/**
 	 * Launch the application.
@@ -57,10 +62,12 @@ public class GuestbookUI {
 		SpringLayout springLayout = new SpringLayout();
 		frame.getContentPane().setLayout(springLayout);
 		
-		JButton submitPost = new JButton("Submit");
+		submitPost = new JButton("Submit");
 		springLayout.putConstraint(SpringLayout.NORTH, submitPost, 12, SpringLayout.NORTH, frame.getContentPane());
 		springLayout.putConstraint(SpringLayout.WEST, submitPost, 244, SpringLayout.WEST, frame.getContentPane());
 		frame.getContentPane().add(submitPost);
+		
+		submitPost.addActionListener(new SubmissionListener());
 		
 		textField = new JTextField();
 		springLayout.putConstraint(SpringLayout.NORTH, textField, 11, SpringLayout.NORTH, frame.getContentPane());
@@ -81,37 +88,67 @@ public class GuestbookUI {
 		springLayout.putConstraint(SpringLayout.EAST, scrollPane, 238, SpringLayout.WEST, frame.getContentPane());
 		frame.getContentPane().add(scrollPane);
 		
-		DefaultListModel<Post> listModel = new DefaultListModel<>();
+		listModel = new DefaultListModel<>();
 		
 		postList = new JList<Post>(listModel);
 		scrollPane.setViewportView(postList);
 		postList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		postList.setLayoutOrientation(JList.VERTICAL);
-			
-		JButton btnViewComments = new JButton("Comments");
-		springLayout.putConstraint(SpringLayout.NORTH, btnViewComments, 0, SpringLayout.NORTH, scrollPane);
-		springLayout.putConstraint(SpringLayout.WEST, btnViewComments, 0, SpringLayout.WEST, submitPost);
-		frame.getContentPane().add(btnViewComments);
 		
-		JButton btnPreviousContent = new JButton("Previous");
-		springLayout.putConstraint(SpringLayout.NORTH, btnPreviousContent, 6, SpringLayout.SOUTH, btnViewComments);
-		springLayout.putConstraint(SpringLayout.EAST, btnViewComments, 0, SpringLayout.EAST, btnPreviousContent);
-		springLayout.putConstraint(SpringLayout.WEST, btnPreviousContent, 0, SpringLayout.WEST, submitPost);
-		frame.getContentPane().add(btnPreviousContent);
+		postList.addListSelectionListener(new PostSelectionListener());
+		
+		listModel.addElement(new Post("Hello world"));
+			
+		viewComments = new JButton("Comments");
+		springLayout.putConstraint(SpringLayout.NORTH, viewComments, 0, SpringLayout.NORTH, scrollPane);
+		springLayout.putConstraint(SpringLayout.WEST, viewComments, 0, SpringLayout.WEST, submitPost);
+		frame.getContentPane().add(viewComments);
+		
+		previousContent = new JButton("Previous");
+		springLayout.putConstraint(SpringLayout.NORTH, previousContent, 6, SpringLayout.SOUTH, viewComments);
+		springLayout.putConstraint(SpringLayout.EAST, viewComments, 0, SpringLayout.EAST, previousContent);
+		springLayout.putConstraint(SpringLayout.WEST, previousContent, 0, SpringLayout.WEST, submitPost);
+		frame.getContentPane().add(previousContent);
 	}
 	
-	public void valueChanged(ListSelectionEvent e) {
-	    if (e.getValueIsAdjusting() == false) { //only care about when the user is done doing things to the list
+	
+	class SubmissionListener implements ActionListener {
 
-	        if (postList.getSelectedIndex() == -1) {
-	        //No selection, disable fire button.
-	            fireButton.setEnabled(false);
-
-	        } else {
-	        //Selection, enable the fire button.
-	            fireButton.setEnabled(true);
-	        }
-	    }
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			Post p = new Post(textField.getText());
+			
+			if (postList.isSelectionEmpty()) {
+				listModel.addElement(p);
+			}
+			else {
+				postList.getSelectedValue().addComment(p);
+			}
+			
+		}
+		
+	}
+	
+	class PostSelectionListener implements ListSelectionListener {
+		
+		public void valueChanged(ListSelectionEvent e) {
+		    if (e.getValueIsAdjusting() == false) { //only care about when the user is done doing things to the list
+	
+		        if (postList.getSelectedIndex() == -1) {
+		        //No selection, disable fire button.
+		        	viewComments.setEnabled(false);
+		        	previousContent.setEnabled(false);
+		        	
+	
+		        } else {
+		        //Selection, enable the fire button.
+		       
+		        	previousContent.setEnabled(true);
+		            viewComments.setEnabled(true);
+		            
+		        }
+		    }
+		}
 	}
 	
 }

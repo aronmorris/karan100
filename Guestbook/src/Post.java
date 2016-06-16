@@ -9,11 +9,20 @@ public class Post {
 	private Date timestamp;
 	private ArrayList<Post> comments;
 	private String content;
+	private Post parent;
 	
 	protected Post(String content) {
 		this.content = content;
 		comments = new ArrayList<Post>();
 		timestamp = new Date();
+	}
+	
+	public void setParent(Post p) {
+		parent = p;
+	}
+	
+	public Post getParent() {
+		return parent;
 	}
 	
 	public String getContent() {
@@ -24,8 +33,18 @@ public class Post {
 		return timestamp;
 	}
 	
+	public boolean hasComments() {
+		return !comments.isEmpty();
+	}
+	
+	@Deprecated
 	public void addComment(String comment) {
 		comments.add(new Post(comment));
+	}
+	
+	public void addComment(Post comment) {
+		comment.setParent(this);
+		comments.add(comment);
 	}
 	
 	public void removeComment(Post comment) {
