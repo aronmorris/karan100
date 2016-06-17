@@ -117,17 +117,21 @@ public class GuestbookUI {
 		public void actionPerformed(ActionEvent e) {
 			Post p = new Post(textField.getText());
 			
+			//previouscontext is root for the first comment and at the highest level
 			if (root == null) {
 				root = new Node<Post>(p);
 				previousContext = root;
 			}
 			
+			//if no item is selected, then the previous context's parent is given a child at this level
+			//if the context is root, then it gives itself a child
 			if (postList.isSelectionEmpty()) {
-				previousContext.addChild(p);
+				previousContext.getParent().addChild(p);
 				listModel.addElement(new Node<Post>(p));
 				
 			}
 			
+			//An item is selected, so it is given a comment but it isn't displayed
 			else {
 				postList.getSelectedValue().addChild(p);
 			}
@@ -138,18 +142,24 @@ public class GuestbookUI {
 	
 	class CommentSelectListener implements ActionListener {
 
+		//TODO on click, the previouscontext becomes the node selected, and its children are displayed
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			if (!postList.isSelectionEmpty()) {
+				System.out.println("Hello!");
 			
 				Node<Post> n = postList.getSelectedValue();
 				
 				if (n.hasChildren()) {
+					System.out.println("Hello2!");
 					listModel.clear();
 					previousContext = n;
+					System.out.println("Hello3!");
 					for (Node<Post> np : n.getChildren()) {
 						listModel.addElement(np);
+						System.out.println("Hello4!");
 					}
+					System.out.println("Hello5!");
 				}
 				
 			}

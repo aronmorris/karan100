@@ -14,8 +14,10 @@ public class Node<T> {
    }
    
    public Node(T data, Node<T> parent) {
+	   this.data = data;
 	   this.parent = parent;
 	   this.parent.children.add(this);
+	   this.children = new ArrayList<Node<T>>();
    }
    
    public boolean hasChildren() {
@@ -44,7 +46,7 @@ public class Node<T> {
         
     @Override
     public String toString() {
-    	return data.toString();
+    	return this.data.toString();
     }
    
 }
