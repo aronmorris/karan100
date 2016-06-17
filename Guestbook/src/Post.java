@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Date;
 
 
@@ -14,7 +13,7 @@ public class Post {
 	
 	@Override
 	public String toString() {
-		return content;
+		return "\"" + content + "\"" + " -Posted at: " + timestamp.toString().substring(0, 19);
 	}
 	
 	@Override
