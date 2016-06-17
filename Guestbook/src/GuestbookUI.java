@@ -1,37 +1,32 @@
 import java.awt.EventQueue;
-
-import javax.swing.DefaultListModel;
-import javax.swing.JFrame;
-import javax.swing.ListSelectionModel;
-import javax.swing.SpringLayout;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JTable;
-import javax.swing.JScrollPane;
-import javax.swing.AbstractAction;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-import javax.swing.Action;
+import javax.swing.DefaultListModel;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import javax.swing.ListSelectionModel;
+import javax.swing.SpringLayout;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-
 
 public class GuestbookUI {
 
 	private JFrame frame;
 	private JTextField textField;
-	private JList<Post> postList;
-	private DefaultListModel<Post> listModel;
+	private JList<Node<Post>> postList;
+	private DefaultListModel<Node<Post>> listModel;
 	private JButton viewComments, previousContent, submitPost;
-		
-	private GuestBook guestbook;
-	
 
+	private Node<Post> root = null;
+	
+	private Node<Post> previousContext;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -59,8 +54,6 @@ public class GuestbookUI {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		
-		guestbook = new GuestBook();
 		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
@@ -96,15 +89,13 @@ public class GuestbookUI {
 		
 		listModel = new DefaultListModel<>();
 		
-		postList = new JList<Post>(listModel);
+		postList = new JList<Node<Post>>(listModel);
 		scrollPane.setViewportView(postList);
 		postList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		postList.setLayoutOrientation(JList.VERTICAL);
 		
 		postList.addListSelectionListener(new PostSelectionListener());
-		
-		listModel.addElement(new Post("Hello world"));
-			
+				
 		viewComments = new JButton("Comments");
 		springLayout.putConstraint(SpringLayout.NORTH, viewComments, 0, SpringLayout.NORTH, scrollPane);
 		springLayout.putConstraint(SpringLayout.WEST, viewComments, 0, SpringLayout.WEST, submitPost);
@@ -116,6 +107,7 @@ public class GuestbookUI {
 		springLayout.putConstraint(SpringLayout.EAST, viewComments, 0, SpringLayout.EAST, previousContent);
 		springLayout.putConstraint(SpringLayout.WEST, previousContent, 0, SpringLayout.WEST, submitPost);
 		frame.getContentPane().add(previousContent);
+			
 	}
 	
 	
@@ -125,12 +117,19 @@ public class GuestbookUI {
 		public void actionPerformed(ActionEvent e) {
 			Post p = new Post(textField.getText());
 			
+			if (root == null) {
+				root = new Node<Post>(p);
+				previousContext = root;
+			}
+			
 			if (postList.isSelectionEmpty()) {
-				listModel.addElement(p);
+				previousContext.addChild(p);
+				listModel.addElement(new Node<Post>(p));
+				
 			}
 			
 			else {
-				postList.getSelectedValue().addComment(p);
+				postList.getSelectedValue().addChild(p);
 			}
 			
 		}
@@ -142,13 +141,14 @@ public class GuestbookUI {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			if (!postList.isSelectionEmpty()) {
+			
+				Node<Post> n = postList.getSelectedValue();
 				
-				Post p = postList.getSelectedValue();
-				
-				if (p.hasComments()) {
+				if (n.hasChildren()) {
 					listModel.clear();
-					for (Post po : p.getComments()) {
-						listModel.addElement(po);
+					previousContext = n;
+					for (Node<Post> np : n.getChildren()) {
+						listModel.addElement(np);
 					}
 				}
 				
