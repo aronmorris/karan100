@@ -26,8 +26,11 @@ public class GuestbookUI {
 	private JFrame frame;
 	private JTextField textField;
 	private JList<Post> postList;
-	DefaultListModel<Post> listModel;
+	private DefaultListModel<Post> listModel;
 	private JButton viewComments, previousContent, submitPost;
+		
+	private GuestBook guestbook;
+	
 
 	/**
 	 * Launch the application.
@@ -56,6 +59,9 @@ public class GuestbookUI {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		
+		guestbook = new GuestBook();
+		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -103,6 +109,7 @@ public class GuestbookUI {
 		springLayout.putConstraint(SpringLayout.NORTH, viewComments, 0, SpringLayout.NORTH, scrollPane);
 		springLayout.putConstraint(SpringLayout.WEST, viewComments, 0, SpringLayout.WEST, submitPost);
 		frame.getContentPane().add(viewComments);
+		viewComments.addActionListener(new CommentSelectListener());
 		
 		previousContent = new JButton("Previous");
 		springLayout.putConstraint(SpringLayout.NORTH, previousContent, 6, SpringLayout.SOUTH, viewComments);
@@ -121,12 +128,44 @@ public class GuestbookUI {
 			if (postList.isSelectionEmpty()) {
 				listModel.addElement(p);
 			}
+			
 			else {
 				postList.getSelectedValue().addComment(p);
 			}
 			
 		}
 		
+	}
+	
+	class CommentSelectListener implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			if (!postList.isSelectionEmpty()) {
+				
+				Post p = postList.getSelectedValue();
+				
+				if (p.hasComments()) {
+					listModel.clear();
+					for (Post po : p.getComments()) {
+						listModel.addElement(po);
+					}
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+	class PreviousContentListener implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			
+			
+		}
+
 	}
 	
 	class PostSelectionListener implements ListSelectionListener {

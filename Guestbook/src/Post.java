@@ -9,22 +9,13 @@ public class Post {
 	private Date timestamp;
 	private ArrayList<Post> comments;
 	private String content;
-	private Post parent;
 	
 	protected Post(String content) {
 		this.content = content;
 		comments = new ArrayList<Post>();
 		timestamp = new Date();
 	}
-	
-	public void setParent(Post p) {
-		parent = p;
-	}
-	
-	public Post getParent() {
-		return parent;
-	}
-	
+		
 	public String getContent() {
 		return content;
 	}
@@ -43,7 +34,6 @@ public class Post {
 	}
 	
 	public void addComment(Post comment) {
-		comment.setParent(this);
 		comments.add(comment);
 	}
 	
