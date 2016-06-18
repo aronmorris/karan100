@@ -1,9 +1,10 @@
 
 public class CaesarCipher {
 
-	private static char[] message;
+	protected static char[] message;
 	
 	public static String encrypt(String msg, char shift) {
+		
 		message = msg.toCharArray();
 		
 		StringBuilder sb = new StringBuilder();
