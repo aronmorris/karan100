@@ -89,7 +89,13 @@ public class RegexQueryTool {
 			
 			ArrayList<String> matches = RegexQuery.regexQuery(sourcePane.getText(), regex);
 			
+			StringBuilder sb = new StringBuilder();
 			
+			for (String str : matches) {
+				sb.append(str);
+			}
+			
+			matchArea.setText(sb.toString());
 			
 		}
 		
