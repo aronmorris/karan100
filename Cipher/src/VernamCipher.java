@@ -6,7 +6,7 @@ public class VernamCipher {
 		StringBuilder sb = new StringBuilder();
 		
 		for (int i = 0; i < msg.length(); i++) {
-			sb.append(Character.toString((char) (msg.charAt(i) ^ key.charAt(i % key.length()))));
+			sb.append((char) (msg.charAt(i) ^ key.charAt(i % key.length())));
 		}
 		
 		return sb.toString();

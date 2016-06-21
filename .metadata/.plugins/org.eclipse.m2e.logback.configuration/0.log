@@ -933,6 +933,7 @@
 
 2016-06-16 21:57:03,841 [Thread-10] ERROR org.eclipse.jgit.util.FS - fatal: Could not switch to '/Library/Developer/CommandLineTools/usr/etc/': No such file or directory
 
+<<<<<<< Updated upstream
 2016-06-19 22:12:23,271 [Worker-6] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.jar
 2016-06-19 22:12:23,524 [Worker-6] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.jar
 2016-06-19 22:12:25,524 [Worker-6] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.quotetracker:QuoteTracker:0.0.1-SNAPSHOT @ D:\Programming\Java\JavaWorkspace\Projects\Quote Tracker\pom.xml.
@@ -977,3 +978,29 @@
 2016-06-19 22:12:29,941 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\RSSReader\src\main\resources
 2016-06-19 22:12:29,942 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-06-19 22:12:29,942 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\RSSReader\src\test\resources
+=======
+2016-06-21 00:11:22,385 [Thread-13] ERROR org.eclipse.jgit.util.FS - fatal: Could not switch to '/Library/Developer/CommandLineTools/usr/etc/': No such file or directory
+
+2016-06-21 00:11:28,133 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.quotetracker:QuoteTracker:0.0.1-SNAPSHOT @ /Users/Aron/Documents/karan100/Quote Tracker/pom.xml.
+2016-06-21 00:11:28,592 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.rss:RSSReader:0.0.1-SNAPSHOT @ /Users/Aron/Documents/karan100/RSSReader/pom.xml.
+2016-06-21 00:11:29,936 [Worker-3] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.quotetracker:QuoteTracker:0.0.1-SNAPSHOT @ /Users/Aron/Documents/karan100/Quote Tracker/pom.xml.
+2016-06-21 00:11:30,826 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-21 00:11:30,827 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Quote Tracker/src/main/resources
+2016-06-21 00:11:30,832 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-21 00:11:30,832 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Quote Tracker/src/test/resources
+2016-06-21 00:11:31,208 [Worker-3] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.rss:RSSReader:0.0.1-SNAPSHOT @ /Users/Aron/Documents/karan100/RSSReader/pom.xml.
+2016-06-21 00:11:31,382 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-21 00:11:31,391 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-21 00:11:31,394 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-21 00:11:31,395 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-21 00:11:33,370 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.quotetracker:QuoteTracker:0.0.1-SNAPSHOT @ /Users/Aron/Documents/karan100/Quote Tracker/pom.xml.
+2016-06-21 00:11:33,435 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.rss:RSSReader:0.0.1-SNAPSHOT @ /Users/Aron/Documents/karan100/RSSReader/pom.xml.
+2016-06-21 00:11:34,776 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-21 00:11:34,778 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Quote Tracker/src/main/resources
+2016-06-21 00:11:34,781 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-21 00:11:34,781 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Quote Tracker/src/test/resources
+2016-06-21 00:11:34,819 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-21 00:11:34,822 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-06-21 00:11:34,825 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-21 00:11:34,825 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+>>>>>>> Stashed changes

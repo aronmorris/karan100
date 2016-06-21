@@ -70,6 +70,7 @@ public class RegexQueryTool {
 		springLayout.putConstraint(SpringLayout.NORTH, submitButton, -1, SpringLayout.NORTH, regexField);
 		springLayout.putConstraint(SpringLayout.WEST, submitButton, 6, SpringLayout.EAST, regexField);
 		frame.getContentPane().add(submitButton);
+		submitButton.addActionListener(new SubmissionListener());
 		
 		matchArea = new JTextArea();
 		springLayout.putConstraint(SpringLayout.NORTH, matchArea, 6, SpringLayout.SOUTH, regexField);
