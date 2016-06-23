@@ -2,6 +2,8 @@ import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
 
 import javax.swing.JFrame;
 import javax.swing.SpringLayout;
@@ -88,12 +90,19 @@ public class RegexQueryTool {
 			
 			String regex = regexField.getText();
 			
+			try {
+				Pattern pReg = Pattern.compile(regex);
+			} catch (PatternSyntaxException pse) {
+				matchArea.setText("Invalid Regex");
+				return;
+			}
+			
 			ArrayList<String> matches = RegexQuery.regexQuery(sourcePane.getText(), regex);
 			
 			StringBuilder sb = new StringBuilder();
 			
 			for (String str : matches) {
-				sb.append(str);
+				sb.append(str + "\n");
 			}
 			
 			matchArea.setText(sb.toString());
