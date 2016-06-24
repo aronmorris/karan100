@@ -23,14 +23,21 @@ public class FTP {
 		try {
 			
 			int reply;
-			
+						
 			String server = args[0];
+			
+			String user = "anonymous";
 			
 			ftp.connect(server, 21); //connect to server
 			
+			ftp.enterLocalPassiveMode();
+			
+			//login credentials for anonymity
+			ftp.login(user, user + "@" + server);
+			
 			System.out.println("Connected to " + server + ".");
 		    
-			System.out.print("Code: " + ftp.getReplyString());
+		
 			
 			reply = ftp.getReplyCode();
 			
@@ -45,10 +52,13 @@ public class FTP {
 			}
 			
 			//actual file operations
-			FTPFile[] files = ftp.listDirectories();
+			FTPFile[] files = ftp.listFiles("/");
+			
+			//System.out.println(ftp.getReplyString());
 			
 			for (FTPFile f : files) {
 				System.out.println(f.getName());
+				
 			}
 					
 			ftp.logout();
