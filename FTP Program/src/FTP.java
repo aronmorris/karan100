@@ -1,4 +1,7 @@
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPClientConfig;
@@ -8,6 +11,11 @@ import org.apache.commons.net.ftp.FTPReply;
 
 public class FTP {
 
+	/*
+	 * args[0] == server to connect to
+	 * args[1] == file to download
+	 * args[2] == path to place it
+	 */
 	public static void main(String[] args) {
 		
 		FTPClient ftp = new FTPClient();
@@ -25,6 +33,8 @@ public class FTP {
 			int reply;
 						
 			String server = args[0];
+			
+			String fileName = args[1];
 			
 			String user = "anonymous";
 			
@@ -58,6 +68,18 @@ public class FTP {
 			
 			for (FTPFile f : files) {
 				System.out.println(f.getName());
+				
+				if (f.getName().equals(fileName)) {
+					
+					File file = new File(args[2]);
+						
+					try (FileOutputStream io = new FileOutputStream(file)) {
+						ftp.retrieveFile(f.getName(), io);
+						
+						io.close();
+					}
+					
+				}
 				
 			}
 					
