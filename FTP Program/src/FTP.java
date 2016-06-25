@@ -12,9 +12,10 @@ import org.apache.commons.net.ftp.FTPReply;
 public class FTP {
 
 	/*
-	 * args[0] == server to connect to
-	 * args[1] == file to download
-	 * args[2] == path to place it
+	 * args[0] == upload or download
+	 * args[1] == server to connect to
+	 * args[2] == file to download
+	 * args[3] == path to place it
 	 */
 	public static void main(String[] args) {
 		
@@ -31,62 +32,30 @@ public class FTP {
 	}
 	
 	private static void upload(String[] args) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	public static void download(String[] args) {
 		
-		FTPClient ftp = new FTPClient();
+		FTPClient ftp = connect(args[1]);
 		
-		//in case default configuration doesn't work
-		FTPClientConfig config = new FTPClientConfig();
-		
-		ftp.configure(config);
-		
-		@SuppressWarnings("unused")
-		boolean err = false;
-		
+		String fileName = args[2];
+			
+		//actual file operations
+		FTPFile[] files = null;
 		try {
-			
-			int reply;
-						
-			String server = args[1];
-			
-			String fileName = args[2];
-			
-			String user = "anonymous";
-			
-			ftp.connect(server, 21); //connect to server
-			
-			ftp.enterLocalPassiveMode();
-			
-			//login credentials for anonymity
-			ftp.login(user, user + "@" + server);
-			
-			System.out.println("Connected to " + server + ".");
-		    
+			files = ftp.listFiles("/");
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
-			
-			reply = ftp.getReplyCode();
-			
-			if (!FTPReply.isPositiveCompletion(reply)) {
-				
-				ftp.disconnect();
-				
-				System.out.println("Server rejected connection.");
-				
-				return; //exit program if the server rejects the connection
-				
-			}
-			
-			//actual file operations
-			FTPFile[] files = ftp.listFiles("/");
-			
-			//System.out.println(ftp.getReplyString());
-			
-			boolean found = false;
-			
+		//System.out.println(ftp.getReplyString());
+		
+		boolean found = false;
+		
+		if (files != null) {
+		
 			for (FTPFile f : files) {
 			
 				if (f.getName().equals(fileName)) {
@@ -111,36 +80,75 @@ public class FTP {
 				}
 					
 			}
-			
-			if (!found) {
-				System.out.println("No file found with that name.");
-			}
-					
-			ftp.logout();
-			
-		} catch(IOException e) {
-			
-			err = true;
-			
-			e.printStackTrace();
-			
-		} finally {
-			
-			if (ftp.isConnected()) {
-				
-				try {
-					ftp.disconnect();
-					
-				} catch (IOException io ) {
-					
-				}
-			}
 		}
 		
+		if (!found) {
+			System.out.println("No file found with that name.");
+		}
+				
+		disconnect(ftp);
+					
 		System.out.println("Completed.");
 		
 		return;
 		
+	}
+	
+	public static FTPClient connect(String serverURL) {
+
+		FTPClient ftp = new FTPClient();
+		
+		//in case default configuration doesn't work
+		FTPClientConfig config = new FTPClientConfig();
+		
+		ftp.configure(config);
+		
+		@SuppressWarnings("unused")
+		boolean err = false;
+		
+		try {
+			
+			int reply;
+						
+			String server = serverURL;
+			
+			String user = "anonymous";
+			
+			ftp.connect(server, 21); //connect to server
+			
+			ftp.enterLocalPassiveMode();
+			
+			//login credentials for anonymity
+			ftp.login(user, user + "@" + server);
+			
+			System.out.println("Connected to " + server + ".");
+		    
+			reply = ftp.getReplyCode();
+			
+			if (!FTPReply.isPositiveCompletion(reply)) {
+				
+				ftp.disconnect();
+				
+				System.out.println("Server rejected connection.");
+				
+				return null; //exit program if the server rejects the connection
+				
+			}
+				
+		} catch (IOException e) {
+			err = true;
+			e.printStackTrace();
+		}
+		return ftp;
+	}
+	
+	public static void disconnect(FTPClient ftp) {
+		try {
+			ftp.logout();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 }
