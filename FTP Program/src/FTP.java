@@ -18,6 +18,25 @@ public class FTP {
 	 */
 	public static void main(String[] args) {
 		
+		if (args[0].equalsIgnoreCase("dl")) {
+			download(args);
+		}
+		else if (args[0].equalsIgnoreCase("ul")) {
+			upload(args);
+		}
+		else {
+			System.out.println("No valid selection of \"dl\" (download) or \"ul\" (upload) as first argument");
+		}
+		
+	}
+	
+	private static void upload(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void download(String[] args) {
+		
 		FTPClient ftp = new FTPClient();
 		
 		//in case default configuration doesn't work
@@ -32,9 +51,9 @@ public class FTP {
 			
 			int reply;
 						
-			String server = args[0];
+			String server = args[1];
 			
-			String fileName = args[1];
+			String fileName = args[2];
 			
 			String user = "anonymous";
 			
@@ -66,21 +85,35 @@ public class FTP {
 			
 			//System.out.println(ftp.getReplyString());
 			
+			boolean found = false;
+			
 			for (FTPFile f : files) {
-				System.out.println(f.getName());
-				
+			
 				if (f.getName().equals(fileName)) {
 					
-					File file = new File(args[2]);
+					found = true;
+					
+					File file = new File(args[3]);
 						
 					try (FileOutputStream io = new FileOutputStream(file)) {
+						
+						System.out.println("Downloading file now...");
+						
 						ftp.retrieveFile(f.getName(), io);
 						
 						io.close();
+					} catch (Exception e) {
+						System.out.println("Something went wrong while downloading!");
 					}
 					
+					break;
+					
 				}
-				
+					
+			}
+			
+			if (!found) {
+				System.out.println("No file found with that name.");
 			}
 					
 			ftp.logout();
