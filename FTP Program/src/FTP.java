@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -32,6 +33,34 @@ public class FTP {
 	}
 	
 	private static void upload(String[] args) {
+	
+		FTPClient ftp = connect(args[1]);
+		FileInputStream fis = null;
+		String fileName = args[2];
+		
+		try {
+			ftp.setFileType(FTPClient.BINARY_FILE_TYPE, FTPClient.BINARY_FILE_TYPE);
+			ftp.setFileTransferMode(FTPClient.BINARY_FILE_TYPE);
+			
+			System.out.println("Attempting to upload " + fileName);
+			
+			fis = new FileInputStream(fileName);
+			
+			ftp.storeFile(fileName, fis);
+			
+			System.out.println("Uploading file...");
+			
+			fis.close();
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		finally {
+			disconnect(ftp);
+			System.out.println("Completed!");
+		}
 		
 	}
 
@@ -85,9 +114,9 @@ public class FTP {
 		if (!found) {
 			System.out.println("No file found with that name.");
 		}
-				
+		
 		disconnect(ftp);
-					
+									
 		System.out.println("Completed.");
 		
 		return;
