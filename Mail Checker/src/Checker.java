@@ -30,7 +30,7 @@ public class Checker {
 		
 		sc.close();
 		*/
-		
+		//protocol, email address, pw
 		inbox.read(args[0], args[1], args[2]);
 	}
 	
@@ -40,15 +40,15 @@ public class Checker {
 		
 		try {
 			
-			p.setProperty("mail.host", "smtp.gamil.com");
-			p.setProperty("mail.port", "465");
+			p.setProperty("mail.host", "127.0.0.1");
+			p.setProperty("mail.port", "25");
 			p.setProperty("mail.protocol", "smtps");
 			p.setProperty("mail.smtps.starttls.enable", "true");
 			p.setProperty("mail.smtps.auth", "true");
 			p.setProperty("mail.smtp.timeout", "10000");
 			
-			p.setProperty("mail.username", address);
-			p.setProperty("mail.password", password);
+			//p.setProperty("mail.username", address);
+			//p.setProperty("mail.password", password);
 			
 			System.out.println("Establishing connection...");
 			

@@ -1477,3 +1477,45 @@ Binding(CTRL+SHIFT+ARROW_DOWN,
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-27 23:40:54.156
 !MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-28 22:52:15.581
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-28 22:52:15.601
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-28 22:53:20.946
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-28 22:53:20.948
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-28 22:55:41.777
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-28 22:55:41.781
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-28 22:56:12.348
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-28 22:56:12.349
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.egit.core 4 0 2016-06-28 23:31:36.547
+!MESSAGE Auto sharing project with git failed
+!STACK 0
+java.nio.file.InvalidPathException: Illegal char <:> at index 0: :/Users/Aron/.git:.git
+	at sun.nio.fs.WindowsPathParser.normalize(Unknown Source)
+	at sun.nio.fs.WindowsPathParser.parse(Unknown Source)
+	at sun.nio.fs.WindowsPathParser.parse(Unknown Source)
+	at sun.nio.fs.WindowsPath.parse(Unknown Source)
+	at sun.nio.fs.WindowsFileSystem.getPath(Unknown Source)
+	at sun.nio.fs.AbstractPath.resolve(Unknown Source)
+	at org.eclipse.egit.core.RepositoryUtil.toDirSet(RepositoryUtil.java:450)
+	at org.eclipse.egit.core.RepositoryUtil.getRepositories(RepositoryUtil.java:413)
+	at org.eclipse.egit.core.RepositoryUtil.getConfiguredRepositories(RepositoryUtil.java:460)
+	at org.eclipse.egit.core.RepositoryUtil.addConfiguredRepository(RepositoryUtil.java:484)
+	at org.eclipse.egit.core.Activator$CheckProjectsToShare.visitConnect(Activator.java:580)
+	at org.eclipse.egit.core.Activator$CheckProjectsToShare.run(Activator.java:501)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)

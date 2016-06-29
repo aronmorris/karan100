@@ -1524,3 +1524,19 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact javax.activat
 2016-06-27 23:40:54,154 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Mail Checker\src\main\resources
 2016-06-27 23:40:54,156 [Worker-60] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-06-27 23:40:54,156 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Mail Checker\src\test\resources
+2016-06-28 22:52:15,581 [Worker-76] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-28 22:52:15,600 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Mail Checker\src\main\resources
+2016-06-28 22:52:15,601 [Worker-76] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-28 22:52:15,602 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Mail Checker\src\test\resources
+2016-06-28 22:53:20,946 [Worker-80] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-28 22:53:20,946 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Mail Checker\src\main\resources
+2016-06-28 22:53:20,947 [Worker-80] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-28 22:53:20,948 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Mail Checker\src\test\resources
+2016-06-28 22:55:41,777 [Worker-82] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-28 22:55:41,778 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Mail Checker\src\main\resources
+2016-06-28 22:55:41,781 [Worker-82] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-28 22:55:41,781 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Mail Checker\src\test\resources
+2016-06-28 22:56:12,348 [Worker-81] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-28 22:56:12,348 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Mail Checker\src\main\resources
+2016-06-28 22:56:12,349 [Worker-81] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-28 22:56:12,350 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Mail Checker\src\test\resources
