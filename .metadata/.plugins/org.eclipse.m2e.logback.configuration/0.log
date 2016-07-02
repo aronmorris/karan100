@@ -1564,3 +1564,7 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact javax.activat
 2016-07-04 17:39:26,635 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Whois Search/src/main/resources
 2016-07-04 17:39:26,638 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-07-04 17:39:26,638 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Whois Search/src/test/resources
+2016-07-02 17:56:37,696 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-02 17:56:37,699 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Whois Search/src/main/resources
+2016-07-02 17:56:37,701 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-02 17:56:37,702 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Whois Search/src/test/resources
