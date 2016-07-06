@@ -1568,3 +1568,5 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact javax.activat
 2016-07-02 17:56:37,699 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Whois Search/src/main/resources
 2016-07-02 17:56:37,701 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-07-02 17:56:37,702 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Whois Search/src/test/resources
+2016-07-05 22:02:09,733 [Thread-11] ERROR org.eclipse.jgit.util.FS - fatal: Could not switch to '/Library/Developer/CommandLineTools/usr/etc/': No such file or directory
+
