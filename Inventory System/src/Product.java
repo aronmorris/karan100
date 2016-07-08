@@ -12,7 +12,7 @@ public class Product {
 	
 	public Product(double price, String id, int quantity) {
 	
-		this.price = new BigDecimal(price).round(new MathContext(4, RoundingMode.UNNECESSARY));
+		this.price = new BigDecimal(price).round(new MathContext(4, RoundingMode.HALF_DOWN));
 		
 		this.id = id;
 		
@@ -50,6 +50,20 @@ public class Product {
 	
 	public int getQuantity() {
 		return quantity;
+	}
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("\nProduct ID: " + this.id + "\n");
+		
+		sb.append("Product Inventory: " + this.quantity + "\n");
+		
+		sb.append("Product Price: " + this.price + "\n");
+		
+		return sb.toString();
+		
 	}
 	
 	

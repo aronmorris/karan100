@@ -12,6 +12,25 @@ import java.util.Map;
  */
 public class Inventory {
 	
+	public static void main(String[] args) {
+		
+		Inventory inv = new Inventory();
+	
+		//populate inventory
+		for (int i = 0; i < 5; i++) {
+			
+			inv.addProduct(new Product((Math.random() * 100) / 100, Integer.toString(i), i));
+			
+		}
+		
+		System.out.println("Product ID 4 retrieved: " + inv.getProductByID("4").toString());
+		
+		System.out.println("Total inv: " + inv.getTotalInventory());
+		
+		System.out.println("Inv of product ID 4: " + inv.getInventoryByID("4"));
+		
+	}
+	
 	private Map<String, Product> inventory;
 	
 	public Inventory() {
@@ -40,7 +59,7 @@ public class Inventory {
 	 * Entirely deletes the product from the inventory
 	 * @param p
 	 */
-	public void deleteItem(Product p) {
+	public void deleteProductFromInventory(Product p) {
 		
 		inventory.remove(p.getID());
 		
@@ -55,6 +74,12 @@ public class Inventory {
 		}
 		
 		return ctr;
+		
+	}
+	
+	public Product getProductByID(String id) {
+		
+		return inventory.get(id);		
 		
 	}
 	
