@@ -1570,3 +1570,48 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact javax.activat
 2016-07-02 17:56:37,702 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Whois Search/src/test/resources
 2016-07-05 22:02:09,733 [Thread-11] ERROR org.eclipse.jgit.util.FS - fatal: Could not switch to '/Library/Developer/CommandLineTools/usr/etc/': No such file or directory
 
+2016-07-09 19:55:56,601 [Worker-554] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.reservationsystem:ReservationSystem:0.0.1-SNAPSHOT @ /Users/Aron/Documents/karan100/Reservation System/pom.xml.
+2016-07-09 19:55:57,290 [Worker-555] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-09 19:55:57,291 [Worker-555] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Reservation System/src/main/resources
+2016-07-09 19:55:57,295 [Worker-555] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-09 19:55:57,295 [Worker-555] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Reservation System/src/test/resources
+2016-07-09 19:55:57,477 [Worker-554] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Reservation System/src
+2016-07-09 19:55:57,479 [Worker-554] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /Reservation System/src/test/java because it overlaps with /Reservation System/src
+2016-07-09 19:55:57,754 [Worker-554] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2016-07-09 19:55:57,843 [Worker-554] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.reservationsystem:ReservationSystem:0.0.1-SNAPSHOT @ /Users/Aron/Documents/karan100/Reservation System/pom.xml.
+2016-07-09 19:55:58,121 [Worker-554] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Reservation System/src
+2016-07-09 19:55:58,122 [Worker-554] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /Reservation System/src/test/java because it overlaps with /Reservation System/src
+2016-07-09 19:55:58,177 [Worker-554] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2016-07-09 19:55:58,354 [Worker-558] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-09 19:55:58,354 [Worker-558] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Reservation System/src/main/resources
+2016-07-09 19:55:58,356 [Worker-558] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-09 19:55:58,357 [Worker-558] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Reservation System/src/test/resources
+2016-07-09 19:56:28,527 [Worker-557] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.reservationsystem:ReservationSystem:0.0.1-SNAPSHOT @ /Users/Aron/Documents/karan100/Reservation System/pom.xml.
+2016-07-09 19:56:28,917 [Worker-557] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/joda-time/joda-time/2.9.4/joda-time-2.9.4.pom
+2016-07-09 19:56:29,060 [Worker-557] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/joda-time/joda-time/2.9.4/joda-time-2.9.4.pom
+2016-07-09 19:56:29,133 [Worker-557] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/joda-time/joda-time/2.9.4/joda-time-2.9.4.jar
+2016-07-09 19:56:29,823 [Worker-557] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/joda-time/joda-time/2.9.4/joda-time-2.9.4.jar
+2016-07-09 19:56:30,203 [Worker-557] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-09 19:56:30,204 [Worker-557] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Reservation System/src/main/resources
+2016-07-09 19:56:30,207 [Worker-557] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-09 19:56:30,207 [Worker-557] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Reservation System/src/test/resources
+2016-07-09 19:56:31,332 [Worker-555] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-09 19:56:31,333 [Worker-555] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Reservation System/src/main/resources
+2016-07-09 19:56:31,336 [Worker-555] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-09 19:56:31,337 [Worker-555] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Reservation System/src/test/resources
+2016-07-09 20:01:45,780 [Worker-556] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-09 20:01:45,782 [Worker-556] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Reservation System/src/main/resources
+2016-07-09 20:01:45,784 [Worker-556] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-09 20:01:45,785 [Worker-556] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Reservation System/src/test/resources
+2016-07-09 20:03:36,967 [Worker-547] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-09 20:03:36,968 [Worker-547] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Reservation System/src/main/resources
+2016-07-09 20:03:36,969 [Worker-547] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-09 20:03:36,970 [Worker-547] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Reservation System/src/test/resources
+2016-07-09 20:03:43,222 [Worker-556] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-09 20:03:43,223 [Worker-556] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Reservation System/src/main/resources
+2016-07-09 20:03:43,225 [Worker-556] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-09 20:03:43,226 [Worker-556] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Reservation System/src/test/resources
+2016-07-09 20:03:52,334 [Worker-556] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-09 20:03:52,335 [Worker-556] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Reservation System/src/main/resources
+2016-07-09 20:03:52,339 [Worker-556] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-09 20:03:52,340 [Worker-556] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Aron/Documents/karan100/Reservation System/src/test/resources
