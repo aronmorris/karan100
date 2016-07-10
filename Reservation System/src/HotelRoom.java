@@ -32,6 +32,8 @@ public class HotelRoom {
 	
 	private BigDecimal price;
 	
+	private RoomType type;
+	
 	public HotelRoom(DateTime startDate, DateTime endDate, RoomType type) {
 		
 		this.startDate = startDate;
@@ -42,6 +44,12 @@ public class HotelRoom {
 		
 		price = new BigDecimal(type.price()).round(new MathContext(2, RoundingMode.HALF_EVEN));
 		
+		this.type = type;
+		
+	}
+	
+	public RoomType getType() {
+		return type;
 	}
 	
 	public boolean isReservedAtDate(DateTime sDate) {
