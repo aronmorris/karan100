@@ -9,17 +9,24 @@ import org.joda.time.Interval;
 public class HotelRoom {
 	
 	enum RoomType {
-		REGULAR(100.00),
-		PENTHOUSE(150.00);
+		REGULAR(100.00, "Regular"),
+		PENTHOUSE(150.00, "Penthouse");
 		
 		private final double price;
 		
-		double price() {
+		private final String name;
+		
+		public String roomType() {
+			return name;
+		}
+		
+		public double price() {
 			return price;
 		}
 		
-		private RoomType(double price) {
+		private RoomType(double price, String name) {
 			this.price = price;
+			this.name = name;
 		}
 		
 	}
@@ -68,6 +75,31 @@ public class HotelRoom {
 	
 	public double getPrice() {
 		return price.doubleValue();
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		
+		if (o == null) {
+			return false;
+		}
+		if (o == this)  {
+			return true;
+		}
+		if (!(o instanceof HotelRoom)) {
+			return false;
+		}
+		
+		HotelRoom r = (HotelRoom) o;
+		
+		if (r.duration.equals(this.duration) && r.endDate.equals(this.endDate)
+				&& r.price.equals(this.price) && r.startDate.equals(this.startDate)
+				&& r.type.equals(this.type)) {
+			return true;
+		}
+		
+		return false;
+		
 	}
 	
 }

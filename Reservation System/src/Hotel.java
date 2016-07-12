@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 
 public final class Hotel {
 	
@@ -11,9 +13,18 @@ public final class Hotel {
 
 	private static HotelRoom[] ROOMS;
 	
-	private Hotel() {
+	Hotel() {
 		ROOMS = new HotelRoom[TOTAL_COUNT];
 		
+		occupiedTotal = 0;
+		
+	}
+	
+	//safe copy of the ROOMS array, changing the copy doesn't change the original
+	public static HotelRoom[] getRooms() {
+		HotelRoom[] ret = Arrays.copyOf(ROOMS, ROOMS.length);
+		
+		return ret;
 	}
 	
 	public static boolean bookRoom(HotelRoom room) {
@@ -31,8 +42,7 @@ public final class Hotel {
 		if (type == HotelRoom.RoomType.REGULAR && occupiedRooms == ROOM_COUNT) {
 			return false;
 		}
-		
-		
+			
 		occupiedTotal += 1;
 		ROOMS[occupiedTotal - 1] = room;
 		
@@ -44,6 +54,20 @@ public final class Hotel {
 		}
 		
 		return true;
+		
+	}
+	
+	public boolean freeRoom(HotelRoom room) {
+		
+		for (HotelRoom hr : ROOMS) {
+			
+			if (hr.equals(room)) {
+				
+			}
+			
+		}
+		
+		return false;
 		
 	}
 	

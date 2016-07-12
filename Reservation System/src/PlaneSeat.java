@@ -6,18 +6,25 @@ import java.math.RoundingMode;
 public class PlaneSeat {
 
 	enum SeatClass {
-		ECONOMY(50),
-		BUSINESS(100),
-		FIRST_CLASS(200);
+		ECONOMY(50, "Economy"),
+		BUSINESS(100, "Business"),
+		FIRST_CLASS(200, "First Class");
 		
 		private final double price;
+		
+		private final String name;
+		
+		String getName() {
+			return name;
+		}
 		
 		double getPrice() {
 			return price;
 		}
 		
-		private SeatClass(double price) {
+		private SeatClass(double price, String name) {
 			this.price = price;
+			this.name = name;
 		}
 	}
 	
