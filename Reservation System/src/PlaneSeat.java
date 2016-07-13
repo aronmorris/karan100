@@ -30,12 +30,19 @@ public class PlaneSeat {
 	
 	private BigDecimal price;
 	
+	private SeatClass type;
+	
 	public PlaneSeat(SeatClass sClass) {
 		price = new BigDecimal(sClass.getPrice()).round(new MathContext(4, RoundingMode.HALF_EVEN));
+		type = sClass;
 	}
 	
 	public double getPrice() {
 		return price.doubleValue();
+	}
+	
+	public SeatClass getType() {
+		return type;
 	}
 	
 }

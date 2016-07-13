@@ -9,6 +9,8 @@ public class Scheduler {
 	
 	public static void main(String[] args) {
 		
+		Hotel h = new Hotel();
+		
 		Scheduler scheduler = new Scheduler();
 		
 		//scheduler.listPricesForRooms();
@@ -20,6 +22,10 @@ public class Scheduler {
 		
 		HotelRoom hr = new HotelRoom(booking, end, HotelRoom.RoomType.PENTHOUSE);
 		
+		PlaneSeat ps = new PlaneSeat(PlaneSeat.SeatClass.FIRST_CLASS);
+		
+		scheduler.bookFlight(ps);
+		
 		for (int i = 0; i < 6; i++) {
 			scheduler.bookRoom(hr);
 		}
@@ -27,9 +33,14 @@ public class Scheduler {
 	}
 	
 	public Scheduler() {
-		Hotel hotel = new Hotel();
+		//Hotel hotel = new Hotel();
 	}
 	
+	public void bookFlight(PlaneSeat ps) {
+		
+		System.out.printf("A seat in the %s class costs $%.2f dollars.%n", ps.getType().getName(), ps.getPrice());
+		
+	}
 	public void bookRoom(HotelRoom hr) {
 		if (Hotel.bookRoom(hr)) {
 			System.out.println("Room booked!");
