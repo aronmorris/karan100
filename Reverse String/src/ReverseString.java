@@ -9,6 +9,8 @@ public class ReverseString {
 		
 		System.out.println(new StringBuilder(tor).reverse());
 		
+		sc.close();
+		
 	}
 	
 }

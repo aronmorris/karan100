@@ -1,15 +1,10 @@
-import java.io.File;
-import java.io.FileInputStream;
 import java.util.Properties;
-import java.util.Scanner;
 
 import javax.mail.Folder;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Session;
 import javax.mail.Store;
-
-import com.sun.mail.util.MailLogger;
 
 public class Checker {
 	
@@ -101,8 +96,10 @@ public class Checker {
 		
 	}
 	//read inbox using pop3 protocol
+	
+	@SuppressWarnings("unused")
 	private void readPOP3(Store store) {
-		
+		//TODO complete POP3 function
 	}
 
 }

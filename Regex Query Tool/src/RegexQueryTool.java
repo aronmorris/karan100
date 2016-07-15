@@ -91,6 +91,8 @@ public class RegexQueryTool {
 			String regex = regexField.getText();
 			
 			try {
+				//Just to ensure correct regex
+				@SuppressWarnings(value = { "unused" })
 				Pattern pReg = Pattern.compile(regex);
 			} catch (PatternSyntaxException pse) {
 				matchArea.setText("Invalid Regex");

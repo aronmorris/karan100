@@ -1,10 +1,9 @@
 import java.io.IOException;
 import java.net.SocketException;
-<<<<<<< HEAD
-=======
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
->>>>>>> c16d833c6c575cda901ba7b0c57998016b11d7ef
+
 
 import org.apache.commons.net.whois.WhoisClient;
 
@@ -93,7 +92,6 @@ public class WhoisSearch {
 
 	public static void main(String[] args) {
 		
-<<<<<<< HEAD
 		System.out.println(whois(args[0]));
 		
 	}
@@ -123,36 +121,5 @@ public class WhoisSearch {
 		
 	}
 	
-=======
-		
-		
-		WhoisClient wClient = new WhoisClient();
-		
-		StringBuilder sb = new StringBuilder();
-		
-		try {
-			
-			wClient.connect(WhoisClient.DEFAULT_HOST);
-	
-			String data = wClient.query("=" + args[0]);
-			
-			sb.append(data);
-			
-			wClient.disconnect();
-			
-		} catch (SocketException e) {
-			e.printStackTrace();
-			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		System.out.println(sb.toString());
-		
-	}
-	
-	
-	
->>>>>>> c16d833c6c575cda901ba7b0c57998016b11d7ef
+
 }

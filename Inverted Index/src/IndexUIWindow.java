@@ -134,7 +134,7 @@ public class IndexUIWindow {
 		ArrayList<HashMap<File, Integer>> toArr = new ArrayList<HashMap<File, Integer>>();
 		
 		for (String token : tokens) {
-			HashMap<File, Integer> valueMap = index.getOccurrences(token);
+			HashMap<File, Integer> valueMap = IndexMap.getOccurrences(token);
 			toArr.add(valueMap);
 		}
 		

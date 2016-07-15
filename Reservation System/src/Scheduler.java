@@ -1,6 +1,3 @@
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-
 import org.joda.time.DateTime;
 import org.joda.time.format.ISODateTimeFormat;
 
@@ -9,6 +6,7 @@ public class Scheduler {
 	
 	public static void main(String[] args) {
 		
+		@SuppressWarnings("unused")
 		Hotel h = new Hotel();
 		
 		Scheduler scheduler = new Scheduler();

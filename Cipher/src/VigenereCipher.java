@@ -3,8 +3,6 @@ public class VigenereCipher {
 
 	private static char[] message;
 	
-	private static char[] key;
-	
 	public static String encrypt(String msg, String keyphrase) {
 		
 		message = msg.toCharArray();

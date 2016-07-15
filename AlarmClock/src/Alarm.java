@@ -42,7 +42,7 @@ public class Alarm extends Observer {
 		if (repeats) {
 			
 			long interval = 
-				Math.abs(cal.DAY_OF_WEEK * (1000 * 60 * 60 * 24 * 7) + cal.HOUR_OF_DAY * (1000 * 60 * 60) + cal.MINUTE * (1000 * 60));
+				Math.abs(Calendar.DAY_OF_WEEK * (1000 * 60 * 60 * 24 * 7) + Calendar.HOUR_OF_DAY * (1000 * 60 * 60) + Calendar.MINUTE * (1000 * 60));
 			
 			//System.out.println(interval);
 			

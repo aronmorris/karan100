@@ -21,8 +21,6 @@ public class GuestbookUI {
 	private JList<Node<Post>> postList;
 	private DefaultListModel<Node<Post>> listModel;
 	private JButton viewComments, previousContent, submitPost;
-
-	private Node<Post> root = null;
 	
 	private Node<Post> previousContext;
 	

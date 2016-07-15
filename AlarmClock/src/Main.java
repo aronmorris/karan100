@@ -1,5 +1,6 @@
 
 public class Main {
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		Subject subj1 = new Subject();
 		

@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Set;
 
@@ -32,7 +31,7 @@ public class MinSpanTree {
 	
 	//starting over with graph from external lib
 	public static KruskalMinimumSpanningTree<Integer, DefaultWeightedEdge> kruskal(SimpleWeightedGraph<Integer, DefaultWeightedEdge> graph) {
-		KruskalMinimumSpanningTree kmst = new KruskalMinimumSpanningTree(graph);
+		KruskalMinimumSpanningTree<Integer, DefaultWeightedEdge> kmst = new KruskalMinimumSpanningTree<Integer, DefaultWeightedEdge>(graph);
 		return kmst;
 	}
 	
@@ -51,9 +50,10 @@ public class MinSpanTree {
 		
 		while (forest.size() > 1) {
 			for (Tree t : forest) {
-				ArrayList<TLink> links = new ArrayList<TLink>();
+				//ArrayList<TLink> links = new ArrayList<TLink>();
 				for (TNode tn : t.getNodesInTree()) {
 					int shortest = Integer.MAX_VALUE;
+					@SuppressWarnings("unused")
 					TLink shortestLink = null;
 					for (TLink l : linkSet) {
 						if (l.getWeight() < shortest && (l.A().equals(tn) || l.B().equals(tn))) {

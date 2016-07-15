@@ -20,7 +20,7 @@ public class MassConverter implements Converter {
 		}
 	}
 	
-	private String firstMass, secondMass;
+	private String firstMass;
 	private MassUnit firstUnit, secondUnit;
 	private double amount;
 	

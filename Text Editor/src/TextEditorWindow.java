@@ -2,7 +2,6 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.EventQueue;
 import java.awt.Font;
-import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -25,10 +24,6 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JEditorPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import javax.swing.plaf.FileChooserUI;
-import javax.swing.text.DefaultStyledDocument;
-import javax.swing.text.StyledDocument;
-import javax.swing.text.html.HTMLDocument;
 import javax.swing.text.html.HTMLEditorKit;
 
 
@@ -88,6 +83,7 @@ public class TextEditorWindow {
 		editorPane.setContentType("text/html");
 		editorPane.setName("editorPane");
 		
+		@SuppressWarnings("unused")
 		HTMLEditorKit html = new HTMLEditorKit();
 		
 		//TODO
@@ -123,7 +119,6 @@ public class TextEditorWindow {
 	
 	//highlights hardcoded keywords for now
 	public void syntaxHighlight(JEditorPane editor) {
-		String[] terms = editor.getText().split(" ");
 		
 		//htmleditorkit api use here?
 		

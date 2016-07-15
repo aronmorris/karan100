@@ -1,6 +1,5 @@
 import java.io.File;
 import java.io.IOException;
-import java.net.InetAddress;
 import java.util.Scanner;
 
 import com.maxmind.geoip.Location;

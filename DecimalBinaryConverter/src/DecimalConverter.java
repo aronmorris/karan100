@@ -38,6 +38,8 @@ public class DecimalConverter {
 			}
 		} while(true);
 		
+		sc.close();
+		
 	}
 	
 	public static String toBinary(int i) {

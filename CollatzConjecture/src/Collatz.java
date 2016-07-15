@@ -7,7 +7,6 @@ public class Collatz {
 	
 	public static int stepsToReachOne(int startingVal) {
 		int ctr = 0;
-		int n = startingVal;
 		
 		while (startingVal != 1) {
 			if (startingVal <= 1) {
