@@ -21,6 +21,12 @@ public class CompanyOperation {
 		
 		apple.payEmployee(apple.getEmployee(x.ID));
 		
+		apple.changeEmployeeType(apple.getEmployee("SteveJobs"), HourlyEmployee.class);
+		
+		apple.giveEmployeeRaise(x, 400);
+		
+		
+		
 	}
 	
 }

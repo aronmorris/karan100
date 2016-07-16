@@ -45,7 +45,7 @@ public class Company {
 		roster.remove(e.getEmployeeID());
 	}
 	
-	public void changeEmployeeType(Employee e, Class<Employee> newEmployeeRank) {
+	public void changeEmployeeType(Employee e, Class<? extends Employee> newEmployeeRank) {
 		Employee em = e;
 		
 		try {
@@ -59,6 +59,7 @@ public class Company {
 	public void giveEmployeeRaise(Employee e, int newPay) {
 		if (roster.containsKey(e.getEmployeeID())) {
 			e.setPay(newPay);
+			System.out.printf("Employee %s has been given a raise, their pay is now %d%n", e.getEmployeeID(), e.getPay());
 		}
 	}
 	
