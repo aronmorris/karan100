@@ -1,3 +1,5 @@
+import java.util.concurrent.TimeUnit;
+
 
 public class HourlyEmployee extends Employee {
 
@@ -8,7 +10,7 @@ public class HourlyEmployee extends Employee {
 
 	@Override
 	public void setEmployeeID(String newID) {
-		// TODO Auto-generated method stub
+		
 
 	}
 
@@ -31,6 +33,11 @@ public class HourlyEmployee extends Employee {
 	public int getPay() {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	public void payEmployee(int hoursWorked) {
+		setPaySchedule(hoursWorked, TimeUnit.HOURS);
+		
 	}
 
 }

@@ -26,12 +26,34 @@ public class Company {
 		return ae;
 	}
 	
+	public void payEmployee(Employee e) {
+		Employee em = roster.get(e.getEmployeeID());
+		
+		if (em != null) {
+			e.payEmployee(e.getPay());
+		}
+		else {
+			System.out.println("No such employee in the system.");
+		}
+	}
+	
 	public void hireNewEmployee(Employee e) {
 		roster.put(e.getEmployeeID(), e);
 	}
 	
 	public void fireEmployee(Employee e) {
 		roster.remove(e.getEmployeeID());
+	}
+	
+	public void changeEmployeeType(Employee e, Class<Employee> newEmployeeRank) {
+		Employee em = e;
+		
+		try {
+			em = newEmployeeRank.cast(em);
+		
+		} catch(ClassCastException cce) {
+			System.out.println("This is not a valid employee rank!");
+		}
 	}
 	
 	public void giveEmployeeRaise(Employee e, int newPay) {

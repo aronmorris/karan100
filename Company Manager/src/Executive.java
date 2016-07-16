@@ -1,3 +1,5 @@
+import java.util.concurrent.TimeUnit;
+
 
 public class Executive extends Employee {
 
@@ -8,26 +10,32 @@ public class Executive extends Employee {
 
 	@Override
 	public void setEmployeeID(String newID) {
-		// TODO Auto-generated method stub
+		ID = newID;
 
 	}
 
 	@Override
 	public String getEmployeeID() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.ID;
 	}
 
 	@Override
 	public void setPay(int newPay) {
-		// TODO Auto-generated method stub
+		pay = newPay;
 
 	}
 
 	@Override
 	public int getPay() {
 		// TODO Auto-generated method stub
-		return 0;
+		return this.pay;
+	}
+
+	
+	public void payEmployee(int bonus) {
+		super.setPaySchedule(bonus, TimeUnit.DAYS);
+		
 	}
 
 }

@@ -1,3 +1,5 @@
+import java.util.concurrent.TimeUnit;
+
 
 public class SalariedEmployee extends Employee {
 
@@ -31,6 +33,12 @@ public class SalariedEmployee extends Employee {
 	public int getPay() {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	
+	public void payEmployee(int pay) {
+		super.setPaySchedule(pay, TimeUnit.DAYS);
+		
 	}
 
 }
