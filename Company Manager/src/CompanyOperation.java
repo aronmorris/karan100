@@ -7,7 +7,7 @@ public class CompanyOperation {
 		
 		Company apple = new Company();
 		
-		Employee x = new Executive(200, "SteveJobs");
+		Employee x = new Executive(200, "Steve Jobs");
 		
 		apple.hireNewEmployee(x);
 		
@@ -21,7 +21,7 @@ public class CompanyOperation {
 		
 		apple.payEmployee(apple.getEmployee(x.ID));
 		
-		apple.changeEmployeeType(apple.getEmployee("SteveJobs"), HourlyEmployee.class);
+		apple.changeEmployeeType(apple.getEmployee("Steve Jobs"), "hourly");
 		
 		apple.giveEmployeeRaise(x, 400);
 		

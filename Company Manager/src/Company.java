@@ -45,15 +45,33 @@ public class Company {
 		roster.remove(e.getEmployeeID());
 	}
 	
-	public void changeEmployeeType(Employee e, Class<? extends Employee> newEmployeeRank) {
-		Employee em = e;
+	/**
+	 * Valids are hourly, salary, manager, executive
+	 * @param e
+	 * @param rank
+	 */
+	public void changeEmployeeType(Employee e, String rank) {
+		Employee em;
 		
-		try {
-			em = newEmployeeRank.cast(em);
-		
-		} catch(ClassCastException cce) {
-			System.out.println("This is not a valid employee rank!");
+		switch(rank.toLowerCase()) {
+		case "hourly": em = new HourlyEmployee(e.pay, e.ID);
+		break;
+		case "salary": em = new SalariedEmployee(e.pay, e.ID);
+		break;
+		case "manager": em = new Manager(e.pay, e.ID);
+		break;
+		case "executive": em = new Executive(e.pay, e.ID);
+		break;
+		default: em = null;
+		break;	
 		}
+		
+		if (em != null) {
+			roster.put(em.ID, em);
+		} else {
+			System.out.println("Not an employee rank. Valid ranks are hourly, salary, manager, executive");
+		}
+		
 	}
 	
 	public void giveEmployeeRaise(Employee e, int newPay) {
