@@ -9,12 +9,16 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 import javax.swing.SpringLayout;
 import javax.swing.JTextField;
+import java.awt.FlowLayout;
+import javax.swing.JLabel;
 
 
 public class atmWindow {
 
 	private JFrame frame;
 	private JTextField txtEnterPin;
+	private JTextField textField;
+	private JTextField textField_1;
 
 	/**
 	 * Launch the application.
@@ -68,11 +72,43 @@ public class atmWindow {
 		
 		JPanel pnlATMMenu = new JPanel();
 		frame.getContentPane().add(pnlATMMenu, "name_160161626461799");
-		pnlATMMenu.setLayout(new SpringLayout());
+		pnlATMMenu.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		
+		JButton btnViewSavings = new JButton("Savings");
+		pnlATMMenu.add(btnViewSavings);
+		
+		JButton btnViewChecking = new JButton("Checking");
+		pnlATMMenu.add(btnViewChecking);
+		
+		JButton btnViewBusiness = new JButton("Business");
+		pnlATMMenu.add(btnViewBusiness);
 		
 		JPanel pnlChecking = new JPanel();
 		frame.getContentPane().add(pnlChecking, "name_160311075315663");
-		pnlChecking.setLayout(new SpringLayout());
+		SpringLayout springLayout = new SpringLayout();
+		pnlChecking.setLayout(springLayout);
+		
+		JLabel lblAccountValue = new JLabel("New label");
+		springLayout.putConstraint(SpringLayout.NORTH, lblAccountValue, 10, SpringLayout.NORTH, pnlChecking);
+		springLayout.putConstraint(SpringLayout.WEST, lblAccountValue, 10, SpringLayout.WEST, pnlChecking);
+		pnlChecking.add(lblAccountValue);
+		
+		JButton btnMakeDeposit = new JButton("Deposit");
+		springLayout.putConstraint(SpringLayout.NORTH, btnMakeDeposit, 31, SpringLayout.NORTH, pnlChecking);
+		springLayout.putConstraint(SpringLayout.WEST, btnMakeDeposit, 97, SpringLayout.WEST, pnlChecking);
+		pnlChecking.add(btnMakeDeposit);
+		
+		textField = new JTextField();
+		springLayout.putConstraint(SpringLayout.NORTH, textField, 1, SpringLayout.NORTH, btnMakeDeposit);
+		springLayout.putConstraint(SpringLayout.WEST, textField, 0, SpringLayout.WEST, lblAccountValue);
+		pnlChecking.add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		springLayout.putConstraint(SpringLayout.NORTH, textField_1, 6, SpringLayout.SOUTH, btnMakeDeposit);
+		springLayout.putConstraint(SpringLayout.WEST, textField_1, 0, SpringLayout.WEST, lblAccountValue);
+		pnlChecking.add(textField_1);
+		textField_1.setColumns(10);
 		
 		JPanel pnlSavings = new JPanel();
 		frame.getContentPane().add(pnlSavings, "name_160311107646049");
