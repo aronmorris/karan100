@@ -5,11 +5,6 @@ public class CheckingAccount extends Account {
 		super(PIN);
 		value = amount;
 	}
-	
-	@Override
-	public int getAmount() {
-		return value;
-	}
 
 	@Override
 	public int withdraw(int amount) {
