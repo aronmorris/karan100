@@ -1,15 +1,23 @@
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+
 import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.ColumnSpec;
 import com.jgoodies.forms.layout.RowSpec;
+
 import java.awt.CardLayout;
+
 import javax.swing.JPanel;
 import javax.swing.JButton;
 import javax.swing.SpringLayout;
 import javax.swing.JTextField;
+
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.HashMap;
+
 import javax.swing.JLabel;
 
 
@@ -17,8 +25,12 @@ public class atmWindow {
 
 	private JFrame frame;
 	private JTextField txtEnterPin;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField txtDeposit;
+	private JTextField txtWithdraw;
+	
+	//TODO declare these in initialize
+	private HashMap<String, User> accounts;
+	private User activeUser;
 
 	/**
 	 * Launch the application.
@@ -83,39 +95,48 @@ public class atmWindow {
 		JButton btnViewBusiness = new JButton("Business");
 		pnlATMMenu.add(btnViewBusiness);
 		
-		JPanel pnlChecking = new JPanel();
-		frame.getContentPane().add(pnlChecking, "name_160311075315663");
-		SpringLayout springLayout = new SpringLayout();
-		pnlChecking.setLayout(springLayout);
+		JPanel pnlAccount = new JPanel();
+		frame.getContentPane().add(pnlAccount, "name_160311075315663");
+		SpringLayout sl_pnlAccount = new SpringLayout();
+		pnlAccount.setLayout(sl_pnlAccount);
 		
 		JLabel lblAccountValue = new JLabel("New label");
-		springLayout.putConstraint(SpringLayout.NORTH, lblAccountValue, 10, SpringLayout.NORTH, pnlChecking);
-		springLayout.putConstraint(SpringLayout.WEST, lblAccountValue, 10, SpringLayout.WEST, pnlChecking);
-		pnlChecking.add(lblAccountValue);
+		sl_pnlAccount.putConstraint(SpringLayout.NORTH, lblAccountValue, 10, SpringLayout.NORTH, pnlAccount);
+		sl_pnlAccount.putConstraint(SpringLayout.WEST, lblAccountValue, 10, SpringLayout.WEST, pnlAccount);
+		pnlAccount.add(lblAccountValue);
 		
 		JButton btnMakeDeposit = new JButton("Deposit");
-		springLayout.putConstraint(SpringLayout.NORTH, btnMakeDeposit, 31, SpringLayout.NORTH, pnlChecking);
-		springLayout.putConstraint(SpringLayout.WEST, btnMakeDeposit, 97, SpringLayout.WEST, pnlChecking);
-		pnlChecking.add(btnMakeDeposit);
+		sl_pnlAccount.putConstraint(SpringLayout.NORTH, btnMakeDeposit, 31, SpringLayout.NORTH, pnlAccount);
+		sl_pnlAccount.putConstraint(SpringLayout.WEST, btnMakeDeposit, 97, SpringLayout.WEST, pnlAccount);
+		pnlAccount.add(btnMakeDeposit);
 		
-		textField = new JTextField();
-		springLayout.putConstraint(SpringLayout.NORTH, textField, 1, SpringLayout.NORTH, btnMakeDeposit);
-		springLayout.putConstraint(SpringLayout.WEST, textField, 0, SpringLayout.WEST, lblAccountValue);
-		pnlChecking.add(textField);
-		textField.setColumns(10);
+		txtDeposit = new JTextField();
+		sl_pnlAccount.putConstraint(SpringLayout.NORTH, txtDeposit, 1, SpringLayout.NORTH, btnMakeDeposit);
+		sl_pnlAccount.putConstraint(SpringLayout.WEST, txtDeposit, 0, SpringLayout.WEST, lblAccountValue);
+		pnlAccount.add(txtDeposit);
+		txtDeposit.setColumns(10);
 		
-		textField_1 = new JTextField();
-		springLayout.putConstraint(SpringLayout.NORTH, textField_1, 6, SpringLayout.SOUTH, btnMakeDeposit);
-		springLayout.putConstraint(SpringLayout.WEST, textField_1, 0, SpringLayout.WEST, lblAccountValue);
-		pnlChecking.add(textField_1);
-		textField_1.setColumns(10);
+		txtWithdraw = new JTextField();
+		sl_pnlAccount.putConstraint(SpringLayout.NORTH, txtWithdraw, 6, SpringLayout.SOUTH, btnMakeDeposit);
+		sl_pnlAccount.putConstraint(SpringLayout.WEST, txtWithdraw, 0, SpringLayout.WEST, lblAccountValue);
+		pnlAccount.add(txtWithdraw);
+		txtWithdraw.setColumns(10);
 		
-		JPanel pnlSavings = new JPanel();
-		frame.getContentPane().add(pnlSavings, "name_160311107646049");
-		pnlSavings.setLayout(new SpringLayout());
+		JButton btnMakeWithdrawal = new JButton("Withdraw");
+		sl_pnlAccount.putConstraint(SpringLayout.NORTH, btnMakeWithdrawal, 6, SpringLayout.SOUTH, btnMakeDeposit);
+		sl_pnlAccount.putConstraint(SpringLayout.WEST, btnMakeWithdrawal, 0, SpringLayout.WEST, btnMakeDeposit);
+		pnlAccount.add(btnMakeWithdrawal);
+	}
+	
+	class pinListener implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			if (accounts.containsKey(txtEnterPin.getText())) {
+				activeUser = accounts.get(txtEnterPin.getText());
+			}
+			
+		}
 		
-		JPanel pnlBusiness = new JPanel();
-		frame.getContentPane().add(pnlBusiness, "name_160311130721795");
-		pnlBusiness.setLayout(new SpringLayout());
 	}
 }
