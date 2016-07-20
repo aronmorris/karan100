@@ -158,7 +158,8 @@ public class atmWindow {
 		public void actionPerformed(ActionEvent arg0) {
 			if (accounts.containsKey(txtEnterPin.getText())) {
 				activeUser = accounts.get(txtEnterPin.getText());
-				
+				CardLayout cl = (CardLayout) cardContainerPanel.getLayout();
+				cl.show(cardContainerPanel, ACCOUNT_MENU);
 			}
 			
 		}
