@@ -28,9 +28,18 @@ public class atmWindow {
 	private JTextField txtDeposit;
 	private JTextField txtWithdraw;
 	
+	private JPanel pnlSignIn;
+	private JPanel pnlATMMenu;
+	private JPanel pnlAccount;
+	private JPanel cardContainerPanel;
+	
 	//TODO declare these in initialize
 	private HashMap<String, User> accounts;
 	private User activeUser;
+	
+	final static String ATM_MENU = "ATM Menu";
+	final static String ACCOUNT_MENU = "Account Menu";
+	final static String SIGN_IN_MENU = "Sign In Menu";
 
 	/**
 	 * Launch the application.
@@ -59,13 +68,26 @@ public class atmWindow {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		
+		accounts = new HashMap<String, User>();
+		
+		User baron = new User("1111");
+		
+		baron.addAccount(Accounts.CHECKING, 200);
+		
+		accounts.put("1111", baron);
+		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new CardLayout(0, 0));
 		
-		JPanel pnlSignIn = new JPanel();
-		frame.getContentPane().add(pnlSignIn, "name_159791925385046");
+		cardContainerPanel = new JPanel();
+		frame.getContentPane().add(cardContainerPanel, "name_341291192584994");
+		cardContainerPanel.setLayout(new CardLayout(0, 0));
+		
+		pnlSignIn = new JPanel();
+		cardContainerPanel.add(pnlSignIn, SIGN_IN_MENU);
 		SpringLayout sl_pnlSignIn = new SpringLayout();
 		pnlSignIn.setLayout(sl_pnlSignIn);
 		
@@ -82,8 +104,8 @@ public class atmWindow {
 		sl_pnlSignIn.putConstraint(SpringLayout.SOUTH, btnSubmitPIN, 0, SpringLayout.SOUTH, txtEnterPin);
 		pnlSignIn.add(btnSubmitPIN);
 		
-		JPanel pnlATMMenu = new JPanel();
-		frame.getContentPane().add(pnlATMMenu, "name_160161626461799");
+		pnlATMMenu = new JPanel();
+		cardContainerPanel.add(pnlATMMenu, ATM_MENU);
 		pnlATMMenu.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
 		JButton btnViewSavings = new JButton("Savings");
@@ -95,8 +117,8 @@ public class atmWindow {
 		JButton btnViewBusiness = new JButton("Business");
 		pnlATMMenu.add(btnViewBusiness);
 		
-		JPanel pnlAccount = new JPanel();
-		frame.getContentPane().add(pnlAccount, "name_160311075315663");
+		pnlAccount = new JPanel();
+		cardContainerPanel.add(pnlAccount, ACCOUNT_MENU);
 		SpringLayout sl_pnlAccount = new SpringLayout();
 		pnlAccount.setLayout(sl_pnlAccount);
 		
@@ -126,6 +148,8 @@ public class atmWindow {
 		sl_pnlAccount.putConstraint(SpringLayout.NORTH, btnMakeWithdrawal, 6, SpringLayout.SOUTH, btnMakeDeposit);
 		sl_pnlAccount.putConstraint(SpringLayout.WEST, btnMakeWithdrawal, 0, SpringLayout.WEST, btnMakeDeposit);
 		pnlAccount.add(btnMakeWithdrawal);
+		btnSubmitPIN.addActionListener(new pinListener());
+		
 	}
 	
 	class pinListener implements ActionListener {
@@ -134,6 +158,7 @@ public class atmWindow {
 		public void actionPerformed(ActionEvent arg0) {
 			if (accounts.containsKey(txtEnterPin.getText())) {
 				activeUser = accounts.get(txtEnterPin.getText());
+				
 			}
 			
 		}
