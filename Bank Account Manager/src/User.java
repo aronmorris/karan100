@@ -39,7 +39,7 @@ public class User {
 			return accounts.get(type);
 		}
 		System.out.println("This user doesn't have this type of account.");
-		return null;
+		throw new NullPointerException();
 	}
 	
 }

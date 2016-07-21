@@ -2,10 +2,6 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
-
 import java.awt.CardLayout;
 
 import javax.swing.JPanel;
@@ -20,6 +16,12 @@ import java.util.HashMap;
 
 import javax.swing.JLabel;
 
+/*
+ * The plan here is to reuse the text fields and buttons for each class, only showing what is actually necessary for each account.
+ * e.g. the active account type is the parameter that determines what info will be pulled out
+ *  evt.getActionCommand()?
+ */
+
 
 public class atmWindow {
 
@@ -33,9 +35,9 @@ public class atmWindow {
 	private JPanel pnlAccount;
 	private JPanel cardContainerPanel;
 	
-	//TODO declare these in initialize
 	private HashMap<String, User> accounts;
 	private User activeUser;
+	Accounts activeType;
 	
 	final static String ATM_MENU = "ATM Menu";
 	final static String ACCOUNT_MENU = "Account Menu";
@@ -110,12 +112,15 @@ public class atmWindow {
 		
 		JButton btnViewSavings = new JButton("Savings");
 		pnlATMMenu.add(btnViewSavings);
+		btnViewSavings.addActionListener(new menuSelectListener());
 		
 		JButton btnViewChecking = new JButton("Checking");
 		pnlATMMenu.add(btnViewChecking);
+		btnViewChecking.addActionListener(new menuSelectListener());
 		
 		JButton btnViewBusiness = new JButton("Business");
 		pnlATMMenu.add(btnViewBusiness);
+		btnViewBusiness.addActionListener(new menuSelectListener());
 		
 		pnlAccount = new JPanel();
 		cardContainerPanel.add(pnlAccount, ACCOUNT_MENU);
@@ -128,29 +133,31 @@ public class atmWindow {
 		pnlAccount.add(lblAccountValue);
 		
 		JButton btnMakeDeposit = new JButton("Deposit");
-		sl_pnlAccount.putConstraint(SpringLayout.NORTH, btnMakeDeposit, 31, SpringLayout.NORTH, pnlAccount);
-		sl_pnlAccount.putConstraint(SpringLayout.WEST, btnMakeDeposit, 97, SpringLayout.WEST, pnlAccount);
 		pnlAccount.add(btnMakeDeposit);
 		
 		txtDeposit = new JTextField();
-		sl_pnlAccount.putConstraint(SpringLayout.NORTH, txtDeposit, 1, SpringLayout.NORTH, btnMakeDeposit);
+		sl_pnlAccount.putConstraint(SpringLayout.NORTH, btnMakeDeposit, -1, SpringLayout.NORTH, txtDeposit);
+		sl_pnlAccount.putConstraint(SpringLayout.WEST, btnMakeDeposit, 22, SpringLayout.EAST, txtDeposit);
+		sl_pnlAccount.putConstraint(SpringLayout.NORTH, txtDeposit, 8, SpringLayout.SOUTH, lblAccountValue);
 		sl_pnlAccount.putConstraint(SpringLayout.WEST, txtDeposit, 0, SpringLayout.WEST, lblAccountValue);
 		pnlAccount.add(txtDeposit);
 		txtDeposit.setColumns(10);
 		
 		txtWithdraw = new JTextField();
-		sl_pnlAccount.putConstraint(SpringLayout.NORTH, txtWithdraw, 6, SpringLayout.SOUTH, btnMakeDeposit);
+		sl_pnlAccount.putConstraint(SpringLayout.NORTH, txtWithdraw, 8, SpringLayout.SOUTH, txtDeposit);
 		sl_pnlAccount.putConstraint(SpringLayout.WEST, txtWithdraw, 0, SpringLayout.WEST, lblAccountValue);
 		pnlAccount.add(txtWithdraw);
 		txtWithdraw.setColumns(10);
 		
 		JButton btnMakeWithdrawal = new JButton("Withdraw");
-		sl_pnlAccount.putConstraint(SpringLayout.NORTH, btnMakeWithdrawal, 6, SpringLayout.SOUTH, btnMakeDeposit);
+		sl_pnlAccount.putConstraint(SpringLayout.NORTH, btnMakeWithdrawal, -1, SpringLayout.NORTH, txtWithdraw);
 		sl_pnlAccount.putConstraint(SpringLayout.WEST, btnMakeWithdrawal, 0, SpringLayout.WEST, btnMakeDeposit);
 		pnlAccount.add(btnMakeWithdrawal);
 		btnSubmitPIN.addActionListener(new pinListener());
 		
 	}
+	
+	//TODO hook in all these listeners, test behaviours
 	
 	class pinListener implements ActionListener {
 
@@ -159,10 +166,59 @@ public class atmWindow {
 			if (accounts.containsKey(txtEnterPin.getText())) {
 				activeUser = accounts.get(txtEnterPin.getText());
 				CardLayout cl = (CardLayout) cardContainerPanel.getLayout();
-				cl.show(cardContainerPanel, ACCOUNT_MENU);
+				cl.show(cardContainerPanel, ATM_MENU);
 			}
 			
 		}
 		
 	}
+	
+	//defines the selective account based on the button pressed
+	//3 options are the text on the buttons in the ATM Menu panel
+	class menuSelectListener implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			
+			switch(e.getActionCommand()) {
+			case "Checking": activeType = Accounts.CHECKING;
+				break;
+			case "Savings": activeType = Accounts.SAVINGS;
+				break;
+			case "Business": activeType = Accounts.BUSINESS;
+				break;
+			}
+			
+		}
+		
+	}
+	
+	class depositListener implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			try {
+				int depositAmt = Integer.parseInt(txtDeposit.getText());
+				
+				activeUser.accessAccount(activeType).deposit(depositAmt);
+				
+			} catch(NumberFormatException nfe) {
+				System.out.println("Invalid.");
+				return;
+			}
+			
+		}
+		
+	}
+	
+	class withdrawalListener implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	
 }
