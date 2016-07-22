@@ -42,4 +42,11 @@ public class User {
 		throw new NullPointerException();
 	}
 	
+	public boolean hasAccount(Accounts type) {
+		if (accounts.containsKey(type)) {
+			return true;
+		}
+		return false;
+	}
+	
 }

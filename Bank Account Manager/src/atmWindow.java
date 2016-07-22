@@ -35,6 +35,8 @@ public class atmWindow {
 	private JPanel pnlAccount;
 	private JPanel cardContainerPanel;
 	
+	private JLabel lblAccountValue;
+	
 	private HashMap<String, User> accounts;
 	private User activeUser;
 	Accounts activeType;
@@ -127,7 +129,7 @@ public class atmWindow {
 		SpringLayout sl_pnlAccount = new SpringLayout();
 		pnlAccount.setLayout(sl_pnlAccount);
 		
-		JLabel lblAccountValue = new JLabel("New label");
+		lblAccountValue = new JLabel("New label");
 		sl_pnlAccount.putConstraint(SpringLayout.NORTH, lblAccountValue, 10, SpringLayout.NORTH, pnlAccount);
 		sl_pnlAccount.putConstraint(SpringLayout.WEST, lblAccountValue, 10, SpringLayout.WEST, pnlAccount);
 		pnlAccount.add(lblAccountValue);
@@ -153,6 +155,7 @@ public class atmWindow {
 		sl_pnlAccount.putConstraint(SpringLayout.NORTH, btnMakeWithdrawal, -1, SpringLayout.NORTH, txtWithdraw);
 		sl_pnlAccount.putConstraint(SpringLayout.WEST, btnMakeWithdrawal, 0, SpringLayout.WEST, btnMakeDeposit);
 		pnlAccount.add(btnMakeWithdrawal);
+		
 		btnSubmitPIN.addActionListener(new pinListener());
 		
 	}
@@ -180,19 +183,49 @@ public class atmWindow {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			
+			boolean accountActive = false;
+			
 			switch(e.getActionCommand()) {
-			case "Checking": activeType = Accounts.CHECKING;
+			case "Checking": if(activeUser.hasAccount(Accounts.CHECKING)) {
+				activeType = Accounts.CHECKING;
+				accountActive = true;
+			}
 				break;
-			case "Savings": activeType = Accounts.SAVINGS;
+			case "Savings": if(activeUser.hasAccount(Accounts.SAVINGS)){
+				activeType = Accounts.SAVINGS;
+				accountActive = true;
+			}
 				break;
-			case "Business": activeType = Accounts.BUSINESS;
+			case "Business": if(activeUser.hasAccount(Accounts.BUSINESS)){
+				activeType = Accounts.BUSINESS;
+				accountActive = true;
+			}
 				break;
 			}
+			
+			if (accountActive) {
+				
+				CardLayout cl = (CardLayout) cardContainerPanel.getLayout();
+				cl.show(cardContainerPanel, ACCOUNT_MENU);
+				lblAccountValue.setText(Integer.toString(activeUser.accessAccount(activeType).getAmount()));
+			}
+			else {
+				
+				//TODO Set up option to create new accounts
+				
+			}
+		
+			
+			
+		}
+	
+		private void displayFields(User user, Accounts account) {
 			
 		}
 		
 	}
 	
+	//TODO for both of these change error to in-UI label that appears when error caught
 	class depositListener implements ActionListener {
 
 		@Override
@@ -215,7 +248,16 @@ public class atmWindow {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
+
+			try {
+				int withdrawAmt = Integer.parseInt(txtWithdraw.getText());
+				
+				activeUser.accessAccount(activeType).withdraw(withdrawAmt);
+				
+			} catch(NumberFormatException nfe) {
+				System.out.println("Invalid.");
+				return;
+			}
 			
 		}
 		
