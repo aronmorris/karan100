@@ -46,11 +46,15 @@ public class atmWindow {
 	final static String ATM_MENU = "ATM Menu";
 	final static String ACCOUNT_MENU = "Account Menu";
 	final static String SIGN_IN_MENU = "Sign In Menu";
-	private JTextField txtNewUser;
 	private JTextField txtNewPIN;
+	
 	private JButton btnNewAccount;
+	
 	private JPanel pnlNewAccount;
+	
 	private JTextField txtNewAccountSum;
+	
+	private JComboBox<Accounts> comboAccountTypes;
 
 	/**
 	 * Launch the application.
@@ -115,20 +119,13 @@ public class atmWindow {
 		sl_pnlSignIn.putConstraint(SpringLayout.SOUTH, btnSubmitPIN, 0, SpringLayout.SOUTH, txtEnterPin);
 		pnlSignIn.add(btnSubmitPIN);
 		
-		txtNewUser = new JTextField();
-		txtNewUser.setText("New Username");
-		sl_pnlSignIn.putConstraint(SpringLayout.NORTH, txtNewUser, 7, SpringLayout.SOUTH, txtEnterPin);
-		sl_pnlSignIn.putConstraint(SpringLayout.WEST, txtNewUser, 0, SpringLayout.WEST, txtEnterPin);
-		sl_pnlSignIn.putConstraint(SpringLayout.EAST, txtNewUser, 0, SpringLayout.EAST, txtEnterPin);
-		pnlSignIn.add(txtNewUser);
-		txtNewUser.setColumns(10);
-		
 		JButton btnCreateAccount = new JButton("Create Account");
 		pnlSignIn.add(btnCreateAccount);
+		btnCreateAccount.addActionListener(new AccountCreationListener());
 		
 		txtNewPIN = new JTextField();
+		sl_pnlSignIn.putConstraint(SpringLayout.NORTH, txtNewPIN, 33, SpringLayout.SOUTH, txtEnterPin);
 		txtNewPIN.setText("New PIN");
-		sl_pnlSignIn.putConstraint(SpringLayout.NORTH, txtNewPIN, 6, SpringLayout.SOUTH, txtNewUser);
 		sl_pnlSignIn.putConstraint(SpringLayout.NORTH, btnCreateAccount, -1, SpringLayout.NORTH, txtNewPIN);
 		sl_pnlSignIn.putConstraint(SpringLayout.WEST, btnCreateAccount, 6, SpringLayout.EAST, txtNewPIN);
 		sl_pnlSignIn.putConstraint(SpringLayout.WEST, txtNewPIN, 0, SpringLayout.WEST, txtEnterPin);
@@ -141,18 +138,18 @@ public class atmWindow {
 		
 		JButton btnViewSavings = new JButton("Savings");
 		pnlATMMenu.add(btnViewSavings);
-		btnViewSavings.addActionListener(new menuSelectListener());
+		btnViewSavings.addActionListener(new MenuSelectListener());
 		
 		JButton btnViewChecking = new JButton("Checking");
 		pnlATMMenu.add(btnViewChecking);
-		btnViewChecking.addActionListener(new menuSelectListener());
+		btnViewChecking.addActionListener(new MenuSelectListener());
 		
 		JButton btnViewBusiness = new JButton("Business");
 		pnlATMMenu.add(btnViewBusiness);
 		
 		btnNewAccount = new JButton("New Account");
 		pnlATMMenu.add(btnNewAccount);
-		btnViewBusiness.addActionListener(new menuSelectListener());
+		btnViewBusiness.addActionListener(new MenuSelectListener());
 		
 		pnlAccount = new JPanel();
 		cardContainerPanel.add(pnlAccount, ACCOUNT_MENU);
@@ -198,24 +195,24 @@ public class atmWindow {
 		pnlNewAccount.add(txtNewAccountSum);
 		txtNewAccountSum.setColumns(10);
 		
-		JComboBox comboAccountTypes = new JComboBox();
-		comboAccountTypes.setModel(new DefaultComboBoxModel(Accounts.values()));
+		comboAccountTypes = new JComboBox<Accounts>();
+		comboAccountTypes.setModel(new DefaultComboBoxModel<Accounts>(Accounts.values()));
 		sl_pnlNewAccount.putConstraint(SpringLayout.NORTH, comboAccountTypes, 6, SpringLayout.SOUTH, txtNewAccountSum);
 		sl_pnlNewAccount.putConstraint(SpringLayout.WEST, comboAccountTypes, 0, SpringLayout.WEST, txtNewAccountSum);
 		pnlNewAccount.add(comboAccountTypes);
 		
-		JButton btn = new JButton("New button");
-		sl_pnlNewAccount.putConstraint(SpringLayout.NORTH, btn, 6, SpringLayout.SOUTH, comboAccountTypes);
-		sl_pnlNewAccount.putConstraint(SpringLayout.WEST, btn, 0, SpringLayout.WEST, txtNewAccountSum);
-		pnlNewAccount.add(btn);
+		JButton btnGenerateAcct = new JButton("Create New Account");
+		sl_pnlNewAccount.putConstraint(SpringLayout.NORTH, btnGenerateAcct, 6, SpringLayout.SOUTH, comboAccountTypes);
+		sl_pnlNewAccount.putConstraint(SpringLayout.WEST, btnGenerateAcct, 0, SpringLayout.WEST, txtNewAccountSum);
+		pnlNewAccount.add(btnGenerateAcct);
 		
-		btnSubmitPIN.addActionListener(new pinListener());
+		btnSubmitPIN.addActionListener(new PinListener());
 		
 	}
 	
 	//TODO hook in all these listeners, test behaviours
 	
-	class pinListener implements ActionListener {
+	class PinListener implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
@@ -231,7 +228,7 @@ public class atmWindow {
 	
 	//defines the selective account based on the button pressed
 	//3 options are the text on the buttons in the ATM Menu panel
-	class menuSelectListener implements ActionListener {
+	class MenuSelectListener implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
@@ -266,20 +263,35 @@ public class atmWindow {
 				
 				//TODO Set up option to create new accounts
 				
-			}
-		
-			
+			}	
 			
 		}
 	
-		private void displayFields(User user, Accounts account) {
+	}
+	
+	//creates new user from pin login screen
+	class AccountCreationListener implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
 			
+			try {
+				
+				String newUserPIN = txtNewPIN.getText();
+				
+				User newUser = new User(newUserPIN);
+				
+				accounts.put(newUserPIN, newUser);
+				
+			} catch(NumberFormatException nfe) {
+				System.out.println("Invalid value.");
+			}
 		}
 		
 	}
 	
 	//TODO for both of these change error to in-UI label that appears when error caught
-	class depositListener implements ActionListener {
+	class DepositListener implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
@@ -297,7 +309,7 @@ public class atmWindow {
 		
 	}
 	
-	class withdrawalListener implements ActionListener {
+	class WithdrawalListener implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
