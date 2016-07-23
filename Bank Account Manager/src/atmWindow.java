@@ -15,6 +15,8 @@ import java.awt.event.ActionListener;
 import java.util.HashMap;
 
 import javax.swing.JLabel;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
 
 /*
  * The plan here is to reuse the text fields and buttons for each class, only showing what is actually necessary for each account.
@@ -44,6 +46,11 @@ public class atmWindow {
 	final static String ATM_MENU = "ATM Menu";
 	final static String ACCOUNT_MENU = "Account Menu";
 	final static String SIGN_IN_MENU = "Sign In Menu";
+	private JTextField txtNewUser;
+	private JTextField txtNewPIN;
+	private JButton btnNewAccount;
+	private JPanel pnlNewAccount;
+	private JTextField txtNewAccountSum;
 
 	/**
 	 * Launch the application.
@@ -108,6 +115,26 @@ public class atmWindow {
 		sl_pnlSignIn.putConstraint(SpringLayout.SOUTH, btnSubmitPIN, 0, SpringLayout.SOUTH, txtEnterPin);
 		pnlSignIn.add(btnSubmitPIN);
 		
+		txtNewUser = new JTextField();
+		txtNewUser.setText("New Username");
+		sl_pnlSignIn.putConstraint(SpringLayout.NORTH, txtNewUser, 7, SpringLayout.SOUTH, txtEnterPin);
+		sl_pnlSignIn.putConstraint(SpringLayout.WEST, txtNewUser, 0, SpringLayout.WEST, txtEnterPin);
+		sl_pnlSignIn.putConstraint(SpringLayout.EAST, txtNewUser, 0, SpringLayout.EAST, txtEnterPin);
+		pnlSignIn.add(txtNewUser);
+		txtNewUser.setColumns(10);
+		
+		JButton btnCreateAccount = new JButton("Create Account");
+		pnlSignIn.add(btnCreateAccount);
+		
+		txtNewPIN = new JTextField();
+		txtNewPIN.setText("New PIN");
+		sl_pnlSignIn.putConstraint(SpringLayout.NORTH, txtNewPIN, 6, SpringLayout.SOUTH, txtNewUser);
+		sl_pnlSignIn.putConstraint(SpringLayout.NORTH, btnCreateAccount, -1, SpringLayout.NORTH, txtNewPIN);
+		sl_pnlSignIn.putConstraint(SpringLayout.WEST, btnCreateAccount, 6, SpringLayout.EAST, txtNewPIN);
+		sl_pnlSignIn.putConstraint(SpringLayout.WEST, txtNewPIN, 0, SpringLayout.WEST, txtEnterPin);
+		pnlSignIn.add(txtNewPIN);
+		txtNewPIN.setColumns(10);
+		
 		pnlATMMenu = new JPanel();
 		cardContainerPanel.add(pnlATMMenu, ATM_MENU);
 		pnlATMMenu.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
@@ -122,6 +149,9 @@ public class atmWindow {
 		
 		JButton btnViewBusiness = new JButton("Business");
 		pnlATMMenu.add(btnViewBusiness);
+		
+		btnNewAccount = new JButton("New Account");
+		pnlATMMenu.add(btnNewAccount);
 		btnViewBusiness.addActionListener(new menuSelectListener());
 		
 		pnlAccount = new JPanel();
@@ -155,6 +185,29 @@ public class atmWindow {
 		sl_pnlAccount.putConstraint(SpringLayout.NORTH, btnMakeWithdrawal, -1, SpringLayout.NORTH, txtWithdraw);
 		sl_pnlAccount.putConstraint(SpringLayout.WEST, btnMakeWithdrawal, 0, SpringLayout.WEST, btnMakeDeposit);
 		pnlAccount.add(btnMakeWithdrawal);
+		
+		pnlNewAccount = new JPanel();
+		cardContainerPanel.add(pnlNewAccount, "name_594604001923954");
+		SpringLayout sl_pnlNewAccount = new SpringLayout();
+		pnlNewAccount.setLayout(sl_pnlNewAccount);
+		
+		txtNewAccountSum = new JTextField();
+		txtNewAccountSum.setText("Initial Sum");
+		sl_pnlNewAccount.putConstraint(SpringLayout.NORTH, txtNewAccountSum, 10, SpringLayout.NORTH, pnlNewAccount);
+		sl_pnlNewAccount.putConstraint(SpringLayout.WEST, txtNewAccountSum, 10, SpringLayout.WEST, pnlNewAccount);
+		pnlNewAccount.add(txtNewAccountSum);
+		txtNewAccountSum.setColumns(10);
+		
+		JComboBox comboAccountTypes = new JComboBox();
+		comboAccountTypes.setModel(new DefaultComboBoxModel(Accounts.values()));
+		sl_pnlNewAccount.putConstraint(SpringLayout.NORTH, comboAccountTypes, 6, SpringLayout.SOUTH, txtNewAccountSum);
+		sl_pnlNewAccount.putConstraint(SpringLayout.WEST, comboAccountTypes, 0, SpringLayout.WEST, txtNewAccountSum);
+		pnlNewAccount.add(comboAccountTypes);
+		
+		JButton btn = new JButton("New button");
+		sl_pnlNewAccount.putConstraint(SpringLayout.NORTH, btn, 6, SpringLayout.SOUTH, comboAccountTypes);
+		sl_pnlNewAccount.putConstraint(SpringLayout.WEST, btn, 0, SpringLayout.WEST, txtNewAccountSum);
+		pnlNewAccount.add(btn);
 		
 		btnSubmitPIN.addActionListener(new pinListener());
 		
@@ -262,5 +315,4 @@ public class atmWindow {
 		}
 		
 	}
-	
 }
