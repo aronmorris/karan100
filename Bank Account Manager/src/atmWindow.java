@@ -46,6 +46,7 @@ public class atmWindow {
 	final static String ATM_MENU = "ATM Menu";
 	final static String ACCOUNT_MENU = "Account Menu";
 	final static String SIGN_IN_MENU = "Sign In Menu";
+	final static String NEW_ACCOUNT_MENU = "New Account Menu";
 	private JTextField txtNewPIN;
 	
 	private JButton btnNewAccount;
@@ -121,7 +122,7 @@ public class atmWindow {
 		
 		JButton btnCreateAccount = new JButton("Create Account");
 		pnlSignIn.add(btnCreateAccount);
-		btnCreateAccount.addActionListener(new AccountCreationListener());
+		btnCreateAccount.addActionListener(new UserCreationListener());
 		
 		txtNewPIN = new JTextField();
 		sl_pnlSignIn.putConstraint(SpringLayout.NORTH, txtNewPIN, 33, SpringLayout.SOUTH, txtEnterPin);
@@ -184,7 +185,7 @@ public class atmWindow {
 		pnlAccount.add(btnMakeWithdrawal);
 		
 		pnlNewAccount = new JPanel();
-		cardContainerPanel.add(pnlNewAccount, "name_594604001923954");
+		cardContainerPanel.add(pnlNewAccount, NEW_ACCOUNT_MENU);
 		SpringLayout sl_pnlNewAccount = new SpringLayout();
 		pnlNewAccount.setLayout(sl_pnlNewAccount);
 		
@@ -205,12 +206,34 @@ public class atmWindow {
 		sl_pnlNewAccount.putConstraint(SpringLayout.NORTH, btnGenerateAcct, 6, SpringLayout.SOUTH, comboAccountTypes);
 		sl_pnlNewAccount.putConstraint(SpringLayout.WEST, btnGenerateAcct, 0, SpringLayout.WEST, txtNewAccountSum);
 		pnlNewAccount.add(btnGenerateAcct);
+		btnGenerateAcct.addActionListener(new AccountAdditionListener());
 		
 		btnSubmitPIN.addActionListener(new PinListener());
 		
 	}
 	
 	//TODO hook in all these listeners, test behaviours
+	
+	
+	class ReturnButtonListener implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	
+	class LogoutButtonListener implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
 	
 	class PinListener implements ActionListener {
 
@@ -269,8 +292,33 @@ public class atmWindow {
 	
 	}
 	
+	//add new account to this user
+	class AccountAdditionListener implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			
+			CardLayout cl = (CardLayout) cardContainerPanel.getLayout();
+			cl.show(cardContainerPanel, NEW_ACCOUNT_MENU);
+			
+			try {
+				int initAmt = Integer.parseInt(txtNewAccountSum.getText());
+				Accounts type = (Accounts) comboAccountTypes.getSelectedItem();
+				
+				activeUser.addAccount(type, initAmt);
+				
+			} catch(NumberFormatException nfe) {
+				System.out.println("Invalid value.");
+			} catch(Exception e) {
+				System.out.println("Something went wrong.");
+			}
+			
+		}
+		
+	}
+	
 	//creates new user from pin login screen
-	class AccountCreationListener implements ActionListener {
+	class UserCreationListener implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
