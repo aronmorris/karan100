@@ -184,6 +184,12 @@ public class atmWindow {
 		sl_pnlAccount.putConstraint(SpringLayout.WEST, btnMakeWithdrawal, 0, SpringLayout.WEST, btnMakeDeposit);
 		pnlAccount.add(btnMakeWithdrawal);
 		
+		JButton btnBack = new JButton("Back");
+		sl_pnlAccount.putConstraint(SpringLayout.NORTH, btnBack, 6, SpringLayout.SOUTH, btnMakeWithdrawal);
+		sl_pnlAccount.putConstraint(SpringLayout.WEST, btnBack, 0, SpringLayout.WEST, btnMakeDeposit);
+		pnlAccount.add(btnBack);
+		btnBack.addActionListener(new ReturnButtonListener());
+		
 		pnlNewAccount = new JPanel();
 		cardContainerPanel.add(pnlNewAccount, NEW_ACCOUNT_MENU);
 		SpringLayout sl_pnlNewAccount = new SpringLayout();
@@ -219,8 +225,8 @@ public class atmWindow {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			
+			CardLayout cl = (CardLayout) cardContainerPanel.getLayout();
+			cl.show(cardContainerPanel, ATM_MENU);
 		}
 		
 	}
