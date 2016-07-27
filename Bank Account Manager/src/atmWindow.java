@@ -151,6 +151,7 @@ public class atmWindow {
 		btnNewAccount = new JButton("New Account");
 		pnlATMMenu.add(btnNewAccount);
 		btnViewBusiness.addActionListener(new MenuSelectListener());
+		btnNewAccount.addActionListener(new AccountAdditionViewListener());
 		
 		pnlAccount = new JPanel();
 		cardContainerPanel.add(pnlAccount, ACCOUNT_MENU);
@@ -164,6 +165,7 @@ public class atmWindow {
 		
 		JButton btnMakeDeposit = new JButton("Deposit");
 		pnlAccount.add(btnMakeDeposit);
+		btnMakeDeposit.addActionListener(new DepositListener());
 		
 		txtDeposit = new JTextField();
 		sl_pnlAccount.putConstraint(SpringLayout.NORTH, btnMakeDeposit, -1, SpringLayout.NORTH, txtDeposit);
@@ -301,7 +303,7 @@ public class atmWindow {
 	}
 	
 	//add new account to this user
-	class AccountAdditionListener implements ActionListener {
+	class AccountAdditionViewListener implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
@@ -309,11 +311,22 @@ public class atmWindow {
 			CardLayout cl = (CardLayout) cardContainerPanel.getLayout();
 			cl.show(cardContainerPanel, NEW_ACCOUNT_MENU);
 			
+		}
+		
+	}
+	
+	class AccountAdditionListener implements ActionListener {
+		
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
 			try {
 				int initAmt = Integer.parseInt(txtNewAccountSum.getText());
 				Accounts type = (Accounts) comboAccountTypes.getSelectedItem();
 				
 				activeUser.addAccount(type, initAmt);
+				
+				CardLayout cl = (CardLayout) cardContainerPanel.getLayout();
+				cl.show(cardContainerPanel, ATM_MENU);
 				
 			} catch(NumberFormatException nfe) {
 				System.out.println("Invalid value.");
@@ -322,7 +335,6 @@ public class atmWindow {
 			}
 			
 		}
-		
 	}
 	
 	//creates new user from pin login screen
@@ -354,7 +366,7 @@ public class atmWindow {
 			try {
 				int depositAmt = Integer.parseInt(txtDeposit.getText());
 				
-				activeUser.accessAccount(activeType).deposit(depositAmt);
+				lblAccountValue.setText(Integer.toString(activeUser.accessAccount(activeType).deposit(depositAmt)));
 				
 			} catch(NumberFormatException nfe) {
 				System.out.println("Invalid.");
@@ -373,7 +385,7 @@ public class atmWindow {
 			try {
 				int withdrawAmt = Integer.parseInt(txtWithdraw.getText());
 				
-				activeUser.accessAccount(activeType).withdraw(withdrawAmt);
+				lblAccountValue.setText(Integer.toString(activeUser.accessAccount(activeType).withdraw(withdrawAmt)));
 				
 				
 				
