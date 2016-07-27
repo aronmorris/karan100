@@ -37,8 +37,6 @@ public class atmWindow {
 	private JPanel pnlAccount;
 	private JPanel cardContainerPanel;
 	
-	private JLabel lblAccountValue;
-	
 	private HashMap<String, User> accounts;
 	private User activeUser;
 	Accounts activeType;
@@ -48,6 +46,8 @@ public class atmWindow {
 	final static String SIGN_IN_MENU = "Sign In Menu";
 	final static String NEW_ACCOUNT_MENU = "New Account Menu";
 	private JTextField txtNewPIN;
+	
+	private JLabel lblAccountValue;
 	
 	private JButton btnNewAccount;
 	
@@ -183,6 +183,7 @@ public class atmWindow {
 		sl_pnlAccount.putConstraint(SpringLayout.NORTH, btnMakeWithdrawal, -1, SpringLayout.NORTH, txtWithdraw);
 		sl_pnlAccount.putConstraint(SpringLayout.WEST, btnMakeWithdrawal, 0, SpringLayout.WEST, btnMakeDeposit);
 		pnlAccount.add(btnMakeWithdrawal);
+		btnMakeWithdrawal.addActionListener(new WithdrawalListener());
 		
 		JButton btnBack = new JButton("Back");
 		sl_pnlAccount.putConstraint(SpringLayout.NORTH, btnBack, 6, SpringLayout.SOUTH, btnMakeWithdrawal);
@@ -231,6 +232,7 @@ public class atmWindow {
 		
 	}
 	
+	//TODO add this to account selection menu to go back to login
 	class LogoutButtonListener implements ActionListener {
 
 		@Override
@@ -372,6 +374,8 @@ public class atmWindow {
 				int withdrawAmt = Integer.parseInt(txtWithdraw.getText());
 				
 				activeUser.accessAccount(activeType).withdraw(withdrawAmt);
+				
+				
 				
 			} catch(NumberFormatException nfe) {
 				System.out.println("Invalid.");
