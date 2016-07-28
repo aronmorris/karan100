@@ -2312,3 +2312,5 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact javax.activat
 2016-07-26 22:34:15,158 [Worker-5] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|http://repo.maven.apache.org/maven2 in 247302 ms
 2016-07-26 23:15:33,907 [Worker-5] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|http://repo.maven.apache.org/maven2
 2016-07-26 23:16:02,052 [Worker-5] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|http://repo.maven.apache.org/maven2 in 28147 ms
+2016-07-27 21:41:44,826 [Thread-12] ERROR org.eclipse.jgit.util.FS - fatal: Could not switch to '/Library/Developer/CommandLineTools/usr/etc/': No such file or directory
+
