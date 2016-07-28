@@ -5,19 +5,17 @@ public class SalariedEmployee extends Employee {
 
 	public SalariedEmployee(int pay, String ID) {
 		super(pay, ID);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public void setEmployeeID(String newID) {
-		// TODO Auto-generated method stub
+		this.ID = newID;
 
 	}
 
 	@Override
 	public String getEmployeeID() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.ID;
 	}
 
 	/**
@@ -25,14 +23,13 @@ public class SalariedEmployee extends Employee {
 	 */
 	@Override
 	public void setPay(int newPay) {
-		// TODO Auto-generated method stub
+		this.pay = newPay;
 
 	}
 
 	@Override
 	public int getPay() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.pay;
 	}
 
 	

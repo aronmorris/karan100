@@ -16,8 +16,7 @@ public class HourlyEmployee extends Employee {
 
 	@Override
 	public String getEmployeeID() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.ID;
 	}
 
 	/**
@@ -25,8 +24,7 @@ public class HourlyEmployee extends Employee {
 	 */
 	@Override
 	public void setPay(int newPay) {
-		// TODO Auto-generated method stub
-
+		this.pay = newPay;
 	}
 
 	@Override

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
+<<<<<<< Updated upstream
 <fullyQualifiedTypeName name="java.util.Collections"/>
+=======
+>>>>>>> Stashed changes
 <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="javax.swing.JFrame"/>
@@ -38,7 +41,6 @@
 <fullyQualifiedTypeName name="javax.swing.event.ListSelectionListener"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="Tree.Node"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="org.apache.commons.net.ftp.FTPClientConfig"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="org.apache.commons.net.ftp.FTPReply"/>
@@ -55,9 +57,16 @@
 <fullyQualifiedTypeName name="java.net.SocketAddress"/>
 <fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
 <fullyQualifiedTypeName name="java.net.URL"/>
+<<<<<<< Updated upstream
 <fullyQualifiedTypeName name="java.util.TimerTask"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="Accounts"/>
+=======
+<fullyQualifiedTypeName name="java.util.concurrent.ScheduledExecutorService"/>
+<fullyQualifiedTypeName name="java.util.concurrent.Executors"/>
+<fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+>>>>>>> Stashed changes
 </qualifiedTypeNameHistroy>
