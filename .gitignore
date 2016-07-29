@@ -6,6 +6,15 @@ tmp/
 *.bak
 *.swp
 *~.nib
+*.index
+*.resources
+*.prefs
+*.properties
+*.ini
+*.gen
+*.dat
+*.txt
+*.xmi
 local.properties
 .settings/
 .loadpath
