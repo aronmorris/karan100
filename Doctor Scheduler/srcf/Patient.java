@@ -16,7 +16,9 @@ public class Patient implements Runnable {
 
 	}
 	
-	
+	public Duration timeToHealth() {
+		return timeToHealthy;
+	}
 	
 	public boolean cure() {
 		//TODO redo this bsns
