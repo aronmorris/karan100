@@ -22,23 +22,13 @@ public class Doctor {
 	
 	public boolean cure() {
 		Patient p = patients.pop();
+
+		return p.cure();
 		
-		//work on the patient, crude implementation but finer not strictly needed
-		//since a doctor can only do one patient at a time
-		//Thought: Consider multiple doctors on one thread - make the object itself synced to a thread?
-		while(!p.isCured()) {
-			
-			try {
-				Thread.sleep(10);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-		}
-		
-		return true;
-		
+	}
+	
+	public boolean hasPatients() {
+		return !patients.isEmpty();
 	}
 	
 	public boolean add(Patient p) {
