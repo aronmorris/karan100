@@ -14,7 +14,7 @@ public class Doctor {
 	public Doctor(int maxPatientsPerDay) {
 		MAX_PATIENTS = maxPatientsPerDay;
 		
-		patients = new LimitedLinkedList<Patient>(MAX_PATIENTS);
+		patients = new LimitedLinkedList<Patient>(MAX_PATIENTS + 1);
 		
 		currentTimeOccupied = Duration.ZERO;
 		
@@ -22,6 +22,8 @@ public class Doctor {
 	
 	public boolean cure() {
 		Patient p = patients.pop();
+		
+		System.out.println("This patient should take " + p.timeToHealth().toMinutes() + " minutes to cure.");
 
 		return p.cure();
 		
@@ -37,13 +39,20 @@ public class Doctor {
 		//Otherwise, no-go
 		if (currentTimeOccupied.plus(p.timeToHealth()).toMillis() <= timeLeftInDay.toMillis()) {
 			patients.add(p);
-			currentTimeOccupied = currentTimeOccupied.plus(p.timeToHealth());
+			//currentTimeOccupied = currentTimeOccupied.plus(p.timeToHealth());
 			timeLeftInDay = timeLeftInDay.minus(p.timeToHealth());
+			
+			if (patients.size() < MAX_PATIENTS) {
+				System.out.println("Patient added to list! " + p.timeToHealth().toMinutes() + " minutes!");
+			}
+			else {
+				System.out.println("A patient has been booted to add this one!");
+			}
 			return true;
 		}
 		
 		else {
-			System.out.println("This doctor fully booked.");
+			System.out.println("This doctor can't take this patient due to time constraints.");
 			return false;
 		}
 		

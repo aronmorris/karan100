@@ -21,7 +21,6 @@ public class Patient implements Runnable {
 	}
 	
 	public boolean cure() {
-		//TODO redo this bsns
 		
 		System.out.println("Doctor has started to cure this patient.");
 		
@@ -29,8 +28,28 @@ public class Patient implements Runnable {
 		
 		cureTime.schedule(this, timeToHealthy.toMinutes(), TimeUnit.MINUTES);
 		
-		System.out.println("The patient is cured!");
+		Duration elapsed = Duration.ZERO;
 		
+		final long TEN_SECONDS = 10;
+		
+		final long TEN_IN_MILLIS = 10000;
+		
+		while(!isCured) {
+			try {
+				Thread.sleep(TEN_IN_MILLIS);
+				
+				elapsed = elapsed.plus(Duration.ofSeconds(TEN_SECONDS));
+				
+				System.out.printf("%d seconds have elapsed since the doctor began work on this patient.%n", elapsed.toMillis() / 1000);
+				
+				System.out.printf("There are %.2f minutes left.%n", (float)(timeToHealthy.minus(elapsed).toMillis() / 1000) / 60);
+				
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		System.out.println("Patient cured!");
 		return isCured;
 	}
 
@@ -43,6 +62,8 @@ public class Patient implements Runnable {
 	@Override
 	public void run() {
 		System.out.println("Doctor is curing the patient.");
+		
+		isCured = true;
 		
 	}
 }
