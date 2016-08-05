@@ -1,5 +1,5 @@
 
-public abstract class Ingredient {
+public class Ingredient {
 
 	private String name;
 	

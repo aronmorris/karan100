@@ -30,6 +30,7 @@ public class Organizer {
 		//Improve further by switching to a Map for ingredients in a recipe? O(1) access for each Recipe
 		//and O(n) worst case access for sorting through every recipe
 		
+		//Did the above
 		if (type.equals(Organizable.INGREDIENT)) {
 			returnArr = sortByIngredient(sortByThisIngredient);
 		}

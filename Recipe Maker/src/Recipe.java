@@ -1,7 +1,7 @@
 import java.util.HashMap;
 
 
-public abstract class Recipe {
+public class Recipe {
 
 	private HashMap<String, Ingredient> ingredients;
 	
