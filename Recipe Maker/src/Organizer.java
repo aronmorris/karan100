@@ -20,8 +20,8 @@ public class Organizer {
 		recipes.remove(r);
 	}
 	
-	///TODO implement fast sorting depending on the organizable type chosen
-	public ArrayList<Recipe> organize(Organizable type, Ingredient sortByThisIngredient) {
+	///takes an object convertible to enum or string
+	public ArrayList<Recipe> organize(Organizable type, Object sortKey) {
 		
 		ArrayList<Recipe> returnArr = new ArrayList<Recipe>();
 		
@@ -32,11 +32,11 @@ public class Organizer {
 		
 		//Did the above
 		if (type.equals(Organizable.INGREDIENT)) {
-			returnArr = sortByIngredient(sortByThisIngredient);
+			returnArr = sortByIngredient(sortKey);
 		}
 		
 		else if (type.equals(Organizable.COURSE)) {
-			returnArr = sortByCourse(type);
+			returnArr = sortByCourse(sortKey);
 		}
 		
 		/*
@@ -56,7 +56,9 @@ public class Organizer {
 		
 	}
 
-	private ArrayList<Recipe> sortByCourse(Organizable type) {
+	private ArrayList<Recipe> sortByCourse(Object type) {
+		
+		type = (Course) type;
 		
 		ArrayList<Recipe> returnArr = new ArrayList<Recipe>();
 		
@@ -72,14 +74,16 @@ public class Organizer {
 		
 	}
 
-	private ArrayList<Recipe> sortByIngredient(Ingredient sortByThisIngredient) {
+	private ArrayList<Recipe> sortByIngredient(Object ingredient) {
+		
+		String ing = (String) ingredient;
 		
 		ArrayList<Recipe> returnArr = new ArrayList<Recipe>();
 		
 		for (Iterator<Recipe> it = recipes.iterator(); it.hasNext();) {
 			Recipe r = it.next();
 			
-			if (r.getIngredient(sortByThisIngredient.getName()) != null) {
+			if (r.getIngredient(ing) != null) {
 				returnArr.add(r);
 			}
 		}

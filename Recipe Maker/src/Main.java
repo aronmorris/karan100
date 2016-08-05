@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 
 public class Main {
@@ -7,14 +8,23 @@ public class Main {
 		
 		ArrayList<Recipe> recipes = new ArrayList<Recipe>();
 		
-		Recipe applePie = new Recipe(Course.DESSERT, new Ingredient("Flour"), new Ingredient("Apple"), new Ingredient("Sugar"));
+		Recipe applePie = new Recipe("Apple Pie", Course.DESSERT, "Flour", "Sugar", "Apple");
 		
+		Recipe blueberryPie = new Recipe("Blueberry Pie", Course.DESSERT, "Flour", "Sugar", "Blueberry");
 		
-		recipes.add(applePie);
+		Recipe steak = new Recipe("Steak", Course.ENTREE, "Beef");
+		
+		Recipe wellington = new Recipe("Beef Wellington", Course.ENTREE, "Beef", "Flour", "Mushroom", "Gravy");	
+		
+		Recipe[] list = new Recipe[] { applePie, blueberryPie, steak, wellington };
+		
+		recipes.addAll(Arrays.asList(list));
 		
 		Organizer organizer = new Organizer(recipes);
 		
-		organizer.addRecipe(new Recipe(Course.DESSERT, new Ingredient("Flour")));
+		System.out.println(organizer.organize(Organizable.INGREDIENT, "Flour"));
+		
+		System.out.println(organizer.organize(Organizable.COURSE, Course.ENTREE));
 		
 	}
 	
