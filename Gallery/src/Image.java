@@ -9,7 +9,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 
-public abstract class Image extends Component {
+public class Image extends Component {
 
 	/**
 	 * randomly generated
