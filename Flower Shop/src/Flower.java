@@ -5,7 +5,9 @@ public abstract class Flower {
 	private String name;
 	
 	public Flower(String name) {
-		this.name = name;
+		//lowercased to prevent the nonsense of having "peonies" and "Peonies" as separate things
+		this.name = name.toLowerCase();
+		
 	}
 	
 	public String getName() {
