@@ -1,6 +1,6 @@
 
-//abstract Flower class defines the specific requirements of each descendant type of flower
-public abstract class Flower {
+
+public class Flower {
 
 	private String name;
 	

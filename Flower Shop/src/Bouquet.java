@@ -32,6 +32,15 @@ public class Bouquet {
 		}
 	}
 	
-	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		for (Flower f : bouquet.keySet()) {
+			sb.append(f.getName() + ": " + bouquet.get(f) + " units.\n");
+		}
+		
+		return sb.toString();
+	}
 		
 }

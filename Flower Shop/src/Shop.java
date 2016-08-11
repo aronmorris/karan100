@@ -6,6 +6,26 @@ import java.util.HashMap;
  */
 public class Shop {
 	
+	public static void main(String[] args) {
+		
+		Shop shop = new Shop();
+		
+		shop.addFlowerToInventory(new Flower("Rose"), 10);
+		
+		shop.addFlowerToInventory(new Flower("Sunflower"), 10);
+		
+		shop.addFlowerToInventory(new Flower("Orchid"), 10);
+		
+		//bouquet of 3 roses
+		shop.sell(shop.createBouquet(new FlowerTuple(lookup.get("rose"), 3)));
+		
+		shop.sell(shop.createBouquet(new FlowerTuple(lookup.get("rose"), 5), new FlowerTuple(lookup.get("orchid"), 8)));
+		
+		shop.sell(shop.createBouquet(new FlowerTuple(lookup.get("rose"), 5), new FlowerTuple(lookup.get("orchid"), 8)));
+
+		
+	}
+	
 	//all shops ought to be able to tell what every kind of flower is regardless of if only one or every shop has it
 	private static HashMap<String, Flower> lookup = new HashMap<String, Flower>();
 	
@@ -20,6 +40,9 @@ public class Shop {
 			lookup.put(f.getName(), f);
 		}
 		if (inventory.containsKey(f.getName())) {
+			inventory.put(f, inventory.get(f) + i);
+		}
+		else {
 			inventory.put(f, i);
 		}
 	}
@@ -39,19 +62,24 @@ public class Shop {
 				}
 				else {
 					System.out.printf("Insufficient quantity of %s to add to bouquet.%n"
-							+ "Need: %d%n more"
-							+ "Have:%d%n"
+							+ "Need: %d more%n"
+							+ "Have: %d%n"
 							+ "Process continues.%n",
 							ft.FLOWER.getName(), ft.COUNT - inventory.get(ft.FLOWER), inventory.get(ft.FLOWER));
 				}
 			}
 			else {
 				System.out.printf("No %s in this shop's inventory!%n"
-						+ "Process continues.%n");
+						+ "Process continues.%n",
+						ft.FLOWER.getName());
 			}
 		}
 		
 		return bouquet;
+	}
+	
+	public void sell(Bouquet b) {
+		System.out.println("Sold a bouquet of: \n" + b.toString());
 	}
 	
 	public void addToBouquet(Bouquet b, Flower f, int count) {
