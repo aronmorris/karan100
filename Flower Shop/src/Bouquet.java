@@ -13,9 +13,16 @@ public class Bouquet {
 	}
 	
 	//adds flowers to the bouquet, taking a tuple of the Flower and how many are desired as args
+	//if a bouquet already contains a specific flower its quantity is incremented instead of being replaced
 	public void addToBouquet(FlowerTuple... ft) {
 		for (FlowerTuple f : ft) {
-			bouquet.put(f.FLOWER, f.COUNT);
+			if (bouquet.containsKey(f.FLOWER)) {
+				int quantity = f.COUNT + bouquet.get(f.FLOWER);
+				bouquet.put(f.FLOWER, quantity);
+			}
+			else {
+				bouquet.put(f.FLOWER, f.COUNT);
+			}
 		}
 	}
 	
