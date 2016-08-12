@@ -32,6 +32,8 @@ public class Person {
 		}
 	}
 	
+	
+	
 	public String getName() {
 		return name;
 	}
@@ -58,6 +60,24 @@ public class Person {
 			System.out.println("This person hasn't died, returning null.");
 			return null;
 		}
+	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("\n" + name + "\n");
+		sb.append("Born: " + birth.toString() + "\n");
+		
+		if (hasDeath) sb.append("Died: " + death.toString() + "\n");
+		
+		if (parents != null) {
+			for (Person p : parents) {
+				sb.append("Parent: " + p.getName());
+			}
+		}
+		
+		return sb.toString();
+		
 	}
 	
 }
