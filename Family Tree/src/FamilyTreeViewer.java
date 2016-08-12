@@ -13,6 +13,8 @@ import java.awt.Color;
 import javax.swing.JTextField;
 import javax.swing.JTree;
 import javax.swing.JScrollPane;
+import java.awt.CardLayout;
+import javax.swing.JButton;
 
 
 public class FamilyTreeViewer {
@@ -49,34 +51,27 @@ public class FamilyTreeViewer {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		SpringLayout springLayout = new SpringLayout();
-		frame.getContentPane().setLayout(springLayout);
+		frame.getContentPane().setLayout(new CardLayout(0, 0));
 		
 		JPanel treeDisplayPanel = new JPanel();
-		springLayout.putConstraint(SpringLayout.NORTH, treeDisplayPanel, 10, SpringLayout.NORTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.WEST, treeDisplayPanel, 135, SpringLayout.WEST, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.SOUTH, treeDisplayPanel, 251, SpringLayout.NORTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.EAST, treeDisplayPanel, -10, SpringLayout.EAST, frame.getContentPane());
 		treeDisplayPanel.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
-		frame.getContentPane().add(treeDisplayPanel);
-		
-		JPanel panel = new JPanel();
-		springLayout.putConstraint(SpringLayout.NORTH, panel, 10, SpringLayout.NORTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.WEST, panel, 10, SpringLayout.WEST, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.SOUTH, panel, 251, SpringLayout.NORTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.EAST, panel, -6, SpringLayout.WEST, treeDisplayPanel);
-		panel.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
+		frame.getContentPane().add(treeDisplayPanel, "name_689299405180623");
 		treeDisplayPanel.setLayout(null);
 		
 		JTree tree = new JTree();
-		tree.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
-		tree.setBounds(0, 0, 289, 241);
+		tree.setBounds(0, 0, 328, 261);
 		treeDisplayPanel.add(tree);
 		
-		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(0, 0, 200, 50);
-		treeDisplayPanel.add(scrollPane);
-		frame.getContentPane().add(panel);
-		panel.setLayout(null);
+		JButton btnBack = new JButton("New button");
+		btnBack.setBounds(335, 11, 89, 23);
+		treeDisplayPanel.add(btnBack);
+		
+		JPanel addMembersPanel = new JPanel();
+		frame.getContentPane().add(addMembersPanel, "name_689334841623690");
+		addMembersPanel.setLayout(null);
+		
+		JPanel menuPanel = new JPanel();
+		frame.getContentPane().add(menuPanel, "name_689738373664520");
+		menuPanel.setLayout(null);
 	}
 }

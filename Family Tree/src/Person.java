@@ -1,7 +1,7 @@
 import java.util.Date;
 
-//A Person is immutable once set so their position on the tree doesn't change
 //You can only assign a child to a person by having someone assign that person as their parent.
+//Partners can be assigned and reassigned without much trouble
 public class Person {
 
 	private String name;
@@ -9,6 +9,8 @@ public class Person {
 	private Date death;
 	
 	private boolean hasDeath;
+	
+	private Person partner;
 	
 	private Person[] parents;
 	
@@ -32,7 +34,13 @@ public class Person {
 		}
 	}
 	
+	public void setPartner(Person p) {
+		partner = p;
+	}
 	
+	public Person getPartner() {
+		return partner;
+	}
 	
 	public String getName() {
 		return name;
