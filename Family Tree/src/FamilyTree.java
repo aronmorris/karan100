@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -17,7 +19,10 @@ public class FamilyTree {
 		System.out.println(ft.people);
 		
 	}
-
+	
+	/*
+	 * Consider replacing this with a TreeNode from swing
+	 */
 	private LinkedList<Person> people;
 	
 	public FamilyTree() {
@@ -46,6 +51,17 @@ public class FamilyTree {
 			people.add(child);
 		}
 		return child;
+	}
+	
+	public String toString() {
+		
+		//HashMap<Person, ArrayList<Person>> tree 
+		
+		for (Person p : people) {
+			if (p.getParents() != null) {
+		
+			}
+		}
 	}
 	
 }

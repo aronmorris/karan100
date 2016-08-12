@@ -80,4 +80,24 @@ public class Person {
 		
 	}
 	
+	@Override
+	public boolean equals(Object obj) {
+	    if (!(obj instanceof Person)) {
+	        return false;
+	    }
+	  
+	    if (obj == this) {
+	    	return true;
+	    }
+	
+	    Person p = (Person) obj;
+	    
+	    if (this.name.equals(p.name) && this.birth.equals(this.birth)) {
+	    	return true;
+	    }
+	    
+	    return false;
+	    
+	}
+	
 }

@@ -6,12 +6,13 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="pnlNewAccount" key="selection"/>
+		<item value="Person" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Node&lt;Person&gt;"/>
 			<item value="pnlNewAccount"/>
 			<item value="txtNewAccountSum"/>
 			<item value="esult"/>
@@ -19,9 +20,9 @@
 			<item value="domainName"/>
 			<item value="fileName"/>
 			<item value="build"/>
-			<item value="dependency"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Person"/>
 			<item value="sb"/>
 			<item value="StringBuilder sb"/>
 			<item value="domain"/>

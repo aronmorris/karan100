@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
 <typeInfo handle="=Bank Account Manager/src&lt;{Account.java[Account" modifiers="1025" timestamp="1468794248511"/>
-<typeInfo handle="=Doctor Scheduler/C:\/Program Files \(x86)\/Java\/jre1.8.0_91\/lib\/rt.jar&lt;java.util(LinkedList.class[LinkedList" modifiers="33" timestamp="1461884708904"/>
+<typeInfo handle="=Gallery/src&lt;{Image.java[Image" modifiers="1" timestamp="1470714037653"/>
+<typeInfo handle="=Gallery/C:\/Program Files \(x86)\/Java\/jre1.8.0_91\/lib\/rt.jar&lt;java.awt(Image.class[Image" modifiers="1057" timestamp="1461884708904"/>
+<typeInfo handle="=Shape Classes/src&lt;{Shape.java[Shape" modifiers="1025" timestamp="1470627847773"/>
 </typeInfoHistroy>
