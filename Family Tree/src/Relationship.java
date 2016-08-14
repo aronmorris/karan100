@@ -1,12 +1,16 @@
 
-public abstract class Relationship {
-
+public class Relationship {
+	
 	private Person A;
 	private Person B;
 	
-	public Relationship(Person A, Person B) {
+	private RType type;
+	
+	public Relationship(Person A, Person B, RType type) {
 		this.A = A;
 		this.B = B;
+		
+		this.type = type;
 	}
 	
 	public Person getRelatedA() {
@@ -15,6 +19,10 @@ public abstract class Relationship {
 	
 	public Person getRelatedB() {
 		return B;
+	}
+	
+	public RType getRelation() {
+		return type;
 	}
 	
 }
