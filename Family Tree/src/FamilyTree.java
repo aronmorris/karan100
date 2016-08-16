@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
+
+import org.jgrapht.ListenableGraph;
 
 public class FamilyTree {
 
@@ -10,6 +13,31 @@ public class FamilyTree {
 	
 	public FamilyTree() {
 		relationships = new HashMap<Person, ArrayList<Relationship>>();
+	}
+	
+	public Person getPerson(String name) {
+		for (Person p : relationships.keySet()) {
+			if (p.getName().equals(name)) {
+				return p;
+			}
+		}
+		return null;
+	}
+	
+	public Relationship getRelation(Person A, Person B) {
+		if (relationships.containsKey(A) && relationships.containsKey(B)) {
+			for (Iterator<Relationship> it = relationships.get(A).iterator(); it.hasNext();) {
+				Relationship temp = it.next();
+				if (temp.getRelatedB().equals(B)) {
+					return temp;
+				}
+			}
+		}
+		return null;
+	}
+	
+	public ArrayList<Relationship> getAllRelations(Person p) {
+		return relationships.get(p);
 	}
 	
 }

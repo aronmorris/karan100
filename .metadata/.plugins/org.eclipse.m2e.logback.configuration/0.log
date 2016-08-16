@@ -2416,3 +2416,219 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact javax.activat
 2016-08-11 23:10:55,284 [Worker-5] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|http://repo.maven.apache.org/maven2 in 18554 ms
 2016-08-11 23:17:20,899 [Worker-3] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|http://repo.maven.apache.org/maven2
 2016-08-11 23:17:38,388 [Worker-3] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|http://repo.maven.apache.org/maven2 in 17525 ms
+2016-08-14 13:48:16,215 [Worker-6] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|http://repo.maven.apache.org/maven2
+2016-08-12 13:48:35,608 [Worker-6] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|http://repo.maven.apache.org/maven2 in -172780595 ms
+2016-08-12 14:06:51,543 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-12 14:06:51,544 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Country From IP\src\main\resources
+2016-08-12 14:06:51,546 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-12 14:06:51,547 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Country From IP\src\test\resources
+2016-08-12 14:06:51,806 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-12 14:06:51,806 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\FTP Program\src\main\resources
+2016-08-12 14:06:51,808 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-12 14:06:51,808 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\FTP Program\src\test\resources
+2016-08-12 14:06:52,315 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-12 14:06:52,316 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Guestbook\src\main\resources
+2016-08-12 14:06:52,317 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-12 14:06:52,317 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Guestbook\src\test\resources
+2016-08-12 14:06:52,605 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-12 14:06:52,606 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Mail Checker\src\main\resources
+2016-08-12 14:06:52,607 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-12 14:06:52,608 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Mail Checker\src\test\resources
+2016-08-12 14:06:52,980 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-12 14:06:52,981 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quote Tracker\src\main\resources
+2016-08-12 14:06:52,982 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-12 14:06:52,982 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quote Tracker\src\test\resources
+2016-08-12 14:06:53,151 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-12 14:06:53,152 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\RSSReader\src\main\resources
+2016-08-12 14:06:53,153 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-12 14:06:53,154 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\RSSReader\src\test\resources
+2016-08-12 14:06:53,414 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-12 14:06:53,415 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Reservation System\src\main\resources
+2016-08-12 14:06:53,416 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-12 14:06:53,416 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Reservation System\src\test\resources
+2016-08-12 14:06:53,778 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-12 14:06:53,779 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Whois Search\src\main\resources
+2016-08-12 14:06:53,781 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-12 14:06:53,781 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Whois Search\src\test\resources
+2016-08-15 22:55:09,468 [Worker-143] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.familytree:FamilyTree:0.0.1-SNAPSHOT @ D:\Programming\Java\JavaWorkspace\Projects\Family Tree\pom.xml.
+2016-08-15 22:55:09,854 [Worker-142] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 22:55:09,874 [Worker-142] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-15 22:55:09,875 [Worker-142] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 22:55:09,876 [Worker-142] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-15 22:55:10,899 [Worker-143] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Family Tree/src
+2016-08-15 22:55:10,900 [Worker-143] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /Family Tree/src/test/java because it overlaps with /Family Tree/src
+2016-08-15 22:55:11,430 [Worker-143] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2016-08-15 22:55:11,475 [Worker-143] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.familytree:FamilyTree:0.0.1-SNAPSHOT @ D:\Programming\Java\JavaWorkspace\Projects\Family Tree\pom.xml.
+2016-08-15 22:55:12,576 [Worker-143] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Family Tree/src
+2016-08-15 22:55:12,576 [Worker-143] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /Family Tree/src/test/java because it overlaps with /Family Tree/src
+2016-08-15 22:55:12,714 [Worker-143] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2016-08-15 22:55:12,737 [Worker-145] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 22:55:12,738 [Worker-145] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-15 22:55:12,739 [Worker-145] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 22:55:12,740 [Worker-145] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-15 22:58:09,546 [Worker-143] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 22:58:09,548 [Worker-143] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-15 22:58:09,551 [Worker-143] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 22:58:09,552 [Worker-143] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-15 23:02:45,489 [Worker-149] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 23:02:45,490 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-15 23:02:45,491 [Worker-149] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 23:02:45,492 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-15 23:03:08,504 [Worker-140] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 23:03:08,505 [Worker-140] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-15 23:03:08,507 [Worker-140] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 23:03:08,508 [Worker-140] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-15 23:03:36,095 [Worker-147] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.familytree:FamilyTree:0.0.1-SNAPSHOT @ D:\Programming\Java\JavaWorkspace\Projects\Family Tree\pom.xml.
+2016-08-15 23:03:36,299 [Worker-147] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/jgrapht/jgrapht-core/0.9.2/jgrapht-core-0.9.2.pom
+2016-08-15 23:03:36,448 [Worker-147] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/jgrapht/jgrapht-core/0.9.2/jgrapht-core-0.9.2.pom
+2016-08-15 23:03:36,517 [Worker-147] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/jgrapht/jgrapht/0.9.2/jgrapht-0.9.2.pom
+2016-08-15 23:03:36,659 [Worker-147] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/jgrapht/jgrapht/0.9.2/jgrapht-0.9.2.pom
+2016-08-15 23:03:36,724 [Worker-147] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/jgrapht/jgrapht-core/0.9.2/jgrapht-core-0.9.2.jar
+2016-08-15 23:03:37,118 [Worker-147] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/jgrapht/jgrapht-core/0.9.2/jgrapht-core-0.9.2.jar
+2016-08-15 23:03:37,327 [Worker-147] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 23:03:37,329 [Worker-147] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-15 23:03:37,330 [Worker-147] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 23:03:37,331 [Worker-147] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-15 23:03:38,388 [Worker-149] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/jgrapht/jgrapht-core/0.9.2/jgrapht-core-0.9.2-sources.jar
+2016-08-15 23:03:38,763 [Worker-149] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/jgrapht/jgrapht-core/0.9.2/jgrapht-core-0.9.2-sources.jar
+2016-08-15 23:03:38,840 [Worker-148] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 23:03:38,841 [Worker-148] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-15 23:03:38,842 [Worker-148] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 23:03:38,843 [Worker-148] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-15 23:03:38,863 [Worker-149] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.jgrapht:jgrapht-core:0.9.2
+2016-08-15 23:03:39,037 [Worker-149] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/jgrapht/jgrapht-core/0.9.2/jgrapht-core-0.9.2-javadoc.jar
+2016-08-15 23:03:40,166 [Worker-149] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/jgrapht/jgrapht-core/0.9.2/jgrapht-core-0.9.2-javadoc.jar
+2016-08-15 23:03:40,270 [Worker-149] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.jgrapht:jgrapht-core:0.9.2
+2016-08-15 23:03:40,990 [Worker-150] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 23:03:40,991 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-15 23:03:40,992 [Worker-150] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 23:03:40,993 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-15 23:12:35,453 [Worker-151] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 23:12:35,455 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-15 23:12:35,456 [Worker-151] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 23:12:35,456 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-15 23:16:20,879 [Worker-143] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 23:16:20,882 [Worker-143] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-15 23:16:20,884 [Worker-143] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 23:16:20,886 [Worker-143] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-15 23:57:17,619 [Worker-162] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 23:57:17,620 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-15 23:57:17,621 [Worker-162] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 23:57:17,622 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-15 23:57:34,246 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 23:57:34,247 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-15 23:57:34,248 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 23:57:34,249 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-15 23:58:24,211 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 23:58:24,213 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-15 23:58:24,215 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-15 23:58:24,216 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-16 00:00:08,020 [Worker-161] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.familytree:FamilyTree:0.0.1-SNAPSHOT @ D:\Programming\Java\JavaWorkspace\Projects\Family Tree\pom.xml.
+2016-08-16 00:00:08,092 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:00:08,093 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-16 00:00:08,095 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:00:08,095 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-16 00:00:09,636 [Worker-160] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:00:09,638 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-16 00:00:09,657 [Worker-160] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:00:09,657 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-16 00:01:18,032 [Worker-163] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.familytree:FamilyTree:0.0.1-SNAPSHOT @ D:\Programming\Java\JavaWorkspace\Projects\Family Tree\pom.xml.
+2016-08-16 00:01:18,079 [Worker-163] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:01:18,080 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-16 00:01:18,081 [Worker-163] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:01:18,082 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-16 00:01:52,157 [Worker-162] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2016-08-16 00:01:52,249 [Worker-162] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.familytree:FamilyTree:0.0.1-SNAPSHOT @ D:\Programming\Java\JavaWorkspace\Projects\Family Tree\pom.xml.
+2016-08-16 00:01:52,314 [Worker-162] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Family Tree/src
+2016-08-16 00:01:52,315 [Worker-162] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /Family Tree/src/test/java because it overlaps with /Family Tree/src
+2016-08-16 00:01:52,774 [Worker-162] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.familytree:FamilyTree:0.0.1-SNAPSHOT @ D:\Programming\Java\JavaWorkspace\Projects\Family Tree\pom.xml.
+2016-08-16 00:01:52,810 [Worker-162] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2016-08-16 00:01:52,995 [Worker-160] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:01:52,996 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-16 00:01:52,997 [Worker-160] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:01:52,998 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-16 00:03:42,259 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:03:42,260 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Country From IP\src\main\resources
+2016-08-16 00:03:42,262 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:03:42,263 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Country From IP\src\test\resources
+2016-08-16 00:03:42,431 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:03:42,432 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\FTP Program\src\main\resources
+2016-08-16 00:03:42,433 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:03:42,434 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\FTP Program\src\test\resources
+2016-08-16 00:03:42,479 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:03:42,480 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-16 00:03:42,481 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:03:42,481 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-16 00:03:42,739 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:03:42,740 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Guestbook\src\main\resources
+2016-08-16 00:03:42,740 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:03:42,741 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Guestbook\src\test\resources
+2016-08-16 00:03:42,946 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:03:42,947 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Mail Checker\src\main\resources
+2016-08-16 00:03:42,947 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:03:42,948 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Mail Checker\src\test\resources
+2016-08-16 00:03:43,238 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:03:43,240 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quote Tracker\src\main\resources
+2016-08-16 00:03:43,240 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:03:43,241 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quote Tracker\src\test\resources
+2016-08-16 00:03:43,278 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:03:43,279 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\RSSReader\src\main\resources
+2016-08-16 00:03:43,280 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:03:43,281 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\RSSReader\src\test\resources
+2016-08-16 00:03:43,642 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:03:43,643 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Reservation System\src\main\resources
+2016-08-16 00:03:43,644 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:03:43,644 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Reservation System\src\test\resources
+2016-08-16 00:03:43,905 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:03:43,906 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Whois Search\src\main\resources
+2016-08-16 00:03:43,907 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:03:43,908 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Whois Search\src\test\resources
+2016-08-16 00:04:02,628 [Worker-161] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2016-08-16 00:04:02,770 [Worker-161] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.familytree:FamilyTree:0.0.1-SNAPSHOT @ D:\Programming\Java\JavaWorkspace\Projects\Family Tree\pom.xml.
+2016-08-16 00:04:02,832 [Worker-161] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Family Tree/src
+2016-08-16 00:04:02,833 [Worker-161] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /Family Tree/src/test/java because it overlaps with /Family Tree/src
+2016-08-16 00:04:03,239 [Worker-161] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2016-08-16 00:04:03,398 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:04:03,399 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-16 00:04:03,400 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:04:03,401 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-16 00:04:15,798 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:04:15,799 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-16 00:04:15,800 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:04:15,800 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-16 00:05:52,430 [Worker-167] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.familytree:FamilyTree:0.0.1-SNAPSHOT @ D:\Programming\Java\JavaWorkspace\Projects\Family Tree\pom.xml.
+2016-08-16 00:05:52,690 [Worker-143] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/jgrapht/jgrapht//jgrapht-.pom
+2016-08-16 00:05:52,692 [Worker-143] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.jgrapht:jgrapht:pom: is missing, no dependency information available
+2016-08-16 00:18:00,586 [Worker-165] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.familytree:FamilyTree:0.0.1-SNAPSHOT @ D:\Programming\Java\JavaWorkspace\Projects\Family Tree\pom.xml.
+2016-08-16 00:18:00,674 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.jgrapht:jgrapht:pom: is missing, no dependency information available
+2016-08-16 00:21:31,870 [Worker-173] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.familytree:FamilyTree:0.0.1-SNAPSHOT @ D:\Programming\Java\JavaWorkspace\Projects\Family Tree\pom.xml.
+2016-08-16 00:21:31,912 [Worker-173] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:21:31,913 [Worker-173] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-16 00:21:31,915 [Worker-173] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:21:31,916 [Worker-173] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-16 00:21:57,590 [Worker-166] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.familytree:FamilyTree:0.0.1-SNAPSHOT @ D:\Programming\Java\JavaWorkspace\Projects\Family Tree\pom.xml.
+2016-08-16 00:21:57,656 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:21:57,658 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-16 00:21:57,659 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:21:57,660 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-16 00:21:59,152 [Worker-173] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:21:59,153 [Worker-173] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-16 00:21:59,154 [Worker-173] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:21:59,155 [Worker-173] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-16 00:22:00,203 [Worker-172] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:22:00,204 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-16 00:22:00,206 [Worker-172] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:22:00,206 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-16 00:22:18,938 [Worker-172] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.familytree:FamilyTree:0.0.1-SNAPSHOT @ D:\Programming\Java\JavaWorkspace\Projects\Family Tree\pom.xml.
+2016-08-16 00:22:18,995 [Worker-172] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:22:18,996 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-16 00:22:18,998 [Worker-172] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:22:18,998 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-16 00:22:33,327 [Worker-172] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:22:33,328 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-16 00:22:33,329 [Worker-172] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:22:33,330 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
+2016-08-16 00:22:37,256 [Worker-172] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:22:37,257 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\main\resources
+2016-08-16 00:22:37,259 [Worker-172] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-16 00:22:37,260 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Family Tree\src\test\resources
