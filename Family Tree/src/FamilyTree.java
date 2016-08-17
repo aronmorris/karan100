@@ -2,8 +2,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
-import org.jgrapht.ListenableGraph;
-
 public class FamilyTree {
 
 	//each person has a list of their relations with other people
