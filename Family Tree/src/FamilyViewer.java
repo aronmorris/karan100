@@ -82,6 +82,7 @@ public class FamilyViewer extends JApplet {
         positionVertexAt(james.getName(), 100, 100);
     }
     
+    //LOOK HERE FIRST DOPE
     //Put the names of the people into the UI after declaring every person and relation, fetching the relations from the Person object
     //and ensuring there's no weird repeats
     //It's a directed graph so presumably the first arg in addEdge(a, b) is the initial point
@@ -119,4 +120,16 @@ public class FamilyViewer extends JApplet {
         cellAttr.put( cell, attr );
         m_jgAdapter.edit( cellAttr, null, null, null );
     }
+    
+    public FamilyTree declarePeople(String... people) {
+    	FamilyTree ft = new FamilyTree();
+    	
+    	for (String p : people) {
+    		ft.addPerson(new Person(p, new Date()));
+    	}
+    	
+    	return ft;
+    	
+    }
+    
 }
