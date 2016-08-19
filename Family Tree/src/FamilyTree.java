@@ -26,6 +26,39 @@ public class FamilyTree {
 		relationships.put(p, new ArrayList<Relationship>()); //no relations at first
 	}
 	
+	
+	public void addRelation(String A, String B, RType relation) {
+		boolean trueA = false, trueB = false;
+		Person pA = null;
+		Person pB = null;
+		/* Commenting this because it's a weird looking bit of code
+		 * Iterates over every person in the relationship keyset, checking to see if the two strings match
+		 * the names of two people in the list. If one is a match, the first boolean switches to true and the first person is assigned.
+		 * The second conditional will never be checked once the first person is assigned, preventing constant reassignement
+		 * to the latest person in the loop.
+		 * 
+		 * The second conditional does the same but only triggers once another name match is found, and then breaks the loop.
+		 */
+		for (Person p : relationships.keySet()) {
+			if (p.getName().equalsIgnoreCase(A) || p.getName().equalsIgnoreCase(B)) {
+				
+				if (trueA) {
+					trueB = true;
+					pB = p;
+					break;
+				}
+				if (!trueB && !trueA) {
+					trueA = true;
+					pA = p;
+				}
+			}
+		}
+		
+		if (trueA && trueB) { //only do this if both people are on the list (trueB would be false otherwise
+			addRelation(pA, pB, relation);
+		}
+	}
+	
 	public void addRelation(Person A, Person B, RType relation) {
 		//I'll admit this code is suboptimal at the moment
 		for (Iterator<Relationship> it = relationships.get(A).iterator(); it.hasNext();) {

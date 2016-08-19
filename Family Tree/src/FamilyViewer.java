@@ -33,17 +33,25 @@ public class FamilyViewer extends JApplet {
 	 */
 	private static final long serialVersionUID = -3670735964267916607L;
 	private static final Color     DEFAULT_BG_COLOR = Color.decode( "#FAFBFF" );
-    private static final Dimension DEFAULT_SIZE = new Dimension( 530, 320 );
+    private static final Dimension DEFAULT_SIZE = new Dimension( 1000, 1000 );
 
     // 
     private JGraphModelAdapter<String, Relationship> m_jgAdapter;
     
+    private FamilyTree family;
+    
+    private int xOffset, yOffset;
+    
+    //moving out of init for wider scope access
+    ListenableGraph<String, Relationship> g;
+    
     /**
      * @see java.applet.Applet#init().
      */
-    public void init(  ) {
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+	public void init(  ) {
         // create a JGraphT graph
-        ListenableGraph<String, Relationship> g = new ListenableDirectedGraph( DefaultEdge.class );
+        g = new ListenableDirectedGraph( DefaultEdge.class );
 
         // create a visualization using JGraph, via an adapter
         m_jgAdapter = new JGraphModelAdapter<String, Relationship>( g );
@@ -66,9 +74,6 @@ public class FamilyViewer extends JApplet {
         g.addEdge( "v4", "v3" );
          */
         
-        Person james = new Person("James", new Date());
-        
-        g.addVertex(james.getName());
         /*
         // position vertices nicely within JGraph component
         positionVertexAt( "v1", 130, 40 );
@@ -78,8 +83,13 @@ public class FamilyViewer extends JApplet {
 		
         // that's all there is to it!...
         */
+     
+        family = this.declarePeople("Larry", "Sergei", "Jesse", "James", "Kamehameha", "Bruce");
         
-        positionVertexAt(james.getName(), 100, 100);
+        defineRelation("Larry", "Jesse", RType.SIBLING);
+        defineRelation("Larry", "James", RType.CHILD);
+        defineRelation("Bruce", "Sergei", RType.PARTNER);
+ 
     }
     
     //LOOK HERE FIRST DOPE
@@ -108,14 +118,23 @@ public class FamilyViewer extends JApplet {
         jg.setBackground( c );
     }
 
-
-    private void positionVertexAt( Object vertex, int x, int y ) {
+    //removed x and y in favour of offset global args
+    private void positionVertexAt( Object vertex ) {
         DefaultGraphCell cell = m_jgAdapter.getVertexCell( vertex );
         AttributeMap             attr = cell.getAttributes(  );
         //Rectangle        b    = GraphConstants.getBounds( attr );
         
-        GraphConstants.setBounds( attr, new Rectangle( x, y, 100, 30 ) ); //it's magic but the code commented out above was broken and this does the same thing
+        GraphConstants.setBounds( attr, new Rectangle( xOffset, yOffset, 100, 30 ) ); //it's magic but the code commented out above was broken and this does the same thing
 
+        
+        xOffset += 150;
+        if (xOffset % 600 == 0) {
+        	xOffset = 0;
+        	yOffset += 100;
+        }
+        
+       
+        
         Map<DefaultGraphCell, Map<?, ?>> cellAttr = new HashMap<DefaultGraphCell, Map<?, ?>>(  );
         cellAttr.put( cell, attr );
         m_jgAdapter.edit( cellAttr, null, null, null );
@@ -125,11 +144,24 @@ public class FamilyViewer extends JApplet {
     	FamilyTree ft = new FamilyTree();
     	
     	for (String p : people) {
-    		ft.addPerson(new Person(p, new Date()));
+    		
+    		Person prsn = new Person(p, new Date());
+    		
+    		g.addVertex(prsn.getName());
+    		
+    		ft.addPerson(prsn);
+    		
+    		positionVertexAt(prsn.getName());
+    		
     	}
     	
     	return ft;
     	
+    }
+    
+    public void defineRelation(String A, String B, RType relation) {
+    	family.addRelation(A, B, relation);
+    	g.addEdge(A, B);
     }
     
 }
