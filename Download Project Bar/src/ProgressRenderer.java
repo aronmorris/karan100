@@ -19,10 +19,10 @@ public class ProgressRenderer extends JProgressBar implements TableCellRenderer 
 	@Override
 	public Component getTableCellRendererComponent(JTable table, Object value,
 			boolean isSelect, boolean hasFocus, int row, int column) {
-		
+		//set the value of completeness as a %age
 		setValue((int) ((Float) value).floatValue()); //set percentage complete value
 		
-		return null;
+		return this;
 	}
 
 	
