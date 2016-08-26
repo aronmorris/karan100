@@ -45,10 +45,19 @@ public class WebScraper {
 		//Adds a url to the output only if it's an "a" tag and has a "href"
 		//the url added is the absolute url, not the page-relative one
 		
+		int ctr = 0;
+		
 		for (Element e : links) {
 			sb.append(e.absUrl("href").toString() != "" ? e.absUrl("href").toString() + "\n" : "");
+			
+			if (!e.absUrl("href").toString().isEmpty()) {
+				ctr++;
+			}
+			
 			//System.out.println(e.toString());
 		}
+		
+		System.out.println("URLs found: " + ctr + "\n");
 		
 		return sb.toString();
 		
@@ -57,23 +66,34 @@ public class WebScraper {
 	public String getImages() {
 		Document doc = Jsoup.parse(htmlContent);
 		
+		StringBuilder sb = new StringBuilder();
+		
 		Elements images = doc.select("img");
-		System.out.println(images.size());
-		for (int i = 0; i < images.size(); i++) {
-			Element e = images.get(i);
-			System.out.println(e.absUrl("src").toString() != "" ? e.absUrl("src").toString() + "\n" : "");
+		
+		int ctr = 0;
+		
+		for (Element e: images) {
+			String absImg = e.attr("abs:src");
+			if (!absImg.isEmpty()) {
+				sb.append(absImg + "\n");
+				ctr++;
+			}
 			
 		}
 		
-		return null;
+		System.out.println("Image URLs found: " + ctr + "\n");
+		
+		return sb.toString();
 		
 	}
 	
 	public static void main(String[] args) {
 		
+		//TODO write results to file
+		
 		URL url = null;
 		try {
-			url = new URL("http://xkcd.com/");
+			url = new URL("http://drmcninja.com/");
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
