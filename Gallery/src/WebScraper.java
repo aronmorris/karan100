@@ -42,8 +42,12 @@ public class WebScraper {
 		
 		StringBuilder sb = new StringBuilder();
 		
+		//Adds a url to the output only if it's an "a" tag and has a "href"
+		//the url added is the absolute url, not the page-relative one
+		
 		for (Element e : links) {
-			sb.append(e.attr("href") + "\n");
+			sb.append(e.absUrl("href").toString() != "" ? e.absUrl("href").toString() + "\n" : "");
+			//System.out.println(e.toString());
 		}
 		
 		return sb.toString();
@@ -51,15 +55,25 @@ public class WebScraper {
 	}
 	
 	public String getImages() {
-		//TODO add stuff to filter for pngs, jpegs, and gifs
+		Document doc = Jsoup.parse(htmlContent);
+		
+		Elements images = doc.select("img");
+		System.out.println(images.size());
+		for (int i = 0; i < images.size(); i++) {
+			Element e = images.get(i);
+			System.out.println(e.absUrl("src").toString() != "" ? e.absUrl("src").toString() + "\n" : "");
+			
+		}
+		
 		return null;
+		
 	}
 	
 	public static void main(String[] args) {
 		
 		URL url = null;
 		try {
-			url = new URL("https://jsoup.org/cookbook/extracting-data/working-with-urls");
+			url = new URL("http://xkcd.com/");
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -68,6 +82,8 @@ public class WebScraper {
 		WebScraper ws = new WebScraper(url);
 		
 		System.out.println(ws.getLinks());
+		
+		System.out.println(ws.getImages());
 		
 	}
 	
