@@ -1,7 +1,12 @@
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Scanner;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -87,23 +92,65 @@ public class WebScraper {
 		
 	}
 	
-	public static void main(String[] args) {
+	//writes the result of the indexing to a new file in an index folder
+	//in the same folder as the program is in.
+	public static boolean writeResultsToFile(String fileName, String contents) {
 		
-		//TODO write results to file
+		String user = System.getenv("USERNAME");
 		
-		URL url = null;
+		File file = new File("C:\\Users\\" + user + "\\Desktop\\Indexes\\" + fileName + ".txt");
+		
+		file.getParentFile().mkdirs();
+	
 		try {
-			url = new URL("http://drmcninja.com/");
-		} catch (MalformedURLException e) {
-			// TODO Auto-generated catch block
+		
+			BufferedWriter writer = new BufferedWriter(new FileWriter(file, true)); //creates writer to write to the file
+			
+			for (String line : contents.split("\n")) {
+				writer.write(line);
+				writer.newLine();
+			}
+			
+			writer.close();
+			
+		} catch (IOException e) {
 			e.printStackTrace();
+			return false;
 		}
+		
+		return true;
+		
+	}
+	
+	public static void main(String[] args) {
+				
+		URL url = null;
+		
+		Scanner sc = new Scanner(System.in);
+		do {
+			
+			System.out.println("Enter site URL.");
+			
+			String siteURL = sc.next();
+			
+			try {
+				url = new URL(siteURL);
+				break;
+			} catch (MalformedURLException e) {
+				System.out.println("Not a valid URL!");
+			}
+		
+		} while(true);
 		
 		WebScraper ws = new WebScraper(url);
 		
-		System.out.println(ws.getLinks());
+		System.out.println("Enter desired filename.");
 		
-		System.out.println(ws.getImages());
+		String indexFileName = sc.next();
+		
+		sc.close();
+		
+		writeResultsToFile(indexFileName, ws.getLinks() + "\n" + ws.getImages());
 		
 	}
 	
