@@ -2,5 +2,15 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/Users/Aron/.m2/repository/org/jsoup/jsoup/1.9.2/jsoup-1.9.2.jar" sourcepath="C:/Users/Aron/.m2/repository/org/jsoup/jsoup/1.9.2/jsoup-1.9.2-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/Aron/.m2/repository/org/jsoup/jsoup/1.9.2/jsoup-1.9.2-javadoc.jar!/"/>
+			<attribute name="maven.groupId" value="org.jsoup"/>
+			<attribute name="maven.artifactId" value="jsoup"/>
+			<attribute name="maven.version" value="1.9.2"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
