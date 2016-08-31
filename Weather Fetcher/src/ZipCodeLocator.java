@@ -17,7 +17,7 @@ public class ZipCodeLocator {
 	//latitude and longitude aren't assigned until strictly necessary
 	void getGPSCoordinates() {
 		//TODO todo placed for obvious tag where to place API 
-		GeoApiContext context = new GeoApiContext().setApiKey("--API HERE--");
+		GeoApiContext context = new GeoApiContext().setApiKey("--GOOGLE API HERE--");
 		GeocodingResult[] results = null;
 		try {
 			results = GeocodingApi.geocode(context, zipCode).await(); //fetches gps coords from google using the zip

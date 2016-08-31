@@ -23,7 +23,7 @@ public class WeatherFetcher {
 	
 	public String getWeather() {
 		try {
-			WeatherStatusResponse currentWeather = owm.currentWeatherAtCityCircle(gpsLat, gpsLng, WEATHER_STATION_COUNT);
+			WeatherStatusResponse currentWeather = owm.currentWeatherAtCityCircle(gpsLat, gpsLng, 100);
 			
 			if (currentWeather.hasWeatherStatus()) {
 				WeatherData weather = currentWeather.getWeatherStatus().get(0);
@@ -44,8 +44,8 @@ public class WeatherFetcher {
 	}
 	
 	public static void main(String[] args) {
-		
-		WeatherFetcher wf = new WeatherFetcher(new ZipCodeLocator("H9S 1M2"));
+		//TODO replace zip code
+		WeatherFetcher wf = new WeatherFetcher(new ZipCodeLocator("--ZIP/POSTAL HERE--"));
 		
 		System.out.println(wf.getWeather());
 		
