@@ -23,6 +23,11 @@
     <artifactId>htmlunit</artifactId>
     <version>2.23</version>
 </dependency>
-  
+
+  	<dependency>
+  		<groupId>net.sourceforge.cssparser</groupId>
+  		<artifactId>cssparser</artifactId>
+  		<version>0.9.20</version>
+  	</dependency>
   </dependencies>
 </project>
