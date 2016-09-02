@@ -1,7 +1,5 @@
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.net.URL;
-
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
@@ -91,12 +89,9 @@ public class SiteLogin {
 	}
 	
 	public static void main(String[] args) {
+		RetrievalService rServ = new RetrievalService("user", "pass");
 		
-		SiteLogin site = new SiteLogin("https://www.facebook.com/", "USER", "PASS");
-		
-		HtmlPage page = site.login();
-		
-		System.out.println(page.asText());
+		rServ.initiate(10000);
 	
 	}
 	
