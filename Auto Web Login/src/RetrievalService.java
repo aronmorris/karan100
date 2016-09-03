@@ -16,6 +16,8 @@ public class RetrievalService implements Runnable {
 
 	SiteLogin loggedSite;
 	
+	boolean running = false; //returns true if the program is currently running a retrieval
+	
 	public RetrievalService(String username, String password) {
 		loggedSite = new SiteLogin("https://www.facebook.com/", username, password);
 	}
@@ -25,12 +27,15 @@ public class RetrievalService implements Runnable {
 	public void initiate(long period) {
 		final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 	    
-		final ScheduledFuture<?> beeperHandle = scheduler.scheduleAtFixedRate(this, 1, period, TimeUnit.SECONDS);
+		final ScheduledFuture<?> retriever = scheduler.scheduleAtFixedRate(this, 1, period, TimeUnit.SECONDS);
 	   
+		running = true;
+		
 		scheduler.schedule(new Runnable() {
 			public void run() { 
-				beeperHandle.cancel(true); }
-			}, 60 * 60, TimeUnit.SECONDS);
+				retriever.cancel(true); 
+				running = false;	}
+			}, 60, TimeUnit.SECONDS); //timeout after 1 minute
 	}
 	
 	//appends the contents of the logged-in page to the relevant file
@@ -42,10 +47,15 @@ public class RetrievalService implements Runnable {
 			pageContent.add(s);
 		}
 		
+		pageContent.add("\n\n"); //append double newline to break old content from new
+		
 		Path file = Paths.get("C:/Users/Aron/Desktop/AutoLogIn/savedContent.txt");
 		
 		try {
 			Files.write(file, pageContent, Charset.forName("UTF-8"), StandardOpenOption.APPEND); //appends content to the file
+			
+			System.out.println("Content saved!");
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

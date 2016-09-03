@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.net.MalformedURLException;
+
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
@@ -91,8 +92,19 @@ public class SiteLogin {
 	public static void main(String[] args) {
 		RetrievalService rServ = new RetrievalService("user", "pass");
 		
-		rServ.initiate(10000);
+		rServ.initiate(10);
+		
+		do {
+			try {
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} while(rServ.running);
 	
+		System.exit(0);
+		
 	}
 	
 }
