@@ -5,62 +5,68 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
 import org.yaml.snakeyaml.Yaml;
+
+import com.google.common.collect.Lists;
+
+
+
 
 public class QuizReader {
 	
-	private final static String QUIZ_YML_PATH = "resources\\QuizReader\\yaml.txt"; //win mode, UNIX not set yet (do with ternary?)
-
-	/*
-	 * TODO
-	 * read quizzes from yml format eg:
-	 * 		q1:
-	 * 			option1
-	 * 			option2
-	 *			option3
- 	 * 			...
- 	 * 			ans:
- 	 * 				answer
- 	 * 		q2:
- 	 * 			...
-	 * 
-	 * populate CLI or GUI with random selection of questions with options in random order
-	 * 
-	 * verify correct/incorrect from user input
-	 * 
-	 * thought: open ended questions?
-	 * 
-	 */
+	private final static String QUIZ_XML_PATH = "resources\\QuizReader\\quizzes.xml"; //win mode, UNIX not set yet (do with ternary?)
+	
+	private SAXParser parser;
 	
 	QuizReader(File quizFile) {
-		Yaml yamlReader = new Yaml();
+		SAXParserFactory factory = SAXParserFactory.newInstance();
 		
-		readFileToYamlFromStream(yamlReader, quizFile);
+		factory.setValidating(true);
+	
+		SAXParser sParser;
 		
-	}
-	
-	
-	private void readFileToYamlFromStream(Yaml yaml, File file) {
-		try (InputStream input = new FileInputStream(file)) {
+		try {
+			sParser = factory.newSAXParser();
 			
-			for (Object data : yaml.loadAll(input)) { //just prints out the list right now so I can see that it's reading it
-				System.out.println(data);
-			}
+			sParser.parse(quizFile, new DefaultHandler());
 			
-		} catch (FileNotFoundException e) {
+			parser = sParser;
+			
+		} catch (ParserConfigurationException | SAXException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		
+		
+		
 	}
+	
+	//TODO switch from YML to XML, since XML is easier to retrieve specifics from
+	
 	
 	public static void main(String[] args) {
 		
-		QuizReader qr = new QuizReader(new File(QUIZ_YML_PATH));
+		QuizReader qr = new QuizReader(new File(QUIZ_XML_PATH));
 
 	}
 	

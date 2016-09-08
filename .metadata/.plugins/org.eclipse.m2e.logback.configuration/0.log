@@ -5706,3 +5706,383 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.apache.ht
 2016-09-06 23:06:07,345 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
 2016-09-06 23:06:07,346 [Worker-69] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-09-06 23:06:07,346 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-06 23:17:17,030 [Worker-67] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-06 23:17:17,031 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-06 23:17:17,032 [Worker-67] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-06 23:17:17,033 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-06 23:17:53,807 [Worker-72] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-06 23:17:53,808 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-06 23:17:53,809 [Worker-72] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-06 23:17:53,810 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-06 23:18:44,727 [Worker-72] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-06 23:18:44,727 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-06 23:18:44,729 [Worker-72] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-06 23:18:44,729 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-06 23:21:58,083 [Worker-75] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-06 23:21:58,084 [Worker-75] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-06 23:21:58,085 [Worker-75] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-06 23:21:58,086 [Worker-75] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-06 23:26:25,336 [Worker-71] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-06 23:26:25,337 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-06 23:26:25,338 [Worker-71] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-06 23:26:25,338 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-06 23:26:27,947 [Worker-77] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-06 23:26:27,948 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-06 23:26:27,949 [Worker-77] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-06 23:26:27,950 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-06 23:26:50,137 [Worker-72] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-06 23:26:50,138 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-06 23:26:50,139 [Worker-72] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-06 23:26:50,140 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-06 23:28:02,403 [Worker-79] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-06 23:28:02,403 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-06 23:28:02,404 [Worker-79] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-06 23:28:02,405 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:36:40,894 [Worker-90] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:36:40,895 [Worker-90] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:36:40,896 [Worker-90] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:36:40,896 [Worker-90] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:37:28,855 [Worker-83] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:37:28,855 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:37:28,857 [Worker-83] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:37:28,858 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:38:02,906 [Worker-93] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:38:02,907 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:38:02,909 [Worker-93] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:38:02,909 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:38:13,615 [Worker-93] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:38:13,615 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:38:13,616 [Worker-93] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:38:13,617 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:38:41,045 [Worker-94] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:38:41,046 [Worker-94] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:38:41,047 [Worker-94] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:38:41,048 [Worker-94] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:40:30,417 [Worker-95] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:40:30,417 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:40:30,418 [Worker-95] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:40:30,419 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:42:20,101 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:42:20,102 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:42:20,104 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:42:20,105 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:42:51,439 [Worker-98] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:42:51,440 [Worker-98] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:42:51,442 [Worker-98] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:42:51,443 [Worker-98] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:43:55,806 [Worker-92] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:43:55,807 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:43:55,808 [Worker-92] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:43:55,808 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:46:25,293 [Worker-99] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:46:25,294 [Worker-99] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:46:25,295 [Worker-99] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:46:25,296 [Worker-99] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:46:58,258 [Worker-100] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:46:58,258 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:46:58,259 [Worker-100] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:46:58,260 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:47:09,567 [Worker-99] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:47:09,568 [Worker-99] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:47:09,570 [Worker-99] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:47:09,570 [Worker-99] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:47:23,453 [Worker-101] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:47:23,453 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:47:23,454 [Worker-101] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:47:23,455 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:47:30,660 [Worker-88] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:47:30,661 [Worker-88] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:47:30,663 [Worker-88] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:47:30,663 [Worker-88] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:47:37,382 [Worker-102] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:47:37,383 [Worker-102] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:47:37,384 [Worker-102] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:47:37,384 [Worker-102] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:49:01,017 [Worker-93] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:49:01,017 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:49:01,020 [Worker-93] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:49:01,020 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:49:34,393 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:49:34,394 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:49:34,395 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:49:34,396 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:52:30,196 [Worker-99] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:52:30,196 [Worker-99] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:52:30,197 [Worker-99] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:52:30,198 [Worker-99] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:52:33,505 [Worker-88] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:52:33,506 [Worker-88] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:52:33,507 [Worker-88] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:52:33,508 [Worker-88] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:53:04,218 [Worker-107] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:53:04,218 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:53:04,219 [Worker-107] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:53:04,220 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:53:21,139 [Worker-88] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:53:21,139 [Worker-88] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:53:21,141 [Worker-88] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:53:21,141 [Worker-88] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:53:39,155 [Worker-105] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:53:39,155 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:53:39,156 [Worker-105] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:53:39,157 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:54:20,034 [Worker-107] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:54:20,034 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:54:20,035 [Worker-107] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:54:20,036 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:55:02,753 [Worker-105] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:55:02,754 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:55:02,756 [Worker-105] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:55:02,757 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:55:17,751 [Worker-105] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:55:17,752 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:55:17,753 [Worker-105] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:55:17,754 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:55:33,558 [Worker-106] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:55:33,559 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:55:33,560 [Worker-106] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:55:33,561 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:56:16,108 [Worker-105] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:56:16,108 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:56:16,110 [Worker-105] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:56:16,110 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:57:49,905 [Worker-105] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.quizmaker:QuizMaker:0.0.1-SNAPSHOT @ D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\pom.xml.
+2016-09-07 00:57:50,085 [Worker-105] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/google/guava/guava/19.0/guava-19.0.pom
+2016-09-07 00:57:50,146 [Worker-105] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/google/guava/guava/19.0/guava-19.0.pom
+2016-09-07 00:57:50,179 [Worker-105] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/google/guava/guava-parent/19.0/guava-parent-19.0.pom
+2016-09-07 00:57:50,241 [Worker-105] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/google/guava/guava-parent/19.0/guava-parent-19.0.pom
+2016-09-07 00:57:50,272 [Worker-105] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/google/guava/guava/19.0/guava-19.0.jar
+2016-09-07 00:57:51,864 [Worker-105] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/google/guava/guava/19.0/guava-19.0.jar
+2016-09-07 00:57:51,990 [Worker-105] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.ecard:eCardGenerator:0.0.1-SNAPSHOT @ D:\Programming\Java\JavaWorkspace\Projects\eCard Generator Site\pom.xml.
+2016-09-07 00:57:52,835 [Worker-105] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:57:52,836 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:57:52,836 [Worker-105] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:57:52,837 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:57:53,786 [Worker-106] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:57:53,787 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:57:53,788 [Worker-106] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:57:53,788 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:57:53,795 [Worker-99] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/google/guava/guava/19.0/guava-19.0-sources.jar
+2016-09-07 00:57:54,227 [Worker-106] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:57:54,228 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\eCard Generator Site\src\main\resources
+2016-09-07 00:57:54,229 [Worker-106] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:57:54,229 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\eCard Generator Site\src\test\resources
+2016-09-07 00:57:54,804 [Worker-99] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/google/guava/guava/19.0/guava-19.0-sources.jar
+2016-09-07 00:57:54,901 [Worker-99] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.google.guava:guava:19.0
+2016-09-07 00:57:54,918 [Worker-99] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/google/guava/guava/19.0/guava-19.0-javadoc.jar
+2016-09-07 00:57:59,075 [Worker-99] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/google/guava/guava/19.0/guava-19.0-javadoc.jar
+2016-09-07 00:57:59,142 [Worker-99] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for com.google.guava:guava:19.0
+2016-09-07 00:57:59,770 [Worker-105] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:57:59,771 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:57:59,771 [Worker-105] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:57:59,772 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 00:59:49,213 [Worker-109] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:59:49,214 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 00:59:49,215 [Worker-109] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 00:59:49,215 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:00:26,864 [Worker-111] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:00:26,864 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:00:26,865 [Worker-111] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:00:26,865 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:00:49,516 [Worker-106] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:00:49,516 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:00:49,517 [Worker-106] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:00:49,518 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:01:01,444 [Worker-88] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:01:01,444 [Worker-88] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:01:01,445 [Worker-88] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:01:01,446 [Worker-88] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:01:09,687 [Worker-105] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:01:09,687 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:01:09,688 [Worker-105] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:01:09,689 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:03:06,729 [Worker-109] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:03:06,730 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:03:06,731 [Worker-109] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:03:06,731 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:06:28,291 [Worker-99] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:06:28,292 [Worker-99] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:06:28,293 [Worker-99] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:06:28,293 [Worker-99] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:07:04,954 [Worker-106] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:07:04,954 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:07:04,955 [Worker-106] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:07:04,956 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:07:46,485 [Worker-113] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:07:46,486 [Worker-113] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:07:46,488 [Worker-113] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:07:46,488 [Worker-113] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:08:00,649 [Worker-109] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:08:00,649 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:08:00,650 [Worker-109] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:08:00,651 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:08:29,985 [Worker-106] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:08:29,985 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:08:29,986 [Worker-106] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:08:29,986 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:09:00,245 [Worker-106] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:09:00,246 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:09:00,247 [Worker-106] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:09:00,248 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:09:06,153 [Worker-112] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:09:06,153 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:09:06,154 [Worker-112] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:09:06,155 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:09:20,282 [Worker-112] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:09:20,283 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:09:20,285 [Worker-112] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:09:20,285 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:09:27,228 [Worker-114] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:09:27,228 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:09:27,229 [Worker-114] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:09:27,230 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:09:31,013 [Worker-106] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:09:31,014 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:09:31,015 [Worker-106] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:09:31,015 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:13:28,799 [Worker-116] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:13:28,800 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:13:28,801 [Worker-116] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:13:28,802 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:13:38,856 [Worker-116] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:13:38,857 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:13:38,858 [Worker-116] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:13:38,858 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:14:14,339 [Worker-106] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:14:14,340 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:14:14,341 [Worker-106] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:14:14,341 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:14:49,801 [Worker-119] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:14:49,802 [Worker-119] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:14:49,803 [Worker-119] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:14:49,804 [Worker-119] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:15:02,408 [Worker-106] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:15:02,408 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:15:02,409 [Worker-106] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:15:02,410 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:15:11,758 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:15:11,759 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:15:11,761 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:15:11,762 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:15:19,678 [Worker-119] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:15:19,679 [Worker-119] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:15:19,680 [Worker-119] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:15:19,681 [Worker-119] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:15:23,826 [Worker-116] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:15:23,826 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:15:23,827 [Worker-116] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:15:23,827 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:17:26,292 [Worker-112] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:17:26,292 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:17:26,293 [Worker-112] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:17:26,294 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:17:33,776 [Worker-120] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:17:33,776 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:17:33,777 [Worker-120] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:17:33,778 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:17:43,059 [Worker-99] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:17:43,059 [Worker-99] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:17:43,060 [Worker-99] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:17:43,060 [Worker-99] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:18:11,396 [Worker-99] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:18:11,397 [Worker-99] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:18:11,398 [Worker-99] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:18:11,398 [Worker-99] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:18:32,839 [Worker-121] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:18:32,840 [Worker-121] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:18:32,841 [Worker-121] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:18:32,842 [Worker-121] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:18:55,809 [Worker-120] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:18:55,810 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:18:55,811 [Worker-120] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:18:55,811 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 01:19:19,935 [Worker-112] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:19:19,935 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 01:19:19,936 [Worker-112] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 01:19:19,936 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 21:38:20,705 [Worker-125] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:38:20,736 [Worker-125] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 21:38:20,738 [Worker-125] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:38:20,738 [Worker-125] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 21:38:43,974 [Worker-112] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:38:43,975 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 21:38:43,976 [Worker-112] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:38:43,977 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 21:39:14,193 [Worker-126] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:39:14,194 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 21:39:14,195 [Worker-126] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:39:14,195 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 21:40:05,646 [Worker-129] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:40:05,646 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 21:40:05,647 [Worker-129] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:40:05,647 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 21:40:35,301 [Worker-113] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:40:35,301 [Worker-113] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 21:40:35,303 [Worker-113] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:40:35,304 [Worker-113] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 21:43:22,703 [Worker-126] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:43:22,704 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 21:43:22,705 [Worker-126] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:43:22,706 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 21:43:28,621 [Worker-112] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:43:28,622 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 21:43:28,623 [Worker-112] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:43:28,623 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 21:47:26,978 [Worker-133] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:47:26,979 [Worker-133] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 21:47:26,980 [Worker-133] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:47:26,981 [Worker-133] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 21:47:45,936 [Worker-132] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:47:45,937 [Worker-132] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 21:47:45,938 [Worker-132] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:47:45,938 [Worker-132] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 21:48:01,081 [Worker-130] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:48:01,082 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 21:48:01,083 [Worker-130] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:48:01,083 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 21:49:43,920 [Worker-132] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker
+2016-09-07 21:49:43,920 [Worker-132] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B clean
+2016-09-07 21:49:45,826 [Worker-133] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:49:45,826 [Worker-133] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 21:49:45,827 [Worker-133] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:49:45,828 [Worker-133] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 21:50:56,705 [Worker-134] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:50:56,705 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 21:50:56,706 [Worker-134] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:50:56,707 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 21:51:23,451 [Worker-112] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:51:23,451 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 21:51:23,452 [Worker-112] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:51:23,452 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 21:51:34,258 [Worker-132] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:51:34,258 [Worker-132] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 21:51:34,259 [Worker-132] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:51:34,259 [Worker-132] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 21:51:45,046 [Worker-135] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:51:45,046 [Worker-135] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 21:51:45,048 [Worker-135] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:51:45,049 [Worker-135] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 21:52:04,899 [Worker-132] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:52:04,900 [Worker-132] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 21:52:04,901 [Worker-132] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:52:04,901 [Worker-132] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 21:52:16,114 [Worker-135] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:52:16,115 [Worker-135] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 21:52:16,116 [Worker-135] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:52:16,116 [Worker-135] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 21:52:31,626 [Worker-112] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:52:31,627 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 21:52:31,628 [Worker-112] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:52:31,629 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 21:52:44,032 [Worker-135] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:52:44,033 [Worker-135] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 21:52:44,034 [Worker-135] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:52:44,034 [Worker-135] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 21:52:55,131 [Worker-129] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:52:55,132 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 21:52:55,133 [Worker-129] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:52:55,133 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
+2016-09-07 21:53:03,090 [Worker-130] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:53:03,091 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\main\resources
+2016-09-07 21:53:03,092 [Worker-130] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-07 21:53:03,092 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Quiz Maker\src\test\resources
