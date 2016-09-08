@@ -1,29 +1,15 @@
 package com.aronmorris.quizmaker;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-import org.xml.sax.helpers.DefaultHandler;
-import org.yaml.snakeyaml.Yaml;
-
-import com.google.common.collect.Lists;
 
 
 
@@ -32,41 +18,65 @@ public class QuizReader {
 	
 	private final static String QUIZ_XML_PATH = "resources\\QuizReader\\quizzes.xml"; //win mode, UNIX not set yet (do with ternary?)
 	
-	private SAXParser parser;
+	private Document xmlDoc;
 	
-	QuizReader(File quizFile) {
-		SAXParserFactory factory = SAXParserFactory.newInstance();
-		
-		factory.setValidating(true);
-	
-		SAXParser sParser;
+	QuizReader() {
 		
 		try {
-			sParser = factory.newSAXParser();
-			
-			sParser.parse(quizFile, new DefaultHandler());
-			
-			parser = sParser;
-			
-		} catch (ParserConfigurationException | SAXException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		
-		
+			xmlDoc = parseXML("QUIZ_XML_PATH");
+		} 
+		catch (ParserConfigurationException e) 
+	    {
+	        e.printStackTrace();
+	    } 
+	    catch (SAXException e) 
+	    {
+	        e.printStackTrace();
+	    } 
+	    catch (IOException e) 
+	    {
+	        e.printStackTrace();
+	    }
 		
 	}
 	
-	//TODO switch from YML to XML, since XML is easier to retrieve specifics from
+	private Document parseXML(String filePath) throws ParserConfigurationException, SAXException, IOException
+	{
+	    DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+	    
+	    DocumentBuilder db = dbf.newDocumentBuilder();
+	    
+	    Document doc = db.parse(filePath);
+	    
+	    doc.getDocumentElement().normalize();
+	    
+	    return doc;
+	    
+	}
 	
+	//TODO switch from YML to XML, since XML is easier to retrieve specifics from
+	//DONE
+	
+	public Quiz generateQuiz(int numberOfQuestions) {
+		Quiz quiz = new Quiz();
+		
+		Node topicNode, answerNode, optionNode;
+		
+		NodeList nList;
+		for (int i = 0; i < numberOfQuestions; i++) {
+			nList = xmlDoc.getElementsByTagName("questions"); //get all <question> nodes, which includes topic, answer, and options
+		
+			//TODO finish selection logic
+		
+		}
+		
+		return null;
+		
+	}
 	
 	public static void main(String[] args) {
 		
-		QuizReader qr = new QuizReader(new File(QUIZ_XML_PATH));
+		QuizReader qr = new QuizReader();
 
 	}
 	

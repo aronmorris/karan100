@@ -1,0 +1,12 @@
+
+  <quiz>
+    <questions>
+      <question>
+        <topic>Who is the rightful King of England?</topic>
+        <answer>Arthur</answer>
+        <option>Elizabeth II</option>
+        <option>The Illuminati</option>
+        <option>Space Jesus</option>
+      </question>
+    </questions>
+  </quiz>
