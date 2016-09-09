@@ -86,14 +86,14 @@ public class QuizReader {
 			
 			optionNode = new ArrayList<Node>();
 			
-			for (int j = OPTION_ID; j < currentQuestion.getLength(); j++) {	
+			for (int j = OPTION_ID; j < currentQuestion.getLength(); j++) {	//loop starts at 5th index, where the options list begins
 				
-				if (j % 2 == 1) {
+				if (j % 2 == 1) { //indexes containing data are always odd-numbered, and only odd numbers meet this definition
 					optionNode.add(currentQuestion.item(j));
 				}
 			}
 			
-			for (Node n : optionNode) System.out.println(n.getTextContent());
+			for (Node n : optionNode) System.out.println(n.getTextContent()); //checking for correct values, not for final build
 			
 			//quiz.addQuestion(currentQuestion.get, answer, options)
 			
