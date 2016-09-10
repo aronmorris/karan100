@@ -1,6 +1,7 @@
 package com.aronmorris.quizmaker;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -61,9 +62,10 @@ public class QuizReader {
 	public Quiz generateQuiz(int numberOfQuestions) {
 		Quiz quiz = new Quiz();
 		
-		Node topicNode, answerNode, optionNode;
+		Node topicNode, answerNode; 
+		ArrayList<Node> optionNode;
 		
-		final int TOPIC_ID = 0, ANSWER_ID = 1, OPTION_ID = 2;
+		final int TOPIC_ID = 1, ANSWER_ID = 3, OPTION_ID = 5; //NodeList is twice as large as necessary as values are only stored in odd-numbered indexes for some reason
 		
 		NodeList nList;
 		
@@ -79,9 +81,19 @@ public class QuizReader {
 		for (int i = 0; i < nList.getLength(); i++) {
 			NodeList currentQuestion = nList.item(i).getChildNodes(); //Every question is guaranteed 3+n child nodes, in topic, answer, and options (unlimited options possible)
 			
-			System.out.println(currentQuestion.item(TOPIC_ID));
+			topicNode = currentQuestion.item(TOPIC_ID);
+			answerNode = currentQuestion.item(ANSWER_ID);
 			
-			//System.out.println(topicNode.getTextContent());
+			optionNode = new ArrayList<Node>();
+			
+			for (int j = OPTION_ID; j < currentQuestion.getLength(); j++) {	
+				
+				if (j % 2 == 1) {
+					optionNode.add(currentQuestion.item(j));
+				}
+			}
+			
+			for (Node n : optionNode) System.out.println(n.getTextContent());
 			
 			//quiz.addQuestion(currentQuestion.get, answer, options)
 			
