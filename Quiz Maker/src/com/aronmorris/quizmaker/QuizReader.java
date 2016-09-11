@@ -16,14 +16,16 @@ import org.xml.sax.SAXException;
 
 public class QuizReader {
 	
-	private final static String QUIZ_XML_PATH = "resources\\QuizReader\\quizzes.xml"; //win mode, UNIX not set yet (do with ternary?)
+	private final static String QUIZ_XML_PATH = "D:\\Programming\\Java\\JavaWorkspace\\Projects\\Quiz Maker\\resources\\QuizReader\\quizzes.xml"; //win mode, UNIX not set yet (do with ternary?)
 	
 	private Document xmlDoc;
 	
 	QuizReader() {
 		
 		try {
-			xmlDoc = parseXML("QUIZ_XML_PATH");
+			xmlDoc = parseXML(QUIZ_XML_PATH);
+			
+			System.out.println(xmlDoc.hasChildNodes());
 		} 
 		catch (ParserConfigurationException e) 
 	    {
@@ -63,12 +65,25 @@ public class QuizReader {
 		Node topicNode, answerNode, optionNode;
 		
 		NodeList nList;
-		for (int i = 0; i < numberOfQuestions; i++) {
-			nList = xmlDoc.getElementsByTagName("questions"); //get all <question> nodes, which includes topic, answer, and options
 		
-			//TODO finish selection logic
+		boolean questionOverflow = false;
+	
+		nList = xmlDoc.getElementsByTagName("question"); //get all <question> nodes, which includes topic, answer, and options inside each <question>
 		
+		if (numberOfQuestions > nList.getLength()) {
+			System.out.println("You've requested more questions than are available. All questions will be listed.");
+			questionOverflow = true;
 		}
+		
+		for (int i = 0; i < nList.getLength(); i++) {
+			Node currentQuestion = nList.item(i); //currentQuestion is the currently
+			System.out.println(currentQuestion.getTextContent());
+			//quiz.addQuestion(currentQuestion.get, answer, options)
+			
+		}
+		//TODO finish selection logic
+		
+		
 		
 		return null;
 		
@@ -77,6 +92,8 @@ public class QuizReader {
 	public static void main(String[] args) {
 		
 		QuizReader qr = new QuizReader();
+		
+		qr.generateQuiz(4);
 
 	}
 	

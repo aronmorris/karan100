@@ -1,12 +1,17 @@
-
-  <quiz>
-    <questions>
-      <question>
-        <topic>Who is the rightful King of England?</topic>
-        <answer>Arthur</answer>
-        <option>Elizabeth II</option>
-        <option>The Illuminati</option>
-        <option>Space Jesus</option>
-      </question>
-    </questions>
-  </quiz>
+<questions>
+  <question>
+    <topic>Who is the rightful King of England?</topic>
+    <answer>Arthur</answer>
+    <option>Elizabeth II</option>
+    <option>The Illuminati</option>
+    <option>Space Jesus</option>
+  </question>
+  <question>
+    <topic>What is 2+2?</topic>
+    <answer>5</answer>
+    <option>1</option>
+    <option>2</option>
+    <option>78</option>
+    </question>
+</questions>
+ 
