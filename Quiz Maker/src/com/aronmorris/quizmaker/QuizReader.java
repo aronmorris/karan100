@@ -8,7 +8,6 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.w3c.dom.Document;
-import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
@@ -69,13 +68,10 @@ public class QuizReader {
 		
 		NodeList nList;
 		
-		boolean questionOverflow = false;
-	
 		nList = xmlDoc.getElementsByTagName("question"); //get all <question> nodes, which includes topic, answer, and options inside each <question>
 		
 		if (numberOfQuestions > nList.getLength()) {
 			System.out.println("You've requested more questions than are available. All questions will be listed.");
-			questionOverflow = true;
 		}
 		
 		for (int i = 0; i < nList.getLength(); i++) {
@@ -102,19 +98,20 @@ public class QuizReader {
 			
 			
 		}
-		//TODO finish selection logic
 		
-		
-		
-		return null;
+		return quiz;
 		
 	}
+	
+	
 	
 	public static void main(String[] args) {
 		
 		QuizReader qr = new QuizReader();
 		
-		qr.generateQuiz(4);
+		Quiz trialQuiz = qr.generateQuiz(2);
+		
+		trialQuiz.getRandomQuestion();
 
 	}
 	
