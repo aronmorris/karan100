@@ -25,7 +25,6 @@ public class QuizReader {
 		try {
 			xmlDoc = parseXML(QUIZ_XML_PATH);
 			
-			System.out.println(xmlDoc.hasChildNodes());
 		} 
 		catch (ParserConfigurationException e) 
 	    {
@@ -64,6 +63,8 @@ public class QuizReader {
 		
 		Node topicNode, answerNode, optionNode;
 		
+		final int TOPIC_ID = 0, ANSWER_ID = 1, OPTION_ID = 2;
+		
 		NodeList nList;
 		
 		boolean questionOverflow = false;
@@ -76,8 +77,12 @@ public class QuizReader {
 		}
 		
 		for (int i = 0; i < nList.getLength(); i++) {
-			Node currentQuestion = nList.item(i); //currentQuestion is the currently
-			System.out.println(currentQuestion.getTextContent());
+			NodeList currentQuestion = nList.item(i).getChildNodes(); //Every question is guaranteed 3+n child nodes, in topic, answer, and options (unlimited options possible)
+			
+			System.out.println(currentQuestion.item(TOPIC_ID));
+			
+			//System.out.println(topicNode.getTextContent());
+			
 			//quiz.addQuestion(currentQuestion.get, answer, options)
 			
 		}
