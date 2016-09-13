@@ -28,28 +28,29 @@ public class Quiz {
 		
 	}
 	
-	//populates the current (latest) question added to the Quiz
-	//also a test of lambdas
 	public void addQuestion(String topic, String answer, String... options) {
 				
-		getNewestQuestion(quizValues -> quizValues.put("topic", topic));
+		HashMap<String, Object> question = new HashMap<String, Object>();
 		
-		getNewestQuestion(quizValues -> quizValues.put("answer", answer));
+		question.put("topic", topic);
+		
+		question.put("answer", answer);
 		
 		ArrayList<String> arrOpt = new ArrayList<String>(Arrays.asList(options));
 		
-		getNewestQuestion(quizValues -> quizValues.put("options", arrOpt));
+		question.put("options", arrOpt);
+		
+		quizValues.put(questionsInQuiz, question);
+		
+		questionsInQuiz += 1; //increment to indicate that there's now more questions in the quiz
+		
+		System.out.println(quizValues.toString());
 		
 	}
 	
-	
-	//Using an Execute Around idiom so I don't have to constantly reference the current 
-	//question in the greater quiz map. Also to play with lambdas
-	private <T> void getNewestQuestion(Function<HashMap<String, Object>, T> f) {
-		
-		HashMap<String, Object> currentQuestion = quizValues.get(questionsInQuiz);
-		
-		f.apply(currentQuestion);
+	public String getRandomQuestion() {
+		//int randSel = 
+		return null;
 	}
 	
 }
