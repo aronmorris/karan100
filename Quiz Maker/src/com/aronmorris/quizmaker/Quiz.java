@@ -29,11 +29,15 @@ public class Quiz {
 	//as per the specification
 	private int questionsInQuiz; 
 	
+	private int correctAnswers; //the number of questions in this quiz answered correctly
+	
 	public Quiz() {
 		
 		quizValues = new HashMap<Integer, HashMap<QuizKey, Object>>();	//TODO modify this so it's not clumsily casting back and forth
 		
 		questionsInQuiz = 0;
+		
+		correctAnswers = 0; 
 		
 	}
 	
@@ -55,7 +59,22 @@ public class Quiz {
 				
 	}
 	
-	public void getRandomQuestion() {
+	//Fires off the number of questions requested by the user for this quiz, waiting for answers from each one
+	//At the end, sums up the number of correct answers out of the total questions
+	public void takeQuiz() {
+		
+		int totalQuestions = quizValues.size();
+		
+		do {
+			getRandomQuestion();
+		} while (!quizValues.isEmpty());
+		
+		System.out.printf("You got %d/%d questions correct!", correctAnswers, totalQuestions);
+		
+	}
+	
+	//Selects a question, prints it to the user, and handles IO for responses
+	private boolean getRandomQuestion() {
 				
 		Random randSel = new Random();
 		
@@ -63,35 +82,52 @@ public class Quiz {
 		
 		HashMap<QuizKey, Object> question = quizValues.get(qKey); 
 		
+		boolean questionCorrect = false;
+		
 		try (Scanner sc = new Scanner(System.in)) { //use of the scanner in this method is rudimentary but it works barring going to a UI design, also, using it as a try-with-resource so it closes itself
 			
-			@SuppressWarnings("unchecked")
-			ArrayList<String> options = (ArrayList<String>) question.get(QuizKey.OPTIONS);
-			
-			options.add((String) question.get(QuizKey.ANSWER));
-			
-			long seed = System.nanoTime(); //get a seed from system time
-			
-			Collections.shuffle(options, new Random(seed)); //and use it in generating a new random value such that each list is uniquely shuffled ([1 + 
-			
-			System.out.println(question.get(QuizKey.TOPIC));
-			
-			for (String s : options) {
-				System.out.println(s);
-			}
-			
-			System.out.println("Enter answer now from the options above.");
+			printQuestion(question);
 			
 			String ans = sc.nextLine();
 			
 			if (ans.equalsIgnoreCase((String) question.get(QuizKey.ANSWER))) {
 				System.out.println("Correct!");
+				questionCorrect = true;
 			} else {
 				System.out.println("False!");
+				questionCorrect = false;
 			}
 			
+		} finally {
+			quizValues.remove(qKey); //remove the question from the rotation so, right or wrong, it won't get asked twice unless the quiz is rebuilt by asking the QuizReader for more questions
+			
+			correctAnswers += (questionCorrect ? 1 : 0); //increment correct answers if the question was answered correctly
+			
 		}
+		
+		return questionCorrect;
 	
+	}
+	
+	//prints the question to the user, then returns control to whatever is using the map for the answer
+	private void printQuestion(HashMap<QuizKey, Object> question) {
+		
+		@SuppressWarnings("unchecked")
+		ArrayList<String> options = (ArrayList<String>) question.get(QuizKey.OPTIONS);
+		
+		options.add((String) question.get(QuizKey.ANSWER));
+		
+		long seed = System.nanoTime(); //get a seed from system time
+		
+		Collections.shuffle(options, new Random(seed)); //and use it in generating a new random value such that each list is uniquely shuffled ([1 + 
+		
+		System.out.println(question.get(QuizKey.TOPIC));
+		
+		for (String s : options) {
+			System.out.println(s);
+		}
+		
+		System.out.println("Enter answer now from the options above.");
 	}
 	
 }

@@ -111,7 +111,7 @@ public class QuizReader {
 		
 		Quiz trialQuiz = qr.generateQuiz(2);
 		
-		trialQuiz.getRandomQuestion();
+		trialQuiz.takeQuiz();
 
 	}
 	
