@@ -28,8 +28,9 @@ public class Quiz {
 	//An integer count is maintained in order to select questions on a per-quiz basis and at random
 	//as per the specification
 	private int questionsInQuiz; 
-	
 	private int correctAnswers; //the number of questions in this quiz answered correctly
+	
+	private Scanner input;
 	
 	public Quiz() {
 		
@@ -38,6 +39,8 @@ public class Quiz {
 		questionsInQuiz = 0;
 		
 		correctAnswers = 0; 
+		
+		input = new Scanner(System.in);
 		
 	}
 	
@@ -69,26 +72,39 @@ public class Quiz {
 			getRandomQuestion();
 		} while (!quizValues.isEmpty());
 		
-		System.out.printf("You got %d/%d questions correct!", correctAnswers, totalQuestions);
+		System.out.printf("You got %d/%d questions correct!%n", correctAnswers, totalQuestions); //reports total correct from all taken
 		
 	}
 	
 	//Selects a question, prints it to the user, and handles IO for responses
 	private boolean getRandomQuestion() {
 				
+		//TODO CRITICAL
+		/*
+		 * The use of randSel would work if the quizValues data structure was a list, not a map, since it would access a random element.
+		 * As is, it'll at random cause a bug where a previously randomly generated value will be generated again, but as the structure
+		 * is a map, the key resolves to a null value and throws a null pointer exception.
+		 * 
+		 * Fix: Change the map of ints to a linkedlist and run it through Collections.shuffle. Then, each time a question is pulled out
+		 * the list will shrink to fit, so the same random can be called several times.
+		 * 
+		 * Thought: Why rely on random at all if the list of questions is already randomized and can simply be traversed?
+		 */
 		Random randSel = new Random();
 		
-		int qKey = randSel.nextInt(questionsInQuiz);
+		int qKey = randSel.nextInt(quizValues.size());
+	
 		
 		HashMap<QuizKey, Object> question = quizValues.get(qKey); 
 		
 		boolean questionCorrect = false;
 		
-		try (Scanner sc = new Scanner(System.in)) { //use of the scanner in this method is rudimentary but it works barring going to a UI design, also, using it as a try-with-resource so it closes itself
+		try { //use of the scanner in this method is rudimentary but it works barring going to a UI design, also, using it as a try-with-resource so it closes itself
+			  //Fixed a bug with the scanner closing System.in when closed, causing it to be unavailable for future scanners
 			
 			printQuestion(question);
 			
-			String ans = sc.nextLine();
+			String ans = (String) input.nextLine();
 			
 			if (ans.equalsIgnoreCase((String) question.get(QuizKey.ANSWER))) {
 				System.out.println("Correct!");
@@ -102,6 +118,8 @@ public class Quiz {
 			quizValues.remove(qKey); //remove the question from the rotation so, right or wrong, it won't get asked twice unless the quiz is rebuilt by asking the QuizReader for more questions
 			
 			correctAnswers += (questionCorrect ? 1 : 0); //increment correct answers if the question was answered correctly
+			
+			questionsInQuiz -= 1; //reduces tracked size of map to prevent nullpointers when going to find the next question
 			
 		}
 		
@@ -128,6 +146,7 @@ public class Quiz {
 		}
 		
 		System.out.println("Enter answer now from the options above.");
+	
 	}
 	
 }

@@ -109,7 +109,7 @@ public class QuizReader {
 		
 		QuizReader qr = new QuizReader();
 		
-		Quiz trialQuiz = qr.generateQuiz(2);
+		Quiz trialQuiz = qr.generateQuiz(4);
 		
 		trialQuiz.takeQuiz();
 
