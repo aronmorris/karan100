@@ -4,8 +4,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
+
+import com.aronmorris.quizmaker.Quiz.QuizKey;
 
 public class Quiz {
 
@@ -17,28 +21,27 @@ public class Quiz {
 	 * its own map
 	 */
 	
-	private enum QuizKey { //more certain retrieval than strings
+	protected enum QuizKey { //more certain retrieval than strings
 		TOPIC,
 		ANSWER,
 		OPTIONS
 	}
 	
-	private HashMap<Integer, HashMap<QuizKey, Object>> quizValues;
+	private LinkedList<HashMap<QuizKey, Object>> quizValues;
 	
-	//An integer count is maintained in order to select questions on a per-quiz basis and at random
-	//as per the specification
-	private int questionsInQuiz; 
 	private int correctAnswers; //the number of questions in this quiz answered correctly
+	
+	private final int QUIZ_SIZE;
 	
 	private Scanner input;
 	
-	public Quiz() {
+	public Quiz(int size) {
 		
-		quizValues = new HashMap<Integer, HashMap<QuizKey, Object>>();	//TODO modify this so it's not clumsily casting back and forth
-		
-		questionsInQuiz = 0;
+		quizValues = new LinkedList<HashMap<QuizKey, Object>>();	//TODO modify this so it's not clumsily casting back and forth
 		
 		correctAnswers = 0; 
+		
+		QUIZ_SIZE = size;
 		
 		input = new Scanner(System.in);
 		
@@ -56,15 +59,20 @@ public class Quiz {
 		
 		question.put(QuizKey.OPTIONS, arrOpt);
 		
-		quizValues.put(questionsInQuiz, question);
+		quizValues.add(question);
 		
-		questionsInQuiz += 1; //increment to indicate that there's now more questions in the quiz
 				
 	}
 	
 	//Fires off the number of questions requested by the user for this quiz, waiting for answers from each one
 	//At the end, sums up the number of correct answers out of the total questions
 	public void takeQuiz() {
+				
+		Collections.shuffle(quizValues); //randomizes the order of the questions in the list
+		
+		//List<HashMap<QuizKey, Object>> temp =  quizValues.subList(0, QUIZ_SIZE + 1); //cuts the list down to the correct size requested by the QuizReader, 0-SIZE inclusive
+		
+		quizValues = new LinkedList<HashMap<QuizKey, Object>>( quizValues.subList(0, QUIZ_SIZE)); //cuts the list down to the correct size requested by the QuizReader
 		
 		int totalQuestions = quizValues.size();
 		
@@ -90,12 +98,10 @@ public class Quiz {
 		 * 
 		 * Thought: Why rely on random at all if the list of questions is already randomized and can simply be traversed?
 		 */
-		Random randSel = new Random();
 		
-		int qKey = randSel.nextInt(quizValues.size());
-	
+		//Implementing the above
+		HashMap<QuizKey, Object> question = quizValues.poll(); //retrieves the first question and removes it from the list. The list is shuffled ahead of time
 		
-		HashMap<QuizKey, Object> question = quizValues.get(qKey); 
 		
 		boolean questionCorrect = false;
 		
@@ -110,16 +116,13 @@ public class Quiz {
 				System.out.println("Correct!");
 				questionCorrect = true;
 			} else {
-				System.out.println("False!");
+				System.out.println("Incorrect!");
 				questionCorrect = false;
 			}
 			
 		} finally {
-			quizValues.remove(qKey); //remove the question from the rotation so, right or wrong, it won't get asked twice unless the quiz is rebuilt by asking the QuizReader for more questions
 			
 			correctAnswers += (questionCorrect ? 1 : 0); //increment correct answers if the question was answered correctly
-			
-			questionsInQuiz -= 1; //reduces tracked size of map to prevent nullpointers when going to find the next question
 			
 		}
 		
@@ -137,7 +140,7 @@ public class Quiz {
 		
 		long seed = System.nanoTime(); //get a seed from system time
 		
-		Collections.shuffle(options, new Random(seed)); //and use it in generating a new random value such that each list is uniquely shuffled ([1 + 
+		Collections.shuffle(options, new Random(seed)); //and use it in generating a new random value such that each list is uniquely shuffled 
 		
 		System.out.println(question.get(QuizKey.TOPIC));
 		

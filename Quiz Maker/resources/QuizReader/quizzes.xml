@@ -20,5 +20,47 @@
     <option>Journey</option>
     <option>Survivor</option>
   </question>
+  <question>
+    <topic>What color is the sky?</topic>
+    <answer>Blue</answer>
+    <option>Red</option>
+    <option>Green</option>
+    <option>Skittle-Mix</option>
+    <option>Pink</option>
+  </question>
+  <question>
+    <topic>True or False: Ben Stiller was in Night At The Museum</topic>
+    <answer>True</answer>
+    <option>False</option>
+  </question>
+  <question>
+    <topic>What does the yellow floor sign with the slipping man mean?</topic>
+    <answer>Wet Floor</answer>
+    <option>Slow Down</option>
+    <option>Corrosive Warning</option>
+  </question>
+  <question>
+    <topic>Which state is Area 51 in?</topic>
+    <answer>Nevada</answer>
+    <option>A state of disrepair</option>
+    <option>New Mexico</option>
+    <option>Arkansas</option>
+    <option>Texas</option>
+    <option>Mississippi</option>
+  </question>
+  <question>
+    <topic>Who was the female lead in Titanic?</topic>
+    <answer>Kate Winslet</answer>
+    <option>Winona Ryder</option>
+    <option>Anne Hathaway</option>
+    <option>Jennifer Garner</option>
+  </question>
+  <question>
+    <topic>What is the name of the alien in American Dad?</topic>
+    <answer>Roger</answer>
+    <option>Karmen</option>
+    <option>Klaus</option>
+    <option>Freddy</option>
+  </question>
 </questions>
  

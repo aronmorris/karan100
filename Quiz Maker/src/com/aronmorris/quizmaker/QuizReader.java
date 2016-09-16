@@ -59,7 +59,7 @@ public class QuizReader {
 	//DONE
 	
 	public Quiz generateQuiz(int numberOfQuestions) {
-		Quiz quiz = new Quiz();
+		Quiz quiz = new Quiz(numberOfQuestions);
 		
 		String topic, answer;
 		ArrayList<String> options;
@@ -95,9 +95,9 @@ public class QuizReader {
 			
 			quiz.addQuestion(topic, answer, strOpt);
 			
-			
-			
 		}
+		
+		
 		
 		return quiz;
 		
