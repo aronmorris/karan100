@@ -38,6 +38,8 @@ public class Record {
 		listOfColumns = parse(csvFile, format);
 		
 	}
+
+	
 	
 	//method loads the file into memory
 	//may be disadvantageous for large files but will be ok for this toy program
