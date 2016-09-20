@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.csv.CSVFormat;
@@ -15,14 +16,16 @@ public class Record {
 
 	private File csvFile;
 	
-	private List<CSVRecord> listOfColumns; 
+	private ArrayList<CSVRecord> listOfColumns; 
 	
 	public Record(String filePath) {
 		csvFile = new File(filePath);
 		
 		CSVFormat format;
 		
-		if (filePath.contains(".xlsx")) { //excel extension
+		format = CSVFormat.DEFAULT;
+		/*
+		if (filePath.contains("xlsx")) { //excel extension
 			format = CSVFormat.EXCEL;
 		}
 		
@@ -33,26 +36,38 @@ public class Record {
 		else {
 			format = CSVFormat.DEFAULT; //default case
 		}
+		*/
 		
+		listOfColumns = parse(csvFile, CSVFormat.EXCEL);
 		
-		listOfColumns = parse(csvFile, format);
+	}
+	
+	public void sort(int column) {
+		
+		ArrayList<CSVRecord> sortArr = new ArrayList<CSVRecord>(listOfColumns); //make new copy of the columns to sort them into a new file to write
 		
 	}
 
-	
+	protected void print() {
+		for (CSVRecord csvr : listOfColumns) {
+			System.out.println(csvr.toString());
+		}
+	}
 	
 	//method loads the file into memory
 	//may be disadvantageous for large files but will be ok for this toy program
-	private List<CSVRecord> parse(File csv, CSVFormat fileFormat) {
+	private ArrayList<CSVRecord> parse(File csv, CSVFormat fileFormat) {
 		
-		List<CSVRecord> returnList = null;
+		ArrayList<CSVRecord> returnList = null;
+		
+		//System.out.println(fileFormat.toString());
 		
 		try {
 			Reader input = new BufferedReader(new FileReader(csv));
 			
 			CSVParser parser = new CSVParser(input, fileFormat);
 			
-			returnList = parser.getRecords();
+			returnList = new ArrayList<CSVRecord>(parser.getRecords());
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
