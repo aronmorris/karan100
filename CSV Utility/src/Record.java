@@ -42,9 +42,13 @@ public class Record {
 		
 	}
 	
-	public void sort(int column) {
+	private Record(ArrayList<CSVRecord> records) {
+		listOfColumns = records;
+	}
+	
+	public Record sort(int column) {
 		
-		ArrayList<CSVRecord> sortArr = new ArrayList<CSVRecord>(listOfColumns); //make new copy of the columns to sort them into a new file to write
+		return new Record(QuickSort.sort(this.listOfColumns, column));
 		
 	}
 
