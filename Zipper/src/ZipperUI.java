@@ -2,17 +2,30 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+
 import java.awt.BorderLayout;
+
 import javax.swing.SpringLayout;
 import javax.swing.JFileChooser;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.SwingConstants;
 import javax.swing.JPanel;
+
 import java.awt.CardLayout;
+
 import javax.swing.JSplitPane;
 import javax.swing.border.MatteBorder;
+
 import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+
+import org.eclipse.wb.swing.FocusTraversalOnArray;
+
+import java.awt.Component;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 /*
  * UI is used to find and select one or multiple files without relying on
@@ -55,31 +68,56 @@ public class ZipperUI {
 		SpringLayout springLayout = new SpringLayout();
 		frame.getContentPane().setLayout(springLayout);
 		
-		JPanel panel = new JPanel();
-		springLayout.putConstraint(SpringLayout.EAST, panel, -10, SpringLayout.EAST, frame.getContentPane());
-		panel.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
-		springLayout.putConstraint(SpringLayout.NORTH, panel, 10, SpringLayout.NORTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.SOUTH, panel, -10, SpringLayout.SOUTH, frame.getContentPane());
-		frame.getContentPane().add(panel);
+		JPanel fileResultDisplayPanel = new JPanel();
+		springLayout.putConstraint(SpringLayout.EAST, fileResultDisplayPanel, -10, SpringLayout.EAST, frame.getContentPane());
+		fileResultDisplayPanel.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
+		springLayout.putConstraint(SpringLayout.NORTH, fileResultDisplayPanel, 10, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, fileResultDisplayPanel, -10, SpringLayout.SOUTH, frame.getContentPane());
+		frame.getContentPane().add(fileResultDisplayPanel);
 		
-		JPanel panel_1 = new JPanel();
-		springLayout.putConstraint(SpringLayout.WEST, panel, 164, SpringLayout.EAST, panel_1);
-		springLayout.putConstraint(SpringLayout.NORTH, panel_1, 0, SpringLayout.NORTH, panel);
-		springLayout.putConstraint(SpringLayout.WEST, panel_1, 10, SpringLayout.WEST, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.SOUTH, panel_1, 0, SpringLayout.SOUTH, panel);
+		JPanel fileChooserPanel = new JPanel();
+		springLayout.putConstraint(SpringLayout.WEST, fileResultDisplayPanel, 164, SpringLayout.EAST, fileChooserPanel);
+		springLayout.putConstraint(SpringLayout.NORTH, fileChooserPanel, 0, SpringLayout.NORTH, fileResultDisplayPanel);
+		springLayout.putConstraint(SpringLayout.WEST, fileChooserPanel, 10, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, fileChooserPanel, 0, SpringLayout.SOUTH, fileResultDisplayPanel);
+		springLayout.putConstraint(SpringLayout.EAST, fileChooserPanel, -374, SpringLayout.EAST, frame.getContentPane());
+		fileChooserPanel.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
+		frame.getContentPane().add(fileChooserPanel);
 		
-		JPanel panel_2 = new JPanel();
-		panel.add(panel_2);
-		springLayout.putConstraint(SpringLayout.EAST, panel_1, -374, SpringLayout.EAST, frame.getContentPane());
-		panel_1.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
-		frame.getContentPane().add(panel_1);
-		
-		int widthPos = frame.WIDTH;
+		JLabel labelOperationDirection = new JLabel("-->");
+		springLayout.putConstraint(SpringLayout.WEST, labelOperationDirection, 6, SpringLayout.EAST, fileChooserPanel);
+		springLayout.putConstraint(SpringLayout.WEST, fileResultDisplayPanel, 164, SpringLayout.EAST, fileChooserPanel);
+		springLayout.putConstraint(SpringLayout.NORTH, fileChooserPanel, 0, SpringLayout.NORTH, fileResultDisplayPanel);
+		springLayout.putConstraint(SpringLayout.WEST, fileChooserPanel, 10, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, fileChooserPanel, 0, SpringLayout.SOUTH, fileResultDisplayPanel);
+		springLayout.putConstraint(SpringLayout.EAST, fileChooserPanel, -374, SpringLayout.EAST, frame.getContentPane());
+		labelOperationDirection.setFont(new Font("Tahoma", Font.PLAIN, 54));
+		labelOperationDirection.setHorizontalAlignment(SwingConstants.CENTER);
+		frame.getContentPane().add(labelOperationDirection);
+		frame.getContentPane().setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{fileResultDisplayPanel, fileChooserPanel, labelOperationDirection}));
 		
 		JMenuBar menuBar = new JMenuBar();
 		frame.setJMenuBar(menuBar);
 		
+		//this button opens the file chooser
+		//files selected from it will be placed in the left panel to be listed and confirmed for zip/unzip operations
+		//Where the final result will be available in the right panel
 		JMenuItem menuFileSelectButton = new JMenuItem("Select File(s)");
+		menuFileSelectButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			
+				JFileChooser fileChooser = new JFileChooser();
+				
+				fileChooser.setDialogTitle("Choose file(s)");
+				
+				fileChooser.setVisible(true);
+				
+				fileChooser.setPreferredSize(new Dimension(200, 300));
+				
+				fileChooser.showOpenDialog(menuFileSelectButton);
+			
+			}
+		});
 		menuBar.add(menuFileSelectButton);
 		
 		JMenuItem menuFileZipButton = new JMenuItem("Zip File(s)");
