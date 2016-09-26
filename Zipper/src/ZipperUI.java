@@ -26,12 +26,96 @@ import org.eclipse.wb.swing.FocusTraversalOnArray;
 import java.awt.Component;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.util.ArrayList;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
+
+import javax.swing.BoxLayout;
 
 /*
  * UI is used to find and select one or multiple files without relying on
  * CLI, easier for general operation of the program
  */
 public class ZipperUI {
+	
+	private File[] filesSelected;
+	
+	private ArrayList<File> unzippedFiles = new ArrayList<File>();
+	
+	//exit the system
+	private class CloseListener implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			System.exit(0); 
+			
+		}
+		
+	}
+	
+	private class UnZipListener implements ActionListener {
+
+		final int BUFFER = 2048;
+		//unzips the files selected in the filechooser if they're zip files
+		//then writes them to a new file
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			if (filesSelected != null) {
+				for (File f : filesSelected) {
+					if (!f.getName().substring(f.getName().length() - 4).equals(".zip")) { //skip this iteration of the loop if the file isn't a .zip file
+						continue;
+					}
+					else {
+						 try {
+					         BufferedOutputStream dest = null;
+					         
+					         FileInputStream fis = new FileInputStream(f);
+					         
+					         ZipInputStream zis = new ZipInputStream(new BufferedInputStream(fis));
+					         
+					         ZipEntry entry;
+					         
+					         File decompressed;
+					         
+					         while((entry = zis.getNextEntry()) != null) {
+					        	 
+					            System.out.println("Extracting: " + entry);
+					            int count;
+					            
+					            byte data[] = new byte[BUFFER];
+					            // write the files to the disk
+					            
+					            decompressed = new File(f.getAbsolutePath()); //make new file in the same directory as the original zipped file
+					            
+					            FileOutputStream fos = new FileOutputStream(decompressed);
+					            
+					            dest = new BufferedOutputStream(fos, BUFFER);
+					            
+					            while ((count = zis.read(data, 0, BUFFER)) != -1) {
+					               dest.write(data, 0, count);
+					            }
+					            
+					            unzippedFiles.add(decompressed); //add to unzippedFiles list to display in the completed work panel
+				
+					            dest.flush();
+					            dest.close();
+					         }
+					         zis.close();
+					         
+					      } catch(Exception except) {
+					         except.printStackTrace();
+					      }
+					}
+				}
+			}
+		}
+		
+	}
 
 	private JFrame frame;
 
@@ -85,12 +169,27 @@ public class ZipperUI {
 		frame.getContentPane().add(fileChooserPanel);
 		
 		JLabel labelOperationDirection = new JLabel("-->");
-		springLayout.putConstraint(SpringLayout.WEST, labelOperationDirection, 6, SpringLayout.EAST, fileChooserPanel);
+		springLayout.putConstraint(SpringLayout.NORTH, labelOperationDirection, 120, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.WEST, labelOperationDirection, 40, SpringLayout.EAST, fileChooserPanel);
 		springLayout.putConstraint(SpringLayout.WEST, fileResultDisplayPanel, 164, SpringLayout.EAST, fileChooserPanel);
 		springLayout.putConstraint(SpringLayout.NORTH, fileChooserPanel, 0, SpringLayout.NORTH, fileResultDisplayPanel);
 		springLayout.putConstraint(SpringLayout.WEST, fileChooserPanel, 10, SpringLayout.WEST, frame.getContentPane());
 		springLayout.putConstraint(SpringLayout.SOUTH, fileChooserPanel, 0, SpringLayout.SOUTH, fileResultDisplayPanel);
+		SpringLayout sl_fileResultDisplayPanel = new SpringLayout();
+		fileResultDisplayPanel.setLayout(sl_fileResultDisplayPanel);
+		
+		JLabel labelFilesAfter = new JLabel("After");
+		sl_fileResultDisplayPanel.putConstraint(SpringLayout.NORTH, labelFilesAfter, 10, SpringLayout.NORTH, fileResultDisplayPanel);
+		sl_fileResultDisplayPanel.putConstraint(SpringLayout.WEST, labelFilesAfter, 70, SpringLayout.WEST, fileResultDisplayPanel);
+		fileResultDisplayPanel.add(labelFilesAfter);
 		springLayout.putConstraint(SpringLayout.EAST, fileChooserPanel, -374, SpringLayout.EAST, frame.getContentPane());
+		SpringLayout sl_fileChooserPanel = new SpringLayout();
+		fileChooserPanel.setLayout(sl_fileChooserPanel);
+		
+		JLabel labelFilesBefore = new JLabel("Before");
+		sl_fileChooserPanel.putConstraint(SpringLayout.NORTH, labelFilesBefore, 10, SpringLayout.NORTH, fileChooserPanel);
+		sl_fileChooserPanel.putConstraint(SpringLayout.WEST, labelFilesBefore, 70, SpringLayout.WEST, fileChooserPanel);
+		fileChooserPanel.add(labelFilesBefore);
 		labelOperationDirection.setFont(new Font("Tahoma", Font.PLAIN, 54));
 		labelOperationDirection.setHorizontalAlignment(SwingConstants.CENTER);
 		frame.getContentPane().add(labelOperationDirection);
@@ -115,6 +214,8 @@ public class ZipperUI {
 				fileChooser.setPreferredSize(new Dimension(200, 300));
 				
 				fileChooser.showOpenDialog(menuFileSelectButton);
+				
+				filesSelected = fileChooser.getSelectedFiles();
 			
 			}
 		});
@@ -130,6 +231,9 @@ public class ZipperUI {
 		
 		JMenuItem menuExitButton = new JMenuItem("Exit");
 		menuExitButton.setHorizontalAlignment(SwingConstants.CENTER);
+		menuExitButton.addActionListener(new CloseListener());
 		menuBar.add(menuExitButton);
+	
 	}
+	
 }
