@@ -32,11 +32,13 @@ import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
+import java.util.zip.ZipOutputStream;
 
 import javax.swing.BoxLayout;
 import javax.swing.JList;
@@ -71,8 +73,46 @@ public class ZipperUI {
 
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
-			// TODO Auto-generated method stub
+			zip();
 			
+		}
+		
+		private void zip() {
+			byte buffer[] = new byte[2048];
+			
+			String zippedFileName = "";
+			
+			try (FileOutputStream fos = new FileOutputStream(destinationFolderName + File.separator + filesSelected.getName() + ".zip")) {
+				
+				ZipOutputStream zipOut = new ZipOutputStream(fos);
+				
+				ZipEntry entry = new ZipEntry(filesSelected.getName());
+				
+				zipOut.putNextEntry(entry);
+				
+				FileInputStream in = new FileInputStream(filesSelected.getAbsolutePath()); //TODO still has to write into a file, there's none there
+	
+	    		int len;
+	    		while ((len = in.read(buffer)) > 0) {
+	    			zipOut.write(buffer, 0, len);
+	    		}
+	
+	    		in.close();
+	    		zipOut.closeEntry();
+	
+	    		
+	    		zipOut.close();
+	    		
+	    		System.out.println("Zipped file.");
+	    		
+	    		afterListModel.addElement(filesSelected.getName());
+
+			} catch(FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 	}
@@ -273,17 +313,18 @@ public class ZipperUI {
 		JMenuItem menuFileZipButton = new JMenuItem("Zip File(s)");
 		menuFileZipButton.setHorizontalAlignment(SwingConstants.RIGHT);
 		menuBar.add(menuFileZipButton);
+		menuFileZipButton.addActionListener(new ZipListener()); //adds unzip utility 
 		
 		JMenuItem menuFileUnzipButton = new JMenuItem("Unzip File");
 		menuFileUnzipButton.setHorizontalAlignment(SwingConstants.CENTER);
 		menuBar.add(menuFileUnzipButton);
-		menuFileUnzipButton.addActionListener(new UnZipListener());
+		menuFileUnzipButton.addActionListener(new UnZipListener()); //adds unzip utility to the button
 		
 		
 		JMenuItem menuExitButton = new JMenuItem("Exit");
 		menuExitButton.setHorizontalAlignment(SwingConstants.CENTER);
-		menuExitButton.addActionListener(new CloseListener());
-		menuBar.add(menuExitButton);
+		menuExitButton.addActionListener(new CloseListener()); //exit the program
+		menuBar.add(menuExitButton); 
 	
 	}
 }
