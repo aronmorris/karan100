@@ -47,12 +47,14 @@ import javax.swing.JList;
  */
 public class ZipperUI {
 	
-	private File[] filesSelected;
+	private File filesSelected;
 	
 	private ArrayList<File> unzippedFiles = new ArrayList<File>();
 	
 	private DefaultListModel<String> beforeListModel = new DefaultListModel<>();
 	private DefaultListModel<String> afterListModel = new DefaultListModel<>();
+	
+	private String zipFileName, destinationFolderName = "D:/Programming/Java/JavaWorkspace/Projects/Zipper";
 	
 	//exit the system
 	private class CloseListener implements ActionListener {
@@ -83,6 +85,7 @@ public class ZipperUI {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			
+			unZip(zipFileName, destinationFolderName);
 			
 		}
 		
@@ -124,6 +127,8 @@ public class ZipperUI {
 					fileOut.close(); //close the output stream, as the file is written 
 					
 					entry = zipIn.getNextEntry();
+					
+					afterListModel.addElement(unzipped.getName());
 					
 				}
 				
@@ -239,22 +244,28 @@ public class ZipperUI {
 				
 				JFileChooser fileChooser = new JFileChooser();
 				
-				fileChooser.setDialogTitle("Choose file(s)");
+				fileChooser.setDialogTitle("Choose file");
 				
 				fileChooser.setVisible(true);
 				
 				fileChooser.setPreferredSize(new Dimension(200, 300));
 				
-				fileChooser.setMultiSelectionEnabled(true);
+				fileChooser.setMultiSelectionEnabled(false);
 				
-				fileChooser.showOpenDialog(menuFileSelectButton);
+				int res = fileChooser.showOpenDialog(menuFileSelectButton);
 				
-				filesSelected = fileChooser.getSelectedFiles();
+				filesSelected = fileChooser.getSelectedFile();
 				
-				for (File f : filesSelected) {
-					beforeListModel.addElement(f.getName());
+				if (res == JFileChooser.APPROVE_OPTION) {
+					
+					zipFileName = filesSelected.getAbsolutePath();
+					
+					beforeListModel.addElement(filesSelected.getName());
+					
+				} else if (res == JFileChooser.CANCEL_OPTION) {
+				    System.out.println("Cancel was selected");
 				}
-			
+				
 			}
 		});
 		menuBar.add(menuFileSelectButton);
