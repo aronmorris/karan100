@@ -73,14 +73,16 @@ public class ZipperUI {
 
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
-			zip();
+			zip(destinationFolderName);
 			
 		}
 		
-		private void zip() {
+		private void zip(String outputLocation) {
 			byte buffer[] = new byte[2048];
 			
 			String zippedFileName = "";
+			
+			File zipped = new File(outputLocation + File.separator + filesSelected.getName());
 			
 			try (FileOutputStream fos = new FileOutputStream(destinationFolderName + File.separator + filesSelected.getName() + ".zip")) {
 				
@@ -90,7 +92,7 @@ public class ZipperUI {
 				
 				zipOut.putNextEntry(entry);
 				
-				FileInputStream in = new FileInputStream(filesSelected.getAbsolutePath()); //TODO still has to write into a file, there's none there
+				FileInputStream in = new FileInputStream(zipped); //TODO still has to write into a file, there's none there
 	
 	    		int len;
 	    		while ((len = in.read(buffer)) > 0) {
