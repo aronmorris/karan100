@@ -17,15 +17,21 @@ public class FileZipper {
 
 	private File[] files;
 	
-	public FileZipper(File... files) {
+	private String destination;
+	
+	public FileZipper(String destinationFolder, File... files) {
 		
-		for (File f : files) {
-			
-		}
+		this.files = files;
+		
+		destination = destinationFolder;
 	
 	}
 	
-	private void zip(File[] f, String destinationFileName) {
+	public File zip() {
+		return zip(files, destination);
+	}
+	
+	private File zip(File[] f, String destinationFileName) {
 		
 		byte[] buffer = new byte[2048];
 		
@@ -41,13 +47,15 @@ public class FileZipper {
 			
 			FileInputStream input;
 			
-			for (File fileToCompress : f) {
+			for (int i = 0; i < entries.length; i++) {
 				
-				System.out.println("Now compressing " + fileToCompress.getName());
+				System.out.println("Now compressing " + f[i].getName());
 				
-				input = new FileInputStream(fileToCompress.getAbsolutePath());
+				input = new FileInputStream(f[i].getAbsolutePath());
 				
 				int length;
+				
+				zipOut.putNextEntry(entries[i]);
 				
 				while ((length = input.read(buffer)) > 0) {
 					zipOut.write(buffer, 0, length); //write length bytes into the file
@@ -68,6 +76,7 @@ public class FileZipper {
 			e.printStackTrace();
 			
 		}
+		return new File(destinationFileName);
 		
 	}
 	

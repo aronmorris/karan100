@@ -49,14 +49,14 @@ import javax.swing.JList;
  */
 public class ZipperUI {
 	
-	private File filesSelected;
+	private File[] filesSelected;
 	
-	private ArrayList<File> unzippedFiles = new ArrayList<File>();
+	private File[] unzippedFiles;
 	
 	private DefaultListModel<String> beforeListModel = new DefaultListModel<>();
 	private DefaultListModel<String> afterListModel = new DefaultListModel<>();
 	
-	private String zipFileName, destinationFolderName = "D:/Programming/Java/JavaWorkspace/Projects/Zipper";
+	private String zipFileName, destinationFolderName = "D:/Programming/Java/JavaWorkspace/Projects/Zipper/resources/";
 	
 	//exit the system
 	private class CloseListener implements ActionListener {
@@ -73,48 +73,13 @@ public class ZipperUI {
 
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
-			zip(destinationFolderName);
 			
-		}
-		
-		private void zip(String outputLocation) {
-			byte buffer[] = new byte[2048];
+			afterListModel.clear();
 			
-			String zippedFileName = "";
+			FileZipper zipper = new FileZipper(destinationFolderName, filesSelected);
 			
-			File zipped = new File(outputLocation + File.separator + filesSelected.getName());
+			afterListModel.addElement(zipper.zip().getName());
 			
-			try (FileOutputStream fos = new FileOutputStream(destinationFolderName + File.separator + filesSelected.getName() + ".zip")) {
-				
-				ZipOutputStream zipOut = new ZipOutputStream(fos);
-				
-				ZipEntry entry = new ZipEntry(filesSelected.getName());
-				
-				zipOut.putNextEntry(entry);
-				
-				FileInputStream in = new FileInputStream(zipped); //TODO still has to write into a file, there's none there
-	
-	    		int len;
-	    		while ((len = in.read(buffer)) > 0) {
-	    			zipOut.write(buffer, 0, len);
-	    		}
-	
-	    		in.close();
-	    		zipOut.closeEntry();
-	
-	    		
-	    		zipOut.close();
-	    		
-	    		System.out.println("Zipped file.");
-	    		
-	    		afterListModel.addElement(filesSelected.getName());
-
-			} catch(FileNotFoundException e) {
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 		}
 		
 	}
@@ -127,64 +92,16 @@ public class ZipperUI {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			
-			unZip(zipFileName, destinationFolderName);
+			afterListModel.clear();
 			
-		}
-		
-		private void unZip(String zipFile, String outputLocation) {
+			FileUnzipper unzipper = new FileUnzipper(filesSelected, destinationFolderName);
 			
-			byte[] buffer = new byte[2048]; //set size of data buffer to be read at once
-			
-			try {
-				
-				File outputLoc = new File(outputLocation); //create a new file at the desired location
-				
-				if (!outputLoc.exists()) {
-					outputLoc.mkdir(); //make a directory for that file if the folder doesn't exist
-				}
-				
-				ZipInputStream zipIn = new ZipInputStream(new FileInputStream(zipFile)); //inputstream reads from zipped file
-				
-				ZipEntry entry = zipIn.getNextEntry(); //each entry is a discrete file
-				
-				while (entry != null) { 
-					
-					String fileName = entry.getName(); //get the zipped file's name
-					
-					File unzipped = new File(outputLoc + File.separator + fileName); //and create a new file where it will go in the destination folder, by that name
-					
-					System.out.println("Unzipping: " + unzipped.getAbsoluteFile()); //print the file being unzipped
-					
-					new File(unzipped.getParent()).mkdirs(); //prevent FileNotFoundException for compressed folder
-					
-					
-					FileOutputStream fileOut = new FileOutputStream(unzipped); //stream to write to the file that will contain the unzipped data
-					
-					int length; //# of bytes to read from the buffer
-					
-					while ((length = zipIn.read(buffer)) > 0) { //read buffer length of bytes from the stream into a byte array
-						fileOut.write(buffer, 0, length); //and write the decompressed data to a new file
-					}
-					
-					fileOut.close(); //close the output stream, as the file is written 
-					
-					entry = zipIn.getNextEntry();
-					
-					afterListModel.addElement(unzipped.getName());
-					
-				}
-				
-				//resource cleanup once the outer loop exits
-				
-				zipIn.closeEntry(); 
-				
-				zipIn.close();
-				
-			} catch (IOException e) {
-				e.printStackTrace();
+			for (File f : filesSelected) {
+				afterListModel.addElement(unzipper.unzip().getName()); 
 			}
 			
 		}
+	
 		
 	}
 
@@ -292,17 +209,20 @@ public class ZipperUI {
 				
 				fileChooser.setPreferredSize(new Dimension(200, 300));
 				
-				fileChooser.setMultiSelectionEnabled(false);
+				fileChooser.setMultiSelectionEnabled(true);
 				
 				int res = fileChooser.showOpenDialog(menuFileSelectButton);
 				
-				filesSelected = fileChooser.getSelectedFile();
+				filesSelected = fileChooser.getSelectedFiles();
 				
 				if (res == JFileChooser.APPROVE_OPTION) {
 					
-					zipFileName = filesSelected.getAbsolutePath();
-					
-					beforeListModel.addElement(filesSelected.getName());
+					for (File f : filesSelected) { //populate the UI with the model
+
+						zipFileName = f.getAbsolutePath();
+						
+						beforeListModel.addElement(f.getName());
+					}
 					
 				} else if (res == JFileChooser.CANCEL_OPTION) {
 				    System.out.println("Cancel was selected");
