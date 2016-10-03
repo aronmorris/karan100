@@ -78,7 +78,9 @@ public class ZipperUI {
 			
 			FileZipper zipper = new FileZipper(destinationFolderName, filesSelected);
 			
-			afterListModel.addElement(zipper.zip().getName());
+			File dest = zipper.zip();
+			
+			afterListModel.addElement(dest.getName() + ": " + dest.getAbsolutePath());
 			
 		}
 		
@@ -97,7 +99,12 @@ public class ZipperUI {
 			FileUnzipper unzipper = new FileUnzipper(filesSelected, destinationFolderName);
 			
 			for (File f : filesSelected) {
-				afterListModel.addElement(unzipper.unzip().getName()); 
+				
+				File dest = unzipper.unzip();
+				
+				afterListModel.addElement(dest.getName() + ": " + dest.getAbsolutePath()); 
+				
+				System.out.println("Extracted: " + dest.getName() + " to : " + dest.getAbsolutePath());
 			}
 			
 		}

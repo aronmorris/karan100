@@ -41,6 +41,8 @@ public class FileUnzipper {
 		
 		File outputLoc = null;
 		
+		File unzippedFileLocation = null;
+		
 		try {
 			
 			outputLoc = new File(outputLocation); //create a new file at the desired location
@@ -63,8 +65,7 @@ public class FileUnzipper {
 				
 				new File(unzipped.getParent()).mkdirs(); //prevent FileNotFoundException for compressed folder
 				
-				
-				FileOutputStream fileOut = new FileOutputStream(unzipped); //stream to write to the file that will contain the unzipped data
+				FileOutputStream fileOut = new FileOutputStream(outputLocation + unzipped.getName()); //stream to write to the file that will contain the unzipped data
 				
 				int length; //# of bytes to read from the buffer
 				
@@ -88,7 +89,7 @@ public class FileUnzipper {
 			e.printStackTrace();
 		}
 		
-		return outputLoc;
+		return unzippedFileLocation;
 		
 	}
 	

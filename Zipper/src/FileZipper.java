@@ -19,6 +19,8 @@ public class FileZipper {
 	
 	private String destination;
 	
+	private String archivedFile;
+	
 	public FileZipper(String destinationFolder, File... files) {
 		
 		this.files = files;
@@ -41,7 +43,9 @@ public class FileZipper {
 			entries[i] = new ZipEntry(f[i].getName()); //populate the ZipEntry array
 		}
 		
-		try (FileOutputStream fileOut = new FileOutputStream((f.length > 1 ? "archive.zip" : f[0].getName().substring(0, f[0].getName().indexOf('.')) + ".zip"))) { //create output stream for the new zipped file, add .zip extension if it isn't there already
+		archivedFile = destinationFileName + (f.length > 1 ? "archive.zip" : f[0].getName().substring(0, f[0].getName().indexOf('.')) + ".zip");
+		
+		try (FileOutputStream fileOut = new FileOutputStream(archivedFile)) { //create output stream for the new zipped file, add .zip extension if it isn't there already
 			
 			ZipOutputStream zipOut = new ZipOutputStream(fileOut); //zip stream that feeds into the output
 			
@@ -76,7 +80,7 @@ public class FileZipper {
 			e.printStackTrace();
 			
 		}
-		return new File(destinationFileName);
+		return new File(archivedFile);
 		
 	}
 	
