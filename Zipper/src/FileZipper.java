@@ -38,10 +38,10 @@ public class FileZipper {
 		ZipEntry[] entries = new ZipEntry[f.length];
 		
 		for (int i = 0; i < f.length; i++) {
-			entries[i] = new ZipEntry(f[i].getAbsolutePath()); //populate the ZipEntry array
+			entries[i] = new ZipEntry(f[i].getName()); //populate the ZipEntry array
 		}
 		
-		try (FileOutputStream fileOut = new FileOutputStream(destinationFileName + (destinationFileName.contains(".zip") ? "" : ".zip"))) { //create output stream for the new zipped file, add .zip extension if it isn't there already
+		try (FileOutputStream fileOut = new FileOutputStream((f.length > 1 ? "archive.zip" : f[0].getName().substring(0, f[0].getName().indexOf('.')) + ".zip"))) { //create output stream for the new zipped file, add .zip extension if it isn't there already
 			
 			ZipOutputStream zipOut = new ZipOutputStream(fileOut); //zip stream that feeds into the output
 			
