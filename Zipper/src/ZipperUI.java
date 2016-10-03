@@ -103,8 +103,7 @@ public class ZipperUI {
 				File dest = unzipper.unzip();
 				
 				afterListModel.addElement(dest.getName() + ": " + dest.getAbsolutePath()); 
-				
-				System.out.println("Extracted: " + dest.getName() + " to : " + dest.getAbsolutePath());
+			
 			}
 			
 		}

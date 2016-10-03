@@ -41,8 +41,6 @@ public class FileUnzipper {
 		
 		File outputLoc = null;
 		
-		File unzippedFileLocation = null;
-		
 		try {
 			
 			outputLoc = new File(outputLocation); //create a new file at the desired location
@@ -89,7 +87,7 @@ public class FileUnzipper {
 			e.printStackTrace();
 		}
 		
-		return unzippedFileLocation;
+		return outputLoc;
 		
 	}
 	
