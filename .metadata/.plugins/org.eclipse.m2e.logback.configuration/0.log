@@ -7731,3 +7731,210 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.apache.ht
 2016-10-02 23:58:11,880 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-10-02 23:58:11,880 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\eCard Generator Site\src\test\resources
 2016-10-02 23:59:16,214 [Worker-8] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|http://repo.maven.apache.org/maven2 in 69171 ms
+2016-10-03 23:11:27,207 [Worker-60] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.pdfgenerator:PDFGenerator:0.0.1-SNAPSHOT @ D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\pom.xml.
+2016-10-03 23:11:28,416 [Worker-60] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /PDFGenerator/src
+2016-10-03 23:11:28,416 [Worker-60] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /PDFGenerator/src/test/java because it overlaps with /PDFGenerator/src
+2016-10-03 23:11:29,029 [Worker-60] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2016-10-03 23:11:29,063 [Worker-60] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.pdfgenerator:PDFGenerator:0.0.1-SNAPSHOT @ D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\pom.xml.
+2016-10-03 23:11:29,887 [Worker-60] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /PDFGenerator/src
+2016-10-03 23:11:29,888 [Worker-60] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /PDFGenerator/src/test/java because it overlaps with /PDFGenerator/src
+2016-10-03 23:11:29,980 [Worker-60] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2016-10-03 23:11:30,182 [Worker-58] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:11:30,183 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\main\resources
+2016-10-03 23:11:30,184 [Worker-58] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:11:30,184 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\test\resources
+2016-10-03 23:11:46,158 [Worker-59] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.pdfgenerator:PDFGenerator:0.0.1-SNAPSHOT @ D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\pom.xml.
+2016-10-03 23:11:46,599 [Worker-59] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/itextpdf/itextpdf/5.5.9/itextpdf-5.5.9.pom
+2016-10-03 23:11:46,810 [Worker-59] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/itextpdf/itextpdf/5.5.9/itextpdf-5.5.9.pom
+2016-10-03 23:11:46,878 [Worker-59] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/itextpdf/itext-parent/1.0.0/itext-parent-1.0.0.pom
+2016-10-03 23:11:47,068 [Worker-59] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/itextpdf/itext-parent/1.0.0/itext-parent-1.0.0.pom
+2016-10-03 23:11:47,290 [Worker-59] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/itextpdf/itextpdf/5.5.9/itextpdf-5.5.9.jar
+2016-10-03 23:11:56,406 [Worker-59] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/itextpdf/itextpdf/5.5.9/itextpdf-5.5.9.jar
+2016-10-03 23:11:56,634 [Worker-59] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:11:56,634 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\main\resources
+2016-10-03 23:11:56,635 [Worker-59] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:11:56,636 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\test\resources
+2016-10-03 23:11:57,789 [Worker-61] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/itextpdf/itextpdf/5.5.9/itextpdf-5.5.9-sources.jar
+2016-10-03 23:11:58,321 [Worker-60] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:11:58,321 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\main\resources
+2016-10-03 23:11:58,323 [Worker-60] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:11:58,324 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\test\resources
+2016-10-03 23:12:06,978 [Worker-61] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/itextpdf/itextpdf/5.5.9/itextpdf-5.5.9-sources.jar
+2016-10-03 23:12:07,075 [Worker-61] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.itextpdf:itextpdf:5.5.9
+2016-10-03 23:12:07,156 [Worker-61] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/itextpdf/itextpdf/5.5.9/itextpdf-5.5.9-javadoc.jar
+2016-10-03 23:12:17,690 [Worker-57] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.pdfgenerator:PDFGenerator:0.0.1-SNAPSHOT @ D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\pom.xml.
+2016-10-03 23:12:39,027 [Worker-61] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/itextpdf/itextpdf/5.5.9/itextpdf-5.5.9-javadoc.jar
+2016-10-03 23:12:39,125 [Worker-61] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for com.itextpdf:itextpdf:5.5.9
+2016-10-03 23:12:39,192 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/itextpdf/itext-pdfa/5.5.9/itext-pdfa-5.5.9.pom
+2016-10-03 23:12:39,328 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/itextpdf/itext-pdfa/5.5.9/itext-pdfa-5.5.9.pom
+2016-10-03 23:12:39,373 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/itextpdf/itext-xtra/5.5.9/itext-xtra-5.5.9.pom
+2016-10-03 23:12:39,569 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/itextpdf/itext-xtra/5.5.9/itext-xtra-5.5.9.pom
+2016-10-03 23:12:40,500 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repository.apache.org/content/repositories/snapshots/org/apache/commons/commons-imaging/1.0-SNAPSHOT/maven-metadata.xml
+2016-10-03 23:12:41,215 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repository.apache.org/content/repositories/snapshots/org/apache/commons/commons-imaging/1.0-SNAPSHOT/maven-metadata.xml
+2016-10-03 23:12:41,693 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repository.apache.org/content/repositories/snapshots/org/apache/commons/commons-imaging/1.0-SNAPSHOT/commons-imaging-1.0-20160915.001141-89.pom
+2016-10-03 23:12:42,312 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repository.apache.org/content/repositories/snapshots/org/apache/commons/commons-imaging/1.0-SNAPSHOT/commons-imaging-1.0-20160915.001141-89.pom
+2016-10-03 23:12:42,414 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/commons-io/commons-io/2.4/commons-io-2.4.pom
+2016-10-03 23:12:42,585 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/commons-io/commons-io/2.4/commons-io-2.4.pom
+2016-10-03 23:12:42,669 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/25/commons-parent-25.pom
+2016-10-03 23:12:43,046 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/25/commons-parent-25.pom
+2016-10-03 23:12:43,139 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/itextpdf/tool/xmlworker/5.5.9/xmlworker-5.5.9.pom
+2016-10-03 23:12:43,356 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/itextpdf/tool/xmlworker/5.5.9/xmlworker-5.5.9.pom
+2016-10-03 23:12:43,465 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/itextpdf/itext-pdfa/5.5.9/itext-pdfa-5.5.9.jar
+2016-10-03 23:12:44,307 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/itextpdf/itext-pdfa/5.5.9/itext-pdfa-5.5.9.jar
+2016-10-03 23:12:44,400 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/itextpdf/itext-xtra/5.5.9/itext-xtra-5.5.9.jar
+2016-10-03 23:12:45,481 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/itextpdf/itext-xtra/5.5.9/itext-xtra-5.5.9.jar
+2016-10-03 23:12:45,549 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/commons-io/commons-io/2.4/commons-io-2.4.jar
+2016-10-03 23:12:47,875 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/commons-io/commons-io/2.4/commons-io-2.4.jar
+2016-10-03 23:12:47,963 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/itextpdf/tool/xmlworker/5.5.9/xmlworker-5.5.9.jar
+2016-10-03 23:12:50,054 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/itextpdf/tool/xmlworker/5.5.9/xmlworker-5.5.9.jar
+2016-10-03 23:12:51,029 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repository.apache.org/content/repositories/snapshots/org/apache/commons/commons-imaging/1.0-SNAPSHOT/commons-imaging-1.0-20160915.001141-89.jar
+2016-10-03 23:12:58,966 [Worker-57] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repository.apache.org/content/repositories/snapshots/org/apache/commons/commons-imaging/1.0-SNAPSHOT/commons-imaging-1.0-20160915.001141-89.jar
+2016-10-03 23:12:59,090 [Worker-57] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aronmorris.autoweblogin:AutoWebLogin:0.0.1-SNAPSHOT @ D:\Programming\Java\JavaWorkspace\Projects\Auto Web Login\pom.xml.
+2016-10-03 23:12:59,467 [Worker-57] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:12:59,468 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\main\resources
+2016-10-03 23:12:59,469 [Worker-57] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:12:59,469 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\test\resources
+2016-10-03 23:13:01,268 [Worker-59] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/itextpdf/itext-pdfa/5.5.9/itext-pdfa-5.5.9-sources.jar
+2016-10-03 23:13:01,327 [Worker-62] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:13:01,327 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Auto Web Login\src\main\resources
+2016-10-03 23:13:01,328 [Worker-62] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:13:01,328 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\Auto Web Login\src\test\resources
+2016-10-03 23:13:01,350 [Worker-62] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:13:01,350 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\main\resources
+2016-10-03 23:13:01,351 [Worker-62] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:13:01,351 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\test\resources
+2016-10-03 23:13:02,070 [Worker-59] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/itextpdf/itext-pdfa/5.5.9/itext-pdfa-5.5.9-sources.jar
+2016-10-03 23:13:02,161 [Worker-59] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.itextpdf:itext-pdfa:5.5.9
+2016-10-03 23:13:02,270 [Worker-59] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/itextpdf/itext-pdfa/5.5.9/itext-pdfa-5.5.9-javadoc.jar
+2016-10-03 23:13:06,732 [Worker-59] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/itextpdf/itext-pdfa/5.5.9/itext-pdfa-5.5.9-javadoc.jar
+2016-10-03 23:13:06,825 [Worker-59] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for com.itextpdf:itext-pdfa:5.5.9
+2016-10-03 23:13:06,904 [Worker-59] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/itextpdf/itext-xtra/5.5.9/itext-xtra-5.5.9-sources.jar
+2016-10-03 23:13:08,309 [Worker-59] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/itextpdf/itext-xtra/5.5.9/itext-xtra-5.5.9-sources.jar
+2016-10-03 23:13:08,386 [Worker-59] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.itextpdf:itext-xtra:5.5.9
+2016-10-03 23:13:08,462 [Worker-59] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/itextpdf/itext-xtra/5.5.9/itext-xtra-5.5.9-javadoc.jar
+2016-10-03 23:13:11,636 [Worker-59] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/itextpdf/itext-xtra/5.5.9/itext-xtra-5.5.9-javadoc.jar
+2016-10-03 23:13:11,755 [Worker-59] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for com.itextpdf:itext-xtra:5.5.9
+2016-10-03 23:13:11,774 [Worker-59] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for org.apache.commons:commons-imaging:1.0-SNAPSHOT
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.apache.commons:commons-imaging:jar:sources:1.0-SNAPSHOT
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:769) ~[org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:1) ~[org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:166) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:109) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:96) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:736) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:713) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:244) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:223) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:197) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:153) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob$1.call(DownloadSourcesJob.java:136) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob$1.call(DownloadSourcesJob.java:1) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:166) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:142) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:96) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1348) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:134) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54) [org.eclipse.core.jobs_3.6.0.v20140424-0053.jar:na]
+2016-10-03 23:13:11,779 [Worker-59] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for org.apache.commons:commons-imaging:1.0-SNAPSHOT
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.apache.commons:commons-imaging:jar:javadoc:1.0-SNAPSHOT
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:769) ~[org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:1) ~[org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:166) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:109) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:96) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:736) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:713) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:244) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:232) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:197) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:153) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob$1.call(DownloadSourcesJob.java:136) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob$1.call(DownloadSourcesJob.java:1) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:166) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:142) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:96) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1348) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:134) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54) [org.eclipse.core.jobs_3.6.0.v20140424-0053.jar:na]
+2016-10-03 23:13:11,838 [Worker-59] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/commons-io/commons-io/2.4/commons-io-2.4-sources.jar
+2016-10-03 23:13:13,528 [Worker-59] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/commons-io/commons-io/2.4/commons-io-2.4-sources.jar
+2016-10-03 23:13:13,620 [Worker-59] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for commons-io:commons-io:2.4
+2016-10-03 23:13:13,702 [Worker-59] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/commons-io/commons-io/2.4/commons-io-2.4-javadoc.jar
+2016-10-03 23:13:19,125 [Worker-59] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/commons-io/commons-io/2.4/commons-io-2.4-javadoc.jar
+2016-10-03 23:13:19,209 [Worker-59] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for commons-io:commons-io:2.4
+2016-10-03 23:13:19,308 [Worker-59] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/itextpdf/tool/xmlworker/5.5.9/xmlworker-5.5.9-sources.jar
+2016-10-03 23:13:21,777 [Worker-59] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/itextpdf/tool/xmlworker/5.5.9/xmlworker-5.5.9-sources.jar
+2016-10-03 23:13:21,860 [Worker-59] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.itextpdf.tool:xmlworker:5.5.9
+2016-10-03 23:13:21,947 [Worker-59] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/com/itextpdf/tool/xmlworker/5.5.9/xmlworker-5.5.9-javadoc.jar
+2016-10-03 23:13:29,286 [Worker-59] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/com/itextpdf/tool/xmlworker/5.5.9/xmlworker-5.5.9-javadoc.jar
+2016-10-03 23:13:29,417 [Worker-59] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for com.itextpdf.tool:xmlworker:5.5.9
+2016-10-03 23:13:29,420 [Worker-59] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.itextpdf:itext-pdfa:5.5.9
+2016-10-03 23:13:29,423 [Worker-59] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for com.itextpdf:itext-pdfa:5.5.9
+2016-10-03 23:13:29,426 [Worker-59] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.itextpdf:itext-xtra:5.5.9
+2016-10-03 23:13:29,428 [Worker-59] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for com.itextpdf:itext-xtra:5.5.9
+2016-10-03 23:13:29,433 [Worker-59] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for commons-io:commons-io:2.4
+2016-10-03 23:13:29,435 [Worker-59] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for commons-io:commons-io:2.4
+2016-10-03 23:13:29,438 [Worker-59] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.itextpdf.tool:xmlworker:5.5.9
+2016-10-03 23:13:29,441 [Worker-59] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for com.itextpdf.tool:xmlworker:5.5.9
+2016-10-03 23:13:30,140 [Worker-61] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:13:30,141 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\main\resources
+2016-10-03 23:13:30,142 [Worker-61] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:13:30,142 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\test\resources
+2016-10-03 23:23:26,559 [Worker-72] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:23:26,560 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\main\resources
+2016-10-03 23:23:26,561 [Worker-72] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:23:26,562 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\test\resources
+2016-10-03 23:26:05,801 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-8.1.14.v20131031
+2016-10-03 23:26:05,839 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started SelectChannelConnector@127.0.0.1:60136
+2016-10-03 23:26:58,565 [Worker-69] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:26:58,565 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\main\resources
+2016-10-03 23:26:58,567 [Worker-69] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:26:58,567 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\test\resources
+2016-10-03 23:30:26,301 [Worker-67] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:30:26,301 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\main\resources
+2016-10-03 23:30:26,302 [Worker-67] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:30:26,303 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\test\resources
+2016-10-03 23:32:42,450 [Worker-81] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:32:42,451 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\main\resources
+2016-10-03 23:32:42,452 [Worker-81] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:32:42,453 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\test\resources
+2016-10-03 23:33:55,085 [Worker-82] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:33:55,086 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\main\resources
+2016-10-03 23:33:55,087 [Worker-82] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:33:55,087 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\test\resources
+2016-10-03 23:51:12,309 [Worker-80] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:51:12,310 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\main\resources
+2016-10-03 23:51:12,311 [Worker-80] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:51:12,311 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\test\resources
+2016-10-03 23:52:37,002 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:52:37,003 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\main\resources
+2016-10-03 23:52:37,004 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:52:37,004 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\test\resources
+2016-10-03 23:52:43,906 [Worker-92] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:52:43,907 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\main\resources
+2016-10-03 23:52:43,908 [Worker-92] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:52:43,908 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\test\resources
+2016-10-03 23:54:06,336 [Worker-90] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:54:06,337 [Worker-90] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\main\resources
+2016-10-03 23:54:06,338 [Worker-90] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:54:06,339 [Worker-90] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\test\resources
+2016-10-03 23:54:15,613 [Worker-89] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:54:15,613 [Worker-89] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\main\resources
+2016-10-03 23:54:15,614 [Worker-89] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:54:15,615 [Worker-89] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\test\resources
+2016-10-03 23:54:23,076 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:54:23,076 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\main\resources
+2016-10-03 23:54:23,077 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:54:23,078 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\test\resources
+2016-10-03 23:55:00,056 [Worker-93] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:55:00,057 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\main\resources
+2016-10-03 23:55:00,058 [Worker-93] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:55:00,058 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\test\resources
+2016-10-03 23:56:47,196 [Worker-95] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:56:47,196 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\main\resources
+2016-10-03 23:56:47,198 [Worker-95] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:56:47,198 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\test\resources
+2016-10-03 23:57:36,644 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:57:36,644 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\main\resources
+2016-10-03 23:57:36,645 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 23:57:36,646 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\JavaWorkspace\Projects\PDFGenerator\src\test\resources
