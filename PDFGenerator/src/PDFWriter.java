@@ -1,9 +1,13 @@
 import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
@@ -13,21 +17,52 @@ import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.PdfWriter;
+import com.itextpdf.tool.xml.XMLWorkerHelper;
 
 
 public class PDFWriter {
 
-	private File fileToConvert;
+	private final static int FONT_SIZE = 12;
 	
-	private final int FONT_SIZE = 12;
-	
-	public PDFWriter(File f) {
+	public PDFWriter() {
 		
-		fileToConvert = f;
 		
 	}
 	
-	public boolean convertTextToPDF() {
+	public static boolean convertHtmlToPDF(File htmlToConvert) {
+		boolean error = false;
+		
+		String fileLoc = htmlToConvert.getAbsolutePath();
+		
+		try (OutputStream pdfOut = new FileOutputStream(new File(htmlToConvert.getAbsolutePath().replace(".html", ".pdf")))){
+			
+			Document doc = new Document();
+			
+			PdfWriter writer = PdfWriter.getInstance(doc, pdfOut);
+			
+			doc.open();
+			
+			 XMLWorkerHelper.getInstance().parseXHtml(writer, doc, new FileInputStream(fileLoc));
+			
+		} catch (FileNotFoundException e) { 
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+			return false;
+		} catch (DocumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+		
+		return true;
+		
+	}
+	
+	public static boolean convertTextToPDF(File fileToConvert) {
 		
 		BufferedReader br = null;
 		
@@ -41,7 +76,7 @@ public class PDFWriter {
 				
 				String currentLine;
 			
-				Font font = preprocessAndReturnFont(pdfDoc);
+				Font font = preprocessAndReturnFont(pdfDoc, fileToConvert);
 				
 				br = new BufferedReader(new FileReader(fileToConvert));
 				
@@ -50,6 +85,9 @@ public class PDFWriter {
 					paragraph.setAlignment(Element.ALIGN_JUSTIFIED);
 					pdfDoc.add(paragraph);
 				}
+				
+				br.close();
+				
 			} else {
 				System.err.println("File not found.");
 				error = true;
@@ -68,7 +106,7 @@ public class PDFWriter {
 		
 	}
 	//Does some preprocessing work on the document to pretty it up
-	private Font preprocessAndReturnFont(Document doc) throws DocumentException, IOException {
+	private static Font preprocessAndReturnFont(Document doc, File fileToConvert) throws DocumentException, IOException {
 		
 		String outputFile = fileToConvert.getName().replace(".txt", ".pdf");
 		
