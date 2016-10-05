@@ -1,12 +1,10 @@
 import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
 
 import com.itextpdf.text.Document;
@@ -30,7 +28,10 @@ public class PDFWriter {
 	}
 	
 	public static boolean convertHtmlToPDF(File htmlToConvert) {
+		
 		boolean error = false;
+		
+		System.out.printf("Converting HTML: %s to PDF at: %s%n", htmlToConvert.getName(), htmlToConvert.getAbsolutePath());
 		
 		String fileLoc = htmlToConvert.getAbsolutePath();
 		
@@ -44,6 +45,8 @@ public class PDFWriter {
 			
 			 XMLWorkerHelper.getInstance().parseXHtml(writer, doc, new FileInputStream(fileLoc));
 			
+			 doc.close();
+			 
 		} catch (FileNotFoundException e) { 
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -51,22 +54,24 @@ public class PDFWriter {
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
-			return false;
+			error = true;
 		} catch (DocumentException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return false;
+			error = true;
 		}
 		
-		return true;
+		return !error;
 		
 	}
 	
-	public static boolean convertTextToPDF(File fileToConvert) {
+	public static boolean convertTextToPDF(File fileToConvert) throws IOException {
 		
 		BufferedReader br = null;
 		
 		boolean error = false;
+		
+		System.out.printf("Converting text: %s to PDF at: %s%n", fileToConvert.getName(), fileToConvert.getAbsolutePath());
 		
 		try { 
 			
@@ -86,7 +91,9 @@ public class PDFWriter {
 					pdfDoc.add(paragraph);
 				}
 				
-				br.close();
+				pdfDoc.close();
+				
+				System.out.println("Conversion complete.");
 				
 			} else {
 				System.err.println("File not found.");
@@ -100,6 +107,10 @@ public class PDFWriter {
 			System.err.println("IO exception occurred!");
 			e.printStackTrace();
 			error = true;
+		} finally {
+			if (br != null) {
+				br.close();
+			}
 		}
 		
 		return !error;
@@ -108,7 +119,7 @@ public class PDFWriter {
 	//Does some preprocessing work on the document to pretty it up
 	private static Font preprocessAndReturnFont(Document doc, File fileToConvert) throws DocumentException, IOException {
 		
-		String outputFile = fileToConvert.getName().replace(".txt", ".pdf");
+		String outputFile = fileToConvert.getAbsolutePath().replace(".txt", ".pdf");
 		
 		PdfWriter.getInstance(doc, new FileOutputStream(outputFile)).setPdfVersion(PdfWriter.VERSION_1_7);
 		
