@@ -1,5 +1,7 @@
 package com.aronmorris.karanprojects;
 
+import com.mpatric.mp3agic.Mp3File;
+
 
 /**
  * Defines the methods used to access ID3v1 tags
@@ -7,6 +9,9 @@ package com.aronmorris.karanprojects;
  *
  */
 public interface IDTaggable {
+	
+	public Mp3File getMp3File();
+	public void setMp3File(Mp3File mp3);
 
 	public String getTrack();
 	public void setTrack(String track);
@@ -24,10 +29,9 @@ public interface IDTaggable {
 	public void setYear(String year);
 	
 	public String getGenre();
-	public void setGenre(String genre);
+	public void setGenre(int genre);
 	
 	public String getGenreDescription();
-	public void setGenreDescription(String description);
 	
 	public String getComment();
 	public void setComment(String comment);

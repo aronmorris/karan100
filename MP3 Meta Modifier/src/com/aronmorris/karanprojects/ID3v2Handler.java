@@ -1,89 +1,19 @@
 package com.aronmorris.karanprojects;
 
+import com.mpatric.mp3agic.ID3v2;
+import com.mpatric.mp3agic.Mp3File;
+
 public class ID3v2Handler extends ID3v1Handler implements IDFrameable {
 
-	@Override
-	public String getTrack() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setTrack(String track) {
-		// TODO Auto-generated method stub
+	ID3v2 tag = null;
+	
+	protected ID3v2Handler(Mp3File mp3) {
 		
-	}
-
-	@Override
-	public String getArtist() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setArtist(String artist) {
-		// TODO Auto-generated method stub
+		super(mp3);
 		
-	}
-
-	@Override
-	public String getTitle() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setTitle(String title) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public String getAlbum() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setAlbum(String album) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public String getYear() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setYear(String year) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public String getGenre() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setGenre(String genre) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public String getGenreDescription() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setGenreDescription(String description) {
-		// TODO Auto-generated method stub
-		
+		if (mp3.hasId3v2Tag()) {
+			tag = mp3.getId3v2Tag();
+		}
 	}
 
 	@Override

@@ -1,25 +1,25 @@
 package com.aronmorris.karanprojects;
 
+import com.mpatric.mp3agic.Mp3File;
+
 public class ID3Factory {
 
-	private IDTaggable handler;
-	
-	public IDTaggable getHandler(TagVersion version) {
-		return getHandlerInstance(version);
+	public static IDTaggable getHandler(TagVersion version, Mp3File mp3) {
+		return getHandlerInstance(version, mp3);
 	}
 	
-	public boolean setMp3(Mp3File mp3) {
+	private static IDTaggable getHandlerInstance(TagVersion version, Mp3File file) {
 		
-	}
-	
-	private IDTaggable getHandlerInstance(TagVersion version) {
+		IDTaggable handler;
 		
 		switch (version) {
-		case v1: handler = new ID3v1Handler();
+		case v1: if (file.hasId3v1Tag()) handler = new ID3v1Handler(file);
+			     else handler = null; 
 			break;
-		case v2: handler = new ID3v2Handler();
+		case v2: if (file.hasId3v2Tag() )handler = new ID3v2Handler(file);
+			     else handler = null; 
 			break;
-		case custom: handler = new ID3vCustomHandler();
+		case custom: handler = new ID3vCustomHandler(file);
 			break;
 		default: handler = null; //this shouldnt happen
 			break;
