@@ -18,109 +18,93 @@ public class ID3v2Handler extends ID3v1Handler implements IDFrameable {
 
 	@Override
 	public String getComment() {
-		// TODO Auto-generated method stub
-		return null;
+		return tag.getComment();
 	}
 
 	@Override
 	public void setComment(String comment) {
-		// TODO Auto-generated method stub
-		
+		tag.setComment(comment);
 	}
 
 	@Override
 	public String getComposer() {
-		// TODO Auto-generated method stub
-		return null;
+		return tag.getComposer();
 	}
 
 	@Override
 	public void setComposer(String composer) {
-		// TODO Auto-generated method stub
-		
+		tag.setComposer(composer);
 	}
 
 	@Override
 	public String getPublisher() {
-		// TODO Auto-generated method stub
-		return null;
+		return tag.getPublisher();
 	}
 
 	@Override
 	public void setPublisher(String publisher) {
-		// TODO Auto-generated method stub
+		tag.setPublisher(publisher);
 		
 	}
 
 	@Override
 	public String getOriginalArtist() {
-		// TODO Auto-generated method stub
-		return null;
+		return tag.getOriginalArtist();
 	}
 
 	@Override
 	public void setOriginalArtist(String artist) {
-		// TODO Auto-generated method stub
-		
+		tag.setOriginalArtist(artist);
 	}
 
 	@Override
 	public String getAlbumArtist() {
-		// TODO Auto-generated method stub
-		return null;
+		return tag.getAlbumArtist();
 	}
 
 	@Override
 	public void setAlbumArtist(String artist) {
-		// TODO Auto-generated method stub
-		
+		tag.setAlbumArtist(artist);
 	}
 
 	@Override
 	public String getCopyright() {
-		// TODO Auto-generated method stub
-		return null;
+		return tag.getCopyright();
 	}
 
 	@Override
 	public void setCopyright(String copyright) {
-		// TODO Auto-generated method stub
-		
+		tag.setCopyright(copyright);
 	}
 
 	@Override
 	public String getUrl() {
-		// TODO Auto-generated method stub
-		return null;
+		return tag.getUrl();
 	}
 
 	@Override
 	public void setUrl(String url) {
-		// TODO Auto-generated method stub
-		
+		tag.setUrl(url);
 	}
 
 	@Override
 	public String getEncoder() {
-		// TODO Auto-generated method stub
-		return null;
+		return tag.getEncoder();
 	}
 
 	@Override
 	public void setEncoder(String encoder) {
-		// TODO Auto-generated method stub
-		
+		tag.setEncoder(encoder);
 	}
 
 	@Override
 	public byte[] getAlbumImageData() {
-		// TODO Auto-generated method stub
-		return null;
+		return tag.getAlbumImage();
 	}
 
 	@Override
 	public void setAlbumImageData(byte[] imageData) {
-		// TODO Auto-generated method stub
+		tag.setAlbumImage(imageData, tag.getAlbumImageMimeType());
 		
 	}
 
