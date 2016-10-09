@@ -7,6 +7,10 @@ public class ID3v2Handler extends ID3v1Handler implements IDFrameable {
 
 	ID3v2 tag = null;
 	
+	public ID3v2Handler (IDTaggable taggable) {
+		this(taggable.getMp3File());
+	}
+	
 	protected ID3v2Handler(Mp3File mp3) {
 		
 		super(mp3);
