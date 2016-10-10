@@ -14,10 +14,16 @@ public class ID3Factory {
 		
 		switch (version) {
 		case v1: if (file.hasId3v1Tag()) handler = new ID3v1Handler(file);
-			     else handler = null; 
+			     else { 
+			    	 handler = null; 
+			    	 System.out.println("No ID3v1 tag!");
+			     }
 			break;
 		case v2: if (file.hasId3v2Tag() )handler = new ID3v2Handler(file);
-			     else handler = null; 
+			     else { 
+			    	 handler = null; 
+			    	 System.out.println("No ID3v2 tag!");
+			     }
 			break;
 		case custom: handler = new ID3vCustomHandler(file);
 			break;
