@@ -54,6 +54,8 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="com.aronmorris.karanprojects"/>
+			<item value="com.aronmorris.pdfgenerator"/>
 			<item value="com.aronmorris.whois"/>
 			<item value="FTP Program"/>
 			<item value="com.aronmorris.quotetracker"/>
@@ -61,6 +63,8 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="TagWriter"/>
+			<item value="PDFGenerator"/>
 			<item value="Whois"/>
 			<item value="FTP Program"/>
 			<item value="QuoteTracker"/>
