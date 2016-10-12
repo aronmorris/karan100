@@ -6,6 +6,9 @@ import javax.swing.JFrame;
 import javax.swing.JMenuBar;
 import javax.swing.JButton;
 import javax.swing.JMenuItem;
+import javax.swing.JScrollPane;
+import javax.swing.JList;
+import javax.swing.JTextArea;
 
 
 public class SnippetUI {
@@ -51,5 +54,20 @@ public class SnippetUI {
 		JMenuItem menuExitButton = new JMenuItem("Exit");
 		menuExitButton.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
 		menuBar.add(menuExitButton);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 42, 400, 358);
+		frame.getContentPane().add(scrollPane);
+		
+		JList listOfSnippets = new JList();
+		scrollPane.setViewportView(listOfSnippets);
+		
+		JTextArea txtAreaSnippetSubmitter = new JTextArea();
+		txtAreaSnippetSubmitter.setBounds(420, 42, 354, 200);
+		frame.getContentPane().add(txtAreaSnippetSubmitter);
+		
+		JButton btnSubmitSnippet = new JButton("Submit");
+		btnSubmitSnippet.setBounds(420, 253, 89, 23);
+		frame.getContentPane().add(btnSubmitSnippet);
 	}
 }
