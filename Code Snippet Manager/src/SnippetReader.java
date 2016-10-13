@@ -3,6 +3,8 @@ import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.JList;
 
@@ -12,7 +14,7 @@ import javax.swing.JList;
  * @author Aron
  *
  */
-public class SnippetReader implements ActionListener {
+public class SnippetReader implements MouseListener {
 
 	private final JList<String> snippetList; //list of code snippets the user has saved to the program
 	
@@ -32,10 +34,33 @@ public class SnippetReader implements ActionListener {
 		
 	}
 
-	//performs the adding-to-clipboard operation by calling 
 	@Override
-	public void actionPerformed(ActionEvent arg0) {
+	public void mouseClicked(MouseEvent arg0) {
 		addSelectionToClipboard(snippetList.getSelectedValue());
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent arg0) {
+		// TODO Auto-generated method stub
 		
 	}
 	

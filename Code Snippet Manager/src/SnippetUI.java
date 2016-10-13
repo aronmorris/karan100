@@ -1,7 +1,10 @@
 import java.awt.ComponentOrientation;
 import java.awt.EventQueue;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseListener;
 
 import javax.swing.Box;
+import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
 import javax.swing.JMenuBar;
 import javax.swing.JButton;
@@ -59,8 +62,17 @@ public class SnippetUI {
 		scrollPane.setBounds(10, 42, 400, 358);
 		frame.getContentPane().add(scrollPane);
 		
-		JList listOfSnippets = new JList();
+		DefaultListModel<String> model = new DefaultListModel<String>();
+		
+		model.addElement("Hello world");
+		
+		JList<String> listOfSnippets = new JList<String>(model);
 		scrollPane.setViewportView(listOfSnippets);
+		
+		MouseListener listListener = new SnippetReader(listOfSnippets);
+		
+		listOfSnippets.addMouseListener(listListener);
+		
 		
 		JTextArea txtAreaSnippetSubmitter = new JTextArea();
 		txtAreaSnippetSubmitter.setBounds(420, 42, 354, 200);
