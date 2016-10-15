@@ -85,7 +85,11 @@ public class SnippetUI {
 		btnSubmitSnippet.setBounds(420, 253, 89, 23);
 		frame.getContentPane().add(btnSubmitSnippet);
 		
+		btnSubmitSnippet.addActionListener(new SnippetWriter(txtAreaSnippetSubmitter, model));
+		
 		ioHandler = new SnippetIO(model);
+		
+		ioHandler.writeToModel();
 		
 		//adding shutdown hook to write the model's contents to the file
 		//Thought: Replace with a save button instead to prevent unwanted modification on exit

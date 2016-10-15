@@ -2,22 +2,23 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.DefaultListModel;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 
 public class SnippetWriter implements ActionListener {
 
-	private final JTextField textField;
+	private final JTextArea textArea;
 	private final DefaultListModel<String> listModel;
 	
-	public SnippetWriter(JTextField field, DefaultListModel<String> list) {
-		textField = field;
+	public SnippetWriter(JTextArea field, DefaultListModel<String> list) {
+		textArea = field;
 		listModel = list;
 	}
 	
 	private String retrieveText() {
 		
-		return textField.getText();
+		return textArea.getText();
 	}
 
 	//adds the text written in the text field to the list if the entry wasn't null or empty

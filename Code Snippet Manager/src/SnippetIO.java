@@ -1,3 +1,5 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -5,6 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 
 import javax.swing.DefaultListModel;
@@ -13,7 +16,7 @@ import javax.swing.DefaultListModel;
 public class SnippetIO {
 
 	//location of the file storing the snippets - this is static as there's meant to be only one snippets file
-	private static final String FILE_LOC = File.separator + "resources" + File.separator + "snippets.txt";
+	private final String FILE_LOC = ".\\snippets.txt";
 	
 	private File snippets = new File(FILE_LOC);
 	
@@ -30,6 +33,7 @@ public class SnippetIO {
 		this.model = model;
 	}
 	
+	//on load, write the contents of the text file to the model when the program starts
 	public void writeToModel() {
 		
 		ArrayList<String> snippetsFromFile = new ArrayList<String>();
@@ -73,6 +77,5 @@ public class SnippetIO {
 		}
 		
 	}
-	
 	
 }
