@@ -33,6 +33,10 @@ public class SnippetReader implements MouseListener {
 		clipboard.setContents(selection, selection);
 		
 	}
+	
+	public int getSelectedIndex() {
+		return snippetList.getSelectedIndex();
+	}
 
 	@Override
 	public void mouseClicked(MouseEvent arg0) {

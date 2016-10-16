@@ -72,7 +72,7 @@ public class SnippetUI {
 		JList<String> listOfSnippets = new JList<String>(model);
 		scrollPane.setViewportView(listOfSnippets);
 		
-		MouseListener listListener = new SnippetReader(listOfSnippets);
+		SnippetReader listListener = new SnippetReader(listOfSnippets);
 		
 		listOfSnippets.addMouseListener(listListener);
 		
@@ -86,6 +86,12 @@ public class SnippetUI {
 		frame.getContentPane().add(btnSubmitSnippet);
 		
 		btnSubmitSnippet.addActionListener(new SnippetWriter(txtAreaSnippetSubmitter, model));
+		
+		JButton btnDeleteListEntry = new JButton("Delete");
+		btnDeleteListEntry.setBounds(420, 287, 89, 23);
+		frame.getContentPane().add(btnDeleteListEntry);
+		btnDeleteListEntry.addActionListener(new ListItemDeletionListener(model, listListener));
+		
 		
 		ioHandler = new SnippetIO(model);
 		
