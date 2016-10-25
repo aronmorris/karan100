@@ -25,29 +25,28 @@ public class DatabaseManager {
 	//Unsure of how to handle key replacement vs insertion with one query command, using this
 	//in the meanwhile though it's inefficient
 	//Updating once possible
+	//Updated
 	public static void addEventAtDate(LocalDate date, String eventDescription) {
 		
 		//converts date to ISO-8601 to compare to the 
-		date.format(DateTimeFormatter.BASIC_ISO_DATE);
+		date.format(DateTimeFormatter.ISO_DATE);
 		
 		String eventDate = date.toString();
+		
+		System.out.println(eventDate);
 		
 		try {
 			Statement stmt = connect().createStatement();
 			
-			String getExistingDates = "SELECT id_date "
-									+ "FROM " + dbName + table;
+			String sqlQuery = ""; //TODO database itself has been updated to new model more representative of the required task
 			
-			ResultSet rs = stmt.executeQuery(getExistingDates);
+			/*
+			 * UUID_PK |Date      |Time    |Desc
+			 * 		   |YYYY-MM-DD|HH:MM:SS|Lorem Ipsum
+			 * 
+			 */
 			
-			while (rs.next()) {
-				if (rs.getString("id_date").equals(eventDate)) {
-					replaceInDatabase(eventDate, eventDescription);
-					return;
-				}
-			}
-			
-			insertToDatabase(eventDate, eventDescription);
+			stmt.execute(sqlQuery);
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
