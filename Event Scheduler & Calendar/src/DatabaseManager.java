@@ -1,6 +1,10 @@
 import java.sql.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class DatabaseManager {
@@ -16,29 +20,29 @@ public class DatabaseManager {
 		//pw & user sanitized out
 		DatabaseManager.setCredentials("--", "--");
 		
-		DatabaseManager.addEventAtDate(LocalDate.now(), "Testing mysql queries, should probably buy a book or something for this");
-		
-		
+		DatabaseManager.addEventAtDate(LocalDate.now(), LocalTime.now(), "Testing mysql queries, should probably buy a book or something for this");
 		
 	}
 	
 	//Unsure of how to handle key replacement vs insertion with one query command, using this
 	//in the meanwhile though it's inefficient
 	//Updating once possible
-	//Updated
-	public static void addEventAtDate(LocalDate date, String eventDescription) {
+	//Updated: Now creates a new record for every event using MySQL's uuid() function in a table that
+	//allows for multiple events per day
+	public static void addEventAtDate(LocalDate date, LocalTime time, String eventDescription) {
 		
 		//converts date to ISO-8601 to compare to the 
 		date.format(DateTimeFormatter.ISO_DATE);
+		time.format(DateTimeFormatter.ofPattern("HH:mm:ss", Locale.CANADA));
 		
 		String eventDate = date.toString();
-		
-		System.out.println(eventDate);
-		
+		String eventTime = time.truncatedTo(ChronoUnit.SECONDS).toString();
+			
 		try {
 			Statement stmt = connect().createStatement();
 			
-			String sqlQuery = ""; //TODO database itself has been updated to new model more representative of the required task
+			String sqlQuery = "INSERT INTO " + dbName + table + "(event_date, event_time, event_desc) "
+							+ "VALUES (\"" + eventDate + "\", \"" + eventTime + "\", \"" + eventDescription + "\");"; //TODO database itself has been updated to new model more representative of the required task
 			
 			/*
 			 * UUID_PK |Date      |Time    |Desc
@@ -48,11 +52,15 @@ public class DatabaseManager {
 			
 			stmt.execute(sqlQuery);
 			
+			read(stmt);
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
+		
+		
 		
 	}
 	
@@ -79,41 +87,14 @@ public class DatabaseManager {
 		return con;
 	}
 	
-	//inserts new event at a date into the database
-	//date is YYYY-MM-DD format, one event per day until reformatted here and in the db
-	private static void insertToDatabase(String formattedDate, String eventDescription) throws SQLException, ClassNotFoundException {
-		Connection con = connect();
-		
-		String sqlInsert = "INSERT INTO " + dbName + table + " VALUES "
-				+ "(\"" + formattedDate + "\", \"" + eventDescription + "\");";
-						 
-		
-		Statement stmt = con.createStatement();
-		
-		stmt.executeUpdate(sqlInsert);
-		
-		read(stmt);
-			
-		
-		
-	}
-	
-	private static void replaceInDatabase(String formattedDate, String eventDescription) throws ClassNotFoundException, SQLException {
-		
-		Connection con = connect();
-		
-		String sqlInsert = "REPLACE INTO " + dbName + table + " VALUES "
-				+ "(\"" + formattedDate + "\", \"" + eventDescription + "\");";
-		
-	}
 	
 	private static void read(Statement stmt) throws SQLException { 
-		String query = "SELECT id_date, event_scheduled FROM " + dbName + ".event_scheduler";
+		String query = "SELECT * FROM " + dbName + table;
 		
 		ResultSet rs = stmt.executeQuery(query);
 		
 		while (rs.next()) {
-			System.out.println(rs.getString("id_date") + " | " + rs.getString("event_scheduled"));
+			System.out.println(rs.getString("uuid_pk") + " | " + rs.getString("event_date") + " | " + rs.getString("event_time") + " | " + rs.getString("event_desc"));
 		}
 	}
 	/*
