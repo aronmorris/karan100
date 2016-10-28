@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -24,11 +26,64 @@ public class DatabaseManager {
 		
 	}
 	
+	//Data structure returned is a map of maps which contains all the events on a given date
+	//Specific details on each event can be accessed in the maps in order of time on that date
+	//The UI has no idea of what's happening at each date, only loading info in as the user
+	//clicks on a specific date from the calendar
+	//This gives a lower memory load and lazily instantiates the necessary info
+	public static HashMap<LocalTime, HashMap<String, ArrayList<String>>> getEventsAtDate(LocalDate date) {
+		
+		HashMap<LocalTime, HashMap<String, ArrayList<String>>> eventsAtDay = new HashMap<LocalTime, HashMap<String, ArrayList<String>>>();
+		
+		//query to retrieve all events on a specific date by time, in order they occur
+		String sqlQuery = "SELECT event_time FROM " + dbName + table + 
+						 " WHERE event_date = " + date.format(DateTimeFormatter.ISO_DATE).toString() +
+						 " ORDER BY event_time";
+		
+		try {
+			Statement stmt = connect().createStatement();
+			
+			ResultSet events = stmt.executeQuery(sqlQuery);
+			
+			while (events.next()) {
+				
+				LocalTime time = createTimeFromString(events.getString("event_time"));
+				
+				HashMap<String, ArrayList<String>> eventAtTime = new HashMap<String, ArrayList<String>>();
+				
+				//TODO finish populating logic here
+				
+				eventsAtDay.put(time, eventAtTime);
+				
+			}
+			
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		return eventsAtDay;
+		
+	}
+	
+	//the assumption here is that the string given is always taken out of the database
+	//and thus is always formatted correctly already in ISO form
+	private static LocalTime createTimeFromString(String timeStr) {
+		
+		LocalTime time = LocalTime.parse(timeStr);
+		
+		return time;
+		
+	}
+	
 	//Unsure of how to handle key replacement vs insertion with one query command, using this
 	//in the meanwhile though it's inefficient
 	//Updating once possible
 	//Updated: Now creates a new record for every event using MySQL's uuid() function in a table that
-	//allows for multiple events per day
+	//allows for multiple events per day, likelihood of collision much lower
 	public static void addEventAtDate(LocalDate date, LocalTime time, String eventDescription) {
 		
 		//converts date to ISO-8601 to compare to the 
@@ -87,7 +142,7 @@ public class DatabaseManager {
 		return con;
 	}
 	
-	
+	//for debugging, reads out the contents of the db
 	private static void read(Statement stmt) throws SQLException { 
 		String query = "SELECT * FROM " + dbName + table;
 		
@@ -97,16 +152,5 @@ public class DatabaseManager {
 			System.out.println(rs.getString("uuid_pk") + " | " + rs.getString("event_date") + " | " + rs.getString("event_time") + " | " + rs.getString("event_desc"));
 		}
 	}
-	/*
-	Statement stmt = con.createStatement();
-	
-	String query = "SELECT id_date, event_scheduled FROM " + dbName + ".event_scheduler";
-	
-	ResultSet rs = stmt.executeQuery(query);
-	
-	while (rs.next()) {
-		System.out.println(rs.getString("id_date") + " | " + rs.getString("event_scheduled"));
-	}
-	*/
 	
 }
