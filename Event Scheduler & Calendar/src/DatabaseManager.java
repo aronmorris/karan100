@@ -22,7 +22,13 @@ public class DatabaseManager {
 		//pw & user sanitized out
 		DatabaseManager.setCredentials("--", "--");
 		
-		DatabaseManager.addEventAtDate(LocalDate.now(), LocalTime.now(), "Testing mysql queries, should probably buy a book or something for this");
+		//DatabaseManager.addEventAtDate(LocalDate.now(), LocalTime.now(), "testing");
+		
+		HashMap<LocalTime, HashMap<String, String>> event = DatabaseManager.getEventsAtDate(LocalDate.now());
+		
+		for (LocalTime key : event.keySet()) {
+			System.out.println(event.get(key).get("event_desc"));
+		}
 		
 	}
 	
@@ -31,16 +37,19 @@ public class DatabaseManager {
 	//The UI has no idea of what's happening at each date, only loading info in as the user
 	//clicks on a specific date from the calendar
 	//This gives a lower memory load and lazily instantiates the necessary info
-	public static HashMap<LocalTime, HashMap<String, ArrayList<String>>> getEventsAtDate(LocalDate date) {
+	public static HashMap<LocalTime, HashMap<String, String>> getEventsAtDate(LocalDate date) {
 		
-		HashMap<LocalTime, HashMap<String, ArrayList<String>>> eventsAtDay = new HashMap<LocalTime, HashMap<String, ArrayList<String>>>();
+		HashMap<LocalTime, HashMap<String, String>> eventsAtDay = new HashMap<LocalTime, HashMap<String, String>>();
 		
 		//query to retrieve all events on a specific date by time, in order they occur
 		String sqlQuery = "SELECT event_time FROM " + dbName + table + 
-						 " WHERE event_date = " + date.format(DateTimeFormatter.ISO_DATE).toString() +
+						// " WHERE event_date = " + date.format(DateTimeFormatter.ISO_DATE).toString() +
 						 " ORDER BY event_time";
 		
 		try {
+			
+			String[] columns = {"UUID_PK", "EVENT_DATE", "EVENT_TIME", "EVENT_DESC"}; //the columns in the database
+			
 			Statement stmt = connect().createStatement();
 			
 			ResultSet events = stmt.executeQuery(sqlQuery);
@@ -49,9 +58,13 @@ public class DatabaseManager {
 				
 				LocalTime time = createTimeFromString(events.getString("event_time"));
 				
-				HashMap<String, ArrayList<String>> eventAtTime = new HashMap<String, ArrayList<String>>();
+				HashMap<String, String> eventAtTime = new HashMap<String, String>();
 				
-				//TODO finish populating logic here
+				for (int i = 0; i < columns.length; i++) {
+					
+					eventAtTime.put(columns[i], events.getString(columns[i])); 
+					
+				}
 				
 				eventsAtDay.put(time, eventAtTime);
 				
