@@ -17,6 +17,7 @@ public class DatabaseManager {
 	private static String dbName = "java_test";
 	private static String table = ".event_scheduler";
 	
+	/* used for testing things in this class - no longer needed
 	public static void main(String[] args) {
 	
 		//pw & user sanitized out
@@ -27,10 +28,11 @@ public class DatabaseManager {
 		HashMap<LocalTime, HashMap<String, String>> event = DatabaseManager.getEventsAtDate(LocalDate.now());
 		
 		for (LocalTime key : event.keySet()) {
-			System.out.println(event.get(key).get("event_desc"));
+			System.out.println(event.get(key).get("event_time"));
 		}
 		
 	}
+	*/
 	
 	//Data structure returned is a map of maps which contains all the events on a given date
 	//Specific details on each event can be accessed in the maps in order of time on that date
@@ -42,13 +44,14 @@ public class DatabaseManager {
 		HashMap<LocalTime, HashMap<String, String>> eventsAtDay = new HashMap<LocalTime, HashMap<String, String>>();
 		
 		//query to retrieve all events on a specific date by time, in order they occur
-		String sqlQuery = "SELECT event_time FROM " + dbName + table + 
-						// " WHERE event_date = " + date.format(DateTimeFormatter.ISO_DATE).toString() +
-						 " ORDER BY event_time";
+		String sqlQuery = "SELECT uuid_pk, event_time, event_date, event_desc FROM " + dbName + table + 
+						  " WHERE event_date = \"" + date.format(DateTimeFormatter.ISO_DATE).toString() + "\"";
+		
+		System.out.println(date.format(DateTimeFormatter.ISO_DATE).toString());
 		
 		try {
 			
-			String[] columns = {"UUID_PK", "EVENT_DATE", "EVENT_TIME", "EVENT_DESC"}; //the columns in the database
+			String[] columns = {"uuid_pk", "event_date", "event_time", "event_desc"}; //the columns in the database
 			
 			Statement stmt = connect().createStatement();
 			
