@@ -1,11 +1,14 @@
-import java.util.Calendar;
-import java.util.Properties;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 
 import javax.swing.JPanel;
 
-import org.jdatepicker.impl.JDatePanelImpl;
-import org.jdatepicker.impl.JDatePickerImpl;
-import org.jdatepicker.impl.UtilDateModel;
+import org.jdesktop.swingx.JXDatePicker;
+
+
+
+
 
 /**
  * CalendarPopulator is responsible for refreshing the calendar frames in the 
@@ -15,29 +18,34 @@ import org.jdatepicker.impl.UtilDateModel;
  * @author Aron
  *
  */
-public class CalendarPopulator {
+public class CalendarPopulator extends JPanel implements FocusListener {
 
-	private final JPanel calendarPanel;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8452668545082745134L;
 	
-	private JDatePickerImpl picker;
-	private UtilDateModel model;
-	
-	public CalendarPopulator(JPanel calendarPanel) {
-		this.calendarPanel = calendarPanel;
+	private JXDatePicker picker;
+
+	public CalendarPopulator() {
+		picker = new JXDatePicker();
 		
-		model = new UtilDateModel();
+		picker.getEditor().addFocusListener(this);
 		
-		model.setDate(Calendar.YEAR, Calendar.MONTH, Calendar.DAY_OF_YEAR);
-		
-		Properties prop = new Properties();
-		
-		prop.put("text.today", "Today");
-		prop.put("text.month", "Month");
-		prop.put("text.year", "Year");
-		JDatePanelImpl datePanel = new JDatePanelImpl(model, prop);
-		
+		add(picker);
 		
 	}
-	
+
+	@Override
+	public void focusGained(FocusEvent fe) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void focusLost(FocusEvent fe) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
