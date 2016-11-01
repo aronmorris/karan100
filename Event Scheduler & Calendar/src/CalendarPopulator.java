@@ -1,6 +1,9 @@
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Date;
 
 import javax.swing.JPanel;
 
@@ -15,6 +18,9 @@ import org.jdesktop.swingx.JXDatePicker;
  * main calendar panel. Duty of populating the info in each of those frames
  * (1 per day in each month) is also handled by this class, which reads info
  * for each date from the DatabaseManager
+ * 
+ * Update: Panels are now handled by the JXDatePicker library
+ * This class still handles populating the JList with event data
  * @author Aron
  *
  */
@@ -25,8 +31,11 @@ public class CalendarPopulator extends JPanel implements FocusListener {
 	 */
 	private static final long serialVersionUID = -8452668545082745134L;
 	
+	
 	private JXDatePicker picker;
 
+	private Date date;
+	
 	public CalendarPopulator() {
 		picker = new JXDatePicker();
 		
@@ -35,10 +44,18 @@ public class CalendarPopulator extends JPanel implements FocusListener {
 		add(picker);
 		
 	}
-
+	
+	public boolean hasDate() {
+		return (date != null);
+	}
+	
+	public Date getDate() {
+		return date;
+	}
+	
 	@Override
 	public void focusGained(FocusEvent fe) {
-		// TODO Auto-generated method stub
+		date = picker.getDate();
 		
 	}
 

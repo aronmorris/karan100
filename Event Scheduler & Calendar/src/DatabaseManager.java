@@ -1,4 +1,5 @@
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -16,6 +17,8 @@ public class DatabaseManager {
 	
 	private static String dbName = "java_test";
 	private static String table = ".event_scheduler";
+	
+	private static final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 	
 	/* used for testing things in this class - no longer needed
 	public static void main(String[] args) {
@@ -59,7 +62,7 @@ public class DatabaseManager {
 			
 			while (events.next()) {
 				
-				LocalTime time = createTimeFromString(events.getString("event_time"));
+				LocalTime time = parseTime(events.getString("event_time"));
 				
 				HashMap<String, String> eventAtTime = new HashMap<String, String>();
 				
@@ -85,9 +88,14 @@ public class DatabaseManager {
 		
 	}
 	
-	//the assumption here is that the string given is always taken out of the database
-	//and thus is always formatted correctly already in ISO form
-	private static LocalTime createTimeFromString(String timeStr) {
+	public static LocalDate parseDate(String dateStr) {
+		LocalDate date = LocalDate.parse(formatter.format(dateStr));
+		
+		return date;
+	}
+	
+	
+	public static LocalTime parseTime(String timeStr) {
 		
 		LocalTime time = LocalTime.parse(timeStr);
 		
