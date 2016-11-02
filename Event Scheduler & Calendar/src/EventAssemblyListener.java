@@ -19,6 +19,7 @@ public class EventAssemblyListener implements ActionListener {
 		this.timeText = textField;
 	}
 	
+	//assembles everything and inserts into the db
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		

@@ -26,7 +26,7 @@ public class ButtonListener implements ActionListener {
 		extractedString = text.getText();
 		
 	}
-	
+	//return true IFF text isnt null or blank
 	public boolean hasText() {
 		return (!(extractedString.equals(null) || extractedString.equals(""))); //return true IFF text isnt null or blank
 	}

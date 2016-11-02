@@ -24,6 +24,7 @@ import org.jdesktop.swingx.JXDatePicker;
  * @author Aron
  *
  */
+
 public class CalendarPopulator extends JPanel implements FocusListener {
 
 	/**
@@ -48,11 +49,11 @@ public class CalendarPopulator extends JPanel implements FocusListener {
 	public boolean hasDate() {
 		return (date != null);
 	}
-	
+	//returns the date picked
 	public Date getDate() {
 		return date;
 	}
-	
+	 //focus is gained when the user clicks on a date
 	@Override
 	public void focusGained(FocusEvent fe) {
 		date = picker.getDate();
