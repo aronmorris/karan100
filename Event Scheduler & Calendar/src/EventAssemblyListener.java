@@ -13,10 +13,10 @@ public class EventAssemblyListener implements ActionListener {
 	private final CalendarPopulator populator;
 	private final ButtonListener descText, timeText;
 	
-	public EventAssemblyListener(CalendarPopulator pop, ButtonListener textArea, ButtonListener textField) {
+	public EventAssemblyListener(CalendarPopulator pop, ButtonListener textAreaDesc, ButtonListener textFieldTime) {
 		populator = pop;
-		this.descText = textArea;
-		this.timeText = textField;
+		this.descText = textAreaDesc;
+		this.timeText = textFieldTime;
 	}
 	
 	//assembles everything and inserts into the db
