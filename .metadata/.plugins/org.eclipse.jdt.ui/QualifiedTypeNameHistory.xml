@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.w3c.dom.Document"/>
-<fullyQualifiedTypeName name="com.itextpdf.text.PageSize"/>
-<fullyQualifiedTypeName name="com.itextpdf.text.Document"/>
 <fullyQualifiedTypeName name="com.itextpdf.text.pdf.PdfWriter"/>
 <fullyQualifiedTypeName name="com.itextpdf.text.Font"/>
 <fullyQualifiedTypeName name="com.itextpdf.text.Paragraph"/>
@@ -60,4 +57,7 @@
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.time.LocalDate"/>
 <fullyQualifiedTypeName name="java.time.LocalTime"/>
+<fullyQualifiedTypeName name="javax.swing.table.DefaultTableModel"/>
+<fullyQualifiedTypeName name="javax.swing.JTable"/>
+<fullyQualifiedTypeName name="javax.swing.event.TableModelListener"/>
 </qualifiedTypeNameHistroy>
