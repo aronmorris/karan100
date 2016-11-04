@@ -25,7 +25,7 @@ public class EventAssemblyListener implements ActionListener {
 		
 		if (populator.hasDate() && timeText.hasText() && descText.hasText()) {
 			
-			LocalDate date = DatabaseManager.parseDate(populator.getDate().toString());
+			LocalDate date = DatabaseManager.parseDate(populator.getDate());
 			
 			LocalTime time = DatabaseManager.parseTime(timeText.getText());
 			

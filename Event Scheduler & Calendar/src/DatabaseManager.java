@@ -3,6 +3,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -88,8 +89,8 @@ public class DatabaseManager {
 		
 	}
 	
-	public static LocalDate parseDate(String dateStr) {
-		LocalDate date = LocalDate.parse(formatter.format(dateStr));
+	public static LocalDate parseDate(java.util.Date d) {
+		LocalDate date = d.toInstant().atZone(ZoneId.systemDefault()).toLocalDate(); //from stackoverflow
 		
 		return date;
 	}

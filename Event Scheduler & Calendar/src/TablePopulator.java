@@ -1,15 +1,11 @@
 import java.sql.ResultSet;
 import java.time.LocalDate;
+import java.util.Date;
 
 import javax.swing.JTable;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
-import javax.swing.event.TableModelEvent;
-import javax.swing.event.TableModelListener;
-import javax.swing.table.DefaultTableModel;
 
 
-public class TablePopulator implements TableModelListener, ListSelectionListener {
+public class TablePopulator {
 
 	private final JTable table;
 	
@@ -20,24 +16,18 @@ public class TablePopulator implements TableModelListener, ListSelectionListener
 		this.table = table;
 		
 	}
-
-	@Override
-	public void tableChanged(TableModelEvent tme) {
+	
+	public JTable getTable() {
+		return table;
+	}
+	
+	public void populate(Date date) {
+		//TODO retrieve info from db
+		LocalDate ld = DatabaseManager.parseDate(date);
 		
-		System.out.println("Table changed");
-		
-		//ResultSet res = DatabaseManager.getEventsAtDate(date);
-		
-		
+		System.out.println("It works! " + ld.toString());
 	}
 
-	@Override
-	public void valueChanged(ListSelectionEvent lse) {
-		
-		System.out.println("List changed");
-		
-		selectedRow = table.getSelectedRow();
-		
-	}
+	
 	
 }

@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import java.util.Date;
 
 import javax.swing.JPanel;
+import javax.swing.JTable;
 
 import org.jdesktop.swingx.JXDatePicker;
 
@@ -37,8 +38,12 @@ public class CalendarPopulator extends JPanel implements FocusListener {
 
 	private Date date;
 	
-	public CalendarPopulator() {
+	private TablePopulator tablePopulator;
+	
+	public CalendarPopulator(JTable table) {
 		picker = new JXDatePicker();
+		
+		tablePopulator = new TablePopulator(table);
 		
 		picker.getEditor().addFocusListener(this);
 		
@@ -58,6 +63,9 @@ public class CalendarPopulator extends JPanel implements FocusListener {
 	public void focusGained(FocusEvent fe) {
 		date = picker.getDate();
 		
+		if (date != null) {
+			tablePopulator.populate(date);
+		}
 	}
 
 	@Override
