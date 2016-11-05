@@ -25,6 +25,8 @@ public class CalendarUI {
 
 	private JFrame frame;
 	private JTextField textField;
+	private JTextField txtDBUser;
+	private JTextField txtDBPW;
 
 	/**
 	 * Launch the application.
@@ -119,7 +121,22 @@ public class CalendarUI {
 		btnFinalized.setBounds(638, 374, 89, 23);
 		frame.getContentPane().add(btnFinalized);
 		
+		txtDBUser = new JTextField();
+		txtDBUser.setBounds(638, 180, 86, 20);
+		frame.getContentPane().add(txtDBUser);
+		txtDBUser.setColumns(10);
+		
+		txtDBPW = new JTextField();
+		txtDBPW.setBounds(638, 205, 86, 20);
+		frame.getContentPane().add(txtDBPW);
+		txtDBPW.setColumns(10);
+		
+		JButton btnDBConnect = new JButton("New button");
+		btnDBConnect.setBounds(638, 236, 89, 23);
+		frame.getContentPane().add(btnDBConnect);
 		ButtonListener descListener = new ButtonListener(txtAreaEventDescription);
+		
+		btnDBConnect.addActionListener(new CredentialsListener(txtDBUser, txtDBPW)); //logs into the database server
 		
 		ButtonListener timeListener = new ButtonListener(textField);
 		
@@ -129,7 +146,11 @@ public class CalendarUI {
 		
 		btnFinalized.addActionListener(new EventAssemblyListener(calendarPopulator, descListener, timeListener));
 		
-		//TODO below hook in all the listeners
+		
+		
+		
+		
+		//TODO hook in listeners
 		
 	}
 }

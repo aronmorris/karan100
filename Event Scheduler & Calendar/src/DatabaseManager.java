@@ -69,7 +69,7 @@ public class DatabaseManager {
 				
 				for (int i = 0; i < columns.length; i++) {
 					
-					eventAtTime.put(columns[i], events.getString(columns[i])); 
+					eventAtTime.put(columns[i], events.getString(columns[i])); //put uuid_pk: uid, event_date: yyyy-mm-dd etc
 					
 				}
 				
