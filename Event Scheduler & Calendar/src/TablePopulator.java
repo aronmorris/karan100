@@ -13,7 +13,7 @@ public class TablePopulator {
 
 	private final JTable table;
 	
-	private final String[] eventKeys = {"uuid_pk", "event_date", "event_time", "event_desc"};
+	private final String[] eventKeys = {"event_date", "event_time", "event_desc"};
 	
 	private int selectedRow;
 	
@@ -55,6 +55,8 @@ public class TablePopulator {
 		for (String key : eventKeys) {
 			vector.add(map.get(key));
 		}
+		
+		System.out.println(vector.toString());
 		
 		return vector;
 		

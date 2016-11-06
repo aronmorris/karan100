@@ -131,7 +131,7 @@ public class CalendarUI {
 		frame.getContentPane().add(txtDBPW);
 		txtDBPW.setColumns(10);
 		
-		JButton btnDBConnect = new JButton("New button");
+		JButton btnDBConnect = new JButton("Connect");
 		btnDBConnect.setBounds(638, 236, 89, 23);
 		frame.getContentPane().add(btnDBConnect);
 		ButtonListener descListener = new ButtonListener(txtAreaEventDescription);
@@ -146,11 +146,10 @@ public class CalendarUI {
 		
 		btnFinalized.addActionListener(new EventAssemblyListener(calendarPopulator, descListener, timeListener));
 		
-		
-		
-		
-		
+
 		//TODO hook in listeners
+		
+		
 		
 	}
 }
