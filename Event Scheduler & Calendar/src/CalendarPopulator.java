@@ -70,8 +70,11 @@ public class CalendarPopulator extends JPanel implements FocusListener {
 
 	@Override
 	public void focusLost(FocusEvent fe) {
-		// TODO Auto-generated method stub
+		date = picker.getDate();
 		
+		if (date != null) {
+			tablePopulator.populate(date);
+		}
 	}
 	
 }
