@@ -45,7 +45,7 @@ public class TablePopulator {
 			
 		}
 		
-		System.out.println("It works! " + ld.toString());
+		//System.out.println("It works! " + ld.toString());
 	}
 
 	private Vector<String> retrieveData(HashMap<String, String> map) {

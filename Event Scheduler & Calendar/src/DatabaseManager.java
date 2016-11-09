@@ -132,7 +132,7 @@ public class DatabaseManager {
 			
 			stmt.execute(sqlQuery);
 			
-			read(stmt);
+			//read(stmt);
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
