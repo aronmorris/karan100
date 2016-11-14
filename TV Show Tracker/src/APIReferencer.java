@@ -14,16 +14,32 @@ import com.jaunt.ResponseException;
 import com.jaunt.UserAgent;
 import com.jaunt.component.Form;
 
-
-public class PageScraper {
+public class APIReferencer {
+	
+	enum LineupType {
+		SAT("SAT"),
+		CAB("CAB");
+		
+		private String type;
+		
+		public String toString() {
+			return type;
+		}
+		
+		LineupType(String type) {
+			this.type = type;
+		}
+	}
 
 	private Document doc;
 	
 	private UserAgent agent;
 	
+	private String apiKey;
+	
 	private URL apiUrl; //this is the url that json requests are made of
 	
-	public PageScraper(URL url) {
+	public APIReferencer(URL url) {
 		
 		agent = new UserAgent();
 		
@@ -34,9 +50,14 @@ public class PageScraper {
 			
 			apiUrl = new URL("http://api.tvmedia.ca/tv/v4");
 			
+			apiKey = fetchAPIKey();
+			
 		} catch (ResponseException e) {
 			e.printStackTrace();
 		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -61,8 +82,12 @@ public class PageScraper {
 	//API lineupIDs for cable and satellite are then made in another request
 	private List<String> establishLineup(String postalCode) {
 		
+		String lineupURL = getLineupURL(postalCode);
 		
-		
+	}
+	
+	private String getLineupURL(String postal) {
+		return "http://api.tvmedia.ca/tv/v4/lineups?api_key=" + apiKey + "&postalCode=10001";
 	}
 	
 	private String fetchAPIKey() throws IOException {
