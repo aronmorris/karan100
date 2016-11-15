@@ -1,3 +1,5 @@
+import java.util.Properties;
+
 import javax.mail.Session;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -13,11 +15,9 @@ public class EmailSender {
 	}
 	public EmailSender() throws NamingException {
 		
-		InitialContext ctx = new InitialContext();
+		Properties props = new Properties();
 		
-		Session session = (Session) ctx.lookup("usersMailSession");
-		
-		System.out.println(session.toString());
+		Session session = Session.getInstance(props);
 		
 	}
 	

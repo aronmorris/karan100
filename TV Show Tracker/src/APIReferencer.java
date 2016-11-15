@@ -8,6 +8,8 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.util.List;
 
+import org.json.JSONObject;
+
 import com.jaunt.Document;
 import com.jaunt.NotFound;
 import com.jaunt.ResponseException;
@@ -15,21 +17,6 @@ import com.jaunt.UserAgent;
 import com.jaunt.component.Form;
 
 public class APIReferencer {
-	
-	enum LineupType {
-		SAT("SAT"),
-		CAB("CAB");
-		
-		private String type;
-		
-		public String toString() {
-			return type;
-		}
-		
-		LineupType(String type) {
-			this.type = type;
-		}
-	}
 
 	private Document doc;
 	
@@ -68,21 +55,15 @@ public class APIReferencer {
 		
 	}
 	
-	//searches the returned json for what it is one seeks
-	private Document searchGuide(String searchTerm) throws NotFound, ResponseException {
-		
-		Form searchForm = doc.getForm("<form id=listings-search>");
-		
-		searchForm.submit();
-		
-		
-		
-	}
+	
+	
 	//establishes the lineup according to api instructions
 	//API lineupIDs for cable and satellite are then made in another request
-	private List<String> establishLineup(String postalCode) {
+	private String establishLineup(String postalCode) {
 		
 		String lineupURL = getLineupURL(postalCode);
+		
+		return JSONReader.getValue("lineupID");
 		
 	}
 	

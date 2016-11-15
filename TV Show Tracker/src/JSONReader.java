@@ -13,6 +13,19 @@ public class JSONReader {
 
 	private static JSONObject json;
 	
+	
+	public static String getValue(String jsonKey) {
+		
+		String value = null;
+		
+		if (json != null) {
+			value = json.get(jsonKey).toString();
+		}
+		
+		return value;
+		
+	}
+	
 	private static String readAll(Reader rd) throws IOException {
 		  StringBuilder sb = new StringBuilder();
 		  

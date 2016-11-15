@@ -54,6 +54,7 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="com.aronmorris.tvtracker"/>
 			<item value="com.aronmorris.en"/>
 			<item value="com.aronmorris.karanprojects"/>
 			<item value="com.aronmorris.pdfgenerator"/>
@@ -64,6 +65,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="TVTracker"/>
 			<item value="EventScheduler"/>
 			<item value="TagWriter"/>
 			<item value="PDFGenerator"/>
