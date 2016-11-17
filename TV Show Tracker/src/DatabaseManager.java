@@ -35,4 +35,8 @@ public final class DatabaseManager {
 		}
 	}
 	
+	public static void addEntry(String showName, LocalDateTime timestamp) {
+		
+	}
+	
 }
