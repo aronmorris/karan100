@@ -1,6 +1,10 @@
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 import com.jaunt.Document;
 import com.jaunt.Elements;
@@ -40,14 +44,6 @@ public class PageScraper {
 		DatabaseManager.addEntry(showName, datetime);
 	}
 	
-	private static LocalDateTime generateLocalDateTime(String date, String time) {
-		LocalDateTime datetime;
-		
-		
-		
-		return datetime;
-	}
-	
 	public static boolean searchShowtimes(String showName) throws ResponseException, NotFound {
 		
 		String term = showName.replaceAll(" ", "+"); 
@@ -73,10 +69,26 @@ public class PageScraper {
 		
 	}
 	
-	
+	private static LocalDateTime createLocalDateTimeFromString(String airdate, String airtime) {
+		//formatters designed to capture the strings scraped from the tv guide listing
+		final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MMM dd"); //e.g. NOV 18
+		final DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("hh:mma"); //e.g. 11:30PM
+		
+		LocalDate dateComponent = LocalDate.parse(airdate, dateFormatter);
+		
+		LocalTime timeComponent = LocalTime.parse(airtime, timeFormatter);
+		
+		LocalDateTime dateTime = LocalDateTime.of(dateComponent, timeComponent);
+		
+		return dateTime;
+		
+	}
 	
 	public static void main(String[] args) throws NotFound, ResponseException {
 		searchShowtimes("Modern Family");
+		
+		System.out.println(DatabaseManager.getDateTimeStamp(createLocalDateTimeFromString("NOV 20", "11:30PM")));
+		
 	}
 	
 }

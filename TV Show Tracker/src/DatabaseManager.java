@@ -1,4 +1,7 @@
 import java.sql.*;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 /**
  * This project will track TV shows from a url or web api and alert the user thru email
@@ -11,6 +14,8 @@ public final class DatabaseManager {
 	private static Connection connection;
 	
 	private final static String dbName = "java_test.tv_tracker"; //TODO use this name in the schema
+	
+	private static final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	
 	//if a connection exists, return that one.
 	//If there is no connection, login to the server the old-fashioned way.
@@ -33,6 +38,12 @@ public final class DatabaseManager {
 			return connection;
 			
 		}
+	}
+	
+	public static Timestamp getDateTimeStamp(LocalDateTime ldt) {
+		
+		return Timestamp.valueOf(ldt);
+		
 	}
 	
 	public static void addEntry(String showName, LocalDateTime timestamp) {

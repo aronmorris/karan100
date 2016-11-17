@@ -18,8 +18,7 @@ public class DatabaseManager {
 	
 	private static String dbName = "java_test";
 	private static String table = ".event_scheduler";
-	
-	private static final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+
 	
 	/* used for testing things in this class - no longer needed
 	public static void main(String[] args) {
