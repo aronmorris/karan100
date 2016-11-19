@@ -48,6 +48,14 @@ public final class DatabaseManager {
 	
 	public static void addEntry(String showName, LocalDateTime timestamp) {
 		
+		//add insert logic
+		
+	}
+	
+	public static void removeEntry(String uuid) {
+		
+		//remove entries whose timestamps have passed
+		
 	}
 	
 }

@@ -10,4 +10,18 @@ public class TrackerMain {
 		//through making requests to the relevant classes
 	}
 	
+	private static void sendEmail(String contents) {
+		
+		EmailSender.sendMail(contents);
+		
+	}
+	
+	private static void scrapePage() {
+		//TODO handle pagescraping logic
+	}
+	
+	private static void updateDatabase() {
+		//TODO update DB with add/remove operations
+	}
+	
 }

@@ -20,5 +20,9 @@ public class EmailSender {
 		Session session = Session.getInstance(props);
 		
 	}
+	public static void sendMail(String contents) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
