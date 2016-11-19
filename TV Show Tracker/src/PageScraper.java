@@ -84,11 +84,4 @@ public class PageScraper {
 		
 	}
 	
-	public static void main(String[] args) throws NotFound, ResponseException {
-		searchShowtimes("Modern Family");
-		
-		System.out.println(DatabaseManager.getDateTimeStamp(createLocalDateTimeFromString("NOV 20", "11:30PM")));
-		
-	}
-	
 }
